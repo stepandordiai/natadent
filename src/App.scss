@@ -1,0 +1,21 @@
+@use "fonts" as *;
+@use "reset" as *;
+
+body {
+    font-family: "Montserrat", serif;
+    // background-image: url("https://www.shutterstock.com/image-photo/dental-hygiene-oral-health-care-600nw-2523738153.jpg");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+
+    min-height: 1000px;
+    // background-position: center;
+}
+
+.img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#root {
+}
