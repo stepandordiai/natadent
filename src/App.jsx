@@ -1,18 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import "./App.scss";
+import ToTopBtn from "./components/ToTopBtn/ToTopBtn";
 
 function App() {
     return (
         <Router>
+            <div className="bg-theme"></div>
             <Header />
-            <img
-                className="img"
-                src={
-                    "https://www.shutterstock.com/image-photo/dental-hygiene-oral-health-care-600nw-2523738153.jpg"
-                }
-                alt=""
-            />
+            <ToTopBtn />
         </Router>
     );
 }

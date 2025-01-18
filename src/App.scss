@@ -1,14 +1,14 @@
 @use "fonts" as *;
 @use "reset" as *;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Montserrat", serif;
-    // background-image: url("https://www.shutterstock.com/image-photo/dental-hygiene-oral-health-care-600nw-2523738153.jpg");
-    // background-repeat: no-repeat;
-    // background-size: cover;
-
-    min-height: 1000px;
-    // background-position: center;
+    background: rgb(131, 197, 201);
+    min-height: 2000px;
 }
 
 .img {
@@ -17,5 +17,11 @@ body {
     object-fit: cover;
 }
 
-#root {
+.bg-theme {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgb(131, 197, 201), rgb(222, 255, 197));
 }

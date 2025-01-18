@@ -1,100 +1,132 @@
 .header {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    color: white;
+    top: 5px;
+    right: 5px;
+    left: 5px;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
     min-height: 100px;
+    padding: 0 50px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 .header__logo {
-    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: clamp(35px, 4vw, 40px);
+    }
+    span {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
 }
 
 a {
-    color: white;
+    color: #fff;
 }
 
 .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 50%;
     ul {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
     }
 }
 
-.nav__find-us {
-    span {
+.nav__link {
+    display: grid;
+    place-content: center;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 20px;
+    transition: background-color 150ms;
+    &:hover {
+        background: rgb(100, 218, 212);
     }
+}
+
+.nav__btn-link {
+    display: grid;
+    place-content: center;
+    height: 40px;
+    width: 210px;
+    border-radius: 20px;
+    border: 1px solid rgb(100, 218, 212);
+}
+
+.nav__find-us-icon,
+.nav__contact-icon {
+    display: none;
+    place-content: center;
+    height: 40px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    transition: background-color 150ms;
     img {
+        width: 20px;
+    }
+    &:hover {
+        background: rgb(100, 218, 212);
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav__btn {
         display: none;
     }
-}
 
-.nav__appointment {
-    span {
-        background-color: aqua;
-        padding: 10px;
-        border-radius: 10px;
-        color: black;
-    }
-    img {
-        display: none;
-    }
-}
-
-@media (max-width: 1100px) {
-    .nav__find-us {
-        span {
-        }
-        img {
-            display: none;
-        }
+    .nav__contact-icon {
+        display: grid;
     }
 
-    .nav__appointment {
-        span {
-            display: none;
-            background-color: aqua;
-            padding: 10px;
-            border-radius: 10px;
-            color: black;
-        }
-        img {
-            display: initial;
-            width: 30px;
+    .nav {
+        ul {
+            width: 85%;
         }
     }
 }
 
 @media (max-width: 900px) {
-    .nav__find-us {
-        span {
-            display: none;
-        }
-        img {
-            display: initial;
-            width: 30px;
-        }
+    .header {
+        padding: 0 25px;
+    }
+    .nav__find-us-item {
+        display: none;
     }
 
-    .nav__appointment {
-        span {
-            display: none;
-            background-color: aqua;
-            padding: 10px;
-            border-radius: 10px;
-            color: black;
+    .nav__find-us-icon {
+        display: grid;
+    }
+    .nav {
+        ul {
+            width: 70%;
         }
-        img {
-            display: initial;
-            width: 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    .header {
+        padding: 0 15px;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 25px;
+        width: auto;
+        ul {
+            display: none;
         }
     }
 }
