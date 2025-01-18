@@ -56,12 +56,11 @@ a {
     }
 }
 
+.nav__link--active {
+    background: rgb(100, 218, 212);
+}
+
 .nav__btn-link {
-    display: grid;
-    place-content: center;
-    height: 40px;
-    width: 210px;
-    border-radius: 20px;
     border: 1px solid rgb(100, 218, 212);
 }
 

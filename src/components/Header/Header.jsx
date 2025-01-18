@@ -6,6 +6,8 @@ import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import logoIcon from "./../../assets/logo/tooth.png";
 
 const Header = () => {
+    const inactiveLink = "nav__link";
+    const activeLink = "nav__link nav__link--active";
     return (
         <header className="header">
             <NavLink className="header__logo" to="/">
@@ -15,42 +17,80 @@ const Header = () => {
             <nav className="nav">
                 <ul>
                     <li>
-                        <NavLink className="nav__link" to="/">
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? activeLink : inactiveLink
+                            }
+                            to="/"
+                        >
                             Home
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink className="nav__link" to="/about-us">
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? activeLink : inactiveLink
+                            }
+                            to="/about-us"
+                        >
                             About us
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink className="nav__link" to="/services">
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? activeLink : inactiveLink
+                            }
+                            to="/services"
+                        >
                             Services
                         </NavLink>
                     </li>
                     <li className="nav__find-us-item">
-                        <NavLink className="nav__link" to="/find-us">
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? activeLink : inactiveLink
+                            }
+                            to="/find-us"
+                        >
                             Find us
                         </NavLink>
                     </li>
                     <li className="nav__btn">
                         <NavLink
-                            className="nav__link nav__btn-link"
+                            className={({ isActive }) =>
+                                isActive
+                                    ? `${activeLink} nav__btn-link`
+                                    : `${inactiveLink} nav__btn-link`
+                            }
                             to="/contact"
                         >
                             Make an appointment
                         </NavLink>
                     </li>
                 </ul>
-                <NavLink className="nav__find-us-icon" to="/find-us">
+                <NavLink
+                    className={({ isActive }) =>
+                        isActive
+                            ? `${activeLink} nav__find-us-icon`
+                            : `${inactiveLink} nav__find-us-icon`
+                    }
+                    to="/find-us"
+                >
                     <img
                         className="nav__find-us"
                         src={locationIcon}
                         alt="Location"
                     />
                 </NavLink>
-                <NavLink className="nav__contact-icon" to="/contact">
+                <NavLink
+                    className={({ isActive }) =>
+                        isActive
+                            ? `${activeLink} nav__contact-icon`
+                            : `${inactiveLink} nav__contact-icon`
+                    }
+                    to="/contact"
+                >
                     <img
                         className="nav__appointment"
                         src={calendarIcon}
