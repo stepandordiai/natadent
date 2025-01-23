@@ -1,5 +1,6 @@
 @use "fonts" as *;
 @use "reset" as *;
+@use "variables" as *;
 
 html {
     scroll-behavior: smooth;
@@ -7,14 +8,13 @@ html {
 
 body {
     font-family: "Montserrat", serif;
-    background: rgb(131, 197, 201);
-    min-height: 2000px;
+    background: var(--bg-clr);
 }
 
-.img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .bg-theme {
@@ -23,5 +23,6 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(rgb(131, 197, 201), rgb(222, 255, 197));
+    z-index: -1;
+    // background: linear-gradient(rgb(131, 197, 201), rgb(222, 255, 197));
 }

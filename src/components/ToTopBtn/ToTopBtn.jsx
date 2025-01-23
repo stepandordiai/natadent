@@ -18,7 +18,7 @@ const ToTopBtn = () => {
 
     addEventListener("scroll", () => {
         scrollPercentage();
-        if (document.documentElement.scrollTop >= 300) {
+        if (document.documentElement.scrollTop > 300) {
             document
                 .querySelector(".to-top-btn")
                 .classList.add("to-top-btn--translate");
