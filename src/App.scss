@@ -12,7 +12,8 @@ body {
 }
 
 #root {
-    min-height: 100vh;
+    // min-height: 100vh;
+    min-height: 2000px;
     display: flex;
     flex-direction: column;
 }

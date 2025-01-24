@@ -13,3 +13,14 @@
         font-size: 1.5rem;
     }
 }
+
+.home__book-btn {
+    height: 40px;
+    color: var(--txt-clr);
+    padding: 0 10px;
+    border-radius: 20px;
+    border: 2px solid var(--accent-clr);
+    &:hover {
+        background: var(--accent-clr);
+    }
+}

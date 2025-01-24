@@ -13,7 +13,7 @@ const ToTopBtn = () => {
         let scrollValue = Math.round((positionTop * 100) / calcHeight);
         document.querySelector(
             ".to-top-btn div"
-        ).style.background = `conic-gradient(rgb(100, 218, 212) ${scrollValue}%, transparent 0%)`;
+        ).style.background = `conic-gradient(var(--accent-clr) ${scrollValue}%, transparent 0%)`;
     };
 
     addEventListener("scroll", () => {

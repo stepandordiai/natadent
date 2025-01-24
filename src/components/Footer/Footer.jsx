@@ -81,6 +81,7 @@ const Footer = () => {
                     <p>Contact us</p>
                 </div>
             </div>
+            <hr className="custom-hr" />
             <div className="footer__bottom">
                 <p className="copyright">&copy; 2025 Novozub</p>
                 <p>All rights reserved</p>
