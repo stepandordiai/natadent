@@ -1,0 +1,118 @@
+.services {
+    padding: 170px 0;
+}
+
+// Reusable stlye
+.title-container {
+    padding: 50px;
+    margin-bottom: 35px;
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--txt-clr);
+    div {
+        display: flex;
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    }
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+.title-link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 15px;
+    transition: background-color 150ms;
+
+    &:hover {
+        background: var(--accent-clr);
+    }
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin: 0 50px;
+}
+
+.service {
+    justify-self: center;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 25px;
+    align-items: center;
+    width: 100%;
+    height: 170px;
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--txt-clr);
+    border-radius: 100px;
+    padding: 25px;
+    transform: translateY(35px);
+    opacity: 0;
+    transition: background-color 300ms, opacity 0.5s, transform 0.5s;
+    h4 {
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+    p {
+        font-weight: 200;
+    }
+
+    &:hover {
+        background: var(--accent-clr);
+    }
+}
+
+.service--active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media (max-width: 1300px) {
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        margin: 0 25px;
+    }
+}
+
+@media (max-width: 900px) {
+    .title-container {
+        padding: 15px;
+        margin-bottom: 35px;
+        background: rgba(0, 0, 0, 0.1);
+        color: var(--txt-clr);
+        div {
+            display: flex;
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+                pointer-events: none;
+                opacity: 0.5;
+            }
+        }
+        h2 {
+            font-size: 3rem;
+        }
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 25px;
+        margin: 0 5px;
+    }
+}

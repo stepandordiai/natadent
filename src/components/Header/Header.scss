@@ -15,7 +15,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 50px;
+    height: 30px;
+    padding: 0 50px;
     a {
         transition: color 150ms;
         &:hover {
@@ -185,7 +186,7 @@ a {
 
 @media (max-width: 900px) {
     .header-top {
-        padding: 10px 25px;
+        padding: 0 25px;
     }
     .header-bottom {
         padding: 0 25px;
@@ -207,7 +208,7 @@ a {
 
 @media (max-width: 800px) {
     .header-top {
-        padding: 10px 15px;
+        padding: 0 15px;
     }
     .header-bottom {
         padding: 0 15px;

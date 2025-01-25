@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
 import "./App.scss";
 import AppointmentPopUp from "./components/AppointmentPopUp/AppointmentPopUp";
+import Services from "./pages/Services/Services";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             <AppointmentPopUp />
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/services" element={<Services />} />
             </Routes>
             <Footer />
         </Router>
