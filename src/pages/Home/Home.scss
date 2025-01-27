@@ -1,26 +1,173 @@
+@use "./../../mixins" as *;
+
 .home {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    position: relative;
+    @include flex-center;
     flex-direction: column;
     height: 100vh;
-    div {
+    row-gap: 25px;
+    h2 {
         color: var(--txt-clr);
-        font-size: 3rem;
+        font-size: clamp(2rem, 6vw, 4rem);
+        font-weight: 500;
     }
     p {
         color: var(--txt-clr);
         font-size: 1.5rem;
+        font-weight: 300;
     }
+}
+
+.btn-container {
+    @include flex-center;
+    column-gap: 25px;
 }
 
 .home__book-btn {
     height: 40px;
+    width: 200px;
     color: var(--txt-clr);
-    padding: 0 10px;
     border-radius: 20px;
     border: 2px solid var(--accent-clr);
+    transition: background-color 150ms;
+
     &:hover {
         background: var(--accent-clr);
+    }
+}
+
+.services-btn {
+    display: grid;
+    place-content: center;
+    height: 40px;
+    width: 200px;
+    color: var(--txt-clr);
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.25);
+    transition: background-color 150ms;
+    &:hover {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.home__grid {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    pointer-events: none;
+
+    div {
+        z-index: -1;
+        opacity: 0;
+        transform: translateY(-100px);
+        transition: opacity 1s, transform 2s;
+    }
+
+    .child--active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    div:nth-of-type(1) {
+        background: linear-gradient(
+            var(--home-bg-clr),
+            var(--accent-clr) 20%,
+            var(--home-bg-clr)
+        );
+    }
+    div:nth-of-type(2) {
+        background: linear-gradient(
+            var(--home-bg-clr),
+            var(--accent-clr) 25%,
+            var(--home-bg-clr)
+        );
+    }
+    div:nth-of-type(3) {
+        background: linear-gradient(
+            var(--home-bg-clr),
+            var(--accent-clr) 30%,
+            var(--home-bg-clr)
+        );
+    }
+    div:nth-of-type(4) {
+        background: linear-gradient(
+            var(--home-bg-clr),
+            var(--accent-clr) 35%,
+            var(--home-bg-clr)
+        );
+    }
+    div:nth-of-type(5) {
+        background: linear-gradient(
+            var(--home-bg-clr),
+            var(--accent-clr) 40%,
+            var(--home-bg-clr)
+        );
+    }
+    div:nth-of-type(6) {
+        background: linear-gradient(
+            var(--home-bg-clr),
+            var(--accent-clr) 45%,
+            var(--home-bg-clr)
+        );
+    }
+    div:nth-of-type(7) {
+        background: linear-gradient(
+            var(--home-bg-clr),
+            var(--accent-clr) 50%,
+            var(--home-bg-clr)
+        );
+    }
+    div:nth-of-type(8) {
+        background: linear-gradient(
+            var(--home-bg-clr),
+            var(--accent-clr) 55%,
+            var(--home-bg-clr)
+        );
+    }
+    div:nth-of-type(9) {
+        background: linear-gradient(
+            var(--home-bg-clr),
+            var(--accent-clr) 60%,
+            var(--home-bg-clr)
+        );
+    }
+    div:nth-of-type(10) {
+        background: linear-gradient(
+            var(--home-bg-clr),
+            var(--accent-clr) 65%,
+            var(--home-bg-clr)
+        );
+    }
+    div:nth-of-type(11) {
+        background: linear-gradient(
+            var(--home-bg-clr),
+            var(--accent-clr) 70%,
+            var(--home-bg-clr)
+        );
+    }
+    div:nth-of-type(12) {
+        background: linear-gradient(
+            var(--home-bg-clr),
+            var(--accent-clr) 75%,
+            var(--home-bg-clr)
+        );
+    }
+    div:nth-of-type(13) {
+        background: linear-gradient(
+            var(--home-bg-clr),
+            var(--accent-clr) 80%,
+            var(--home-bg-clr)
+        );
+    }
+}
+
+@media (max-width: 500px) {
+    .btn-container {
+        flex-direction: column;
+        row-gap: 25px;
     }
 }

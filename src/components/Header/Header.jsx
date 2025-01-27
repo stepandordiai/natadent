@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import locationIcon from "./../../assets/icons/pin.png";
-import calendarIcon from "./../../assets/icons/calendar.png";
+import calendarIcon from "./../../assets/icons/schedule.png";
 import logoIcon from "./../../assets/logo/tooth.png";
 import "./Header.scss";
 

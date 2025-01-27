@@ -5,9 +5,18 @@
     flex-direction: column;
     margin-top: auto;
     min-height: 400px;
-    background: rgba(0, 0, 0, 0.1);
+    // background: rgba(0, 0, 0, 0.1);
+    // background: rgba(92, 181, 92, 0.503);
+    // background: rgb(107, 191, 138, 0.5);
+    // background: linear-gradient(black 50%, var(--accent-clr));
     padding: 25px 25px 10px;
     color: var(--txt-clr);
+}
+
+.divider {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, black, var(--accent-clr), black);
 }
 
 .link {
@@ -78,7 +87,7 @@
     width: 100%;
     height: 10px;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--accent-clr);
 }
 
 .footer__bottom {

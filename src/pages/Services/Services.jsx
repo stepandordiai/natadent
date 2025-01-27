@@ -6,9 +6,8 @@ import toothIcon5 from "./../../assets/icons/tooth-icons/implant.png";
 import toothIcon6 from "./../../assets/icons/tooth-icons/tooth-gum.png";
 import toothIcon7 from "./../../assets/icons/tooth-icons/tooth-xray-spot.png";
 import toothIcon8 from "./../../assets/icons/tooth-icons/tooth.png";
-import { NavLink } from "react-router-dom";
-import nextIcon from "./../../assets/icons/next.png";
 import "./Services.scss";
+import PageTitle from "../../components/PageTitle/PageTitle";
 import { useEffect } from "react";
 
 const Services = () => {
@@ -35,18 +34,8 @@ const Services = () => {
 
     return (
         <section className="services">
-            <div className="title-container">
-                <div>
-                    <NavLink className="title-link" to="/">
-                        Home <img width={20} src={nextIcon} alt="" />
-                    </NavLink>
-                    <p>
-                        Services <img width={20} src={nextIcon} alt="" />
-                    </p>
-                </div>
+            <PageTitle activeLink="Home" link="Services" title="Services" />
 
-                <h2>Services</h2>
-            </div>
             <div className="services-grid">
                 <div className="service js-service">
                     <img width={90} src={toothIcon1} alt="" />

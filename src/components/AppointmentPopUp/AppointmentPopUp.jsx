@@ -55,8 +55,8 @@ const AppointmentPopUp = () => {
                     <option value="">3</option>
                     <option value="">4</option>
                 </select>
-                <input type="date" value="2024-12-12" />
-                <input type="time" value="12:00" />
+                <input type="date" defaultValue="2024-12-12" />
+                <input type="time" defaultValue="12:00" />
                 <button type="submit">Book an appointment</button>
             </form>
         </div>

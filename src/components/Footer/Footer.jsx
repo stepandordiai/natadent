@@ -9,6 +9,7 @@ const Footer = () => {
 
     return (
         <footer className="footer">
+            <div className="divider"></div>
             <div className="footer__header">
                 <div className="footer__header-logo">
                     <img src={logoIcon} alt="Logo" />
@@ -41,7 +42,7 @@ const Footer = () => {
                             <span>Saturday:</span>
                             <span>Closed</span>
                         </li>
-                        <li className={day === 7 ? "day--active" : ""}>
+                        <li className={day === 0 ? "day--active" : ""}>
                             <span>Sunday:</span>
                             <span>Closed</span>{" "}
                         </li>
@@ -81,7 +82,7 @@ const Footer = () => {
                     <p>Contact us</p>
                 </div>
             </div>
-            <hr className="custom-hr" />
+            {/* <hr className="custom-hr" /> */}
             <div className="footer__bottom">
                 <p className="copyright">&copy; 2025 Novozub</p>
                 <p>All rights reserved</p>
