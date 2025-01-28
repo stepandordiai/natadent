@@ -9,21 +9,16 @@ html {
 body {
     font-family: "Montserrat", serif;
     background: var(--bg-clr);
+    color: #fff;
+}
+
+a {
+    color: var(--txt-clr);
 }
 
 #root {
-    // min-height: 100vh;
-    min-height: 2000px;
+    // min-height: 2000px;
     display: flex;
     flex-direction: column;
-}
-
-.bg-theme {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    // background: linear-gradient(rgb(131, 197, 201), rgb(222, 255, 197));
+    margin: 0 5px;
 }

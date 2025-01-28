@@ -39,9 +39,7 @@ const ToTopBtn = () => {
     return (
         <div className="to-top-btn" onClick={scrollToTop}>
             <div>
-                <span>
-                    <img src={upArrowIcon} alt="Up arrow" />
-                </span>
+                <img src={upArrowIcon} alt="Up arrow" />
             </div>
         </div>
     );

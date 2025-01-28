@@ -1,25 +1,16 @@
+@use "./../../mixins" as *;
+
 .footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    row-gap: 30px;
     margin-top: auto;
-    min-height: 400px;
-    // background: rgba(0, 0, 0, 0.1);
-    // background: rgba(92, 181, 92, 0.503);
-    // background: rgb(107, 191, 138, 0.5);
-    // background: linear-gradient(black 50%, var(--accent-clr));
-    padding: 25px 25px 10px;
-    color: var(--txt-clr);
+    min-height: 100px;
 }
 
-.divider {
-    height: 1px;
-    width: 100%;
-    background: linear-gradient(90deg, black, var(--accent-clr), black);
-}
-
-.link {
+.footer__link {
     transition: color 150ms;
     &:hover {
         color: var(--accent-clr);
@@ -31,6 +22,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    padding: 0 30px;
 }
 
 .footer__header-logo {
@@ -74,6 +66,11 @@
         font-size: 1.5rem;
         font-weight: 500;
     }
+    ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
 }
 
 .footer__header-contact-us {
@@ -83,22 +80,12 @@
     }
 }
 
-.custom-hr {
-    width: 100%;
-    height: 10px;
-    border-radius: 5px;
-    background: var(--accent-clr);
-}
-
 .footer__bottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     flex-direction: column;
+    padding-bottom: 30px;
 
     p {
-        color: var(--txt-clr);
-
         a {
             transition: color 150ms;
             &:hover {
@@ -109,14 +96,23 @@
 }
 
 .copyright {
-    color: var(--txt-clr);
+    // color: var(--txt-clr);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .footer__header {
+        display: flex;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
-        row-gap: 50px;
+        row-gap: 30px;
+        padding: 0 15px;
+    }
+
+    .footer__header-logo {
+        span {
+            display: none;
+        }
     }
 
     .footer__header-working-hours,

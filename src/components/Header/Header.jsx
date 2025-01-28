@@ -1,26 +1,41 @@
 import { NavLink } from "react-router-dom";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
+import logoIcon from "./../../assets/logo/tooth.png";
 import locationIcon from "./../../assets/icons/pin.png";
 import calendarIcon from "./../../assets/icons/schedule.png";
-import logoIcon from "./../../assets/logo/tooth.png";
+import { useEffect } from "react";
 import "./Header.scss";
 
 const Header = () => {
-    const inactiveLink = "nav__link";
-    const activeLink = "nav__link nav__link--active";
+    const inactiveLink = "nav__link js-link";
+    const activeLink = "nav__link js-link nav__link--active";
 
-    const inactiveMenuLink = "menu-link";
-    const activeMenuLink = "menu-link menu-link--active";
+    const inactiveMenuLink = "menu-link js-link";
+    const activeMenuLink = "menu-link js-link menu-link--active";
 
-    // addEventListener("scroll", () => {
-    //     if (window.scrollY > 100) {
-    //         document.querySelector(".header").classList.add("header--hide-top");
-    //     } else {
-    //         document
-    //             .querySelector(".header")
-    //             .classList.remove("header--hide-top");
-    //     }
-    // });
+    useEffect(() => {
+        document.querySelectorAll(".js-link").forEach((link) => {
+            link.addEventListener("click", () => {
+                document
+                    .querySelector(".burger-5")
+                    .classList.remove("burger-5--active");
+                document
+                    .querySelector(".burger-5__center-line")
+                    .classList.remove("burger-5__center-line--active");
+                document
+                    .querySelector(".header-bottom__grid")
+                    .classList.remove("header-bottom__grid--active");
+                document
+                    .querySelectorAll(".menu-item")
+                    .forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.remove("menu-item--active");
+                        }, 100 * index);
+                    });
+            });
+        });
+    }, []);
+
     return (
         <header className="header">
             <div className="header-top">
@@ -30,7 +45,7 @@ const Header = () => {
             <div className="header-bottom">
                 <div className="header-bottom__container">
                     <NavLink className="header__logo" to="/">
-                        <img src={logoIcon} alt="Novomax Logo" />
+                        <img src={logoIcon} alt="Novozub" />
                         <span>Novozub</span>
                     </NavLink>
                     <nav className="nav">
@@ -88,7 +103,6 @@ const Header = () => {
                                 </NavLink>
                             </li>
                         </ul>
-
                         <NavLink
                             className={({ isActive }) =>
                                 isActive
@@ -97,11 +111,7 @@ const Header = () => {
                             }
                             to="/find-us"
                         >
-                            <img
-                                className="nav__find-us"
-                                src={locationIcon}
-                                alt="Location"
-                            />
+                            <img src={locationIcon} alt="Location" />
                         </NavLink>
                         <NavLink
                             className={({ isActive }) =>
@@ -111,16 +121,12 @@ const Header = () => {
                             }
                             to="/contact"
                         >
-                            <img
-                                className="nav__appointment"
-                                src={calendarIcon}
-                                alt="Calendar"
-                            />
+                            <img src={calendarIcon} alt="Calendar" />
                         </NavLink>
                         <BurgerBtn />
                     </nav>
                 </div>
-
+                {/* Menu links */}
                 <div className="header-bottom__grid">
                     <ul className="menu-list">
                         <li className="menu-item">

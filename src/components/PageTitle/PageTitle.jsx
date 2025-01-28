@@ -1,21 +1,22 @@
 import { NavLink } from "react-router-dom";
+import CustomDivider from "../CustomDivider/CustomDivider";
 import nextIcon from "./../../assets/icons/next.png";
 import "./PageTitle.scss";
 
-const PageTitle = ({ activeLink, link, title }) => {
+const PageTitle = ({ activeLink, title }) => {
     return (
         <div className="page-title">
-            <div className="divider"></div>
+            <CustomDivider />
             <div className="links-container">
                 <NavLink className="page-title__link" to="/">
-                    {activeLink} <img width={20} src={nextIcon} alt="" />
+                    {activeLink} <img width={20} src={nextIcon} alt="Next" />
                 </NavLink>
                 <p>
-                    {link} <img width={20} src={nextIcon} alt="" />
+                    {title} <img width={20} src={nextIcon} alt="Next" />
                 </p>
             </div>
             <h2 className="page-title__title">{title}</h2>
-            <div className="divider"></div>
+            <CustomDivider />
         </div>
     );
 };

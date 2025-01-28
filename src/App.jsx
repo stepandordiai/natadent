@@ -9,10 +9,12 @@ import Contact from "./pages/Contact/Contact";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import FindUs from "./pages/FindUs/FindUs";
 import AppointmentPopUp from "./components/AppointmentPopUp/AppointmentPopUp";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
     return (
         <Router>
+            <ScrollToTop />
             <Header />
             <AppointmentPopUp />
             <ToTopBtn />

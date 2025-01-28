@@ -3,3 +3,19 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin glass-effect {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+@mixin grid-center {
+    display: grid;
+    place-content: center;
+}

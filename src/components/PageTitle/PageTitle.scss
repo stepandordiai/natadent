@@ -1,19 +1,16 @@
 @use "./../../mixins" as *;
 
 .page-title {
-    margin: 170px 0 35px;
-    // background: linear-gradient(-90deg, var(--accent-clr), var(--home-bg-clr));
-    color: var(--txt-clr);
-    // padding: 50px;
+    margin: 160px 0 30px;
 }
 
 .links-container {
-    padding: 50px 50px 0;
-    // padding: 50px;
+    padding: 30px 30px 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     p {
+        height: 30px;
         padding: 5px;
         pointer-events: none;
         opacity: 0.5;
@@ -21,6 +18,7 @@
 }
 
 .page-title__link {
+    height: 30px;
     padding: 5px;
     border-radius: 15px;
     transition: background-color 150ms;
@@ -32,25 +30,15 @@
 
 .page-title__title {
     font-size: 3rem;
-    padding: 0 50px 50px;
+    padding: 0 30px 30px;
 }
 
 @media (max-width: 900px) {
     .links-container {
-        padding: 25px 25px 0;
+        padding: 30px 15px 0;
     }
 
     .page-title__title {
-        padding: 0 25px 25px;
-    }
-}
-
-@media (max-width: 800px) {
-    .links-container {
-        padding: 15px 15px 0;
-    }
-
-    .page-title__title {
-        padding: 0 15px 15px;
+        padding: 0 15px 30px;
     }
 }

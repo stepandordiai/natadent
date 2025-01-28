@@ -1,0 +1,10 @@
+.custom-divider {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--accent-clr),
+        transparent
+    );
+}

@@ -1,15 +1,14 @@
 import { NavLink } from "react-router-dom";
 import logoIcon from "./../../assets/logo/tooth.png";
+import CustomDivider from "../CustomDivider/CustomDivider";
 import "./Footer.scss";
 
 const Footer = () => {
     const day = new Date().getDay();
 
-    console.log(typeof day);
-
     return (
         <footer className="footer">
-            <div className="divider"></div>
+            <CustomDivider />
             <div className="footer__header">
                 <div className="footer__header-logo">
                     <img src={logoIcon} alt="Logo" />
@@ -52,27 +51,27 @@ const Footer = () => {
                     <p>Navigation</p>
                     <ul>
                         <li>
-                            <NavLink className="link" to="/">
+                            <NavLink className="footer__link" to="/">
                                 Home
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink className="link" to="/about-us">
+                            <NavLink className="footer__link" to="/about-us">
                                 About us
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink className="link" to="/services">
+                            <NavLink className="footer__link" to="/services">
                                 Services
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink className="link" to="/find-us">
+                            <NavLink className="footer__link" to="/find-us">
                                 Find us
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink className="link" to="/contact">
+                            <NavLink className="footer__link" to="/contact">
                                 Make an appointment
                             </NavLink>
                         </li>
@@ -82,7 +81,7 @@ const Footer = () => {
                     <p>Contact us</p>
                 </div>
             </div>
-            {/* <hr className="custom-hr" /> */}
+            <CustomDivider />
             <div className="footer__bottom">
                 <p className="copyright">&copy; 2025 Novozub</p>
                 <p>All rights reserved</p>
