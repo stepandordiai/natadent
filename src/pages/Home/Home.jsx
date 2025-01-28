@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./Home.scss";
+import HomeCustomBg from "../../components/HomeCustomBg/HomeCustomBg";
 
 const Home = () => {
     useEffect(() => {
@@ -9,17 +10,11 @@ const Home = () => {
                 .querySelector(".appointment-popup")
                 .classList.add("appointment-popup--active");
         });
-        const grid = document.querySelector(".home__grid");
-
-        grid.childNodes.forEach((child, index) => {
-            setTimeout(() => {
-                child.classList.add("child--active");
-            }, 50 * index);
-        });
     }, []);
 
     return (
         <section className="home">
+            <HomeCustomBg />
             <h2>We care for your smile</h2>
             <p>Dental clinic in Kolin</p>
             <div className="btn-container">
@@ -29,21 +24,6 @@ const Home = () => {
                 <NavLink className="services-btn" to="/services">
                     View services
                 </NavLink>
-            </div>
-            <div className="home__grid">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
             </div>
         </section>
     );
