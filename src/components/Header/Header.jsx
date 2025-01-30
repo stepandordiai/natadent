@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import logoIcon from "./../../assets/logo/tooth.png";
-import locationIcon from "./../../assets/icons/pin.png";
-import calendarIcon from "./../../assets/icons/schedule.png";
+import phoneIcon from "./../../assets/icons/phone-call.png";
+import calendarIcon from "./../../assets/icons/calendar.png";
 import { useEffect } from "react";
 import "./Header.scss";
 
@@ -87,7 +87,7 @@ const Header = () => {
                                     }
                                     to="/find-us"
                                 >
-                                    Find us
+                                    Contacts
                                 </NavLink>
                             </li>
                             <li className="nav__btn">
@@ -109,9 +109,9 @@ const Header = () => {
                                     ? `${activeLink} nav__find-us-icon`
                                     : `${inactiveLink} nav__find-us-icon`
                             }
-                            to="/find-us"
+                            to="/contacts"
                         >
-                            <img src={locationIcon} alt="Location" />
+                            <img src={phoneIcon} alt="Location" />
                         </NavLink>
                         <NavLink
                             className={({ isActive }) =>
@@ -167,7 +167,7 @@ const Header = () => {
                                 className={({ isActive }) =>
                                     isActive ? activeMenuLink : inactiveMenuLink
                                 }
-                                to="/find-us"
+                                to="/contacts"
                             >
                                 <span>Find us</span>
                                 <span>04</span>

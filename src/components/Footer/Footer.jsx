@@ -14,6 +14,7 @@ const Footer = () => {
                     <img src={logoIcon} alt="Logo" />
                     <span>Novozub</span>
                 </div>
+                <CustomDivider none="none" />
                 <div className="footer__header-working-hours">
                     <p>Working hours</p>
                     <ul className="working-hours">
@@ -47,6 +48,8 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
+                <CustomDivider none="none" />
+
                 <div className="footer__header-navigation">
                     <p>Navigation</p>
                     <ul>
@@ -66,8 +69,8 @@ const Footer = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink className="footer__link" to="/find-us">
-                                Find us
+                            <NavLink className="footer__link" to="/contacts">
+                                Contacts
                             </NavLink>
                         </li>
                         <li>
@@ -77,6 +80,8 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
+                <CustomDivider none="none" />
+
                 <div className="footer__header-contact-us">
                     <p>Contact us</p>
                 </div>
@@ -86,7 +91,7 @@ const Footer = () => {
                 <p className="copyright">&copy; 2025 Novozub</p>
                 <p>All rights reserved</p>
                 <p className="creator">
-                    Designed and developed by <a href="">heeeyooo</a>
+                    Designed and developed by <a href="">heeeyooo.studio</a>
                 </p>
             </div>
         </footer>

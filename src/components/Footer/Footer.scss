@@ -1,5 +1,9 @@
 @use "./../../mixins" as *;
 
+.none {
+    display: none;
+}
+
 .footer {
     display: flex;
     justify-content: flex-start;
@@ -100,6 +104,10 @@
 }
 
 @media (max-width: 900px) {
+    .none {
+        display: initial;
+    }
+
     .footer__header {
         display: flex;
         justify-content: center;

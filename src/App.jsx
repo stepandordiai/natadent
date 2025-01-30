@@ -7,7 +7,7 @@ import "./App.scss";
 import Services from "./pages/Services/Services";
 import Contact from "./pages/Contact/Contact";
 import AboutUs from "./pages/AboutUs/AboutUs";
-import FindUs from "./pages/FindUs/FindUs";
+import Contacts from "./pages/Contacts/Contacts";
 import AppointmentPopUp from "./components/AppointmentPopUp/AppointmentPopUp";
 import ScrollToTop from "./utils/ScrollToTop";
 
@@ -22,7 +22,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about-us" element={<AboutUs />} />
                 <Route path="/services" element={<Services />} />
-                <Route path="/find-us" element={<FindUs />} />
+                <Route path="/contacts" element={<Contacts />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
             <Footer />
