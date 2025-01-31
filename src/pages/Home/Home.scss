@@ -29,24 +29,12 @@
     column-gap: 25px;
 }
 
-.home__book-btn {
-    height: 40px;
-    width: 200px;
-    color: var(--txt-clr);
-    border-radius: 20px;
-    border: 2px solid var(--accent-clr);
-    transition: background-color 150ms;
-
-    &:hover {
-        background: var(--accent-clr);
-    }
-}
-
+.home__book-btn,
 .services-btn {
     display: grid;
     place-content: center;
     height: 40px;
-    width: 200px;
+    padding: 0 10px;
     color: var(--txt-clr);
     border-radius: 20px;
     background: rgba(0, 0, 0, 0.25);

@@ -6,6 +6,9 @@ import "./Footer.scss";
 const Footer = () => {
     const day = new Date().getDay();
 
+    const addressLink =
+        "https://www.google.com/maps/place/Pepa+Bourek/@50.0241827,15.2118482,17z/data=!3m1!4b1!4m15!1m8!3m7!1s0x470c153bee9daf87:0xc91ccf8d204d4cb!2sPod+Hroby+271%2F271,+280+02+Kol%C3%ADn+IV!3b1!8m2!3d50.0240306!4d15.2143025!16s%2Fg%2F11cpkpjyq9!3m5!1s0x470c1567f730be5f:0xba05366bb1086eb!8m2!3d50.0241793!4d15.2144231!16s%2Fg%2F11ybt54v3c?entry=ttu&g_ep=EgoyMDI1MDEyOC4wIKXMDSoASAFQAw%3D%3D";
+
     return (
         <footer className="footer">
             <CustomDivider />
@@ -84,6 +87,19 @@ const Footer = () => {
 
                 <div className="footer__header-contact-us">
                     <p>Contact us</p>
+                    <ul>
+                        <li>
+                            <a href="tel:+420722001016">+420 722 001 016</a>
+                        </li>
+                        <li>
+                            <a href="mailto:novozubcz@gmail.com">
+                                novozubcz@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href={addressLink}>Pod Hroby 271/271 Kolín IV</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <CustomDivider />

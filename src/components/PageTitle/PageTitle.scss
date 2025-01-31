@@ -10,14 +10,16 @@
     justify-content: flex-start;
     align-items: center;
     p {
+        @include grid-center;
         height: 30px;
-        padding: 5px;
+        padding: 0 7.5px;
         opacity: 0.5;
     }
 
     span {
+        @include grid-center;
         height: 30px;
-        padding: 5px;
+        padding: 0 7.5px;
     }
 
     span:nth-last-of-type(1) {
@@ -26,14 +28,14 @@
 }
 
 .page-title__link {
+    @include grid-center;
     height: 30px;
-    padding: 5px;
     border-radius: 15px;
+    padding: 0 7.5px;
     transition: background-color 150ms;
 
     &:hover {
         background: var(--accent-clr);
-        color: #000;
     }
 }
 

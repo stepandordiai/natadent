@@ -1,25 +1,10 @@
-import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import HomeCustomBg from "../../components/HomeCustomBg/HomeCustomBg";
 import toothIcon1 from "./../../assets/icons/tooth-icons/braces.png";
 import toothIcon2 from "./../../assets/icons/tooth-icons/cavity.png";
-import toothIcon3 from "./../../assets/icons/tooth-icons/crown.png";
-import toothIcon4 from "./../../assets/icons/tooth-icons/golden-crown.png";
-import toothIcon5 from "./../../assets/icons/tooth-icons/implant.png";
-import toothIcon6 from "./../../assets/icons/tooth-icons/tooth-gum.png";
-import toothIcon7 from "./../../assets/icons/tooth-icons/tooth-xray-spot.png";
-import toothIcon8 from "./../../assets/icons/tooth-icons/tooth.png";
 import "./Home.scss";
 
 const Home = () => {
-    useEffect(() => {
-        document.querySelector(".js-book-btn").addEventListener("click", () => {
-            document
-                .querySelector(".appointment-popup")
-                .classList.add("appointment-popup--active");
-        });
-    }, []);
-
     return (
         <section className="home">
             <div className="home__top">
@@ -27,9 +12,12 @@ const Home = () => {
                 <h2>We care for your smile</h2>
                 <p>Dental clinic in Kolin</p>
                 <div className="btn-container">
-                    <button className="home__book-btn js-book-btn">
+                    <NavLink
+                        className="home__book-btn js-book-btn"
+                        to="/appointment"
+                    >
                         Book an appointment
-                    </button>
+                    </NavLink>
                     <NavLink className="services-btn" to="/services">
                         View services
                     </NavLink>
