@@ -69,15 +69,17 @@
     height: 40px;
     padding: 0 10px;
     border-radius: 20px;
-    transition: background-color 150ms;
+    transition: all 150ms;
 
     &:hover {
         background: var(--accent-clr);
+        color: #000;
     }
 }
 
 .nav__link--active {
     background: var(--accent-clr);
+    color: #000;
 }
 
 .nav__btn-link {

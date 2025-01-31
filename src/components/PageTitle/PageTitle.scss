@@ -12,7 +12,15 @@
     p {
         height: 30px;
         padding: 5px;
-        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    span {
+        height: 30px;
+        padding: 5px;
+    }
+
+    span:nth-last-of-type(1) {
         opacity: 0.5;
     }
 }
@@ -25,6 +33,7 @@
 
     &:hover {
         background: var(--accent-clr);
+        color: #000;
     }
 }
 

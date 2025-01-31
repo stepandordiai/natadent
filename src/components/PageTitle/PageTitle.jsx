@@ -9,11 +9,11 @@ const PageTitle = ({ activeLink, title }) => {
             <CustomDivider />
             <div className="links-container">
                 <NavLink className="page-title__link" to="/">
-                    {activeLink} <img width={20} src={nextIcon} alt="Next" />
+                    {activeLink}
                 </NavLink>
-                <p>
-                    {title} <img width={20} src={nextIcon} alt="Next" />
-                </p>
+                <span>/</span>
+                <p>{title}</p>
+                <span>/</span>
             </div>
             <h2 className="page-title__title">{title}</h2>
             <CustomDivider />

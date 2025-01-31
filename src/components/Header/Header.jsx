@@ -85,7 +85,7 @@ const Header = () => {
                                     className={({ isActive }) =>
                                         isActive ? activeLink : inactiveLink
                                     }
-                                    to="/find-us"
+                                    to="/contacts"
                                 >
                                     Contacts
                                 </NavLink>
@@ -97,7 +97,7 @@ const Header = () => {
                                             ? `${activeLink} nav__btn-link`
                                             : `${inactiveLink} nav__btn-link`
                                     }
-                                    to="/contact"
+                                    to="/appointment"
                                 >
                                     Make an appointment
                                 </NavLink>
@@ -119,7 +119,7 @@ const Header = () => {
                                     ? `${activeLink} nav__contact-icon`
                                     : `${inactiveLink} nav__contact-icon`
                             }
-                            to="/contact"
+                            to="/appointment"
                         >
                             <img src={calendarIcon} alt="Calendar" />
                         </NavLink>
@@ -169,7 +169,7 @@ const Header = () => {
                                 }
                                 to="/contacts"
                             >
-                                <span>Find us</span>
+                                <span>Contacts</span>
                                 <span>04</span>
                             </NavLink>
                         </li>
@@ -178,7 +178,7 @@ const Header = () => {
                                 className={({ isActive }) =>
                                     isActive ? activeMenuLink : inactiveMenuLink
                                 }
-                                to="/contact"
+                                to="/appointment"
                             >
                                 <span>Make an appointment</span>
                                 <span>05</span>

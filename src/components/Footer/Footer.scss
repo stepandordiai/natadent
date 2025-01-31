@@ -63,6 +63,7 @@
 
 .day--active {
     background: var(--accent-clr);
+    color: #000;
 }
 
 .footer__header-navigation {
@@ -88,19 +89,16 @@
     @include flex-center;
     flex-direction: column;
     padding-bottom: 30px;
-
-    p {
-        a {
-            transition: color 150ms;
-            &:hover {
-                color: var(--accent-clr);
-            }
-        }
-    }
 }
 
-.copyright {
-    // color: var(--txt-clr);
+.creator {
+    a {
+        transition: color 150ms;
+
+        &:hover {
+            color: var(--accent-clr);
+        }
+    }
 }
 
 @media (max-width: 900px) {
