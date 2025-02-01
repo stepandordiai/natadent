@@ -9,6 +9,9 @@ const Footer = () => {
     const addressLink =
         "https://www.google.com/maps/place/Pepa+Bourek/@50.0241827,15.2118482,17z/data=!3m1!4b1!4m15!1m8!3m7!1s0x470c153bee9daf87:0xc91ccf8d204d4cb!2sPod+Hroby+271%2F271,+280+02+Kol%C3%ADn+IV!3b1!8m2!3d50.0240306!4d15.2143025!16s%2Fg%2F11cpkpjyq9!3m5!1s0x470c1567f730be5f:0xba05366bb1086eb!8m2!3d50.0241793!4d15.2144231!16s%2Fg%2F11ybt54v3c?entry=ttu&g_ep=EgoyMDI1MDEyOC4wIKXMDSoASAFQAw%3D%3D";
 
+    const inactiveLink = "footer__link";
+    const activeLink = "footer__link footer__link--active";
+
     return (
         <footer className="footer">
             <CustomDivider />
@@ -47,7 +50,7 @@ const Footer = () => {
                         </li>
                         <li className={day === 0 ? "day--active" : ""}>
                             <span>Sunday:</span>
-                            <span>Closed</span>{" "}
+                            <span>Closed</span>
                         </li>
                     </ul>
                 </div>
@@ -57,27 +60,52 @@ const Footer = () => {
                     <p>Navigation</p>
                     <ul>
                         <li>
-                            <NavLink className="footer__link" to="/">
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? activeLink : inactiveLink
+                                }
+                                to="/"
+                            >
                                 Home
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink className="footer__link" to="/about-us">
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? activeLink : inactiveLink
+                                }
+                                to="/about-us"
+                            >
                                 About us
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink className="footer__link" to="/services">
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? activeLink : inactiveLink
+                                }
+                                to="/services"
+                            >
                                 Services
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink className="footer__link" to="/contacts">
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? activeLink : inactiveLink
+                                }
+                                to="/contacts"
+                            >
                                 Contacts
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink className="footer__link" to="/contact">
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? activeLink : inactiveLink
+                                }
+                                to="/contact"
+                            >
                                 Make an appointment
                             </NavLink>
                         </li>

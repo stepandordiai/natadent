@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import "./Appointment.scss";
 
-const Contact = () => {
+const Appointment = () => {
+    useEffect(() => {
+        document.title = "Novozub | Appointment";
+    }, []);
+
     return (
         <section className="contact">
             <PageTitle
@@ -17,4 +22,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default Appointment;

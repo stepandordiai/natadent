@@ -6,12 +6,14 @@ import toothIcon5 from "./../../assets/icons/tooth-icons/implant.png";
 import toothIcon6 from "./../../assets/icons/tooth-icons/tooth-gum.png";
 import toothIcon7 from "./../../assets/icons/tooth-icons/tooth-xray-spot.png";
 import toothIcon8 from "./../../assets/icons/tooth-icons/tooth.png";
-import "./Services.scss";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import { useEffect } from "react";
+import "./Services.scss";
 
 const Services = () => {
     useEffect(() => {
+        document.title = "Novozub | Services";
+
         document.querySelectorAll(".js-service").forEach((el) => {
             document.addEventListener("scroll", () => {
                 const serviceRect = el.getBoundingClientRect().top;
@@ -30,7 +32,7 @@ const Services = () => {
                 el.classList.remove("service--active");
             }
         });
-    });
+    }, []);
 
     return (
         <section className="services">

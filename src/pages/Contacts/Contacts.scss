@@ -183,12 +183,12 @@ input[type="time"] {
 @media (max-width: 700px) {
     .contacts-details {
         grid-template-columns: repeat(1, 1fr);
-        padding: 0 15px 30px;
+        padding: 0 0 30px;
     }
 
     .contacts-form {
         width: 100%;
-        padding: 0 15px 30px;
+        padding: 0 0 30px;
     }
 
     .contacts-form__inputs {

@@ -3,8 +3,13 @@ import HomeCustomBg from "../../components/HomeCustomBg/HomeCustomBg";
 import toothIcon1 from "./../../assets/icons/tooth-icons/braces.png";
 import toothIcon2 from "./../../assets/icons/tooth-icons/cavity.png";
 import "./Home.scss";
+import { useEffect } from "react";
 
 const Home = () => {
+    useEffect(() => {
+        document.title = "Novozub | Dental clinic in Kolin";
+    }, []);
+
     return (
         <section className="home">
             <div className="home__top">

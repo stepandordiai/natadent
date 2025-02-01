@@ -8,6 +8,8 @@ import "./Contacts.scss";
 
 const Contacts = () => {
     useEffect(() => {
+        document.title = "Novozub | Contacts";
+
         const contactsLabels = document.querySelectorAll(
             ".contacts-form__label"
         );
@@ -27,7 +29,7 @@ const Contacts = () => {
                     }
                 });
             });
-    });
+    }, []);
 
     return (
         <section className="contacts">
