@@ -34,6 +34,11 @@ const Contacts = () => {
     return (
         <section className="contacts">
             <PageTitle activeLink="Home" link="Contacts" title="Contacts" />
+            <p className="contacts__secondary-info">
+                Have a question or need to book an appointment? We’re here to
+                help. Get in touch with us via the form, phone, or email, and
+                we’ll be happy to assist you.
+            </p>
             <div className="contacts-details">
                 <div>
                     <img

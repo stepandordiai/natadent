@@ -1,6 +1,12 @@
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 
+import photo1 from "./../../assets/team/1.jpg";
+import photo2 from "./../../assets/team/2.jpg";
+import photo3 from "./../../assets/team/3.jpg";
+import photo4 from "./../../assets/team/4.jpg";
+import photo5 from "./../../assets/team/5.jpg";
+
 import before1 from "./../../assets/smiles/before1.png";
 import after1 from "./../../assets/smiles/after1.png";
 
@@ -49,42 +55,35 @@ const AboutUs = () => {
             <h3 className="about-us__team-title">Our team</h3>
             <div className="about-us__team-grid">
                 <div className="team-card">
-                    <img src="" alt="Photo" />
+                    <img src={photo1} alt="Photo" />
                     <div>
                         <p>Name</p>
                         <p>Position</p>
                     </div>
                 </div>
                 <div className="team-card">
-                    <img src="" alt="Photo" />
+                    <img src={photo2} alt="Photo" />
                     <div>
                         <p>Name</p>
                         <p>Position</p>
                     </div>
                 </div>
                 <div className="team-card">
-                    <img src="" alt="Photo" />
+                    <img src={photo3} alt="Photo" />
                     <div>
                         <p>Name</p>
                         <p>Position</p>
                     </div>
                 </div>
                 <div className="team-card">
-                    <img src="" alt="Photo" />
+                    <img src={photo4} alt="Photo" />
                     <div>
                         <p>Name</p>
                         <p>Position</p>
                     </div>
                 </div>
                 <div className="team-card">
-                    <img src="" alt="Photo" />
-                    <div>
-                        <p>Name</p>
-                        <p>Position</p>
-                    </div>
-                </div>
-                <div className="team-card">
-                    <img src="" alt="Photo" />
+                    <img src={photo5} alt="Photo" />
                     <div>
                         <p>Name</p>
                         <p>Position</p>
