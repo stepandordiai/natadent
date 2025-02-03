@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import CustomDivider from "../CustomDivider/CustomDivider";
-import nextIcon from "./../../assets/icons/next.png";
 import "./PageTitle.scss";
 
 const PageTitle = ({ activeLink, title }) => {

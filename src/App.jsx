@@ -9,6 +9,7 @@ import Appointment from "./pages/Appointment/Appointment";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import ScrollToTop from "./utils/ScrollToTop";
 import "./App.scss";
+import PriceList from "./pages/PriceList/PriceList";
 
 function App() {
     return (
@@ -19,6 +20,9 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about-us" element={<AboutUs />} />
+                {/*  */}
+                <Route path="/price-list" element={<PriceList />} />
+                {/*  */}
                 <Route path="/services" element={<Services />} />
                 <Route path="/contacts" element={<Contacts />} />
                 <Route path="/appointment" element={<Appointment />} />

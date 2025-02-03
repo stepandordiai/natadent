@@ -51,7 +51,7 @@ const AboutUs = () => {
 
     return (
         <section className="about-us">
-            <PageTitle activeLink="Home" link="About us" title="About us" />
+            <PageTitle activeLink="Home" title="About us" />
             <h3 className="about-us__team-title">Our team</h3>
             <div className="about-us__team-grid">
                 <div className="team-card">
