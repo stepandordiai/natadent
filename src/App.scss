@@ -9,7 +9,7 @@ html {
 body {
     font-family: "Montserrat", serif;
     background: var(--bg-clr);
-    color: #fff;
+    color: var(--txt-clr);
 }
 
 a {
@@ -17,7 +17,6 @@ a {
 }
 
 #root {
-    // min-height: 2000px;
     display: flex;
     flex-direction: column;
     margin: 0 5px;

@@ -1,9 +1,5 @@
 @use "./../../mixins" as *;
 
-.about-us {
-    padding-bottom: 30px;
-}
-
 .about-us__team-title {
     font-size: 2.5rem;
     text-align: center;
@@ -30,111 +26,6 @@
     &:hover {
         border: 1px solid var(--accent-clr);
     }
-}
-
-.about-us__gallery-title {
-    font-size: 2.5rem;
-    text-align: center;
-    padding: 30px 0;
-}
-
-.about-us__gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding: 0 30px;
-}
-
-.smile-wrapper {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-
-    img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-.smile-wrapper::before {
-    content: "Before";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 30px;
-    z-index: 1;
-    @include grid-center;
-    height: 30px;
-    border-radius: 15px;
-    padding: 0 7.5px;
-    background: var(--bg-semi-tp-clr);
-    transition: opacity 0.3s;
-}
-
-.smile-wrapper::after {
-    content: "After";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 30px;
-    z-index: 1;
-    @include grid-center;
-    height: 30px;
-    border-radius: 15px;
-    padding: 0 7.5px;
-    background: var(--bg-semi-tp-clr);
-    transition: opacity 0.3s;
-}
-
-.smile-wrapper:hover::before,
-.smile-wrapper:hover::after {
-    opacity: 0;
-}
-
-.img-range {
-    --x-axis: 50%;
-    clip-path: polygon(0 0, var(--x-axis) 0%, var(--x-axis) 100%, 0 100%);
-}
-
-.img-ranger {
-    position: absolute;
-    @include appearance;
-    width: calc(100% + 40px);
-    height: 100%;
-    margin-left: -20px;
-}
-
-.img-ranger::-webkit-slider-thumb {
-    appearance: none;
-    height: 40px;
-    width: 40px;
-    background: url("./../../assets/icons/left-and-right.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: none;
-    cursor: pointer;
-}
-
-.line {
-    position: absolute;
-    appearance: none;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    --x-line-axis: 50%;
-}
-
-.line::before {
-    content: "";
-    position: absolute;
-    left: var(--x-line-axis);
-    transform: translateX(-50%);
-    height: 100%;
-    width: 2px;
-    background: #fff;
 }
 
 @media (max-width: 1200px) {

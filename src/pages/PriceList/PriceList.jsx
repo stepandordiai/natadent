@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import "./PriceList.scss";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import "./PriceList.scss";
 
 const PriceList = () => {
     useEffect(() => {
@@ -8,7 +8,7 @@ const PriceList = () => {
     }, []);
 
     return (
-        <>
+        <section className="price-list">
             <PageTitle activeLink="Home" title="Price list" />
             <table className="price-list__table">
                 <tbody>
@@ -54,7 +54,7 @@ const PriceList = () => {
                     </tr>
                 </tbody>
             </table>
-        </>
+        </section>
     );
 };
 
