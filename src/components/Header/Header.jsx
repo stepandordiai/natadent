@@ -224,7 +224,7 @@ const Header = () => {
                                 <span>01</span>
                             </NavLink>
                         </li>
-                        <li className="menu-item">
+                        <li className="menu-item nav-list__dropdown">
                             <NavLink
                                 className={({ isActive }) =>
                                     isActive ? activeMenuLink : inactiveMenuLink
@@ -234,8 +234,26 @@ const Header = () => {
                                 <span>About us</span>
                                 <span>02</span>
                             </NavLink>
+                            <div className="nav-list__dropdown-list nav-list__menu-dropdown-list">
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/price-list"
+                                >
+                                    Price list
+                                </NavLink>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/smile-gallery"
+                                >
+                                    Smile gallery
+                                </NavLink>
+                            </div>
                         </li>
-                        <li className="menu-item">
+                        <li className="menu-item nav-list__dropdown">
                             <NavLink
                                 className={({ isActive }) =>
                                     isActive ? activeMenuLink : inactiveMenuLink
@@ -245,6 +263,72 @@ const Header = () => {
                                 <span>Services</span>
                                 <span>03</span>
                             </NavLink>
+                            <div className="nav-list__dropdown-list nav-list__menu-dropdown-list">
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/oral-hygienist"
+                                >
+                                    Oral Hygienist
+                                </NavLink>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/teeth-cleaning"
+                                >
+                                    Teeth Cleaning
+                                </NavLink>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/care-advice"
+                                >
+                                    Care Advice
+                                </NavLink>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/dental-care"
+                                >
+                                    Dental Care
+                                </NavLink>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/tooth-protection"
+                                >
+                                    Tooth Protection
+                                </NavLink>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/whitening-teeth"
+                                >
+                                    Whitening Teeth
+                                </NavLink>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/dental-implants"
+                                >
+                                    Dental Implants
+                                </NavLink>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/oral-surgery"
+                                >
+                                    Oral Surgery
+                                </NavLink>
+                            </div>
                         </li>
                         <li className="menu-item">
                             <NavLink
