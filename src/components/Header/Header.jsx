@@ -60,7 +60,7 @@ const Header = () => {
                                     Home
                                 </NavLink>
                             </li>
-                            <li>
+                            <li className="nav-list__dropdown">
                                 <NavLink
                                     className={({ isActive }) =>
                                         isActive ? activeLink : inactiveLink
@@ -69,8 +69,26 @@ const Header = () => {
                                 >
                                     About us
                                 </NavLink>
+                                <div className="nav-list__dropdown-list">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive ? activeLink : inactiveLink
+                                        }
+                                        to="/price-list"
+                                    >
+                                        Price list
+                                    </NavLink>
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive ? activeLink : inactiveLink
+                                        }
+                                        to="/smile-gallery"
+                                    >
+                                        Smile gallery
+                                    </NavLink>
+                                </div>
                             </li>
-                            <li>
+                            <li className="nav-list__dropdown">
                                 <NavLink
                                     className={({ isActive }) =>
                                         isActive ? activeLink : inactiveLink
@@ -79,6 +97,72 @@ const Header = () => {
                                 >
                                     Services
                                 </NavLink>
+                                <div className="nav-list__dropdown-list">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive ? activeLink : inactiveLink
+                                        }
+                                        to="/oral-hygienist"
+                                    >
+                                        Oral Hygienist
+                                    </NavLink>
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive ? activeLink : inactiveLink
+                                        }
+                                        to="/teeth-cleaning"
+                                    >
+                                        Teeth Cleaning
+                                    </NavLink>
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive ? activeLink : inactiveLink
+                                        }
+                                        to="/care-advice"
+                                    >
+                                        Care Advice
+                                    </NavLink>
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive ? activeLink : inactiveLink
+                                        }
+                                        to="/dental-care"
+                                    >
+                                        Dental Care
+                                    </NavLink>
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive ? activeLink : inactiveLink
+                                        }
+                                        to="/tooth-protection"
+                                    >
+                                        Tooth Protection
+                                    </NavLink>
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive ? activeLink : inactiveLink
+                                        }
+                                        to="/whitening-teeth"
+                                    >
+                                        Whitening Teeth
+                                    </NavLink>
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive ? activeLink : inactiveLink
+                                        }
+                                        to="/dental-implants"
+                                    >
+                                        Dental Implants
+                                    </NavLink>
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive ? activeLink : inactiveLink
+                                        }
+                                        to="/oral-surgery"
+                                    >
+                                        Oral Surgery
+                                    </NavLink>
+                                </div>
                             </li>
                             <li className="nav__find-us-item">
                                 <NavLink

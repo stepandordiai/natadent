@@ -29,7 +29,7 @@
     padding: 0 30px;
     border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.25);
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--bg-semi-tp-clr);
     @include glass-effect;
 }
 
@@ -64,11 +64,35 @@
     }
 }
 
+.nav-list__dropdown {
+    position: relative;
+    height: 100%;
+}
+
+.nav-list__dropdown-list {
+    position: absolute;
+    width: max-content;
+    background: var(--bg-clr);
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transform: translateY(30px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.nav-list__dropdown:hover .nav-list__dropdown-list {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
 .nav__link {
     @include grid-center;
     height: 40px;
-    padding: 0 10px;
     border-radius: 20px;
+    padding: 0 10px;
     transition: all 150ms;
 
     &:hover {
