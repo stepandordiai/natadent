@@ -1,9 +1,9 @@
-import { NavLink } from "react-router-dom";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
+import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
 import logoIcon from "./../../assets/logo/tooth.png";
 import phoneIcon from "./../../assets/icons/phone-call.png";
 import calendarIcon from "./../../assets/icons/calendar.png";
-import { useEffect } from "react";
 import "./Header.scss";
 
 const Header = () => {
@@ -12,6 +12,10 @@ const Header = () => {
 
     const inactiveMenuLink = "menu-link js-link";
     const activeMenuLink = "menu-link js-link menu-link--active";
+
+    const inactiveDropdownMenuLink = "dropdown-menu-link js-link";
+    const activeDropdownMenuLink =
+        "dropdown-menu-link js-link menu-link--active";
 
     useEffect(() => {
         document.querySelectorAll(".js-link").forEach((link) => {
@@ -236,10 +240,24 @@ const Header = () => {
                             </NavLink>
                             <div className="menu-dropdown__wrapper">
                                 <div className="menu-dropdown-list">
-                                    <NavLink to="/price-list">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/price-list"
+                                    >
                                         Price list
                                     </NavLink>
-                                    <NavLink to="/smile-gallery">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/smile-gallery"
+                                    >
                                         Smile gallery
                                     </NavLink>
                                 </div>
@@ -257,52 +275,164 @@ const Header = () => {
                             </NavLink>
                             <div className="menu-dropdown__wrapper">
                                 <div className="menu-dropdown-list">
-                                    <NavLink to="/oral-hygienist">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/oral-hygienist"
+                                    >
                                         Oral Hygienist
                                     </NavLink>
-                                    <NavLink to="/teeth-cleaning">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/teeth-cleaning"
+                                    >
                                         Teeth Cleaning
                                     </NavLink>
-                                    <NavLink to="/care-advice">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/care-advice"
+                                    >
                                         Care Advice
                                     </NavLink>
-                                    <NavLink to="/dental-care">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/dental-care"
+                                    >
                                         Dental Care
                                     </NavLink>
-                                    <NavLink to="/tooth-protection">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/tooth-protection"
+                                    >
                                         Tooth Protection
                                     </NavLink>
-                                    <NavLink to="/whitening-teeth">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/whitening-teeth"
+                                    >
                                         Whitening Teeth
                                     </NavLink>
-                                    <NavLink to="/dental-implants">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/dental-implants"
+                                    >
                                         Dental Implants
                                     </NavLink>
-                                    <NavLink to="/oral-surgery">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/oral-surgery"
+                                    >
                                         Oral Surgery
                                     </NavLink>
-                                    <NavLink to="/oral-hygienist">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/oral-hygienist"
+                                    >
                                         Oral Hygienist
                                     </NavLink>
-                                    <NavLink to="/teeth-cleaning">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/teeth-cleaning"
+                                    >
                                         Teeth Cleaning
                                     </NavLink>
-                                    <NavLink to="/care-advice">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/care-advice"
+                                    >
                                         Care Advice
                                     </NavLink>
-                                    <NavLink to="/dental-care">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/dental-care"
+                                    >
                                         Dental Care
                                     </NavLink>
-                                    <NavLink to="/tooth-protection">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/tooth-protection"
+                                    >
                                         Tooth Protection
                                     </NavLink>
-                                    <NavLink to="/whitening-teeth">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/whitening-teeth"
+                                    >
                                         Whitening Teeth
                                     </NavLink>
-                                    <NavLink to="/dental-implants">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/dental-implants"
+                                    >
                                         Dental Implants
                                     </NavLink>
-                                    <NavLink to="/oral-surgery">
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeDropdownMenuLink
+                                                : inactiveDropdownMenuLink
+                                        }
+                                        to="/oral-surgery"
+                                    >
                                         Oral Surgery
                                     </NavLink>
                                 </div>
