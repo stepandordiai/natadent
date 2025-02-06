@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import priceData from "./priceData";
 import "./PriceList.scss";
 
 const PriceList = () => {
@@ -7,53 +8,127 @@ const PriceList = () => {
         document.title = "Price list";
     }, []);
 
+    const [filter, setFilter] = useState("");
+
+    const inactiveFilterBtn = "inactive-filter-btn";
+    const activeFilterBtn = "inactive-filter-btn active-filter-btn";
+
     return (
         <section className="price-list">
             <PageTitle activeLink="Home" title="Price list" />
-            <table className="price-list__table">
-                <tbody>
-                    <tr>
-                        <td>Oral Hygienist</td>
-                        <td>2.070 CZK</td>
-                        <td>Helewqlo</td>
-                    </tr>
-                    <tr>
-                        <td>Teeth Cleaning</td>
-                        <td>1.250 CZK</td>
-                        <td>Hello</td>
-                    </tr>
-                    <tr>
-                        <td>Care Advice</td>
-                        <td>from 900 CZK</td>
-                        <td>Heasdsallo</td>
-                    </tr>
-                    <tr>
-                        <td>Dental Care</td>
-                        <td>2.160 CZK</td>
-                        <td>Hello</td>
-                    </tr>
-                    <tr>
-                        <td>Tooth Protection</td>
-                        <td>550 CZK</td>
-                        <td>Hello</td>
-                    </tr>
-                    <tr>
-                        <td>Whitening Teeth</td>
-                        <td>9.100 CZK</td>
-                        <td>Hello</td>
-                    </tr>
-                    <tr>
-                        <td>Dental Implants</td>
-                        <td>550 CZK</td>
-                        <td>Hello</td>
-                    </tr>
-                    <tr>
-                        <td>Oral Surgery</td>
-                        <td>260 CZK</td>
-                        <td>Hello</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div className="filter-btn-wrapper">
+                <button
+                    className={
+                        filter === "" ? activeFilterBtn : inactiveFilterBtn
+                    }
+                    onClick={(e) => setFilter(e.target.dataset.service)}
+                    data-service=""
+                >
+                    All
+                </button>
+                <button
+                    className={
+                        filter === "braces"
+                            ? activeFilterBtn
+                            : inactiveFilterBtn
+                    }
+                    onClick={(e) => setFilter(e.target.dataset.service)}
+                    data-service="braces"
+                >
+                    Braces
+                </button>
+                <button
+                    className={
+                        filter === "dentistry"
+                            ? activeFilterBtn
+                            : inactiveFilterBtn
+                    }
+                    onClick={(e) => setFilter(e.target.dataset.service)}
+                    data-service="dentistry"
+                >
+                    Dentistry
+                </button>
+            </div>
+            {filter === "" && (
+                <div className="price-list__wrapper">
+                    <p className="price-list__title">Braces</p>
+                    <table className="price-list__table">
+                        <tbody>
+                            {priceData
+                                .filter((el) => {
+                                    return el.service === "braces";
+                                })
+                                .map((el, index) => {
+                                    return (
+                                        <tr key={index}>
+                                            <td>{el.name}</td>
+                                            <td>{el.price}</td>
+                                        </tr>
+                                    );
+                                })}
+                        </tbody>
+                    </table>
+                    <p className="price-list__title">Dentistry</p>
+                    <table className="price-list__table">
+                        <tbody>
+                            {priceData
+                                .filter((el) => {
+                                    return el.service === "dentistry";
+                                })
+                                .map((el, index) => {
+                                    return (
+                                        <tr key={index}>
+                                            <td>{el.name}</td>
+                                            <td>{el.price}</td>
+                                        </tr>
+                                    );
+                                })}
+                        </tbody>
+                    </table>
+                </div>
+            )}
+            {filter === "braces" && (
+                <div className="price-list__wrapper">
+                    <p className="price-list__title">Braces</p>
+                    <table className="price-list__table">
+                        <tbody>
+                            {priceData
+                                .filter((el) => {
+                                    return el.service === "braces";
+                                })
+                                .map((el, index) => {
+                                    return (
+                                        <tr key={index}>
+                                            <td>{el.name}</td>
+                                            <td>{el.price}</td>
+                                        </tr>
+                                    );
+                                })}
+                        </tbody>
+                    </table>
+                </div>
+            )}
+            {filter === "dentistry" && (
+                <div className="price-list__wrapper">
+                    <p className="price-list__title">Dentistry</p>
+                    <table className="price-list__table">
+                        <tbody>
+                            {priceData
+                                .filter((el) => {
+                                    return el.service === "dentistry";
+                                })
+                                .map((el, index) => {
+                                    return (
+                                        <tr key={index}>
+                                            <td>{el.name}</td>
+                                            <td>{el.price}</td>
+                                        </tr>
+                                    );
+                                })}
+                        </tbody>
+                    </table>
+                </div>
+            )}
         </section>
     );
 };
