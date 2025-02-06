@@ -12,7 +12,7 @@ import "./AboutUs.scss";
 
 const AboutUs = () => {
     useEffect(() => {
-        document.title = "Novozub | About us";
+        document.title = "O nás";
 
         document.querySelectorAll(".img-ranger").forEach((ranger, index) => {
             ranger.addEventListener("input", () => {
@@ -33,42 +33,42 @@ const AboutUs = () => {
 
     return (
         <section className="about-us">
-            <PageTitle activeLink="Home" title="About us" />
-            <h3 className="about-us__team-title">Our team</h3>
+            <PageTitle activeLink="Úvod" title="O nás" />
+            <h3 className="about-us__team-title">Náš tým</h3>
             <div className="about-us__team-grid">
                 <div className="team-card">
                     <img src={photo1} alt="Photo" />
                     <div>
-                        <p>Name</p>
-                        <p>Position</p>
+                        <p>Jméno</p>
+                        <p>Pozice</p>
                     </div>
                 </div>
                 <div className="team-card">
                     <img src={photo2} alt="Photo" />
                     <div>
-                        <p>Name</p>
-                        <p>Position</p>
+                        <p>Jméno</p>
+                        <p>Pozice</p>
                     </div>
                 </div>
                 <div className="team-card">
                     <img src={photo3} alt="Photo" />
                     <div>
-                        <p>Name</p>
-                        <p>Position</p>
+                        <p>Jméno</p>
+                        <p>Pozice</p>
                     </div>
                 </div>
                 <div className="team-card">
                     <img src={photo4} alt="Photo" />
                     <div>
-                        <p>Name</p>
-                        <p>Position</p>
+                        <p>Jméno</p>
+                        <p>Pozice</p>
                     </div>
                 </div>
                 <div className="team-card">
                     <img src={photo5} alt="Photo" />
                     <div>
-                        <p>Name</p>
-                        <p>Position</p>
+                        <p>Jméno</p>
+                        <p>Pozice</p>
                     </div>
                 </div>
             </div>

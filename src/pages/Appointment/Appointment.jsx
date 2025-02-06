@@ -4,16 +4,12 @@ import "./Appointment.scss";
 
 const Appointment = () => {
     useEffect(() => {
-        document.title = "Novozub | Appointment";
+        document.title = "Termín";
     }, []);
 
     return (
         <section className="contact">
-            <PageTitle
-                activeLink="Home"
-                link="Appointment"
-                title="Appointment"
-            />
+            <PageTitle activeLink="Úvod" title="Termín" />
             <iframe
                 src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3y2lhQh_lmF5IRVbwctdxTpTw3L5Z9byjt-CaslzDSQWXseEr4VGM5vjAcmNq700Aivq-wSg2x?gv=true"
                 className="google-calendar"

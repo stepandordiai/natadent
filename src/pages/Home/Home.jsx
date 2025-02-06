@@ -14,17 +14,17 @@ const Home = () => {
         <section className="home">
             <div className="home__top">
                 <HomeCustomBg />
-                <h2>We care for your smile</h2>
-                <p>Dental clinic in Kolin</p>
+                <h2>Záleží nám na tvém úsměvu</h2>
+                <p>Zubní klinika v Kolíně</p>
                 <div className="btn-container">
                     <NavLink
                         className="home__book-btn js-book-btn"
                         to="/appointment"
                     >
-                        Book an appointment
+                        Rezervujte si termín
                     </NavLink>
                     <NavLink className="services-btn" to="/services">
-                        View services
+                        Zobrazit služby
                     </NavLink>
                 </div>
             </div>
@@ -33,7 +33,7 @@ const Home = () => {
                 <div className="home__service">
                     <img width={90} src={toothIcon1} alt="" />
                     <div>
-                        <h4>Oral Hygienist</h4>
+                        <h4>Preventivní stomatologie</h4>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Beatae libero at sed soluta inventore labore
@@ -44,7 +44,7 @@ const Home = () => {
                 <div className="home__service">
                     <img width={90} src={toothIcon2} alt="" />
                     <div>
-                        <h4>Teet Cleaning</h4>
+                        <h4>Dentální hygiena</h4>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Beatae libero at sed soluta inventore labore
@@ -54,7 +54,7 @@ const Home = () => {
                 </div>
                 <div className="home__service">
                     <NavLink className="view-more" to="/services">
-                        View more
+                        Zobrazit více
                     </NavLink>
                 </div>
             </div>

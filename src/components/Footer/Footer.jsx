@@ -22,42 +22,42 @@ const Footer = () => {
                 </div>
                 <CustomDivider none="none" />
                 <div className="footer__header-working-hours">
-                    <p>Working hours</p>
+                    <p>Pracovní doba</p>
                     <ul className="working-hours">
                         <li className={day === 1 ? "day--active" : ""}>
-                            <span>Monday:</span>
+                            <span>Pondělí:</span>
                             <span>7:00 - 17:00</span>
                         </li>
                         <li className={day === 2 ? "day--active" : ""}>
-                            <span>Tuesday:</span>
+                            <span>Úterý:</span>
                             <span>7:00 - 17:00</span>
                         </li>
                         <li className={day === 3 ? "day--active" : ""}>
-                            <span>Wednesday:</span>
+                            <span>Středa:</span>
                             <span>7:00 - 17:00</span>
                         </li>
                         <li className={day === 4 ? "day--active" : ""}>
-                            <span>Thursday:</span>
+                            <span>Čtvrtek:</span>
                             <span>7:00 - 17:00</span>
                         </li>
                         <li className={day === 5 ? "day--active" : ""}>
-                            <span>Friday:</span>
+                            <span>Pátek:</span>
                             <span>7:00 - 17:00</span>
                         </li>
                         <li className={day === 6 ? "day--active" : ""}>
-                            <span>Saturday:</span>
-                            <span>Closed</span>
+                            <span>Sobota:</span>
+                            <span>Zavřeno</span>
                         </li>
                         <li className={day === 0 ? "day--active" : ""}>
-                            <span>Sunday:</span>
-                            <span>Closed</span>
+                            <span>Neděle:</span>
+                            <span>Zavřeno</span>
                         </li>
                     </ul>
                 </div>
                 <CustomDivider none="none" />
 
                 <div className="footer__header-navigation">
-                    <p>Navigation</p>
+                    <p>Navigace</p>
                     <ul>
                         <li>
                             <NavLink
@@ -66,7 +66,7 @@ const Footer = () => {
                                 }
                                 to="/"
                             >
-                                Home
+                                Úvod
                             </NavLink>
                         </li>
                         <li>
@@ -76,7 +76,7 @@ const Footer = () => {
                                 }
                                 to="/about-us"
                             >
-                                About us
+                                O nás
                             </NavLink>
                         </li>
                         <li>
@@ -86,7 +86,7 @@ const Footer = () => {
                                 }
                                 to="/services"
                             >
-                                Services
+                                Služby
                             </NavLink>
                         </li>
                         <li>
@@ -96,7 +96,7 @@ const Footer = () => {
                                 }
                                 to="/contacts"
                             >
-                                Contacts
+                                Kontakty
                             </NavLink>
                         </li>
                         <li>
@@ -106,7 +106,7 @@ const Footer = () => {
                                 }
                                 to="/contact"
                             >
-                                Make an appointment
+                                Rezervujte si termín
                             </NavLink>
                         </li>
                     </ul>
@@ -114,7 +114,7 @@ const Footer = () => {
                 <CustomDivider none="none" />
 
                 <div className="footer__header-contact-us">
-                    <p>Contact us</p>
+                    <p>Kontakty</p>
                     <ul>
                         <li>
                             <a href="tel:+420722001016">+420 722 001 016</a>
@@ -133,7 +133,7 @@ const Footer = () => {
             <CustomDivider />
             <div className="footer__bottom">
                 <p className="copyright">&copy; 2025 Novozub</p>
-                <p>All rights reserved</p>
+                <p>Všechna práva vyhrazena</p>
                 <p className="creator">
                     Designed and developed by <a href="">heeeyooo.studio</a>
                 </p>

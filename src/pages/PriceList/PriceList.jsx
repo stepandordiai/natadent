@@ -15,7 +15,7 @@ const PriceList = () => {
 
     return (
         <section className="price-list">
-            <PageTitle activeLink="Home" title="Price list" />
+            <PageTitle activeLink="Úvod" title="Ceník" />
             <div className="filter-btn-wrapper">
                 <button
                     className={

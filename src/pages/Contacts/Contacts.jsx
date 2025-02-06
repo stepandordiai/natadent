@@ -8,7 +8,7 @@ import "./Contacts.scss";
 
 const Contacts = () => {
     useEffect(() => {
-        document.title = "Novozub | Contacts";
+        document.title = "Kontakty";
 
         const contactsLabels = document.querySelectorAll(
             ".contacts-form__label"
@@ -86,11 +86,11 @@ const Contacts = () => {
 
     return (
         <section className="contacts">
-            <PageTitle activeLink="Home" link="Contacts" title="Contacts" />
+            <PageTitle activeLink="Úvod" title="Kontakty" />
             <p className="contacts__secondary-info">
-                Have a question or need to book an appointment? We’re here to
-                help. Get in touch with us via the form, phone, or email, and
-                we’ll be happy to assist you.
+                Máte dotaz nebo si potřebujete rezervovat termín? Jsme tu,
+                abychom vám pomohli. Kontaktujte nás prostřednictvím formuláře,
+                telefonu nebo e-mailu a my vám rádi pomůžeme.
             </p>
             <div className="contacts-details">
                 <div>
@@ -99,7 +99,7 @@ const Contacts = () => {
                         src={phoneIcon}
                         alt="Phone"
                     />
-                    <p className="contacts__phone">Phone</p>
+                    <p className="contacts__phone">Telefonní číslo</p>
                     <a
                         className="contacts__phone-link"
                         href="tel:+420722001016"
@@ -127,17 +127,19 @@ const Contacts = () => {
                         src={pinIcon}
                         alt="Address"
                     />
-                    <p className="contacts__address">Address</p>
+                    <p className="contacts__address">Adresa</p>
                     <a className="contacts__email-link" href="">
                         Pod Hroby 271/271 Kolín IV
                     </a>
                     <a className="contacts-details__address-btn" href="">
-                        Visit us on Google
+                        Navštivte nás na Googlu
                     </a>
                 </div>
             </div>
             <CustomDivider />
-            <h3 className="contacts__appointment-title">Make an appointment</h3>
+            <h3 className="contacts__appointment-title">
+                Rezervujte si termín
+            </h3>
             <form
                 className="contacts-form"
                 action="mailto:"
@@ -146,9 +148,7 @@ const Contacts = () => {
             >
                 <div className="contacts-form__inputs">
                     <div className="contacts-form__input-wrapper">
-                        <label className="contacts-form__label">
-                            First name
-                        </label>
+                        <label className="contacts-form__label">Jméno</label>
                         <input
                             className="contacts-form__input  js-contacts-form__input"
                             type="text"
@@ -156,9 +156,7 @@ const Contacts = () => {
                         />
                     </div>
                     <div className="contacts-form__input-wrapper">
-                        <label className="contacts-form__label">
-                            Last name
-                        </label>
+                        <label className="contacts-form__label">Příjmení</label>
                         <input
                             className="contacts-form__input  js-contacts-form__input"
                             type="text"
@@ -177,7 +175,7 @@ const Contacts = () => {
                     </div>
                     <div className="contacts-form__input-wrapper">
                         <label className="contacts-form__label">
-                            Phone number
+                            Telefonní číslo
                         </label>
                         <input
                             className="contacts-form__input  js-contacts-form__input"
@@ -189,62 +187,68 @@ const Contacts = () => {
                 {/* Custom select */}
                 <div className="contacts-form__custom-select">
                     <button className="contacts-form__dropdown-btn">
-                        Choose department
+                        Vybrat službu
                     </button>
                     <ul className="contacts-form__dropdown-list">
                         <li
                             className="contacts-form__dropdown-option"
                             data-value="Not selected"
                         >
-                            Select department
+                            Vybrat službu
                         </li>
                         <li
                             className="contacts-form__dropdown-option"
                             data-value="Oral Hygienist"
                         >
-                            Oral Hygienist
+                            Preventivní stomatologie
                         </li>
                         <li
                             className="contacts-form__dropdown-option"
                             data-value="Teeth Cleaning"
                         >
-                            Teeth Cleaning
+                            Dentální hygiena
                         </li>
                         <li
                             className="contacts-form__dropdown-option"
                             data-value="Care Advice"
                         >
-                            Care Advice
+                            Parodontologie
                         </li>
                         <li
                             className="contacts-form__dropdown-option"
                             data-value="Dental Care"
                         >
-                            Dental Care
+                            Dětská stomatologie
                         </li>
                         <li
                             className="contacts-form__dropdown-option"
                             data-value="Tooth Protection"
                         >
-                            Tooth Protection
+                            Fotokompozitní výplně
                         </li>
                         <li
                             className="contacts-form__dropdown-option"
                             data-value="Whitening Teeth"
                         >
-                            Whitening Teeth
+                            Endodoncie
                         </li>
                         <li
                             className="contacts-form__dropdown-option"
                             data-value="Dental Implants"
                         >
-                            Dental Implants
+                            Protetická stomatologie
                         </li>
                         <li
                             className="contacts-form__dropdown-option"
                             data-value="Oral Surgery"
                         >
-                            Oral Surgery
+                            Dentoalveolární chirurgie
+                        </li>
+                        <li
+                            className="contacts-form__dropdown-option"
+                            data-value="Oral Surgery"
+                        >
+                            Implantologie
                         </li>
                     </ul>
                     <input
@@ -257,7 +261,7 @@ const Contacts = () => {
                 <input type="date" defaultValue="2024-12-12" name="Date" />
                 <input type="time" defaultValue="12:00" name="Time" />
                 <button className="contacts-form__btn" type="submit">
-                    Book an appointment
+                    Poslat
                 </button>
             </form>
             <CustomDivider />
