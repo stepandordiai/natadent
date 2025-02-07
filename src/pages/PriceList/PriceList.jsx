@@ -5,7 +5,7 @@ import "./PriceList.scss";
 
 const PriceList = () => {
     useEffect(() => {
-        document.title = "Price list";
+        document.title = "Ceník";
     }, []);
 
     const [filter, setFilter] = useState("");

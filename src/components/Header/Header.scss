@@ -6,7 +6,15 @@
     right: 5px;
     left: 5px;
     z-index: 1;
+    // opacity: 0;
+    // animation: revealHeader 1s 1s forwards;
 }
+
+// @keyframes revealHeader {
+//     to {
+//         opacity: 1;
+//     }
+// }
 
 .header-top {
     @include flex-between;

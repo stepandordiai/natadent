@@ -102,7 +102,7 @@ const Header = () => {
                                         }
                                         to="/smile-gallery"
                                     >
-                                        galerie úsměvů
+                                        Galerie úsměvů
                                     </NavLink>
                                 </div>
                             </li>
@@ -237,7 +237,9 @@ const Header = () => {
                         <BurgerBtn />
                     </nav>
                 </div>
+
                 {/* Menu links */}
+
                 <div className="header-bottom__grid">
                     <ul className="menu-list">
                         <li className="menu-item">
@@ -262,9 +264,7 @@ const Header = () => {
                                     to="/about-us"
                                 >
                                     <span>O nás</span>
-                                    {/* <div className="menu-arrow-number"> */}
                                     <span>02</span>
-                                    {/* </div> */}
                                 </NavLink>
                                 <div className="menu-down-arrow-wrapper">
                                     <span className="menu-down-arrow"></span>
@@ -304,12 +304,10 @@ const Header = () => {
                                             ? activeMenuLink
                                             : inactiveMenuLink
                                     }
-                                    to="/about-us"
+                                    to="/services"
                                 >
                                     <span>Sluzbi</span>
-                                    {/* <div className="menu-arrow-number"> */}
                                     <span>03</span>
-                                    {/* </div> */}
                                 </NavLink>
                                 <div className="menu-down-arrow-wrapper">
                                     <span className="menu-down-arrow"></span>

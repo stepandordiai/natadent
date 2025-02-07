@@ -5,7 +5,8 @@
 }
 
 .contacts__secondary-info {
-    text-align: center;
+    text-align: justify;
+    font-size: 1.25rem;
     padding: 0 30px 30px;
 }
 
@@ -128,22 +129,24 @@
     font-size: 12px;
 }
 
-.contacts-form__custom-select {
+// Custom select
+
+.custom-select {
     position: relative;
     width: 100%;
     height: 60px;
 }
 
-.contacts-form__dropdown-btn {
+.custom-select__btn {
     position: relative;
     width: 100%;
     height: 100%;
-    padding-left: 15px;
     text-align: left;
-    cursor: pointer;
     background: var(--bg-clr);
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 30px;
+    padding-left: 15px;
+    cursor: pointer;
     transition: border 150ms;
 
     &:focus {
@@ -151,11 +154,11 @@
     }
 }
 
-.contacts-form__dropdown-btn--active {
+.custom-select__btn--active {
     border: 1px solid var(--accent-clr);
 }
 
-.contacts-form__dropdown-btn::after {
+.custom-select__btn::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -167,7 +170,7 @@
     background: var(--txt-clr);
 }
 
-.contacts-form__dropdown-list {
+.custom-select__list {
     display: none;
     position: absolute;
     left: 0;
@@ -177,11 +180,11 @@
     background: var(--bg-clr);
 }
 
-.contacts-form__dropdown-list--visible {
+.custom-select__list--visible {
     display: block;
 }
 
-.contacts-form__dropdown-option {
+.custom-select__option {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -195,7 +198,7 @@
     }
 }
 
-.contacts-form__dropdown-input {
+.custom-select__input {
     display: none;
 }
 
@@ -227,9 +230,9 @@ input[type="time"] {
 }
 
 .contacts__google-map {
-    padding-top: 30px;
+    margin-top: 30px;
     width: 100%;
-    height: 500px;
+    height: 250px;
 }
 
 @media (max-width: 1000px) {

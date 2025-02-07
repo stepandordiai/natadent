@@ -11,22 +11,37 @@
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    row-gap: 25px;
+    row-gap: 30px;
+
     h2 {
+        text-align: center;
         color: var(--txt-clr);
         font-size: clamp(2rem, 6vw, 4rem);
         font-weight: 500;
+        opacity: 0;
+        animation: revealHome 1s 1s forwards;
     }
+
     p {
         color: var(--txt-clr);
         font-size: 1.5rem;
         font-weight: 300;
+        opacity: 0;
+        animation: revealHome 1s 1s forwards;
     }
 }
 
 .btn-container {
     @include flex-center;
-    column-gap: 25px;
+    gap: 30px;
+    opacity: 0;
+    animation: revealHome 1s 1s forwards;
+}
+
+@keyframes revealHome {
+    to {
+        opacity: 1;
+    }
 }
 
 .home__book-btn,
@@ -52,27 +67,25 @@
 .home__services {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    margin: 0 50px;
+    gap: 30px;
+    margin: 0 30px;
 }
 
 .home__service {
     position: relative;
     width: 100%;
-    background: rgba(255, 255, 255, 0.416);
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    column-gap: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    @include flex-center;
+    gap: 15px;
     height: 170px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-
-    transition: all 0.3s;
-
+    border: 1px solid var(--border-25);
     color: var(--txt-clr);
     border-radius: 85px;
-    padding: 25px;
+    padding: 0 15px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.3s;
+
     h4 {
         font-weight: 600;
         font-size: 1.2rem;
@@ -82,16 +95,11 @@
     }
 }
 
-.home__service:not(:nth-last-of-type(1)) {
-    background: var(--accent-clr);
-}
-
 .view-more {
     position: absolute;
-    display: grid;
-    place-content: center;
+    @include grid-center;
     width: 100%;
-    height: 170px;
+    height: 100%;
     border-radius: 85px;
     transition: background-color 0.15s;
 
@@ -100,25 +108,33 @@
     }
 }
 
+.service--active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 @media (max-width: 1300px) {
     .home__services {
         grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-        margin: 0 25px;
     }
 }
 
 @media (max-width: 900px) {
     .home__services {
         grid-template-columns: repeat(1, 1fr);
-        gap: 15px;
         margin: 0 15px;
+    }
+}
+
+@media (max-width: 800px) {
+    .home__services {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0;
     }
 }
 
 @media (max-width: 500px) {
     .btn-container {
         flex-direction: column;
-        row-gap: 30px;
     }
 }

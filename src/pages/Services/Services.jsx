@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import toothIcon1 from "./../../assets/icons/tooth-icons/braces.png";
 import toothIcon2 from "./../../assets/icons/tooth-icons/cavity.png";
 import toothIcon3 from "./../../assets/icons/tooth-icons/crown.png";
@@ -7,12 +8,11 @@ import toothIcon6 from "./../../assets/icons/tooth-icons/tooth-gum.png";
 import toothIcon7 from "./../../assets/icons/tooth-icons/tooth-xray-spot.png";
 import toothIcon8 from "./../../assets/icons/tooth-icons/tooth.png";
 import PageTitle from "../../components/PageTitle/PageTitle";
-import { useEffect } from "react";
 import "./Services.scss";
 
 const Services = () => {
     useEffect(() => {
-        document.title = "Novozub | Services";
+        document.title = "Služby";
 
         document.querySelectorAll(".js-service").forEach((el) => {
             document.addEventListener("scroll", () => {
@@ -36,13 +36,12 @@ const Services = () => {
 
     return (
         <section className="services">
-            <PageTitle activeLink="Home" link="Services" title="Services" />
-
+            <PageTitle activeLink="Úvod" title="Služby" />
             <div className="services-grid">
                 <div className="service js-service">
                     <img width={90} src={toothIcon1} alt="" />
                     <div>
-                        <h4>Oral Hygienist</h4>
+                        <h4>Preventivní stomatologie</h4>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Beatae libero at sed soluta inventore labore
@@ -53,7 +52,7 @@ const Services = () => {
                 <div className="service js-service">
                     <img width={90} src={toothIcon2} alt="" />
                     <div>
-                        <h4>Teet Cleaning</h4>
+                        <h4>Dentální hygiena</h4>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Beatae libero at sed soluta inventore labore
@@ -64,7 +63,7 @@ const Services = () => {
                 <div className="service js-service">
                     <img width={90} src={toothIcon3} alt="" />
                     <div>
-                        <h4>Care Advice</h4>
+                        <h4>Parodontologie</h4>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Beatae libero at sed soluta inventore labore
@@ -75,7 +74,7 @@ const Services = () => {
                 <div className="service js-service">
                     <img width={90} src={toothIcon4} alt="" />
                     <div>
-                        <h4>Dental Care</h4>
+                        <h4>Dětská stomatologie</h4>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Beatae libero at sed soluta inventore labore
@@ -86,7 +85,7 @@ const Services = () => {
                 <div className="service js-service">
                     <img width={90} src={toothIcon5} alt="" />
                     <div>
-                        <h4>Tooth Protection</h4>
+                        <h4>Fotokompozitní výplně</h4>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Beatae libero at sed soluta inventore labore
@@ -97,7 +96,7 @@ const Services = () => {
                 <div className="service js-service">
                     <img width={90} src={toothIcon6} alt="" />
                     <div>
-                        <h4>Whitening Teet</h4>
+                        <h4>Endodoncie</h4>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Beatae libero at sed soluta inventore labore
@@ -108,7 +107,7 @@ const Services = () => {
                 <div className="service js-service">
                     <img width={90} src={toothIcon7} alt="" />
                     <div>
-                        <h4>Dental Implants</h4>
+                        <h4>Protetická stomatologie</h4>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Beatae libero at sed soluta inventore labore
@@ -119,7 +118,18 @@ const Services = () => {
                 <div className="service js-service">
                     <img width={90} src={toothIcon8} alt="" />
                     <div>
-                        <h4>Oral Surgery</h4>
+                        <h4>Dentoalveolární chirurgie</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Beatae libero at sed soluta inventore labore
+                            cupiditate
+                        </p>
+                    </div>
+                </div>
+                <div className="service js-service">
+                    <img width={90} src={toothIcon8} alt="" />
+                    <div>
+                        <h4>Implantologie</h4>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Beatae libero at sed soluta inventore labore

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import PageTitle from "../../components/PageTitle/PageTitle";
 
 import before1 from "./../../assets/smiles/before1.png";
 import after1 from "./../../assets/smiles/after1.png";
@@ -19,11 +20,10 @@ import before6 from "./../../assets/smiles/before6.png";
 import after6 from "./../../assets/smiles/after6.png";
 
 import "./SmileGallery.scss";
-import PageTitle from "../../components/PageTitle/PageTitle";
 
 const SmileGallery = () => {
     useEffect(() => {
-        document.title = "Smile gallery";
+        document.title = "Galerie úsměvů";
 
         document.querySelectorAll(".img-ranger").forEach((ranger, index) => {
             ranger.addEventListener("input", () => {
@@ -44,8 +44,8 @@ const SmileGallery = () => {
 
     return (
         <section className="smile-gallery">
-            <PageTitle activeLink="Home" title="Smile gallery" />
-            <h3 className="about-us__gallery-title">Smile transformations</h3>
+            <PageTitle activeLink="Úvod" title="Galerie úsměvů" />
+            <h3 className="about-us__gallery-title">Proměny úsměvu</h3>
             <div className="about-us__gallery-grid">
                 <div className="smile-wrapper">
                     <img src={after1} alt="Smile after" />

@@ -31,57 +31,42 @@ const Contacts = () => {
             });
 
         // Listener for multiple custom selectors
-        document
-            .querySelectorAll(".contacts-form__custom-select")
-            .forEach((select) => {
-                const dropdownBtn = select.querySelector(
-                    ".contacts-form__dropdown-btn"
-                );
-                const dropdownList = select.querySelector(
-                    ".contacts-form__dropdown-list"
-                );
-                const dropdownOptions = dropdownList.querySelectorAll(
-                    ".contacts-form__dropdown-option"
-                );
-                const dropdownInput = document.querySelector(
-                    ".contacts-form__dropdown-input"
-                );
 
-                dropdownBtn.addEventListener("click", (e) => {
-                    // Prevent from submitting a form
-                    e.preventDefault();
-                    dropdownList.classList.toggle(
-                        "contacts-form__dropdown-list--visible"
-                    );
-                    dropdownBtn.classList.add(
-                        "contacts-form__dropdown-btn--active"
-                    );
-                });
+        document.querySelectorAll(".custom-select").forEach((select) => {
+            const selectBtn = select.querySelector(".custom-select__btn");
+            const selectList = select.querySelector(".custom-select__list");
+            const selectOptions = selectList.querySelectorAll(
+                ".custom-select__option"
+            );
+            const selectOption = document.querySelector(
+                ".custom-select__input"
+            );
 
-                dropdownOptions.forEach((option) => {
-                    option.addEventListener("click", (e) => {
-                        // TODO:
-                        e.stopPropagation();
-                        dropdownBtn.textContent = option.textContent;
-                        dropdownBtn.focus();
-                        dropdownInput.value = option.dataset.value;
-                        dropdownList.classList.remove(
-                            "contacts-form__dropdown-list--visible"
-                        );
-                    });
-                });
+            selectBtn.addEventListener("click", (e) => {
+                // Prevent from submitting a form
+                e.preventDefault();
+                selectList.classList.toggle("custom-select__list--visible");
+                selectBtn.classList.add("custom-select__btn--active");
+            });
 
-                document.addEventListener("click", (e) => {
-                    if (e.target !== dropdownBtn) {
-                        dropdownBtn.classList.remove(
-                            "contacts-form__dropdown-btn--active"
-                        );
-                        dropdownList.classList.remove(
-                            "contacts-form__dropdown-list--visible"
-                        );
-                    }
+            selectOptions.forEach((option) => {
+                option.addEventListener("click", (e) => {
+                    // TODO:
+                    e.stopPropagation();
+                    selectBtn.textContent = option.textContent;
+                    selectBtn.focus();
+                    selectOption.value = option.dataset.value;
+                    selectList.classList.remove("custom-select__list--visible");
                 });
             });
+
+            document.addEventListener("click", (e) => {
+                if (e.target !== selectBtn) {
+                    selectBtn.classList.remove("custom-select__btn--active");
+                    selectList.classList.remove("custom-select__list--visible");
+                }
+            });
+        });
     }, []);
 
     return (
@@ -111,9 +96,9 @@ const Contacts = () => {
                     <img
                         className="contacts__email-img"
                         src={emailIcon}
-                        alt="Email"
+                        alt="E-mail"
                     />
-                    <p className="contacts__email">Email</p>
+                    <p className="contacts__email">E-mail</p>
                     <a
                         className="contacts__email-link"
                         href="mailto:novozubcz@gmail.com"
@@ -142,7 +127,7 @@ const Contacts = () => {
             </h3>
             <form
                 className="contacts-form"
-                action="mailto:"
+                action="mailto:novozubcz@gmail.com"
                 method="post"
                 encType="text/plain"
             >
@@ -166,7 +151,7 @@ const Contacts = () => {
                 </div>
                 <div className="contacts-form__inputs">
                     <div className="contacts-form__input-wrapper">
-                        <label className="contacts-form__label">Email</label>
+                        <label className="contacts-form__label">E-mail</label>
                         <input
                             className="contacts-form__input js-contacts-form__input"
                             type="text"
@@ -184,75 +169,77 @@ const Contacts = () => {
                         />
                     </div>
                 </div>
+
                 {/* Custom select */}
-                <div className="contacts-form__custom-select">
-                    <button className="contacts-form__dropdown-btn">
+
+                <div className="custom-select">
+                    <button className="custom-select__btn">
                         Vybrat službu
                     </button>
-                    <ul className="contacts-form__dropdown-list">
+                    <ul className="custom-select__list">
                         <li
-                            className="contacts-form__dropdown-option"
+                            className="custom-select__option"
                             data-value="Not selected"
                         >
                             Vybrat službu
                         </li>
                         <li
-                            className="contacts-form__dropdown-option"
+                            className="custom-select__option"
                             data-value="Oral Hygienist"
                         >
                             Preventivní stomatologie
                         </li>
                         <li
-                            className="contacts-form__dropdown-option"
+                            className="custom-select__option"
                             data-value="Teeth Cleaning"
                         >
                             Dentální hygiena
                         </li>
                         <li
-                            className="contacts-form__dropdown-option"
+                            className="custom-select__option"
                             data-value="Care Advice"
                         >
                             Parodontologie
                         </li>
                         <li
-                            className="contacts-form__dropdown-option"
+                            className="custom-select__option"
                             data-value="Dental Care"
                         >
                             Dětská stomatologie
                         </li>
                         <li
-                            className="contacts-form__dropdown-option"
+                            className="custom-select__option"
                             data-value="Tooth Protection"
                         >
                             Fotokompozitní výplně
                         </li>
                         <li
-                            className="contacts-form__dropdown-option"
+                            className="custom-select__option"
                             data-value="Whitening Teeth"
                         >
                             Endodoncie
                         </li>
                         <li
-                            className="contacts-form__dropdown-option"
+                            className="custom-select__option"
                             data-value="Dental Implants"
                         >
                             Protetická stomatologie
                         </li>
                         <li
-                            className="contacts-form__dropdown-option"
+                            className="custom-select__option"
                             data-value="Oral Surgery"
                         >
                             Dentoalveolární chirurgie
                         </li>
                         <li
-                            className="contacts-form__dropdown-option"
+                            className="custom-select__option"
                             data-value="Oral Surgery"
                         >
                             Implantologie
                         </li>
                     </ul>
                     <input
-                        className="contacts-form__dropdown-input"
+                        className="custom-select__input"
                         type="text"
                         name="Department"
                         defaultValue=""
