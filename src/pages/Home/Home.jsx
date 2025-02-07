@@ -7,15 +7,14 @@ import toothIcon3 from "./../../assets/icons/tooth-icons/crown.png";
 import toothIcon4 from "./../../assets/icons/tooth-icons/golden-crown.png";
 import toothIcon5 from "./../../assets/icons/tooth-icons/implant.png";
 import "./Home.scss";
+import CustomDivider from "../../components/CustomDivider/CustomDivider";
 
 const Home = () => {
     useEffect(() => {
         document.title = "Novozub | Zubní klinika v Kolíně";
-
         document.querySelectorAll(".js-service").forEach((el) => {
             document.addEventListener("scroll", () => {
                 const serviceRect = el.getBoundingClientRect().top;
-
                 if (serviceRect < window.innerHeight - 100) {
                     el.classList.add("service--active");
                 } else {
@@ -23,12 +22,21 @@ const Home = () => {
                 }
             });
             const serviceRect = el.getBoundingClientRect().top;
-
             if (serviceRect < window.innerHeight - 100) {
                 el.classList.add("service--active");
             } else {
                 el.classList.remove("service--active");
             }
+        });
+
+        document.querySelectorAll(".js-faq__btn").forEach((btn, index) => {
+            btn.addEventListener("click", () => {
+                const gridDropdowns =
+                    document.querySelectorAll(".grid-dropdown");
+                const faqBtnIcon = document.querySelectorAll(".faq__btn-icon");
+                gridDropdowns[index].classList.toggle("grid-dropdown--active");
+                faqBtnIcon[index].classList.toggle("faq__btn-icon--active");
+            });
         });
     }, []);
 
@@ -123,6 +131,57 @@ const Home = () => {
                     <NavLink className="view-more" to="/services">
                         Zobrazit více
                     </NavLink>
+                </div>
+            </div>
+            <CustomDivider />
+            <div className="faq">
+                <div className="faq__title">FAQ</div>
+                <div className="faq__list">
+                    <div className="faq__item">
+                        <button className="faq__btn js-faq__btn">
+                            <span className="faq__btn-txt">Question</span>
+                            <div className="faq__btn-icon"></div>
+                        </button>
+                        <div className="grid-dropdown">
+                            <p className="grid-dropdown__details">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Aspernatur labore quas, odit
+                                odio consequuntur magni, quia enim commodi
+                                suscipit, animi nobis. Magnam saepe quis alias
+                                dolorem perferendis, libero tempore temporibus!
+                            </p>
+                        </div>
+                    </div>
+                    <div className="faq__item">
+                        <button className="faq__btn js-faq__btn">
+                            <span className="faq__btn-txt">Question</span>
+                            <div className="faq__btn-icon"></div>
+                        </button>
+                        <div className="grid-dropdown">
+                            <p className="grid-dropdown__details">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Aspernatur labore quas, odit
+                                odio consequuntur magni, quia enim commodi
+                                suscipit, animi nobis. Magnam saepe quis alias
+                                dolorem perferendis, libero tempore temporibus!
+                            </p>
+                        </div>
+                    </div>
+                    <div className="faq__item">
+                        <button className="faq__btn js-faq__btn">
+                            <span className="faq__btn-txt">Question</span>
+                            <div className="faq__btn-icon"></div>
+                        </button>
+                        <div className="grid-dropdown">
+                            <p className="grid-dropdown__details">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Aspernatur labore quas, odit
+                                odio consequuntur magni, quia enim commodi
+                                suscipit, animi nobis. Magnam saepe quis alias
+                                dolorem perferendis, libero tempore temporibus!
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

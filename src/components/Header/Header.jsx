@@ -66,176 +66,178 @@ const Header = () => {
                         <span>Novozub</span>
                     </NavLink>
                     <nav className="nav">
-                        <ul className="nav-list">
-                            <li>
+                        <div>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? activeLink : inactiveLink
+                                }
+                                to="/"
+                            >
+                                Úvod
+                            </NavLink>
+                        </div>
+                        <div className="nav-list__dropdown">
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? activeLink : inactiveLink
+                                }
+                                to="/about-us"
+                            >
+                                <span>O nás</span>
+                                <span className="down-arrow"></span>
+                            </NavLink>
+                            <div className="nav-list__dropdown-list">
                                 <NavLink
                                     className={({ isActive }) =>
                                         isActive ? activeLink : inactiveLink
                                     }
-                                    to="/"
+                                    to="/price-list"
                                 >
-                                    Úvod
+                                    Ceník
                                 </NavLink>
-                            </li>
-                            <li className="nav-list__dropdown">
                                 <NavLink
                                     className={({ isActive }) =>
                                         isActive ? activeLink : inactiveLink
                                     }
-                                    to="/about-us"
+                                    to="/smile-gallery"
                                 >
-                                    <span>O nás</span>
-                                    <span className="down-arrow"></span>
+                                    Galerie úsměvů
                                 </NavLink>
-                                <div className="nav-list__dropdown-list">
-                                    <NavLink
-                                        className={({ isActive }) =>
-                                            isActive ? activeLink : inactiveLink
-                                        }
-                                        to="/price-list"
-                                    >
-                                        Ceník
-                                    </NavLink>
-                                    <NavLink
-                                        className={({ isActive }) =>
-                                            isActive ? activeLink : inactiveLink
-                                        }
-                                        to="/smile-gallery"
-                                    >
-                                        Galerie úsměvů
-                                    </NavLink>
-                                </div>
-                            </li>
-                            <li className="nav-list__dropdown">
+                            </div>
+                        </div>
+                        <div className="nav-list__dropdown">
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? activeLink : inactiveLink
+                                }
+                                to="/services"
+                            >
+                                <span>Služby</span>
+                                <span className="down-arrow"></span>
+                            </NavLink>
+                            <div className="nav-list__dropdown-list">
                                 <NavLink
                                     className={({ isActive }) =>
                                         isActive ? activeLink : inactiveLink
                                     }
-                                    to="/services"
+                                    to="/oral-hygienist"
                                 >
-                                    <span>Služby</span>
-                                    <span className="down-arrow"></span>
+                                    Preventivní stomatologie
                                 </NavLink>
-                                <div className="nav-list__dropdown-list">
-                                    <NavLink
-                                        className={({ isActive }) =>
-                                            isActive ? activeLink : inactiveLink
-                                        }
-                                        to="/oral-hygienist"
-                                    >
-                                        Preventivní stomatologie
-                                    </NavLink>
-                                    <NavLink
-                                        className={({ isActive }) =>
-                                            isActive ? activeLink : inactiveLink
-                                        }
-                                        to="/teeth-cleaning"
-                                    >
-                                        Dentální hygiena
-                                    </NavLink>
-                                    <NavLink
-                                        className={({ isActive }) =>
-                                            isActive ? activeLink : inactiveLink
-                                        }
-                                        to="/care-advice"
-                                    >
-                                        Parodontologie
-                                    </NavLink>
-                                    <NavLink
-                                        className={({ isActive }) =>
-                                            isActive ? activeLink : inactiveLink
-                                        }
-                                        to="/dental-care"
-                                    >
-                                        Dětská stomatologie
-                                    </NavLink>
-                                    <NavLink
-                                        className={({ isActive }) =>
-                                            isActive ? activeLink : inactiveLink
-                                        }
-                                        to="/tooth-protection"
-                                    >
-                                        Fotokompozitní výplně
-                                    </NavLink>
-                                    <NavLink
-                                        className={({ isActive }) =>
-                                            isActive ? activeLink : inactiveLink
-                                        }
-                                        to="/whitening-teeth"
-                                    >
-                                        Endodoncie
-                                    </NavLink>
-                                    <NavLink
-                                        className={({ isActive }) =>
-                                            isActive ? activeLink : inactiveLink
-                                        }
-                                        to="/dental-implants"
-                                    >
-                                        Protetická stomatologie
-                                    </NavLink>
-                                    <NavLink
-                                        className={({ isActive }) =>
-                                            isActive ? activeLink : inactiveLink
-                                        }
-                                        to="/oral-surgery"
-                                    >
-                                        Dentoalveolární chirurgie
-                                    </NavLink>
-                                    <NavLink
-                                        className={({ isActive }) =>
-                                            isActive ? activeLink : inactiveLink
-                                        }
-                                        to="/oral-surgery"
-                                    >
-                                        Implantologie
-                                    </NavLink>
-                                </div>
-                            </li>
-                            <li className="nav__find-us-item">
                                 <NavLink
                                     className={({ isActive }) =>
                                         isActive ? activeLink : inactiveLink
                                     }
-                                    to="/contacts"
+                                    to="/teeth-cleaning"
                                 >
-                                    Kontakty
+                                    Dentální hygiena
                                 </NavLink>
-                            </li>
-                            <li className="nav__btn">
                                 <NavLink
                                     className={({ isActive }) =>
-                                        isActive
-                                            ? `${activeLink} nav__btn-link`
-                                            : `${inactiveLink} nav__btn-link`
+                                        isActive ? activeLink : inactiveLink
                                     }
-                                    to="/appointment"
+                                    to="/care-advice"
                                 >
-                                    Rezervujte si termín
+                                    Parodontologie
                                 </NavLink>
-                            </li>
-                        </ul>
-                        <NavLink
-                            className={({ isActive }) =>
-                                isActive
-                                    ? `${activeLink} nav__find-us-icon`
-                                    : `${inactiveLink} nav__find-us-icon`
-                            }
-                            to="/contacts"
-                        >
-                            <img src={phoneIcon} alt="Location" />
-                        </NavLink>
-                        <NavLink
-                            className={({ isActive }) =>
-                                isActive
-                                    ? `${activeLink} nav__contact-icon`
-                                    : `${inactiveLink} nav__contact-icon`
-                            }
-                            to="/appointment"
-                        >
-                            <img src={calendarIcon} alt="Calendar" />
-                        </NavLink>
-                        <BurgerBtn />
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/dental-care"
+                                >
+                                    Dětská stomatologie
+                                </NavLink>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/tooth-protection"
+                                >
+                                    Fotokompozitní výplně
+                                </NavLink>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/whitening-teeth"
+                                >
+                                    Endodoncie
+                                </NavLink>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/dental-implants"
+                                >
+                                    Protetická stomatologie
+                                </NavLink>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/oral-surgery"
+                                >
+                                    Dentoalveolární chirurgie
+                                </NavLink>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/oral-surgery"
+                                >
+                                    Implantologie
+                                </NavLink>
+                            </div>
+                        </div>
+                        <div className="nav__contacts">
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? activeLink : inactiveLink
+                                }
+                                to="/contacts"
+                            >
+                                Kontakty
+                            </NavLink>
+                        </div>
+                        <div className="nav__appointment">
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? `${activeLink} nav__appointment-link`
+                                        : `${inactiveLink} nav__appointment-link`
+                                }
+                                to="/appointment"
+                            >
+                                Rezervujte si termín
+                            </NavLink>
+                        </div>
+                        <div className="nav__contacts-btn">
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? `${activeLink} nav__contacts-link`
+                                        : `${inactiveLink} nav__contacts-link`
+                                }
+                                to="/contacts"
+                            >
+                                <img src={phoneIcon} alt="Location" />
+                            </NavLink>
+                        </div>
+                        <div className="nav__appointment-btn">
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? `${activeLink} nav__appointment-link-btn`
+                                        : `${activeLink} nav__appointment-link-btn`
+                                }
+                                to="/appointment"
+                            >
+                                <img src={calendarIcon} alt="Calendar" />
+                            </NavLink>
+                        </div>
                     </nav>
+                    <BurgerBtn />
                 </div>
 
                 {/* Menu links */}
@@ -270,7 +272,6 @@ const Header = () => {
                                     <span className="menu-down-arrow"></span>
                                 </div>
                             </div>
-
                             <div className="menu-dropdown__wrapper">
                                 <div className="menu-dropdown-list">
                                     <NavLink

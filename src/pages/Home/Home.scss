@@ -68,7 +68,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin: 0 30px;
+    margin: 0 30px 30px;
 }
 
 .home__service {
@@ -113,6 +113,76 @@
     opacity: 1;
 }
 
+// Faq
+
+.faq {
+    @include flex-center;
+    padding: 30px 30px 0;
+}
+
+.faq__title {
+    width: 50%;
+    font-size: 3rem;
+    @include grid-center;
+}
+
+.faq__list {
+    width: 50%;
+}
+
+.faq__item {
+    padding: 15px;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid var(--border-25);
+    }
+}
+
+.faq__btn {
+    width: 100%;
+    height: 60px;
+    @include flex-between-center;
+}
+
+.faq__btn-icon {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background: var(--txt-clr);
+}
+
+.faq__btn-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 30px;
+    background: var(--txt-clr);
+    transition: height 0.3s;
+}
+
+.faq__btn-icon--active::after {
+    height: 1px;
+}
+
+.grid-dropdown {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows 0.3s;
+}
+
+.grid-dropdown--active {
+    grid-template-rows: 1fr;
+}
+
+.grid-dropdown__details {
+    overflow: hidden;
+    text-align: justify;
+}
+
 @media (max-width: 1300px) {
     .home__services {
         grid-template-columns: repeat(2, 1fr);
@@ -122,14 +192,31 @@
 @media (max-width: 900px) {
     .home__services {
         grid-template-columns: repeat(1, 1fr);
-        margin: 0 15px;
+        margin: 0 15px 30px;
+    }
+
+    .faq {
+        padding: 30px 15px 0;
     }
 }
 
 @media (max-width: 800px) {
     .home__services {
         grid-template-columns: repeat(1, 1fr);
-        margin: 0;
+        margin: 0 0 30px;
+    }
+
+    .faq {
+        flex-direction: column;
+        padding: 30px 0 0;
+    }
+
+    .faq__title {
+        width: 100%;
+    }
+
+    .faq__list {
+        width: 100%;
     }
 }
 
