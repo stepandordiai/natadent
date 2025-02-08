@@ -51,8 +51,8 @@ const PriceList = () => {
             </div>
             {filter === "" && (
                 <div className="price-list__wrapper">
-                    <p className="price-list__title">Braces</p>
                     <table className="price-list__table">
+                        <caption className="price-list__title">Braces</caption>
                         <tbody>
                             {priceData
                                 .filter((el) => {
@@ -68,8 +68,10 @@ const PriceList = () => {
                                 })}
                         </tbody>
                     </table>
-                    <p className="price-list__title">Dentistry</p>
                     <table className="price-list__table">
+                        <caption className="price-list__title">
+                            Dentistry
+                        </caption>
                         <tbody>
                             {priceData
                                 .filter((el) => {
@@ -89,8 +91,8 @@ const PriceList = () => {
             )}
             {filter === "braces" && (
                 <div className="price-list__wrapper">
-                    <p className="price-list__title">Braces</p>
                     <table className="price-list__table">
+                        <caption className="price-list__title">Braces</caption>
                         <tbody>
                             {priceData
                                 .filter((el) => {
@@ -110,8 +112,10 @@ const PriceList = () => {
             )}
             {filter === "dentistry" && (
                 <div className="price-list__wrapper">
-                    <p className="price-list__title">Dentistry</p>
                     <table className="price-list__table">
+                        <caption className="price-list__title">
+                            Dentistry
+                        </caption>
                         <tbody>
                             {priceData
                                 .filter((el) => {

@@ -6,16 +6,17 @@
     padding: 0 30px;
 }
 
-.price-list__title {
-    font-size: 1.5rem;
-    font-weight: 500;
-    padding-bottom: 30px;
-}
-
 .price-list__table {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 30px;
+}
+
+.price-list__title {
+    text-align: start;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-bottom: 30px;
 }
 
 tr {
