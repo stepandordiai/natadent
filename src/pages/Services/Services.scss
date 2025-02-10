@@ -1,9 +1,5 @@
 @use "./../../mixins" as *;
 
-.services {
-    padding-bottom: 30px;
-}
-
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

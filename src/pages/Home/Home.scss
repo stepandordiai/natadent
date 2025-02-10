@@ -3,7 +3,6 @@
 .home {
     @include flex-center;
     flex-direction: column;
-    padding-bottom: 30px;
 }
 
 .home__top {
@@ -68,7 +67,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin: 0 30px 30px;
+    margin: 0 30px;
 }
 
 .home__service {
@@ -117,7 +116,7 @@
 
 .faq {
     @include flex-center;
-    padding: 30px 30px 0;
+    padding: 0 30px;
 }
 
 .faq__title {
@@ -192,23 +191,23 @@
 @media (max-width: 900px) {
     .home__services {
         grid-template-columns: repeat(1, 1fr);
-        margin: 0 15px 30px;
+        margin: 0 15px;
     }
 
     .faq {
-        padding: 30px 15px 0;
+        padding: 0 15px;
     }
 }
 
 @media (max-width: 800px) {
     .home__services {
         grid-template-columns: repeat(1, 1fr);
-        margin: 0 0 30px;
+        margin: 0;
     }
 
     .faq {
         flex-direction: column;
-        padding: 30px 0 0;
+        padding: 0;
     }
 
     .faq__title {

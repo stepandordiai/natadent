@@ -1,9 +1,5 @@
 @use "./../../mixins" as *;
 
-.contacts {
-    padding-bottom: 30px;
-}
-
 .contacts__secondary-info {
     text-align: justify;
     font-size: 1.25rem;
@@ -14,7 +10,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    padding: 0 30px 30px;
+    padding: 0 30px;
 
     div {
         width: 100%;
@@ -74,7 +70,7 @@
 .contacts__appointment-title {
     font-size: 2rem;
     text-align: center;
-    padding: 30px 0;
+    padding-bottom: 30px;
 }
 
 .contacts-form {
@@ -83,7 +79,7 @@
     row-gap: 10px;
     width: 50%;
     margin: auto;
-    padding: 0 30px 30px;
+    padding: 0 30px;
 }
 
 .contacts-form__inputs {
@@ -185,9 +181,7 @@
 }
 
 .custom-select__option {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @include flex-start-center;
     height: 60px;
     border-radius: 30px;
     padding: 0 15px;
@@ -217,11 +211,12 @@ input[type="time"] {
 }
 
 .contacts-form__btn {
-    border: 1px solid var(--accent-clr);
     font-weight: inherit;
     height: 60px;
     border-radius: 30px;
     padding: 0 15px;
+    border: 1px solid var(--accent-clr);
+    width: 100%;
     transition: background-color 150ms;
 
     &:hover {
@@ -230,7 +225,6 @@ input[type="time"] {
 }
 
 .contacts__google-map {
-    margin-top: 30px;
     width: 100%;
     height: 250px;
 }

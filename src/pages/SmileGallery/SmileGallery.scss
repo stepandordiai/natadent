@@ -1,13 +1,9 @@
 @use "./../../mixins" as *;
 
-.smile-gallery {
-    padding-bottom: 30px;
-}
-
 .about-us__gallery-title {
     font-size: 2.5rem;
     text-align: center;
-    padding: 30px 0;
+    padding-bottom: 30px;
 }
 
 .about-us__gallery-grid {
@@ -43,7 +39,7 @@
     border-radius: 15px;
     padding: 0 7.5px;
     background: var(--bg-semi-tp-clr);
-    transition: opacity 0.3s;
+    transition: opacity 0.15s;
 }
 
 .smile-wrapper::after {
@@ -58,7 +54,7 @@
     border-radius: 15px;
     padding: 0 7.5px;
     background: var(--bg-semi-tp-clr);
-    transition: opacity 0.3s;
+    transition: opacity 0.15s;
 }
 
 .smile-wrapper:hover::before,

@@ -16,118 +16,219 @@ const Footer = () => {
         <footer className="footer">
             <CustomDivider />
             <div className="footer__header">
-                <div className="footer__header-logo">
-                    <img src={logoIcon} alt="Logo" />
-                    <span>Novozub</span>
+                <div className="footer__header-top">
+                    <div className="footer__header-logo">
+                        <img src={logoIcon} alt="Logo" />
+                        <span>Novozub</span>
+                    </div>
+                    <CustomDivider none="none" />
+                    <div className="footer__header-working-hours">
+                        <p>Pracovní doba</p>
+                        <ul className="working-hours">
+                            <li className={day === 1 ? "day--active" : ""}>
+                                <span>Pondělí:</span>
+                                <span>7:00 - 17:00</span>
+                            </li>
+                            <li className={day === 2 ? "day--active" : ""}>
+                                <span>Úterý:</span>
+                                <span>7:00 - 17:00</span>
+                            </li>
+                            <li className={day === 3 ? "day--active" : ""}>
+                                <span>Středa:</span>
+                                <span>7:00 - 17:00</span>
+                            </li>
+                            <li className={day === 4 ? "day--active" : ""}>
+                                <span>Čtvrtek:</span>
+                                <span>7:00 - 17:00</span>
+                            </li>
+                            <li className={day === 5 ? "day--active" : ""}>
+                                <span>Pátek:</span>
+                                <span>7:00 - 17:00</span>
+                            </li>
+                            <li className={day === 6 ? "day--active" : ""}>
+                                <span>Sobota:</span>
+                                <span>Zavřeno</span>
+                            </li>
+                            <li className={day === 0 ? "day--active" : ""}>
+                                <span>Neděle:</span>
+                                <span>Zavřeno</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <CustomDivider none="none" />
-                <div className="footer__header-working-hours">
-                    <p>Pracovní doba</p>
-                    <ul className="working-hours">
-                        <li className={day === 1 ? "day--active" : ""}>
-                            <span>Pondělí:</span>
-                            <span>7:00 - 17:00</span>
-                        </li>
-                        <li className={day === 2 ? "day--active" : ""}>
-                            <span>Úterý:</span>
-                            <span>7:00 - 17:00</span>
-                        </li>
-                        <li className={day === 3 ? "day--active" : ""}>
-                            <span>Středa:</span>
-                            <span>7:00 - 17:00</span>
-                        </li>
-                        <li className={day === 4 ? "day--active" : ""}>
-                            <span>Čtvrtek:</span>
-                            <span>7:00 - 17:00</span>
-                        </li>
-                        <li className={day === 5 ? "day--active" : ""}>
-                            <span>Pátek:</span>
-                            <span>7:00 - 17:00</span>
-                        </li>
-                        <li className={day === 6 ? "day--active" : ""}>
-                            <span>Sobota:</span>
-                            <span>Zavřeno</span>
-                        </li>
-                        <li className={day === 0 ? "day--active" : ""}>
-                            <span>Neděle:</span>
-                            <span>Zavřeno</span>
-                        </li>
-                    </ul>
-                </div>
-                <CustomDivider none="none" />
+                <CustomDivider />
+                <div className="footer__header-bottom">
+                    <div className="footer__header-navigation">
+                        <p>Navigace</p>
+                        <ul>
+                            <li>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/"
+                                >
+                                    Úvod
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/about-us"
+                                >
+                                    O nás
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/services"
+                                >
+                                    Služby
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/contacts"
+                                >
+                                    Kontakty
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to="/contact"
+                                >
+                                    Rezervujte si termín
+                                </NavLink>
+                            </li>
+                        </ul>
+                    </div>
+                    <CustomDivider none="none" />
+                    <div className="footer__header-navigation">
+                        <p>Služby</p>
+                        <ul>
+                            <li>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to=""
+                                >
+                                    Preventivní stomatologie
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to=""
+                                >
+                                    Dentální hygiena
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to=""
+                                >
+                                    Parodontologie
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to=""
+                                >
+                                    Dětská stomatologie
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to=""
+                                >
+                                    Fotokompozitní výplně
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to=""
+                                >
+                                    Endodoncie
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to=""
+                                >
+                                    Protetická stomatologie
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to=""
+                                >
+                                    Dentoalveolární chirurgie
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? activeLink : inactiveLink
+                                    }
+                                    to=""
+                                >
+                                    Implantologie
+                                </NavLink>
+                            </li>
+                        </ul>
+                    </div>
+                    <CustomDivider none="none" />
 
-                <div className="footer__header-navigation">
-                    <p>Navigace</p>
-                    <ul>
-                        <li>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive ? activeLink : inactiveLink
-                                }
-                                to="/"
-                            >
-                                Úvod
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive ? activeLink : inactiveLink
-                                }
-                                to="/about-us"
-                            >
-                                O nás
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive ? activeLink : inactiveLink
-                                }
-                                to="/services"
-                            >
-                                Služby
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive ? activeLink : inactiveLink
-                                }
-                                to="/contacts"
-                            >
-                                Kontakty
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive ? activeLink : inactiveLink
-                                }
-                                to="/contact"
-                            >
-                                Rezervujte si termín
-                            </NavLink>
-                        </li>
-                    </ul>
-                </div>
-                <CustomDivider none="none" />
-
-                <div className="footer__header-contact-us">
-                    <p>Kontakty</p>
-                    <ul>
-                        <li>
-                            <a href="tel:+420722001016">+420 722 001 016</a>
-                        </li>
-                        <li>
-                            <a href="mailto:novozubcz@gmail.com">
-                                novozubcz@gmail.com
-                            </a>
-                        </li>
-                        <li>
-                            <a href={addressLink}>Pod Hroby 271/271 Kolín IV</a>
-                        </li>
-                    </ul>
+                    <div className="footer__header-contact-us">
+                        <p>Kontakty</p>
+                        <ul>
+                            <li>
+                                <a href="tel:+420722001016">+420 722 001 016</a>
+                            </li>
+                            <li>
+                                <a href="mailto:novozubcz@gmail.com">
+                                    novozubcz@gmail.com
+                                </a>
+                            </li>
+                            <li>
+                                <a href={addressLink}>
+                                    Pod Hroby 271/271 Kolín IV
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <CustomDivider />
