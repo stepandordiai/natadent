@@ -1,5 +1,5 @@
 {
-    "header": {
+    "nav": {
         "home": "Home",
         "about": "About us",
         "price_list": "Price list",
@@ -19,5 +19,18 @@
     },
     "home": {
         "body": "We care for your smile"
+    },
+    "footer": {
+        "working_hours": "Working hours",
+        "mon": "Monday",
+        "tue": "Tuesday",
+        "wed": "Wednesday",
+        "thu": "Thursday",
+        "fri": "Friday",
+        "sat": "Saturday",
+        "sun": "Sunday",
+        "closed": "Closed",
+        "nav_title": "Navigation",
+        "rights": "All rights reserved"
     }
 }

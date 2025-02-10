@@ -1,10 +1,10 @@
 {
-    "header": {
+    "nav": {
         "home": "Úvod",
         "about": "O nás",
         "price_list": "Ceník",
         "gallery": "Galerie úsměvů",
-        "services": "Sluzbi",
+        "services": "Služby",
         "service_1": "Preventivní stomatologie",
         "service_2": "Dentální hygiena",
         "service_3": "Parodontologie",
@@ -19,5 +19,18 @@
     },
     "home": {
         "body": "Záleží nám na tvém úsměvu"
+    },
+    "footer": {
+        "working_hours": "Pracovní doba",
+        "mon": "Pondělí",
+        "tue": "Úterý",
+        "wed": "Středa",
+        "thu": "Čtvrtek",
+        "fri": "Pátek",
+        "sat": "Sobota",
+        "sun": "Neděle",
+        "closed": "Zavřeno",
+        "nav_title": "Navigace",
+        "rights": "Všechna práva vyhrazena"
     }
 }

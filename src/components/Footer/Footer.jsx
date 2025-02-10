@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import logoIcon from "./../../assets/logo/tooth.png";
 import CustomDivider from "../CustomDivider/CustomDivider";
 import "./Footer.scss";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
     const day = new Date().getDay();
@@ -13,7 +13,7 @@ const Footer = () => {
     const inactiveLink = "footer__link";
     const activeLink = "footer__link footer__link--active";
 
-    // const { t } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <footer className="footer">
@@ -26,35 +26,35 @@ const Footer = () => {
                     </div>
                     <CustomDivider none="none" />
                     <div className="footer__header-working-hours">
-                        <p>Pracovní doba</p>
+                        <p>{t("footer.working_hours")}</p>
                         <ul className="working-hours">
                             <li className={day === 1 ? "day--active" : ""}>
-                                <span>Pondělí:</span>
+                                <span>{t("footer.mon")}:</span>
                                 <span>7:00 - 17:00</span>
                             </li>
                             <li className={day === 2 ? "day--active" : ""}>
-                                <span>Úterý:</span>
+                                <span>{t("footer.tue")}:</span>
                                 <span>7:00 - 17:00</span>
                             </li>
                             <li className={day === 3 ? "day--active" : ""}>
-                                <span>Středa:</span>
+                                <span>{t("footer.wed")}:</span>
                                 <span>7:00 - 17:00</span>
                             </li>
                             <li className={day === 4 ? "day--active" : ""}>
-                                <span>Čtvrtek:</span>
+                                <span>{t("footer.thu")}:</span>
                                 <span>7:00 - 17:00</span>
                             </li>
                             <li className={day === 5 ? "day--active" : ""}>
-                                <span>Pátek:</span>
+                                <span>{t("footer.fri")}:</span>
                                 <span>7:00 - 17:00</span>
                             </li>
                             <li className={day === 6 ? "day--active" : ""}>
-                                <span>Sobota:</span>
-                                <span>Zavřeno</span>
+                                <span>{t("footer.sat")}:</span>
+                                <span>{t("footer.closed")}</span>
                             </li>
                             <li className={day === 0 ? "day--active" : ""}>
-                                <span>Neděle:</span>
-                                <span>Zavřeno</span>
+                                <span>{t("footer.sun")}:</span>
+                                <span>{t("footer.closed")}</span>
                             </li>
                         </ul>
                     </div>
@@ -62,7 +62,7 @@ const Footer = () => {
                 <CustomDivider />
                 <div className="footer__header-bottom">
                     <div className="footer__header-navigation">
-                        <p>Navigace</p>
+                        <p>{t("footer.nav_title")}</p>
                         <ul>
                             <li>
                                 <NavLink
@@ -71,7 +71,7 @@ const Footer = () => {
                                     }
                                     to="/"
                                 >
-                                    Úvod
+                                    {t("nav.home")}
                                 </NavLink>
                             </li>
                             <li>
@@ -81,7 +81,7 @@ const Footer = () => {
                                     }
                                     to="/about-us"
                                 >
-                                    O nás
+                                    {t("nav.about")}
                                 </NavLink>
                             </li>
                             <li>
@@ -91,7 +91,7 @@ const Footer = () => {
                                     }
                                     to="/services"
                                 >
-                                    Služby
+                                    {t("nav.services")}
                                 </NavLink>
                             </li>
                             <li>
@@ -101,7 +101,7 @@ const Footer = () => {
                                     }
                                     to="/contacts"
                                 >
-                                    Kontakty
+                                    {t("nav.contacts")}
                                 </NavLink>
                             </li>
                             <li>
@@ -111,14 +111,14 @@ const Footer = () => {
                                     }
                                     to="/contact"
                                 >
-                                    Rezervujte si termín
+                                    {t("nav.appointment")}
                                 </NavLink>
                             </li>
                         </ul>
                     </div>
                     <CustomDivider none="none" />
                     <div className="footer__header-navigation">
-                        <p>Služby</p>
+                        <p>{t("nav.services")}</p>
                         <ul>
                             <li>
                                 <NavLink
@@ -127,7 +127,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    Preventivní stomatologie
+                                    {t("nav.service_1")}
                                 </NavLink>
                             </li>
                             <li>
@@ -137,7 +137,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    Dentální hygiena
+                                    {t("nav.service_2")}
                                 </NavLink>
                             </li>
                             <li>
@@ -147,7 +147,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    Parodontologie
+                                    {t("nav.service_3")}
                                 </NavLink>
                             </li>
                             <li>
@@ -157,7 +157,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    Dětská stomatologie
+                                    {t("nav.service_4")}
                                 </NavLink>
                             </li>
                             <li>
@@ -167,7 +167,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    Fotokompozitní výplně
+                                    {t("nav.service_5")}
                                 </NavLink>
                             </li>
                             <li>
@@ -177,7 +177,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    Endodoncie
+                                    {t("nav.service_6")}
                                 </NavLink>
                             </li>
                             <li>
@@ -187,7 +187,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    Protetická stomatologie
+                                    {t("nav.service_7")}
                                 </NavLink>
                             </li>
                             <li>
@@ -197,7 +197,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    Dentoalveolární chirurgie
+                                    {t("nav.service_8")}
                                 </NavLink>
                             </li>
                             <li>
@@ -207,7 +207,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    Implantologie
+                                    {t("nav.service_9")}
                                 </NavLink>
                             </li>
                         </ul>
@@ -215,7 +215,7 @@ const Footer = () => {
                     <CustomDivider none="none" />
 
                     <div className="footer__header-contact-us">
-                        <p>Kontakty</p>
+                        <p>{t("nav.contacts")}</p>
                         <ul>
                             <li>
                                 <a href="tel:+420722001016">+420 722 001 016</a>
@@ -237,9 +237,12 @@ const Footer = () => {
             <CustomDivider />
             <div className="footer__bottom">
                 <p className="copyright">&copy; 2025 Novozub</p>
-                <p>Všechna práva vyhrazena</p>
+                <p>{t("footer.rights")}.</p>
                 <p className="creator">
-                    Designed and developed by <a href="">heeeyooo.studio</a>
+                    Designed and developed by{" "}
+                    <a href="https://heeeyooo-studio.netlify.app/">
+                        heeeyooo.studio
+                    </a>
                 </p>
             </div>
         </footer>

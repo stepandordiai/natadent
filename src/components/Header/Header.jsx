@@ -82,7 +82,7 @@ const Header = () => {
                         <img src={logoIcon} alt="Novozub" />
                         <span>Novozub</span>
                     </NavLink>
-                    <select className="lang-select" name="" id="">
+                    <select className="lang-select">
                         <option style={{ color: "black" }} value="cz">
                             CZ
                         </option>
@@ -101,7 +101,7 @@ const Header = () => {
                                 }
                                 to="/"
                             >
-                                {t("header.home")}
+                                {t("nav.home")}
                             </NavLink>
                         </div>
                         <div className="nav-list__dropdown">
@@ -111,7 +111,7 @@ const Header = () => {
                                 }
                                 to="/about-us"
                             >
-                                <span>{t("header.about")}</span>
+                                <span>{t("nav.about")}</span>
                                 <span className="down-arrow"></span>
                             </NavLink>
                             <div className="nav-list__dropdown-list">
@@ -121,7 +121,7 @@ const Header = () => {
                                     }
                                     to="/price-list"
                                 >
-                                    {t("header.price_list")}
+                                    {t("nav.price_list")}
                                 </NavLink>
                                 <NavLink
                                     className={({ isActive }) =>
@@ -129,7 +129,7 @@ const Header = () => {
                                     }
                                     to="/smile-gallery"
                                 >
-                                    {t("header.gallery")}
+                                    {t("nav.gallery")}
                                 </NavLink>
                             </div>
                         </div>
@@ -140,7 +140,7 @@ const Header = () => {
                                 }
                                 to="/services"
                             >
-                                <span>{t("header.services")}</span>
+                                <span>{t("nav.services")}</span>
                                 <span className="down-arrow"></span>
                             </NavLink>
                             <div className="nav-list__dropdown-list">
@@ -150,7 +150,7 @@ const Header = () => {
                                     }
                                     to="/oral-hygienist"
                                 >
-                                    {t("header.service_1")}
+                                    {t("nav.service_1")}
                                 </NavLink>
                                 <NavLink
                                     className={({ isActive }) =>
@@ -158,7 +158,7 @@ const Header = () => {
                                     }
                                     to="/teeth-cleaning"
                                 >
-                                    {t("header.service_2")}
+                                    {t("nav.service_2")}
                                 </NavLink>
                                 <NavLink
                                     className={({ isActive }) =>
@@ -166,7 +166,7 @@ const Header = () => {
                                     }
                                     to="/care-advice"
                                 >
-                                    {t("header.service_3")}
+                                    {t("nav.service_3")}
                                 </NavLink>
                                 <NavLink
                                     className={({ isActive }) =>
@@ -174,7 +174,7 @@ const Header = () => {
                                     }
                                     to="/dental-care"
                                 >
-                                    {t("header.service_4")}
+                                    {t("nav.service_4")}
                                 </NavLink>
                                 <NavLink
                                     className={({ isActive }) =>
@@ -182,7 +182,7 @@ const Header = () => {
                                     }
                                     to="/tooth-protection"
                                 >
-                                    {t("header.service_5")}
+                                    {t("nav.service_5")}
                                 </NavLink>
                                 <NavLink
                                     className={({ isActive }) =>
@@ -190,7 +190,7 @@ const Header = () => {
                                     }
                                     to="/whitening-teeth"
                                 >
-                                    {t("header.service_6")}
+                                    {t("nav.service_6")}
                                 </NavLink>
                                 <NavLink
                                     className={({ isActive }) =>
@@ -198,7 +198,7 @@ const Header = () => {
                                     }
                                     to="/dental-implants"
                                 >
-                                    {t("header.service_7")}
+                                    {t("nav.service_7")}
                                 </NavLink>
                                 <NavLink
                                     className={({ isActive }) =>
@@ -206,7 +206,7 @@ const Header = () => {
                                     }
                                     to="/oral-surgery"
                                 >
-                                    {t("header.service_8")}
+                                    {t("nav.service_8")}
                                 </NavLink>
                                 <NavLink
                                     className={({ isActive }) =>
@@ -214,7 +214,7 @@ const Header = () => {
                                     }
                                     to="/oral-surgery"
                                 >
-                                    {t("header.service_9")}
+                                    {t("nav.service_9")}
                                 </NavLink>
                             </div>
                         </div>
@@ -225,7 +225,7 @@ const Header = () => {
                                 }
                                 to="/contacts"
                             >
-                                {t("header.contacts")}
+                                {t("nav.contacts")}
                             </NavLink>
                         </div>
                         <div className="nav__appointment">
@@ -237,7 +237,7 @@ const Header = () => {
                                 }
                                 to="/appointment"
                             >
-                                {t("header.appointment")}
+                                {t("nav.appointment")}
                             </NavLink>
                         </div>
                         <div className="nav__contacts-btn">
@@ -279,7 +279,7 @@ const Header = () => {
                                 }
                                 to="/"
                             >
-                                <span>{t("header.home")}</span>
+                                <span>{t("nav.home")}</span>
                                 <span>01</span>
                             </NavLink>
                         </li>
@@ -293,7 +293,7 @@ const Header = () => {
                                     }
                                     to="/about-us"
                                 >
-                                    <span>{t("header.about")}</span>
+                                    <span>{t("nav.about")}</span>
                                     <span>02</span>
                                 </NavLink>
                                 <div className="menu-down-arrow-wrapper">
@@ -310,7 +310,7 @@ const Header = () => {
                                         }
                                         to="/price-list"
                                     >
-                                        {t("header.price_list")}
+                                        {t("nav.price_list")}
                                     </NavLink>
                                     <NavLink
                                         className={({ isActive }) =>
@@ -320,7 +320,7 @@ const Header = () => {
                                         }
                                         to="/smile-gallery"
                                     >
-                                        {t("header.gallery")}
+                                        {t("nav.gallery")}
                                     </NavLink>
                                 </div>
                             </div>
@@ -335,7 +335,7 @@ const Header = () => {
                                     }
                                     to="/services"
                                 >
-                                    <span>{t("header.services")}</span>
+                                    <span>{t("nav.services")}</span>
                                     <span>03</span>
                                 </NavLink>
                                 <div className="menu-down-arrow-wrapper">
@@ -352,7 +352,7 @@ const Header = () => {
                                         }
                                         to="/oral-hygienist"
                                     >
-                                        {t("header.service_1")}
+                                        {t("nav.service_1")}
                                     </NavLink>
                                     <NavLink
                                         className={({ isActive }) =>
@@ -362,7 +362,7 @@ const Header = () => {
                                         }
                                         to="/teeth-cleaning"
                                     >
-                                        {t("header.service_2")}
+                                        {t("nav.service_2")}
                                     </NavLink>
                                     <NavLink
                                         className={({ isActive }) =>
@@ -372,7 +372,7 @@ const Header = () => {
                                         }
                                         to="/care-advice"
                                     >
-                                        {t("header.service_3")}
+                                        {t("nav.service_3")}
                                     </NavLink>
                                     <NavLink
                                         className={({ isActive }) =>
@@ -382,7 +382,7 @@ const Header = () => {
                                         }
                                         to="/dental-care"
                                     >
-                                        {t("header.service_4")}
+                                        {t("nav.service_4")}
                                     </NavLink>
                                     <NavLink
                                         className={({ isActive }) =>
@@ -392,7 +392,7 @@ const Header = () => {
                                         }
                                         to="/tooth-protection"
                                     >
-                                        {t("header.service_5")}
+                                        {t("nav.service_5")}
                                     </NavLink>
                                     <NavLink
                                         className={({ isActive }) =>
@@ -402,7 +402,7 @@ const Header = () => {
                                         }
                                         to="/whitening-teeth"
                                     >
-                                        {t("header.service_6")}
+                                        {t("nav.service_6")}
                                     </NavLink>
                                     <NavLink
                                         className={({ isActive }) =>
@@ -412,7 +412,7 @@ const Header = () => {
                                         }
                                         to="/dental-implants"
                                     >
-                                        {t("header.service_7")}
+                                        {t("nav.service_7")}
                                     </NavLink>
                                     <NavLink
                                         className={({ isActive }) =>
@@ -422,7 +422,7 @@ const Header = () => {
                                         }
                                         to="/oral-surgery"
                                     >
-                                        {t("header.service_8")}
+                                        {t("nav.service_8")}
                                     </NavLink>
                                     <NavLink
                                         className={({ isActive }) =>
@@ -432,7 +432,7 @@ const Header = () => {
                                         }
                                         to="/oral-hygienist"
                                     >
-                                        {t("header.service_9")}
+                                        {t("nav.service_9")}
                                     </NavLink>
                                 </div>
                             </div>
@@ -444,7 +444,7 @@ const Header = () => {
                                 }
                                 to="/contacts"
                             >
-                                <span>{t("header.contacts")}</span>
+                                <span>{t("nav.contacts")}</span>
                                 <span>04</span>
                             </NavLink>
                         </li>
@@ -455,7 +455,7 @@ const Header = () => {
                                 }
                                 to="/appointment"
                             >
-                                <span>{t("header.appointment")}</span>
+                                <span>{t("nav.appointment")}</span>
                                 <span>05</span>
                             </NavLink>
                         </li>
