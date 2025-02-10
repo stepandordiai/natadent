@@ -4,9 +4,9 @@ import { useEffect } from "react";
 import logoIcon from "./../../assets/logo/tooth.png";
 import phoneIcon from "./../../assets/icons/phone-call.png";
 import calendarIcon from "./../../assets/icons/calendar.png";
-import "./Header.scss";
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
+import "./Header.scss";
 
 const Header = () => {
     const inactiveLink = "nav__link js-link";
@@ -60,12 +60,52 @@ const Header = () => {
             i18n.changeLanguage(lang);
         };
 
-        document
-            .querySelector(".lang-select")
-            .addEventListener("change", () => {
-                const langValue = document.querySelector(".lang-select").value;
-                handleChangeLanguage(langValue);
+        document.querySelectorAll(".lang-custom-select").forEach((select) => {
+            const selectBtn = select.querySelector(".lang-custom-select__btn");
+            const selectList = select.querySelector(
+                ".lang-custom-select__list"
+            );
+            const selectOptions = selectList.querySelectorAll(
+                ".lang-custom-select__option"
+            );
+            const selectInput = document.querySelector(
+                ".lang-custom-select__input"
+            );
+
+            selectBtn.addEventListener("click", (e) => {
+                // Prevent from submitting a form
+                e.preventDefault();
+                selectList.classList.toggle(
+                    "lang-custom-select__list--visible"
+                );
+                selectBtn.classList.add("lang-custom-select__btn--active");
             });
+
+            selectOptions.forEach((option) => {
+                option.addEventListener("click", (e) => {
+                    // TODO:
+                    e.stopPropagation();
+                    selectBtn.textContent = option.textContent;
+                    selectBtn.focus();
+                    selectInput.value = option.dataset.value;
+                    handleChangeLanguage(selectInput.value);
+                    selectList.classList.remove(
+                        "lang-custom-select__list--visible"
+                    );
+                });
+            });
+
+            document.addEventListener("click", (e) => {
+                if (e.target !== selectBtn) {
+                    selectBtn.classList.remove(
+                        "lang-custom-select__btn--active"
+                    );
+                    selectList.classList.remove(
+                        "lang-custom-select__list--visible"
+                    );
+                }
+            });
+        });
     }, []);
 
     const { t } = useTranslation();
@@ -82,17 +122,49 @@ const Header = () => {
                         <img src={logoIcon} alt="Novozub" />
                         <span>Novozub</span>
                     </NavLink>
-                    <select className="lang-select">
-                        <option style={{ color: "black" }} value="cz">
-                            CZ
-                        </option>
-                        <option style={{ color: "black" }} value="en">
-                            EN
-                        </option>
-                        <option style={{ color: "black" }} value="ua">
-                            UA
-                        </option>
-                    </select>
+                    <div className="lang-custom-select">
+                        <button className="lang-custom-select__btn">CZ</button>
+                        <ul className="lang-custom-select__list">
+                            <li
+                                className="lang-custom-select__option"
+                                data-value="cz"
+                            >
+                                CZ{" "}
+                                <img
+                                    width={20}
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/383px-Flag_of_the_Czech_Republic.svg.png"
+                                    alt=""
+                                />
+                            </li>
+                            <li
+                                className="lang-custom-select__option"
+                                data-value="ua"
+                            >
+                                UA{" "}
+                                <img
+                                    width={20}
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/383px-Flag_of_Ukraine.svg.png"
+                                    alt=""
+                                />
+                            </li>
+                            <li
+                                className="lang-custom-select__option"
+                                data-value="en"
+                            >
+                                EN{" "}
+                                <img
+                                    width={20}
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/383px-Flag_of_the_United_States_%28Pantone%29.svg.png"
+                                    alt=""
+                                />
+                            </li>
+                        </ul>
+                        <input
+                            className="lang-custom-select__input"
+                            type="text"
+                            defaultValue="cz"
+                        />
+                    </div>
                     <nav className="nav">
                         <div>
                             <NavLink
