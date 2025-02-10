@@ -1,0 +1,23 @@
+{
+    "header": {
+        "home": "Úvod",
+        "about": "O nás",
+        "price_list": "Ceník",
+        "gallery": "Galerie úsměvů",
+        "services": "Sluzbi",
+        "service_1": "Preventivní stomatologie",
+        "service_2": "Dentální hygiena",
+        "service_3": "Parodontologie",
+        "service_4": "Dětská stomatologie",
+        "service_5": "Fotokompozitní výplně",
+        "service_6": "Endodoncie",
+        "service_7": "Protetická stomatologie",
+        "service_8": "Dentoalveolární chirurgie",
+        "service_9": "Implantologie",
+        "contacts": "Kontakty",
+        "appointment": "Rezervujte si termín"
+    },
+    "home": {
+        "body": "Záleží nám na tvém úsměvu"
+    }
+}

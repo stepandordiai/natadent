@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import logoIcon from "./../../assets/logo/tooth.png";
 import CustomDivider from "../CustomDivider/CustomDivider";
 import "./Footer.scss";
+// import { useTranslation } from "react-i18next";
 
 const Footer = () => {
     const day = new Date().getDay();
@@ -11,6 +12,8 @@ const Footer = () => {
 
     const inactiveLink = "footer__link";
     const activeLink = "footer__link footer__link--active";
+
+    // const { t } = useTranslation();
 
     return (
         <footer className="footer">

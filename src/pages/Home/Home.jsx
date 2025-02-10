@@ -8,6 +8,7 @@ import toothIcon4 from "./../../assets/icons/tooth-icons/golden-crown.png";
 import toothIcon5 from "./../../assets/icons/tooth-icons/implant.png";
 import "./Home.scss";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
     useEffect(() => {
@@ -40,11 +41,13 @@ const Home = () => {
         });
     }, []);
 
+    const { t } = useTranslation();
+
     return (
         <section className="home">
             <div className="home__top">
                 <HomeCustomBg />
-                <h2>Záleží nám na tvém úsměvu</h2>
+                <h2>{t("home.body")}</h2>
                 <p>Zubní klinika v Kolíně</p>
                 <div className="btn-container">
                     <NavLink
