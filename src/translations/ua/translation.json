@@ -6,20 +6,41 @@
         "gallery": "Галерея",
         "services": "Сервіси",
         "service_1": "Профілактична стоматологія",
+        "service_desc_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_2": "Гігієна зубів",
+        "service_desc_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_3": "Пародонтологія",
+        "service_desc_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_4": "Дитяча стоматологія",
+        "service_desc_4": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_5": "Фотокомпозитні пломби",
+        "service_desc_5": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_6": "Ендодонтія",
+        "service_desc_6": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_7": "Ортопедична стоматологія",
+        "service_desc_7": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_8": "Зубно-альвеолярна хірургія",
+        "service_desc_8": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_9": "Імплантологія",
+        "service_desc_9": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "contacts": "Контакти",
         "appointment": "Записатись на прийом"
     },
+
     "home": {
-        "body": "We care for your smile"
+        "title": "Ми дбаємо про вашу усмішку",
+        "secondary_title": "Зубна клініка в місті Колін",
+        "services_btn": "Наші сервіси",
+        "view_more_btn": "Більше сервісів",
+        "faq": "Питання та відповіді",
+        "question_1": "Питання",
+        "answer_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!",
+        "question_2": "Питання",
+        "answer_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!",
+        "question_3": "Питання",
+        "answer_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!"
     },
+
     "footer": {
         "working_hours": "Робочі години",
         "mon": "Понеділок",

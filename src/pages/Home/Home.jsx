@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import CustomDivider from "../../components/CustomDivider/CustomDivider";
+import { useTranslation } from "react-i18next";
 import HomeCustomBg from "../../components/HomeCustomBg/HomeCustomBg";
 import toothIcon1 from "./../../assets/icons/tooth-icons/braces.png";
 import toothIcon2 from "./../../assets/icons/tooth-icons/cavity.png";
@@ -7,12 +9,11 @@ import toothIcon3 from "./../../assets/icons/tooth-icons/crown.png";
 import toothIcon4 from "./../../assets/icons/tooth-icons/golden-crown.png";
 import toothIcon5 from "./../../assets/icons/tooth-icons/implant.png";
 import "./Home.scss";
-import CustomDivider from "../../components/CustomDivider/CustomDivider";
-import { useTranslation } from "react-i18next";
 
 const Home = () => {
     useEffect(() => {
         document.title = "Novozub | Zubní klinika v Kolíně";
+
         document.querySelectorAll(".js-service").forEach((el) => {
             document.addEventListener("scroll", () => {
                 const serviceRect = el.getBoundingClientRect().top;
@@ -47,21 +48,21 @@ const Home = () => {
         <section className="home">
             <div className="home__top">
                 <HomeCustomBg />
-                <h2>{t("home.body")}</h2>
-                <p>Zubní klinika v Kolíně</p>
+                <h2>{t("home.title")}</h2>
+                <p>{t("home.secondary_title")}</p>
                 <div className="btn-container">
                     <NavLink
                         className="home__book-btn js-book-btn"
                         to="/appointment"
                     >
-                        Rezervujte si termín
+                        {t("nav.appointment")}
                     </NavLink>
                     <NavLink className="services-btn" to="/services">
-                        Zobrazit služby
+                        {t("home.services_btn")}
                     </NavLink>
                 </div>
             </div>
-            <h2 className="home__services-title">Služby</h2>
+            <h2 className="home__services-title">{t("nav.services")}</h2>
             <div className="home__services">
                 <div className="home__service js-service">
                     <img
@@ -70,34 +71,22 @@ const Home = () => {
                         alt="Preventivní stomatologie"
                     />
                     <div>
-                        <h4>Preventivní stomatologie</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Beatae libero at sed soluta inventore labore
-                            cupiditate
-                        </p>
+                        <h4>{t("nav.service_1")}</h4>
+                        <p>{t("nav.service_desc_1")}</p>
                     </div>
                 </div>
                 <div className="home__service js-service">
                     <img width={90} src={toothIcon2} alt="Dentální hygiena" />
                     <div>
-                        <h4>Dentální hygiena</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Beatae libero at sed soluta inventore labore
-                            cupiditate
-                        </p>
+                        <h4>{t("nav.service_2")}</h4>
+                        <p>{t("nav.service_desc_2")}</p>
                     </div>
                 </div>
                 <div className="home__service js-service">
                     <img width={90} src={toothIcon3} alt="Parodontologie" />
                     <div>
-                        <h4>Parodontologie</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Beatae libero at sed soluta inventore labore
-                            cupiditate
-                        </p>
+                        <h4>{t("nav.service_3")}</h4>
+                        <p>{t("nav.service_desc_3")}</p>
                     </div>
                 </div>
                 <div className="home__service js-service">
@@ -107,12 +96,8 @@ const Home = () => {
                         alt="Dětská stomatologie"
                     />
                     <div>
-                        <h4>Dětská stomatologie</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Beatae libero at sed soluta inventore labore
-                            cupiditate
-                        </p>
+                        <h4>{t("nav.service_4")}</h4>
+                        <p>{t("nav.service_desc_4")}</p>
                     </div>
                 </div>
                 <div className="home__service js-service">
@@ -122,66 +107,56 @@ const Home = () => {
                         alt="Fotokompozitní výplně"
                     />
                     <div>
-                        <h4>Fotokompozitní výplně</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Beatae libero at sed soluta inventore labore
-                            cupiditate
-                        </p>
+                        <h4>{t("nav.service_5")}</h4>
+                        <p>{t("nav.service_desc_5")}</p>
                     </div>
                 </div>
                 <div className="home__service js-service">
                     <NavLink className="view-more" to="/services">
-                        Zobrazit více
+                        {t("home.view_more_btn")}
                     </NavLink>
                 </div>
             </div>
             <CustomDivider />
             <div className="faq">
-                <div className="faq__title">FAQ</div>
+                <div className="faq__title">{t("home.faq")}</div>
                 <div className="faq__list">
                     <div className="faq__item">
                         <button className="faq__btn js-faq__btn">
-                            <span className="faq__btn-txt">Question</span>
+                            <span className="faq__btn-txt">
+                                {t("home.question_1")}
+                            </span>
                             <div className="faq__btn-icon"></div>
                         </button>
                         <div className="grid-dropdown">
                             <p className="grid-dropdown__details">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Aspernatur labore quas, odit
-                                odio consequuntur magni, quia enim commodi
-                                suscipit, animi nobis. Magnam saepe quis alias
-                                dolorem perferendis, libero tempore temporibus!
+                                {t("home.answer_1")}
                             </p>
                         </div>
                     </div>
                     <div className="faq__item">
                         <button className="faq__btn js-faq__btn">
-                            <span className="faq__btn-txt">Question</span>
+                            <span className="faq__btn-txt">
+                                {t("home.question_2")}
+                            </span>
                             <div className="faq__btn-icon"></div>
                         </button>
                         <div className="grid-dropdown">
                             <p className="grid-dropdown__details">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Aspernatur labore quas, odit
-                                odio consequuntur magni, quia enim commodi
-                                suscipit, animi nobis. Magnam saepe quis alias
-                                dolorem perferendis, libero tempore temporibus!
+                                {t("home.answer_2")}
                             </p>
                         </div>
                     </div>
                     <div className="faq__item">
                         <button className="faq__btn js-faq__btn">
-                            <span className="faq__btn-txt">Question</span>
+                            <span className="faq__btn-txt">
+                                {t("home.question_3")}
+                            </span>
                             <div className="faq__btn-icon"></div>
                         </button>
                         <div className="grid-dropdown">
                             <p className="grid-dropdown__details">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Aspernatur labore quas, odit
-                                odio consequuntur magni, quia enim commodi
-                                suscipit, animi nobis. Magnam saepe quis alias
-                                dolorem perferendis, libero tempore temporibus!
+                                {t("home.answer_3")}
                             </p>
                         </div>
                     </div>

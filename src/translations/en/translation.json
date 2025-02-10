@@ -6,20 +6,41 @@
         "gallery": "Smile gallery",
         "services": "Services",
         "service_1": "Preventive dentistry",
+        "service_desc_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_2": "Dental hygiene",
+        "service_desc_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_3": "Periodontology",
+        "service_desc_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_4": "Pediatric dentistry",
+        "service_desc_4": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_5": "Photocomposite fillings",
+        "service_desc_5": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_6": "Endodontics",
+        "service_desc_6": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_7": "Prosthetic dentistry",
+        "service_desc_7": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_8": "Dentoalveolar surgery",
+        "service_desc_8": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_9": "Implantology",
+        "service_desc_9": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "contacts": "Contacts",
         "appointment": "Book an appointment"
     },
+
     "home": {
-        "body": "We care for your smile"
+        "title": "We care for your smile",
+        "secondary_title": "Dental clinic in Kolin",
+        "services_btn": "View services",
+        "view_more_btn": "View more",
+        "faq": "FAQ",
+        "question_1": "Question",
+        "answer_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!",
+        "question_2": "Question",
+        "answer_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!",
+        "question_3": "Question",
+        "answer_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!"
     },
+
     "footer": {
         "working_hours": "Working hours",
         "mon": "Monday",

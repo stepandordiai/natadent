@@ -6,20 +6,41 @@
         "gallery": "Galerie úsměvů",
         "services": "Služby",
         "service_1": "Preventivní stomatologie",
+        "service_desc_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_2": "Dentální hygiena",
+        "service_desc_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_3": "Parodontologie",
+        "service_desc_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_4": "Dětská stomatologie",
+        "service_desc_4": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_5": "Fotokompozitní výplně",
+        "service_desc_5": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_6": "Endodoncie",
+        "service_desc_6": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_7": "Protetická stomatologie",
+        "service_desc_7": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_8": "Dentoalveolární chirurgie",
+        "service_desc_8": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_9": "Implantologie",
+        "service_desc_9": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "contacts": "Kontakty",
         "appointment": "Rezervujte si termín"
     },
+
     "home": {
-        "body": "Záleží nám na tvém úsměvu"
+        "title": "Záleží nám na tvém úsměvu",
+        "secondary_title": "Zubní klinika v Kolíně",
+        "services_btn": "Zobrazit služby",
+        "view_more_btn": "Zobrazit více",
+        "faq": "Často kladené otázky",
+        "question_1": "Otázka",
+        "answer_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!",
+        "question_2": "Otázka",
+        "answer_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!",
+        "question_3": "Otázka",
+        "answer_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!"
     },
+
     "footer": {
         "working_hours": "Pracovní doba",
         "mon": "Pondělí",
