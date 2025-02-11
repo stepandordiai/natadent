@@ -1,10 +1,11 @@
 {
+    "home_title": "Home",
+    "about_us_title": "About us",
+    "price_list_title": "Price list",
+    "smile_gallery_title": "Smile gallery",
+    "services_title": "Services",
+
     "nav": {
-        "home_title": "Home",
-        "about": "About us",
-        "price_list_title": "Price list",
-        "gallery": "Smile gallery",
-        "services": "Services",
         "service_1": "Preventive dentistry",
         "service_desc_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_2": "Dental hygiene",
@@ -39,6 +40,12 @@
         "answer_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!",
         "question_3": "Question",
         "answer_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!"
+    },
+
+    "smile_gallery": {
+        "gallery_title": "Smile transformations",
+        "before": "Before",
+        "after": "After"
     },
 
     "footer": {

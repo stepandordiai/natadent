@@ -1,10 +1,11 @@
 {
+    "home_title": "Головна",
+    "about_us_title": "Про нас",
+    "price_list_title": "Прайс лист",
+    "smile_gallery_title": "Галерея усмішок",
+    "services_title": "Сервіси",
+
     "nav": {
-        "home_title": "Головна",
-        "about": "Про нас",
-        "price_list_title": "Прайс лист",
-        "gallery": "Галерея",
-        "services": "Сервіси",
         "service_1": "Профілактична стоматологія",
         "service_desc_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_2": "Гігієна зубів",
@@ -39,6 +40,12 @@
         "answer_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!",
         "question_3": "Питання",
         "answer_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!"
+    },
+
+    "smile_gallery": {
+        "gallery_title": "Трансформації усмішок",
+        "before": "До",
+        "after": "Після"
     },
 
     "footer": {

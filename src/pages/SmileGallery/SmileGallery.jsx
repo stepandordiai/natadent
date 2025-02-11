@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import { useTranslation } from "react-i18next";
 
 import before1 from "./../../assets/smiles/before1.png";
 import after1 from "./../../assets/smiles/after1.png";
@@ -22,9 +23,13 @@ import after6 from "./../../assets/smiles/after6.png";
 import "./SmileGallery.scss";
 
 const SmileGallery = () => {
-    useEffect(() => {
-        document.title = "Galerie úsměvů";
+    const { t } = useTranslation();
 
+    useEffect(() => {
+        document.title = t("smile_gallery_title");
+    }, [t]);
+
+    useEffect(() => {
         document.querySelectorAll(".img-ranger").forEach((ranger, index) => {
             ranger.addEventListener("input", () => {
                 const rangesValue = document.querySelectorAll(".img-ranger");
@@ -44,10 +49,19 @@ const SmileGallery = () => {
 
     return (
         <section className="smile-gallery">
-            <PageTitle activeLink="Úvod" title="Galerie úsměvů" />
-            <h3 className="about-us__gallery-title">Proměny úsměvu</h3>
+            <PageTitle
+                activeLink={t("home_title")}
+                title={t("smile_gallery_title")}
+            />
+            <h3 className="about-us__gallery-title">
+                {t("smile_gallery.gallery_title")}
+            </h3>
             <div className="about-us__gallery-grid">
-                <div className="smile-wrapper">
+                <div
+                    className="smile-wrapper"
+                    data-before={t("smile_gallery.before")}
+                    data-after={t("smile_gallery.after")}
+                >
                     <img src={after1} alt="Smile after" />
                     <img
                         className="img-range"
@@ -63,7 +77,11 @@ const SmileGallery = () => {
                     />
                     <div className="line"></div>
                 </div>
-                <div className="smile-wrapper">
+                <div
+                    className="smile-wrapper"
+                    data-before={t("smile_gallery.before")}
+                    data-after={t("smile_gallery.after")}
+                >
                     <img src={after2} alt="Smile after" />
                     <img
                         className="img-range"
@@ -79,7 +97,11 @@ const SmileGallery = () => {
                     />
                     <div className="line"></div>
                 </div>
-                <div className="smile-wrapper">
+                <div
+                    className="smile-wrapper"
+                    data-before={t("smile_gallery.before")}
+                    data-after={t("smile_gallery.after")}
+                >
                     <img src={after3} alt="Smile after" />
                     <img
                         className="img-range"
@@ -95,7 +117,11 @@ const SmileGallery = () => {
                     />
                     <div className="line"></div>
                 </div>
-                <div className="smile-wrapper">
+                <div
+                    className="smile-wrapper"
+                    data-before={t("smile_gallery.before")}
+                    data-after={t("smile_gallery.after")}
+                >
                     <img src={after4} alt="Smile after" />
                     <img
                         className="img-range"
@@ -111,7 +137,11 @@ const SmileGallery = () => {
                     />
                     <div className="line"></div>
                 </div>
-                <div className="smile-wrapper">
+                <div
+                    className="smile-wrapper"
+                    data-before={t("smile_gallery.before")}
+                    data-after={t("smile_gallery.after")}
+                >
                     <img src={after5} alt="Smile after" />
                     <img
                         className="img-range"
@@ -127,7 +157,11 @@ const SmileGallery = () => {
                     />
                     <div className="line"></div>
                 </div>
-                <div className="smile-wrapper">
+                <div
+                    className="smile-wrapper"
+                    data-before={t("smile_gallery.before")}
+                    data-after={t("smile_gallery.after")}
+                >
                     <img src={after6} alt="Smile after" />
                     <img
                         className="img-range"

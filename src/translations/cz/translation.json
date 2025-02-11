@@ -1,10 +1,11 @@
 {
+    "home_title": "Úvod",
+    "about_us_title": "O nás",
+    "price_list_title": "Ceník",
+    "smile_gallery_title": "Galerie úsměvů",
+    "services_title": "Služby",
+
     "nav": {
-        "home_title": "Úvod",
-        "about": "O nás",
-        "price_list_title": "Ceník",
-        "gallery": "Galerie úsměvů",
-        "services": "Služby",
         "service_1": "Preventivní stomatologie",
         "service_desc_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae libero at sed soluta inventore labore cupiditate",
         "service_2": "Dentální hygiena",
@@ -39,6 +40,12 @@
         "answer_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!",
         "question_3": "Otázka",
         "answer_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!"
+    },
+
+    "smile_gallery": {
+        "gallery_title": "Proměny úsměvu",
+        "before": "Před",
+        "after": "Potom"
     },
 
     "footer": {

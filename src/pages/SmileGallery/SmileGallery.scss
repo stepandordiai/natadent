@@ -28,7 +28,7 @@
 }
 
 .smile-wrapper::before {
-    content: "Before";
+    content: attr(data-before);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -43,7 +43,7 @@
 }
 
 .smile-wrapper::after {
-    content: "After";
+    content: attr(data-after);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
