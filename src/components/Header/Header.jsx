@@ -58,6 +58,20 @@ const Header = () => {
 
         const handleChangeLanguage = (lang) => {
             i18n.changeLanguage(lang);
+            // Active state for language options
+            document
+                .querySelectorAll(".lang-custom-select__option")
+                .forEach((option) => {
+                    if (option.dataset.value === lang) {
+                        option.classList.add(
+                            "lang-custom-select__option--active"
+                        );
+                    } else {
+                        option.classList.remove(
+                            "lang-custom-select__option--active"
+                        );
+                    }
+                });
         };
 
         document.querySelectorAll(".lang-custom-select").forEach((select) => {
@@ -126,7 +140,7 @@ const Header = () => {
                         <button className="lang-custom-select__btn">CZ</button>
                         <ul className="lang-custom-select__list">
                             <li
-                                className="lang-custom-select__option"
+                                className="lang-custom-select__option lang-custom-select__option--active"
                                 data-value="cz"
                             >
                                 CZ{" "}

@@ -124,6 +124,10 @@
     }
 }
 
+.lang-custom-select__option--active {
+    background: var(--accent-clr);
+}
+
 .lang-custom-select__input {
     display: none;
 }
