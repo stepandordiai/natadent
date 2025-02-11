@@ -4,7 +4,7 @@
     padding: 130px 0 0;
 }
 
-.links-container {
+.page-title__links {
     padding: 0 30px;
     display: flex;
     justify-content: flex-start;
@@ -45,7 +45,7 @@
 }
 
 @media (max-width: 900px) {
-    .links-container {
+    .page-title__links {
         padding: 0 15px;
     }
 

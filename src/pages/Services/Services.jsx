@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import PageTitle from "../../components/PageTitle/PageTitle";
+import { useTranslation } from "react-i18next";
 import toothIcon1 from "./../../assets/icons/tooth-icons/braces.png";
 import toothIcon2 from "./../../assets/icons/tooth-icons/cavity.png";
 import toothIcon3 from "./../../assets/icons/tooth-icons/crown.png";
@@ -7,13 +9,16 @@ import toothIcon5 from "./../../assets/icons/tooth-icons/implant.png";
 import toothIcon6 from "./../../assets/icons/tooth-icons/tooth-gum.png";
 import toothIcon7 from "./../../assets/icons/tooth-icons/tooth-xray-spot.png";
 import toothIcon8 from "./../../assets/icons/tooth-icons/tooth.png";
-import PageTitle from "../../components/PageTitle/PageTitle";
 import "./Services.scss";
 
 const Services = () => {
-    useEffect(() => {
-        document.title = "Služby";
+    const { t } = useTranslation();
 
+    useEffect(() => {
+        document.title = t("services_title");
+    }, [t]);
+
+    useEffect(() => {
         document.querySelectorAll(".js-service").forEach((el) => {
             document.addEventListener("scroll", () => {
                 const serviceRect = el.getBoundingClientRect().top;
@@ -36,105 +41,69 @@ const Services = () => {
 
     return (
         <section className="services">
-            <PageTitle activeLink="Úvod" title="Služby" />
+            <PageTitle title={t("services_title")} />
             <div className="services-grid">
                 <div className="service js-service">
                     <img width={90} src={toothIcon1} alt="" />
                     <div>
-                        <h4>Preventivní stomatologie</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Beatae libero at sed soluta inventore labore
-                            cupiditate
-                        </p>
+                        <h4>{t("service_1")}</h4>
+                        <p>{t("service_desc_1")}</p>
                     </div>
                 </div>
                 <div className="service js-service">
                     <img width={90} src={toothIcon2} alt="" />
                     <div>
-                        <h4>Dentální hygiena</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Beatae libero at sed soluta inventore labore
-                            cupiditate
-                        </p>
+                        <h4>{t("service_2")}</h4>
+                        <p>{t("service_desc_2")}</p>
                     </div>
                 </div>
                 <div className="service js-service">
                     <img width={90} src={toothIcon3} alt="" />
                     <div>
-                        <h4>Parodontologie</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Beatae libero at sed soluta inventore labore
-                            cupiditate
-                        </p>
+                        <h4>{t("service_3")}</h4>
+                        <p>{t("service_desc_3")}</p>
                     </div>
                 </div>
                 <div className="service js-service">
                     <img width={90} src={toothIcon4} alt="" />
                     <div>
-                        <h4>Dětská stomatologie</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Beatae libero at sed soluta inventore labore
-                            cupiditate
-                        </p>
+                        <h4>{t("service_4")}</h4>
+                        <p>{t("service_desc_4")}</p>
                     </div>
                 </div>
                 <div className="service js-service">
                     <img width={90} src={toothIcon5} alt="" />
                     <div>
-                        <h4>Fotokompozitní výplně</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Beatae libero at sed soluta inventore labore
-                            cupiditate
-                        </p>
+                        <h4>{t("service_5")}</h4>
+                        <p>{t("service_desc_5")}</p>
                     </div>
                 </div>
                 <div className="service js-service">
                     <img width={90} src={toothIcon6} alt="" />
                     <div>
-                        <h4>Endodoncie</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Beatae libero at sed soluta inventore labore
-                            cupiditate
-                        </p>
+                        <h4>{t("service_6")}</h4>
+                        <p>{t("service_desc_6")}</p>
                     </div>
                 </div>
                 <div className="service js-service">
                     <img width={90} src={toothIcon7} alt="" />
                     <div>
-                        <h4>Protetická stomatologie</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Beatae libero at sed soluta inventore labore
-                            cupiditate
-                        </p>
+                        <h4>{t("service_7")}</h4>
+                        <p>{t("service_desc_7")}</p>
                     </div>
                 </div>
                 <div className="service js-service">
                     <img width={90} src={toothIcon8} alt="" />
                     <div>
-                        <h4>Dentoalveolární chirurgie</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Beatae libero at sed soluta inventore labore
-                            cupiditate
-                        </p>
+                        <h4>{t("service_8")}</h4>
+                        <p>{t("service_desc_8")}</p>
                     </div>
                 </div>
                 <div className="service js-service">
                     <img width={90} src={toothIcon8} alt="" />
                     <div>
-                        <h4>Implantologie</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Beatae libero at sed soluta inventore labore
-                            cupiditate
-                        </p>
+                        <h4>{t("service_9")}</h4>
+                        <p>{t("service_desc_9")}</p>
                     </div>
                 </div>
             </div>
