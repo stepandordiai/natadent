@@ -40,40 +40,8 @@
         "answer_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!"
     },
 
-    "contacts": {
-        "details_title": "У вас є запитання або ви бажаєте записатися на прийом? Ми тут, щоб допомогти. Зв'яжіться з нами через форму, телефон або електронну пошту, і ми будемо раді вам допомогти.",
-        "phone": "Номер телефону",
-        "mail": "Електронна пошта",
-        "address": "Адреса",
-        "address_btn_title": "Відвідайте нас в Google картах",
-        "first_name": "Ім'я",
-        "last_name": "Прізвище",
-        "choose_service": "Виберіть сервіс",
-        "submit_btn_title": "Відправити"
-    },
-
     "about_us": {
         "our_team_title": "Наша команда"
-    },
-
-    "smile_gallery": {
-        "gallery_title": "Трансформації усмішок",
-        "before": "До",
-        "after": "Після"
-    },
-
-    "footer": {
-        "working_hours": "Робочі години",
-        "mon": "Понеділок",
-        "tue": "Вівторок",
-        "wed": "Середа",
-        "thu": "Четверг",
-        "fri": "Пятниця",
-        "sat": "Субота",
-        "sun": "Неділя",
-        "closed": "Закрито",
-        "nav_title": "Навігація",
-        "rights": "Всі права захищено"
     },
 
     "price_data": {
@@ -90,5 +58,37 @@
     "dentistry": {
         "name_1": "Стоматологія 15 хв",
         "price_1": "3250 Чешських крон"
+    },
+
+    "smile_gallery": {
+        "gallery_title": "Трансформації усмішок",
+        "before": "До",
+        "after": "Після"
+    },
+
+    "contacts": {
+        "details_title": "У вас є запитання або ви бажаєте записатися на прийом? Ми тут, щоб допомогти. Зв'яжіться з нами через форму, телефон або електронну пошту, і ми будемо раді вам допомогти.",
+        "phone": "Номер телефону",
+        "mail": "Електронна пошта",
+        "address": "Адреса",
+        "address_btn_title": "Відвідайте нас в Google картах",
+        "first_name": "Ім'я",
+        "last_name": "Прізвище",
+        "choose_service": "Виберіть сервіс",
+        "submit_btn_title": "Відправити"
+    },
+
+    "footer": {
+        "working_hours": "Робочі години",
+        "mon": "Понеділок",
+        "tue": "Вівторок",
+        "wed": "Середа",
+        "thu": "Четверг",
+        "fri": "Пятниця",
+        "sat": "Субота",
+        "sun": "Неділя",
+        "closed": "Закрито",
+        "nav_title": "Навігація",
+        "rights": "Всі права захищено"
     }
 }

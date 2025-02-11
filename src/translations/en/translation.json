@@ -40,40 +40,8 @@
         "answer_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!"
     },
 
-    "contacts": {
-        "details_title": "Do you have a question or need to book an appointment? We are here to help. Contact us via the form, phone or email and we will be happy to help you.",
-        "phone": "Phone number",
-        "mail": "E-mail",
-        "address": "Address",
-        "address_btn_title": "Visit us on Google",
-        "first_name": "First name",
-        "last_name": "Last name",
-        "choose_service": "Choose service",
-        "submit_btn_title": "Send"
-    },
-
     "about_us": {
         "our_team_title": "Our team"
-    },
-
-    "smile_gallery": {
-        "gallery_title": "Smile transformations",
-        "before": "Before",
-        "after": "After"
-    },
-
-    "footer": {
-        "working_hours": "Working hours",
-        "mon": "Monday",
-        "tue": "Tuesday",
-        "wed": "Wednesday",
-        "thu": "Thursday",
-        "fri": "Friday",
-        "sat": "Saturday",
-        "sun": "Sunday",
-        "closed": "Closed",
-        "nav_title": "Navigation",
-        "rights": "All rights reserved"
     },
 
     "price_data": {
@@ -90,5 +58,37 @@
     "dentistry": {
         "name_1": "Dentistry 15 min",
         "price_1": "3250 CZK"
+    },
+
+    "smile_gallery": {
+        "gallery_title": "Smile transformations",
+        "before": "Before",
+        "after": "After"
+    },
+
+    "contacts": {
+        "details_title": "Do you have a question or need to book an appointment? We are here to help. Contact us via the form, phone or email and we will be happy to help you.",
+        "phone": "Phone number",
+        "mail": "E-mail",
+        "address": "Address",
+        "address_btn_title": "Visit us on Google",
+        "first_name": "First name",
+        "last_name": "Last name",
+        "choose_service": "Choose service",
+        "submit_btn_title": "Send"
+    },
+
+    "footer": {
+        "working_hours": "Working hours",
+        "mon": "Monday",
+        "tue": "Tuesday",
+        "wed": "Wednesday",
+        "thu": "Thursday",
+        "fri": "Friday",
+        "sat": "Saturday",
+        "sun": "Sunday",
+        "closed": "Closed",
+        "nav_title": "Navigation",
+        "rights": "All rights reserved"
     }
 }

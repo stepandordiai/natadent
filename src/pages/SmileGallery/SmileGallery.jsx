@@ -49,10 +49,7 @@ const SmileGallery = () => {
 
     return (
         <section className="smile-gallery">
-            <PageTitle
-                activeLink={t("home_title")}
-                title={t("smile_gallery_title")}
-            />
+            <PageTitle title={t("smile_gallery_title")} />
             <h3 className="about-us__gallery-title">
                 {t("smile_gallery.gallery_title")}
             </h3>

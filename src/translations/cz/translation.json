@@ -40,6 +40,32 @@
         "answer_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!"
     },
 
+    "about_us": {
+        "our_team_title": "Náš tým"
+    },
+
+    "price_list": {
+        "all_title": "Vše",
+        "braces_title": "Rovnátka",
+        "dentistry_title": "Zubní lékařství"
+    },
+
+    "braces": {
+        "name_1": "Rovnátka 15 min",
+        "price_1": "1250 CZK"
+    },
+
+    "dentistry": {
+        "name_1": "Zubní lékařství 15 min",
+        "price_1": "3250 CZK"
+    },
+
+    "smile_gallery": {
+        "gallery_title": "Proměny úsměvu",
+        "before": "Před",
+        "after": "Potom"
+    },
+
     "contacts": {
         "details_title": "Máte dotaz nebo si potřebujete rezervovat termín? Jsme tu, abychom vám pomohli. Kontaktujte nás prostřednictvím formuláře, telefonu nebo e-mailu a my vám rádi pomůžeme.",
         "phone": "Telefonní číslo",
@@ -50,16 +76,6 @@
         "last_name": "Příjmení",
         "choose_service": "Vybrat službu",
         "submit_btn_title": "Poslat"
-    },
-
-    "about_us": {
-        "our_team_title": "Náš tým"
-    },
-
-    "smile_gallery": {
-        "gallery_title": "Proměny úsměvu",
-        "before": "Před",
-        "after": "Potom"
     },
 
     "footer": {
@@ -74,21 +90,5 @@
         "closed": "Zavřeno",
         "nav_title": "Navigace",
         "rights": "Všechna práva vyhrazena"
-    },
-
-    "price_data": {
-        "all_title": "Vše",
-        "braces_title": "Rovnátka",
-        "dentistry_title": "Zubní lékařství"
-    },
-
-    "braces": {
-        "name_1": "Rovnátka 15 min",
-        "price_1": "1250 CZK"
-    },
-
-    "dentistry": {
-        "name_1": "Zubní lékařství 15 min",
-        "price_1": "3250 CZK"
     }
 }

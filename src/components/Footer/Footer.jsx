@@ -71,7 +71,7 @@ const Footer = () => {
                                     }
                                     to="/"
                                 >
-                                    {t("nav.home")}
+                                    {t("home_title")}
                                 </NavLink>
                             </li>
                             <li>
@@ -81,7 +81,7 @@ const Footer = () => {
                                     }
                                     to="/about-us"
                                 >
-                                    {t("nav.about")}
+                                    {t("about_us_title")}
                                 </NavLink>
                             </li>
                             <li>
@@ -91,7 +91,7 @@ const Footer = () => {
                                     }
                                     to="/services"
                                 >
-                                    {t("nav.services")}
+                                    {t("services_title")}
                                 </NavLink>
                             </li>
                             <li>
@@ -101,7 +101,7 @@ const Footer = () => {
                                     }
                                     to="/contacts"
                                 >
-                                    {t("nav.contacts")}
+                                    {t("contacts_title")}
                                 </NavLink>
                             </li>
                             <li>
@@ -111,14 +111,14 @@ const Footer = () => {
                                     }
                                     to="/contact"
                                 >
-                                    {t("nav.appointment")}
+                                    {t("appointment_title")}
                                 </NavLink>
                             </li>
                         </ul>
                     </div>
                     <CustomDivider none="none" />
                     <div className="footer__header-navigation">
-                        <p>{t("nav.services")}</p>
+                        <p>{t("services_title")}</p>
                         <ul>
                             <li>
                                 <NavLink
@@ -127,7 +127,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    {t("nav.service_1")}
+                                    {t("service_1")}
                                 </NavLink>
                             </li>
                             <li>
@@ -137,7 +137,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    {t("nav.service_2")}
+                                    {t("service_2")}
                                 </NavLink>
                             </li>
                             <li>
@@ -147,7 +147,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    {t("nav.service_3")}
+                                    {t("service_3")}
                                 </NavLink>
                             </li>
                             <li>
@@ -157,7 +157,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    {t("nav.service_4")}
+                                    {t("service_4")}
                                 </NavLink>
                             </li>
                             <li>
@@ -167,7 +167,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    {t("nav.service_5")}
+                                    {t("service_5")}
                                 </NavLink>
                             </li>
                             <li>
@@ -177,7 +177,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    {t("nav.service_6")}
+                                    {t("service_6")}
                                 </NavLink>
                             </li>
                             <li>
@@ -187,7 +187,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    {t("nav.service_7")}
+                                    {t("service_7")}
                                 </NavLink>
                             </li>
                             <li>
@@ -197,7 +197,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    {t("nav.service_8")}
+                                    {t("service_8")}
                                 </NavLink>
                             </li>
                             <li>
@@ -207,7 +207,7 @@ const Footer = () => {
                                     }
                                     to=""
                                 >
-                                    {t("nav.service_9")}
+                                    {t("service_9")}
                                 </NavLink>
                             </li>
                         </ul>
@@ -215,7 +215,7 @@ const Footer = () => {
                     <CustomDivider none="none" />
 
                     <div className="footer__header-contact-us">
-                        <p>{t("nav.contacts")}</p>
+                        <p>{t("contacts_title")}</p>
                         <ul>
                             <li>
                                 <a href="tel:+420722001016">+420 722 001 016</a>

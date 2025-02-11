@@ -18,10 +18,7 @@ const PriceList = () => {
 
     return (
         <section className="price-list">
-            <PageTitle
-                activeLink={t("nav.home_title")}
-                title={t("nav.price_list_title")}
-            />
+            <PageTitle title={t("price_list_title")} />
             <div className="filter-btn-wrapper">
                 <button
                     className={

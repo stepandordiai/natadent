@@ -11,9 +11,13 @@ import toothIcon5 from "./../../assets/icons/tooth-icons/implant.png";
 import "./Home.scss";
 
 const Home = () => {
-    useEffect(() => {
-        document.title = "Novozub | Zubní klinika v Kolíně";
+    const { t } = useTranslation();
 
+    useEffect(() => {
+        document.title = `Novozub | ${t("home.secondary_title")}`;
+    }, [t]);
+
+    useEffect(() => {
         document.querySelectorAll(".js-service").forEach((el) => {
             document.addEventListener("scroll", () => {
                 const serviceRect = el.getBoundingClientRect().top;
@@ -42,8 +46,6 @@ const Home = () => {
         });
     }, []);
 
-    const { t } = useTranslation();
-
     return (
         <section className="home">
             <div className="home__top">
@@ -55,14 +57,14 @@ const Home = () => {
                         className="home__book-btn js-book-btn"
                         to="/appointment"
                     >
-                        {t("nav.appointment")}
+                        {t("appointment_title")}
                     </NavLink>
                     <NavLink className="services-btn" to="/services">
                         {t("home.services_btn")}
                     </NavLink>
                 </div>
             </div>
-            <h2 className="home__services-title">{t("nav.services")}</h2>
+            <h2 className="home__services-title">{t("services_title")}</h2>
             <div className="home__services">
                 <div className="home__service js-service">
                     <img
@@ -71,22 +73,22 @@ const Home = () => {
                         alt="Preventivní stomatologie"
                     />
                     <div>
-                        <h4>{t("nav.service_1")}</h4>
-                        <p>{t("nav.service_desc_1")}</p>
+                        <h4>{t("service_1")}</h4>
+                        <p>{t("service_desc_1")}</p>
                     </div>
                 </div>
                 <div className="home__service js-service">
                     <img width={90} src={toothIcon2} alt="Dentální hygiena" />
                     <div>
-                        <h4>{t("nav.service_2")}</h4>
-                        <p>{t("nav.service_desc_2")}</p>
+                        <h4>{t("service_2")}</h4>
+                        <p>{t("service_desc_2")}</p>
                     </div>
                 </div>
                 <div className="home__service js-service">
                     <img width={90} src={toothIcon3} alt="Parodontologie" />
                     <div>
-                        <h4>{t("nav.service_3")}</h4>
-                        <p>{t("nav.service_desc_3")}</p>
+                        <h4>{t("service_3")}</h4>
+                        <p>{t("service_desc_3")}</p>
                     </div>
                 </div>
                 <div className="home__service js-service">
@@ -96,8 +98,8 @@ const Home = () => {
                         alt="Dětská stomatologie"
                     />
                     <div>
-                        <h4>{t("nav.service_4")}</h4>
-                        <p>{t("nav.service_desc_4")}</p>
+                        <h4>{t("service_4")}</h4>
+                        <p>{t("service_desc_4")}</p>
                     </div>
                 </div>
                 <div className="home__service js-service">
@@ -107,8 +109,8 @@ const Home = () => {
                         alt="Fotokompozitní výplně"
                     />
                     <div>
-                        <h4>{t("nav.service_5")}</h4>
-                        <p>{t("nav.service_desc_5")}</p>
+                        <h4>{t("service_5")}</h4>
+                        <p>{t("service_desc_5")}</p>
                     </div>
                 </div>
                 <div className="home__service js-service">
