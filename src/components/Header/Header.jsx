@@ -120,7 +120,7 @@ const Header = () => {
                 <div className="header-bottom__container">
                     <NavLink className="header__logo" to="/">
                         <img src={logoIcon} alt="Novozub" />
-                        <span>Novozub</span>
+                        <span>Luxdent</span>
                     </NavLink>
                     <div className="lang-custom-select">
                         <button className="lang-custom-select__btn">CZ</button>

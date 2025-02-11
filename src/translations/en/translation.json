@@ -1,8 +1,8 @@
 {
     "nav": {
-        "home": "Home",
+        "home_title": "Home",
         "about": "About us",
-        "price_list": "Price list",
+        "price_list_title": "Price list",
         "gallery": "Smile gallery",
         "services": "Services",
         "service_1": "Preventive dentistry",
@@ -53,5 +53,21 @@
         "closed": "Closed",
         "nav_title": "Navigation",
         "rights": "All rights reserved"
+    },
+
+    "price_data": {
+        "all_title": "All",
+        "braces_title": "Braces",
+        "dentistry_title": "Braces"
+    },
+
+    "braces": {
+        "name_1": "Braces 15 min",
+        "price_1": "1250 CZK"
+    },
+
+    "dentistry": {
+        "name_1": "Dentistry 15 min",
+        "price_1": "3250 CZK"
     }
 }

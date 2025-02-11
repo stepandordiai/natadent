@@ -1,8 +1,8 @@
 {
     "nav": {
-        "home": "Úvod",
+        "home_title": "Úvod",
         "about": "O nás",
-        "price_list": "Ceník",
+        "price_list_title": "Ceník",
         "gallery": "Galerie úsměvů",
         "services": "Služby",
         "service_1": "Preventivní stomatologie",
@@ -53,5 +53,21 @@
         "closed": "Zavřeno",
         "nav_title": "Navigace",
         "rights": "Všechna práva vyhrazena"
+    },
+
+    "price_data": {
+        "all_title": "Vše",
+        "braces_title": "Rovnátka",
+        "dentistry_title": "Zubní lékařství"
+    },
+
+    "braces": {
+        "name_1": "Rovnátka 15 min",
+        "price_1": "1250 CZK"
+    },
+
+    "dentistry": {
+        "name_1": "Zubní lékařství 15 min",
+        "price_1": "3250 CZK"
     }
 }
