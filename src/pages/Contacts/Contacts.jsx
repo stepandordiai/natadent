@@ -1,15 +1,20 @@
 import PageTitle from "../../components/PageTitle/PageTitle";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import phoneIcon from "./../../assets/icons/phone-call.png";
 import emailIcon from "./../../assets/icons/mail.png";
 import pinIcon from "./../../assets/icons/pin.png";
 import "./Contacts.scss";
 
 const Contacts = () => {
-    useEffect(() => {
-        document.title = "Kontakty";
+    const { t } = useTranslation();
 
+    useEffect(() => {
+        document.title = t("contacts_title");
+    }, [t]);
+
+    useEffect(() => {
         const contactsLabels = document.querySelectorAll(
             ".contacts-form__label"
         );
@@ -71,11 +76,9 @@ const Contacts = () => {
 
     return (
         <section className="contacts">
-            <PageTitle activeLink="Úvod" title="Kontakty" />
+            <PageTitle title={t("contacts_title")} />
             <p className="contacts__secondary-info">
-                Máte dotaz nebo si potřebujete rezervovat termín? Jsme tu,
-                abychom vám pomohli. Kontaktujte nás prostřednictvím formuláře,
-                telefonu nebo e-mailu a my vám rádi pomůžeme.
+                {t("contacts.details_title")}
             </p>
             <div className="contacts-details">
                 <div>
@@ -84,7 +87,7 @@ const Contacts = () => {
                         src={phoneIcon}
                         alt="Phone"
                     />
-                    <p className="contacts__phone">Telefonní číslo</p>
+                    <p className="contacts__phone">{t("contacts.phone")}</p>
                     <a
                         className="contacts__phone-link"
                         href="tel:+420722001016"
@@ -98,7 +101,7 @@ const Contacts = () => {
                         src={emailIcon}
                         alt="E-mail"
                     />
-                    <p className="contacts__email">E-mail</p>
+                    <p className="contacts__email">{t("contacts.mail")}</p>
                     <a
                         className="contacts__email-link"
                         href="mailto:novozubcz@gmail.com"
@@ -112,18 +115,18 @@ const Contacts = () => {
                         src={pinIcon}
                         alt="Address"
                     />
-                    <p className="contacts__address">Adresa</p>
+                    <p className="contacts__address">{t("contacts.address")}</p>
                     <a className="contacts__email-link" href="">
                         Pod Hroby 271/271 Kolín IV
                     </a>
                     <a className="contacts-details__address-btn" href="">
-                        Navštivte nás na Googlu
+                        {t("contacts.address_btn_title")}
                     </a>
                 </div>
             </div>
             <CustomDivider />
             <h3 className="contacts__appointment-title">
-                Rezervujte si termín
+                {t("appointment_title")}
             </h3>
             <form
                 className="contacts-form"
@@ -133,7 +136,9 @@ const Contacts = () => {
             >
                 <div className="contacts-form__inputs">
                     <div className="contacts-form__input-wrapper">
-                        <label className="contacts-form__label">Jméno</label>
+                        <label className="contacts-form__label">
+                            {t("contacts.first_name")}
+                        </label>
                         <input
                             className="contacts-form__input  js-contacts-form__input"
                             type="text"
@@ -141,7 +146,9 @@ const Contacts = () => {
                         />
                     </div>
                     <div className="contacts-form__input-wrapper">
-                        <label className="contacts-form__label">Příjmení</label>
+                        <label className="contacts-form__label">
+                            {t("contacts.last_name")}
+                        </label>
                         <input
                             className="contacts-form__input  js-contacts-form__input"
                             type="text"
@@ -151,7 +158,9 @@ const Contacts = () => {
                 </div>
                 <div className="contacts-form__inputs">
                     <div className="contacts-form__input-wrapper">
-                        <label className="contacts-form__label">E-mail</label>
+                        <label className="contacts-form__label">
+                            {t("contacts.mail")}
+                        </label>
                         <input
                             className="contacts-form__input js-contacts-form__input"
                             type="text"
@@ -160,7 +169,7 @@ const Contacts = () => {
                     </div>
                     <div className="contacts-form__input-wrapper">
                         <label className="contacts-form__label">
-                            Telefonní číslo
+                            {t("contacts.phone")}
                         </label>
                         <input
                             className="contacts-form__input  js-contacts-form__input"
@@ -174,68 +183,68 @@ const Contacts = () => {
 
                 <div className="custom-select">
                     <button className="custom-select__btn">
-                        Vybrat službu
+                        {t("contacts.choose_service")}
                     </button>
                     <ul className="custom-select__list">
                         <li
                             className="custom-select__option"
                             data-value="Not selected"
                         >
-                            Vybrat službu
+                            {t("contacts.choose_service")}
                         </li>
                         <li
                             className="custom-select__option"
                             data-value="Oral Hygienist"
                         >
-                            Preventivní stomatologie
+                            {t("service_1")}
                         </li>
                         <li
                             className="custom-select__option"
                             data-value="Teeth Cleaning"
                         >
-                            Dentální hygiena
+                            {t("service_2")}
                         </li>
                         <li
                             className="custom-select__option"
                             data-value="Care Advice"
                         >
-                            Parodontologie
+                            {t("service_3")}
                         </li>
                         <li
                             className="custom-select__option"
                             data-value="Dental Care"
                         >
-                            Dětská stomatologie
+                            {t("service_4")}
                         </li>
                         <li
                             className="custom-select__option"
                             data-value="Tooth Protection"
                         >
-                            Fotokompozitní výplně
+                            {t("service_5")}
                         </li>
                         <li
                             className="custom-select__option"
                             data-value="Whitening Teeth"
                         >
-                            Endodoncie
+                            {t("service_6")}
                         </li>
                         <li
                             className="custom-select__option"
                             data-value="Dental Implants"
                         >
-                            Protetická stomatologie
+                            {t("service_7")}
                         </li>
                         <li
                             className="custom-select__option"
                             data-value="Oral Surgery"
                         >
-                            Dentoalveolární chirurgie
+                            {t("service_8")}
                         </li>
                         <li
                             className="custom-select__option"
                             data-value="Oral Surgery"
                         >
-                            Implantologie
+                            {t("service_9")}
                         </li>
                     </ul>
                     <input
@@ -248,7 +257,7 @@ const Contacts = () => {
                 <input type="date" defaultValue="2024-12-12" name="Date" />
                 <input type="time" defaultValue="12:00" name="Time" />
                 <button className="contacts-form__btn" type="submit">
-                    Poslat
+                    {t("contacts.submit_btn_title")}
                 </button>
             </form>
             <CustomDivider />

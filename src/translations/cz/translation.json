@@ -40,6 +40,18 @@
         "answer_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!"
     },
 
+    "contacts": {
+        "details_title": "Máte dotaz nebo si potřebujete rezervovat termín? Jsme tu, abychom vám pomohli. Kontaktujte nás prostřednictvím formuláře, telefonu nebo e-mailu a my vám rádi pomůžeme.",
+        "phone": "Telefonní číslo",
+        "mail": "E-mail",
+        "address": "Adresa",
+        "address_btn_title": "Navštivte nás na Googlu",
+        "first_name": "Jméno",
+        "last_name": "Příjmení",
+        "choose_service": "Vybrat službu",
+        "submit_btn_title": "Poslat"
+    },
+
     "smile_gallery": {
         "gallery_title": "Proměny úsměvu",
         "before": "Před",
