@@ -52,6 +52,10 @@
         "submit_btn_title": "Send"
     },
 
+    "about_us": {
+        "our_team_title": "Our team"
+    },
+
     "smile_gallery": {
         "gallery_title": "Smile transformations",
         "before": "Before",

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
-import CustomDivider from "../../components/CustomDivider/CustomDivider";
+import { useTranslation } from "react-i18next";
 
 import photo1 from "./../../assets/team/1.jpg";
 import photo2 from "./../../assets/team/2.jpg";
@@ -11,9 +11,13 @@ import photo5 from "./../../assets/team/5.jpg";
 import "./AboutUs.scss";
 
 const AboutUs = () => {
-    useEffect(() => {
-        document.title = "O nás";
+    const { t } = useTranslation();
 
+    useEffect(() => {
+        document.title = t("about_us_title");
+    }, [t]);
+
+    useEffect(() => {
         document.querySelectorAll(".img-ranger").forEach((ranger, index) => {
             ranger.addEventListener("input", () => {
                 const rangesValue = document.querySelectorAll(".img-ranger");
@@ -33,8 +37,10 @@ const AboutUs = () => {
 
     return (
         <section className="about-us">
-            <PageTitle activeLink="Úvod" title="O nás" />
-            <h3 className="about-us__team-title">Náš tým</h3>
+            <PageTitle title={t("about_us_title")} />
+            <h3 className="about-us__team-title">
+                {t("about_us.our_team_title")}
+            </h3>
             <div className="about-us__team-grid">
                 <div className="team-card">
                     <img src={photo1} alt="Photo" />

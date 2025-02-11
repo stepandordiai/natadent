@@ -52,6 +52,10 @@
         "submit_btn_title": "Відправити"
     },
 
+    "about_us": {
+        "our_team_title": "Наша команда"
+    },
+
     "smile_gallery": {
         "gallery_title": "Трансформації усмішок",
         "before": "До",
