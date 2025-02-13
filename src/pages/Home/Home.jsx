@@ -8,6 +8,8 @@ import toothIcon2 from "./../../assets/icons/tooth-icons/cavity.png";
 import toothIcon3 from "./../../assets/icons/tooth-icons/crown.png";
 import toothIcon4 from "./../../assets/icons/tooth-icons/golden-crown.png";
 import toothIcon5 from "./../../assets/icons/tooth-icons/implant.png";
+import logoIcon from "./../../assets/logo/tooth.png";
+
 import "./Home.scss";
 
 const Home = () => {
@@ -49,7 +51,10 @@ const Home = () => {
     return (
         <section className="home">
             <div className="home__top">
-                <HomeCustomBg />
+                <div className="home-img-bg__wrapper">
+                    <img className="home-img-bg" src={logoIcon} alt="" />
+                </div>
+                {/* <HomeCustomBg /> */}
                 <h2>{t("home.title")}</h2>
                 <p>{t("home.secondary_title")}</p>
                 <div className="btn-container">
@@ -64,61 +69,68 @@ const Home = () => {
                     </NavLink>
                 </div>
             </div>
-            <h2 className="home__services-title">{t("services_title")}</h2>
-            <div className="home__services">
-                <div className="home__service js-service">
-                    <img
-                        width={90}
-                        src={toothIcon1}
-                        alt="Preventivní stomatologie"
-                    />
-                    <div>
-                        <h4>{t("service_1")}</h4>
-                        <p>{t("service_desc_1")}</p>
+            <div className="home__services-wrapper">
+                <h2 className="home__services-title">{t("services_title")}</h2>
+                <div className="home__services">
+                    <div className="home__service js-service">
+                        <img
+                            width={90}
+                            src={toothIcon1}
+                            alt="Preventivní stomatologie"
+                        />
+                        <div>
+                            <h4>{t("service_1")}</h4>
+                            <p>{t("service_desc_1")}</p>
+                        </div>
                     </div>
-                </div>
-                <div className="home__service js-service">
-                    <img width={90} src={toothIcon2} alt="Dentální hygiena" />
-                    <div>
-                        <h4>{t("service_2")}</h4>
-                        <p>{t("service_desc_2")}</p>
+                    <div className="home__service js-service">
+                        <img
+                            width={90}
+                            src={toothIcon2}
+                            alt="Dentální hygiena"
+                        />
+                        <div>
+                            <h4>{t("service_2")}</h4>
+                            <p>{t("service_desc_2")}</p>
+                        </div>
                     </div>
-                </div>
-                <div className="home__service js-service">
-                    <img width={90} src={toothIcon3} alt="Parodontologie" />
-                    <div>
-                        <h4>{t("service_3")}</h4>
-                        <p>{t("service_desc_3")}</p>
+                    <div className="home__service js-service">
+                        <img width={90} src={toothIcon3} alt="Parodontologie" />
+                        <div>
+                            <h4>{t("service_3")}</h4>
+                            <p>{t("service_desc_3")}</p>
+                        </div>
                     </div>
-                </div>
-                <div className="home__service js-service">
-                    <img
-                        width={90}
-                        src={toothIcon4}
-                        alt="Dětská stomatologie"
-                    />
-                    <div>
-                        <h4>{t("service_4")}</h4>
-                        <p>{t("service_desc_4")}</p>
+                    <div className="home__service js-service">
+                        <img
+                            width={90}
+                            src={toothIcon4}
+                            alt="Dětská stomatologie"
+                        />
+                        <div>
+                            <h4>{t("service_4")}</h4>
+                            <p>{t("service_desc_4")}</p>
+                        </div>
                     </div>
-                </div>
-                <div className="home__service js-service">
-                    <img
-                        width={90}
-                        src={toothIcon5}
-                        alt="Fotokompozitní výplně"
-                    />
-                    <div>
-                        <h4>{t("service_5")}</h4>
-                        <p>{t("service_desc_5")}</p>
+                    <div className="home__service js-service">
+                        <img
+                            width={90}
+                            src={toothIcon5}
+                            alt="Fotokompozitní výplně"
+                        />
+                        <div>
+                            <h4>{t("service_5")}</h4>
+                            <p>{t("service_desc_5")}</p>
+                        </div>
                     </div>
-                </div>
-                <div className="home__service js-service">
-                    <NavLink className="view-more" to="/services">
-                        {t("home.view_more_btn")}
-                    </NavLink>
+                    <div className="home__service js-service">
+                        <NavLink className="view-more" to="/services">
+                            {t("home.view_more_btn")}
+                        </NavLink>
+                    </div>
                 </div>
             </div>
+
             <CustomDivider />
             <div className="faq">
                 <div className="faq__title">{t("home.faq")}</div>

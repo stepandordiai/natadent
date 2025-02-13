@@ -1,40 +1,73 @@
 @use "./../../mixins" as *;
 
+.home-img-bg__wrapper {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(1);
+    animation: translateTooth 1s forwards;
+}
+
+@keyframes translateTooth {
+    to {
+        opacity: 0.5;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(2);
+    }
+}
+
+.home-img-bg__wrapper--active {
+    display: initial;
+}
+
+.home-img-bg {
+    width: clamp(200px, 30vw, 400px);
+}
+
 .home {
     @include flex-center;
     flex-direction: column;
 }
 
 .home__top {
+    position: relative;
+    background: var(--bg-clr);
     @include flex-center;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: 100svh;
     row-gap: 30px;
+    overflow: hidden;
 
     h2 {
+        z-index: 1;
         text-align: center;
         color: var(--txt-clr);
         font-size: clamp(2rem, 6vw, 4rem);
         font-weight: 500;
         opacity: 0;
-        animation: revealHome 1s 1s forwards;
+        animation: revealHome 1s forwards;
     }
 
     p {
+        z-index: 1;
         color: var(--txt-clr);
         font-size: 1.5rem;
         font-weight: 300;
         opacity: 0;
-        animation: revealHome 1s 1s forwards;
+        animation: revealHome 1s forwards;
     }
 }
 
 .btn-container {
+    z-index: 1;
     @include flex-center;
     gap: 30px;
     opacity: 0;
-    animation: revealHome 1s 1s forwards;
+    animation: revealHome 1s forwards;
 }
 
 @keyframes revealHome {
@@ -49,13 +82,21 @@
     place-content: center;
     height: 40px;
     padding: 0 10px;
-    color: var(--txt-clr);
     border-radius: 20px;
-    background: rgba(0, 0, 0, 0.25);
-    transition: background-color 150ms;
+    border: 1px solid var(--accent-clr);
+    background: var(--accent-clr);
+
+    transition: all 0.3s;
+
     &:hover {
-        background: rgba(0, 0, 0, 0.5);
+        // background: rgba(0, 0, 0, 0.5);
+        transform: translateY(-5px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
+}
+
+.home__services-wrapper {
+    background: #fff;
 }
 
 .home__services-title {
@@ -73,12 +114,12 @@
 .home__service {
     position: relative;
     width: 100%;
-    background: rgba(255, 255, 255, 0.05);
     @include flex-center;
     gap: 15px;
     height: 170px;
-    border: 1px solid var(--border-25);
-    color: var(--txt-clr);
+    // border: 1px solid var(--border-25);
+    background: var(--accent-clr);
+    // color: #fff;
     border-radius: 85px;
     padding: 0 15px;
     opacity: 0;
@@ -92,6 +133,11 @@
     p {
         font-weight: 200;
     }
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
 }
 
 .view-more {
@@ -100,11 +146,7 @@
     width: 100%;
     height: 100%;
     border-radius: 85px;
-    transition: background-color 0.15s;
-
-    &:hover {
-        background: var(--accent-clr);
-    }
+    // border: 1px solid var(--accent-clr);
 }
 
 .service--active {

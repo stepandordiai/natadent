@@ -18,8 +18,11 @@ const BurgerBtn = () => {
         });
     }
     return (
-        <div onClick={toggleBurger5} className="burger-5">
-            <span className="burger-5__center-line"></span>
+        <div className="burger-btn__wrapper" onClick={toggleBurger5}>
+            <span>menu</span>
+            <div className="burger-5">
+                <span className="burger-5__center-line"></span>
+            </div>
         </div>
     );
 };

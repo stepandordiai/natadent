@@ -18,6 +18,8 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import translationCz from "./translations/cz/translation.json";
 import translationEn from "./translations/en/translation.json";
 import translationUa from "./translations/ua/translation.json";
+import Loading from "./components/Loading/Loading";
+import { useEffect } from "react";
 
 i18n.use(initReactI18next) // passes i18n down to react-i18next
     .use(LanguageDetector)
@@ -70,21 +72,36 @@ i18n.use(initReactI18next) // passes i18n down to react-i18next
     });
 
 function App() {
+    useEffect(() => {
+        // document.querySelector(".home-img-bg__wrapper").style.display = "none";
+
+        document.querySelector(".popo").addEventListener("animationend", () => {
+            // document.body.classList.add("body--active");
+
+            document.querySelector(".wrapper").style.display = "initial";
+
+            // document.querySelector(".home-img-bg__wrapper").style.display =
+            // "initial";
+        });
+    }, []);
     return (
         <Router>
-            <ScrollToTop />
-            <Header />
-            <ToTopBtn />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about-us" element={<AboutUs />} />
-                <Route path="/price-list" element={<PriceList />} />
-                <Route path="/smile-gallery" element={<SmileGallery />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/contacts" element={<Contacts />} />
-                <Route path="/appointment" element={<Appointment />} />
-            </Routes>
-            <Footer />
+            <Loading />
+            <div className="wrapper" style={{ display: "none" }}>
+                <ScrollToTop />
+                <Header />
+                <ToTopBtn />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about-us" element={<AboutUs />} />
+                    <Route path="/price-list" element={<PriceList />} />
+                    <Route path="/smile-gallery" element={<SmileGallery />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/contacts" element={<Contacts />} />
+                    <Route path="/appointment" element={<Appointment />} />
+                </Routes>
+                <Footer />
+            </div>
         </Router>
     );
 }

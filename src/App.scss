@@ -6,10 +6,33 @@ html {
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     font-family: "Montserrat", serif;
-    background: var(--bg-clr);
+    // background: var(--bg-clr);
+    background: #ebfbf4;
+    // background: var(--tooth-clr);
     color: var(--txt-clr);
+    overflow-y: hidden;
+}
+
+.body--active {
+    overflow-y: scroll !important;
+    height: auto !important;
+}
+
+.wrapper {
+    // opacity: 0;
+    // animation: revealHome 1s forwards;
+}
+
+@keyframes revealHome {
+    to {
+        opacity: 1;
+    }
 }
 
 a {
@@ -19,5 +42,5 @@ a {
 #root {
     display: flex;
     flex-direction: column;
-    margin: 0 5px;
+    // margin: 0 5px;
 }

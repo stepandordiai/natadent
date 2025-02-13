@@ -3,9 +3,17 @@
 .header {
     position: absolute;
     top: 0;
-    right: 5px;
-    left: 5px;
-    z-index: 1;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+    animation: revealHome 1s forwards;
+}
+
+@keyframes revealHome {
+    to {
+        opacity: 1;
+    }
 }
 
 .header-top {
@@ -15,6 +23,7 @@
 
     a {
         transition: color 0.15s;
+        color: black;
 
         &:hover {
             color: var(--accent-clr);
@@ -28,9 +37,9 @@
     min-height: 100px;
     border-radius: 50px;
     padding: 0 25px;
-    background: var(--bg-semi-tp-clr);
-    @include glass-effect;
-    border: 1px solid var(--border-25);
+    // background: var(--bg-semi-tp-clr);
+    // @include glass-effect;
+    // border: 1px solid var(--border-25);
 }
 
 .header-bottom__container {
@@ -71,10 +80,10 @@
     border-radius: 20px;
     padding-left: 10px;
     text-align: left;
-    background: var(--bg-clr);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    // background: var(--bg-clr);
+    border: 1px solid var(--accent-clr);
     cursor: pointer;
-    transition: border 0.15s;
+    transition: border 0.3s;
 
     &:focus {
         border: 1px solid var(--accent-clr);
@@ -98,17 +107,24 @@
 }
 
 .lang-custom-select__list {
-    display: none;
+    // display: none;
     position: absolute;
     left: 0;
     width: 100%;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.25);
     background: var(--bg-clr);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
 }
 
 .lang-custom-select__list--visible {
-    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
 }
 
 .lang-custom-select__option {
@@ -117,7 +133,7 @@
     border-radius: inherit;
     padding: 0 10px;
     cursor: pointer;
-    transition: background-color 0.15s;
+    transition: background-color 0.3s;
 
     &:hover {
         background: var(--accent-clr);
@@ -139,18 +155,21 @@
 
 .nav-list__dropdown {
     position: relative;
+    z-index: 20;
 }
 
 .nav-list__dropdown-list {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 30px);
-    z-index: 1;
+    z-index: 20;
     width: max-content;
+    // background: var(--bg-clr);
     background: var(--bg-clr);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     padding: 10px;
-    border: 1px solid var(--border-25);
+    // border: 1px solid var(--border-25);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s, transform 0.3s;
@@ -168,7 +187,7 @@
     height: 40px;
     border-radius: 20px;
     padding: 0 10px;
-    transition: background-color 0.15s;
+    transition: background-color 0.3s;
 
     &:hover {
         background: var(--accent-clr);

@@ -136,49 +136,7 @@ const Header = () => {
                         <img src={logoIcon} alt="Novozub" />
                         <span>Luxdent</span>
                     </NavLink>
-                    <div className="lang-custom-select">
-                        <button className="lang-custom-select__btn">CZ</button>
-                        <ul className="lang-custom-select__list">
-                            <li
-                                className="lang-custom-select__option lang-custom-select__option--active"
-                                data-value="cz"
-                            >
-                                CZ{" "}
-                                <img
-                                    width={20}
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/383px-Flag_of_the_Czech_Republic.svg.png"
-                                    alt=""
-                                />
-                            </li>
-                            <li
-                                className="lang-custom-select__option"
-                                data-value="ua"
-                            >
-                                UA{" "}
-                                <img
-                                    width={20}
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/383px-Flag_of_Ukraine.svg.png"
-                                    alt=""
-                                />
-                            </li>
-                            <li
-                                className="lang-custom-select__option"
-                                data-value="en"
-                            >
-                                EN{" "}
-                                <img
-                                    width={20}
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/383px-Flag_of_the_United_States_%28Pantone%29.svg.png"
-                                    alt=""
-                                />
-                            </li>
-                        </ul>
-                        <input
-                            className="lang-custom-select__input"
-                            type="text"
-                            defaultValue="cz"
-                        />
-                    </div>
+
                     <nav className="nav">
                         <div>
                             <NavLink
@@ -314,7 +272,7 @@ const Header = () => {
                                 {t("contacts_title")}
                             </NavLink>
                         </div>
-                        <div className="nav__appointment">
+                        {/* <div className="nav__appointment">
                             <NavLink
                                 className={({ isActive }) =>
                                     isActive
@@ -325,7 +283,7 @@ const Header = () => {
                             >
                                 {t("appointment_title")}
                             </NavLink>
-                        </div>
+                        </div> */}
                         <div className="nav__contacts-btn">
                             <NavLink
                                 className={({ isActive }) =>
@@ -338,7 +296,7 @@ const Header = () => {
                                 <img src={phoneIcon} alt="Location" />
                             </NavLink>
                         </div>
-                        <div className="nav__appointment-btn">
+                        {/* <div className="nav__appointment-btn">
                             <NavLink
                                 className={({ isActive }) =>
                                     isActive
@@ -349,8 +307,51 @@ const Header = () => {
                             >
                                 <img src={calendarIcon} alt="Calendar" />
                             </NavLink>
-                        </div>
+                        </div> */}
                     </nav>
+                    <div className="lang-custom-select">
+                        <button className="lang-custom-select__btn">CZ</button>
+                        <ul className="lang-custom-select__list">
+                            <li
+                                className="lang-custom-select__option lang-custom-select__option--active"
+                                data-value="cz"
+                            >
+                                CZ{" "}
+                                <img
+                                    width={20}
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/383px-Flag_of_the_Czech_Republic.svg.png"
+                                    alt=""
+                                />
+                            </li>
+                            <li
+                                className="lang-custom-select__option"
+                                data-value="ua"
+                            >
+                                UA{" "}
+                                <img
+                                    width={20}
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/383px-Flag_of_Ukraine.svg.png"
+                                    alt=""
+                                />
+                            </li>
+                            <li
+                                className="lang-custom-select__option"
+                                data-value="en"
+                            >
+                                EN{" "}
+                                <img
+                                    width={20}
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/383px-Flag_of_the_United_States_%28Pantone%29.svg.png"
+                                    alt=""
+                                />
+                            </li>
+                        </ul>
+                        <input
+                            className="lang-custom-select__input"
+                            type="text"
+                            defaultValue="cz"
+                        />
+                    </div>
                     <BurgerBtn />
                 </div>
 

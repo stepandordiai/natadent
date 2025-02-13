@@ -9,6 +9,7 @@
     flex-direction: column;
     margin-top: auto;
     min-height: 100px;
+    background: #fff;
 }
 
 .footer__link {
@@ -17,15 +18,17 @@
     height: 30px;
     border-radius: 15px;
     padding: 0 7.5px;
-    transition: background-color 150ms;
+    transition: all 150ms;
 
     &:hover {
         background: var(--accent-clr);
+        color: #fff;
     }
 }
 
 .footer__link--active {
     background: var(--accent-clr);
+    color: #fff;
 }
 
 .footer__header {
@@ -79,6 +82,7 @@
 
 .day--active {
     background: var(--accent-clr);
+    color: #fff;
 }
 
 .footer__header-bottom {
@@ -117,10 +121,11 @@
             height: 30px;
             border-radius: 15px;
             padding: 0 7.5px;
-            transition: background-color 150ms;
+            transition: all 150ms;
 
             &:hover {
                 background: var(--accent-clr);
+                color: #fff;
             }
         }
     }

@@ -1,0 +1,41 @@
+.img-bg__wrapper {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-bg__wrapper--inactive {
+    display: none;
+}
+
+.popo {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    scale: 0.5;
+    animation: revealImg 2s forwards;
+}
+
+@keyframes revealImg {
+    50% {
+        grid-template-rows: 1fr;
+        scale: 0.5;
+    }
+    100% {
+        grid-template-rows: 1fr;
+        scale: 1;
+    }
+}
+
+.img-bg {
+    overflow: hidden;
+    width: clamp(200px, 30vw, 400px);
+}
+
+@keyframes hideLoading {
+    to {
+        opacity: 0;
+    }
+}
