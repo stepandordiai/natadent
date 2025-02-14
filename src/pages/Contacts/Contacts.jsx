@@ -2,7 +2,7 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import phoneIcon from "./../../assets/icons/phone-call.png";
+import phoneIcon from "./../../assets/icons/old-typical-phone.png";
 import emailIcon from "./../../assets/icons/mail.png";
 import pinIcon from "./../../assets/icons/pin.png";
 import "./Contacts.scss";

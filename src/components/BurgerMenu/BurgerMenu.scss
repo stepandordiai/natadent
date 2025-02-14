@@ -1,0 +1,98 @@
+@use "./../../mixins" as *;
+
+.burger-menu {
+    position: absolute;
+    top: 130px;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    background: var(--bg-clr);
+    height: calc(100vh - 130px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.burger-menu--active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+//
+
+.menu-dropdown__wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows 0.5s;
+}
+
+.menu-dropdown__wrapper--active {
+    grid-template-rows: 1fr;
+}
+
+.menu-dropdown-list {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    opacity: 0;
+}
+
+.menu-item--active {
+    opacity: 1;
+    transition: opacity 600ms 150ms;
+}
+
+.menu-link__wrapper {
+    position: relative;
+}
+
+.menu-link {
+    @include flex-between-center;
+    height: 60px;
+    transition: color 0.15s;
+
+    &:hover {
+        color: var(--accent-clr);
+    }
+}
+
+.menu-down-arrow-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 50px;
+    @include grid-center;
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.15s;
+
+    &:hover {
+        background: var(--accent-clr);
+    }
+}
+
+.menu-down-arrow {
+    width: 10px;
+    aspect-ratio: 1 / 1;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background: var(--txt-clr);
+}
+
+.dropdown-menu-link {
+    margin: 5px 0;
+    transition: color 0.15s;
+
+    &:hover {
+        color: var(--accent-clr);
+    }
+}
+
+.menu-link--active {
+    color: var(--accent-clr);
+}

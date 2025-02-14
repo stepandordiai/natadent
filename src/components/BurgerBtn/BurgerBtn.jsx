@@ -9,8 +9,8 @@ const BurgerBtn = () => {
             .querySelector(".burger-5__center-line")
             .classList.toggle("burger-5__center-line--active");
         document
-            .querySelector(".header-bottom__grid")
-            .classList.toggle("header-bottom__grid--active");
+            .querySelector(".burger-menu")
+            .classList.toggle("burger-menu--active");
         document.querySelectorAll(".menu-item").forEach((item, index) => {
             setTimeout(() => {
                 item.classList.toggle("menu-item--active");
