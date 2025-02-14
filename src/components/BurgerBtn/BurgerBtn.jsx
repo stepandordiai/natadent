@@ -8,13 +8,9 @@ const BurgerBtn = () => {
         document
             .querySelector(".burger-5__center-line")
             .classList.toggle("burger-5__center-line--active");
-        document
-            .querySelector(".burger-menu")
-            .classList.toggle("burger-menu--active");
-        document.querySelectorAll(".menu-item").forEach((item, index) => {
-            setTimeout(() => {
-                item.classList.toggle("menu-item--active");
-            }, 100 * index);
+        document.querySelector(".menu").classList.toggle("menu--active");
+        document.querySelectorAll(".menu-dd__wrapper").forEach((wrapper) => {
+            wrapper.classList.remove("menu-dd__wrapper--active");
         });
     }
     return (

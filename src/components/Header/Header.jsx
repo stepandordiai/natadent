@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LangSelect from "../LangSelect/LangSelect";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
-import BurgerMenu from "../BurgerMenu/BurgerMenu";
+import Menu from "../Menu/Menu";
 import logoIcon from "./../../assets/logo/tooth.png";
 import "./Header.scss";
 
@@ -152,7 +152,7 @@ const Header = () => {
                 <LangSelect />
                 <BurgerBtn />
             </div>
-            <BurgerMenu />
+            <Menu />
         </header>
     );
 };
