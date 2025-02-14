@@ -12,34 +12,32 @@ const ToTopBtn = () => {
         // Expression for calculating percent height of the page
         let scrollValue = Math.round((positionTop * 100) / calcHeight);
         document.querySelector(
-            ".to-top-btn div"
-        ).style.background = `conic-gradient(var(--accent-clr) ${scrollValue}%, transparent 0%)`;
+            ".progress"
+        ).style.background = `conic-gradient(var(--accent-clr) ${scrollValue}%, #fff 0%)`;
     };
 
     addEventListener("scroll", () => {
         scrollPercentage();
-        if (document.documentElement.scrollTop > 300) {
+
+        if (document.documentElement.scrollTop > window.innerHeight) {
             document
                 .querySelector(".to-top-btn")
-                .classList.add("to-top-btn--translate");
+                .classList.add("to-top-btn--active");
         } else {
             document
                 .querySelector(".to-top-btn")
-                .classList.remove("to-top-btn--translate");
+                .classList.remove("to-top-btn--active");
         }
     });
 
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
+    function scrollOnToTopBtn() {
+        window.scrollTo(0, 0);
     }
 
     return (
-        <div className="to-top-btn" onClick={scrollToTop} title="To Top Button">
-            <div>
-                <div>
+        <div className="to-top-btn" onClick={scrollOnToTopBtn}>
+            <div className="progress">
+                <div className="inner-to-top-btn">
                     <img src={upArrowIcon} alt="Up arrow" />
                 </div>
             </div>
