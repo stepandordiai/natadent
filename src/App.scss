@@ -12,9 +12,7 @@ html {
 
 body {
     font-family: "Montserrat", serif;
-    // background: var(--bg-clr);
-    background: #ebfbf4;
-    // background: var(--tooth-clr);
+    background: var(--bg-clr);
     color: var(--txt-clr);
     overflow-y: hidden;
 }
@@ -24,17 +22,6 @@ body {
     height: auto !important;
 }
 
-.wrapper {
-    // opacity: 0;
-    // animation: revealHome 1s forwards;
-}
-
-@keyframes revealHome {
-    to {
-        opacity: 1;
-    }
-}
-
 a {
     color: var(--txt-clr);
 }
@@ -42,5 +29,4 @@ a {
 #root {
     display: flex;
     flex-direction: column;
-    // margin: 0 5px;
 }

@@ -9,7 +9,6 @@ import toothIcon3 from "./../../assets/icons/tooth-icons/crown.png";
 import toothIcon4 from "./../../assets/icons/tooth-icons/golden-crown.png";
 import toothIcon5 from "./../../assets/icons/tooth-icons/implant.png";
 import logoIcon from "./../../assets/logo/tooth.png";
-
 import "./Home.scss";
 
 const Home = () => {
@@ -50,21 +49,23 @@ const Home = () => {
 
     return (
         <section className="home">
-            <div className="home__top">
-                <div className="home-img-bg__wrapper">
-                    <img className="home-img-bg" src={logoIcon} alt="" />
+            <div className="home-top">
+                <div className="home-top__logo">
+                    <img
+                        className="home-top__logo-icon"
+                        src={logoIcon}
+                        alt="Logo"
+                    />
                 </div>
-                {/* <HomeCustomBg /> */}
-                <h2>{t("home.title")}</h2>
-                <p>{t("home.secondary_title")}</p>
-                <div className="btn-container">
-                    <NavLink
-                        className="home__book-btn js-book-btn"
-                        to="/appointment"
-                    >
+                <h2 className="home-top__title">{t("home.title")}</h2>
+                <h3 className="home-top__sec-title">
+                    {t("home.secondary_title")}
+                </h3>
+                <div className="home-top__btn-container">
+                    <NavLink className="home-top__btn" to="/appointment">
                         {t("appointment_title")}
                     </NavLink>
-                    <NavLink className="services-btn" to="/services">
+                    <NavLink className="home-top__btn" to="/services">
                         {t("home.services_btn")}
                     </NavLink>
                 </div>

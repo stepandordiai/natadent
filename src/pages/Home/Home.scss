@@ -1,69 +1,65 @@
 @use "./../../mixins" as *;
 
-.home-img-bg__wrapper {
-    position: absolute;
-    z-index: 0;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%) scale(1);
-    animation: translateTooth 1s forwards;
-}
-
-@keyframes translateTooth {
-    to {
-        opacity: 0.5;
-        top: 100%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(2);
-    }
-}
-
-.home-img-bg__wrapper--active {
-    display: initial;
-}
-
-.home-img-bg {
-    width: clamp(200px, 30vw, 400px);
-}
-
 .home {
     @include flex-center;
     flex-direction: column;
 }
 
-.home__top {
+.home-top {
     position: relative;
-    background: var(--bg-clr);
     @include flex-center;
     flex-direction: column;
     width: 100%;
     height: 100svh;
     row-gap: 30px;
     overflow: hidden;
+}
 
-    h2 {
-        z-index: 1;
-        text-align: center;
-        color: var(--txt-clr);
-        font-size: clamp(2rem, 6vw, 4rem);
-        font-weight: 500;
-        opacity: 0;
-        animation: revealHome 1s forwards;
-    }
+.home-top__logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    @include grid-center;
+    animation: animateTooth 1s forwards;
+}
 
-    p {
-        z-index: 1;
-        color: var(--txt-clr);
-        font-size: 1.5rem;
-        font-weight: 300;
-        opacity: 0;
-        animation: revealHome 1s forwards;
+@keyframes animateTooth {
+    to {
+        transform: translateY(50%);
     }
 }
 
-.btn-container {
-    z-index: 1;
+.home-top__logo-icon {
+    width: clamp(200px, 30vw, 400px);
+    animation: animateToothIcon 1s forwards;
+}
+
+@keyframes animateToothIcon {
+    to {
+        opacity: 0.5;
+        scale: 2;
+    }
+}
+
+.home-top__title {
+    text-align: center;
+    font-size: clamp(1.5rem, 6vw, 4rem);
+    font-weight: 500;
+    opacity: 0;
+    animation: revealHome 1s forwards;
+}
+
+.home-top__sec-title {
+    text-align: center;
+    font-size: clamp(1.25rem, 4vw, 2rem);
+    opacity: 0;
+    animation: revealHome 1s forwards;
+}
+
+.home-top__btn-container {
     @include flex-center;
     gap: 30px;
     opacity: 0;
@@ -76,20 +72,15 @@
     }
 }
 
-.home__book-btn,
-.services-btn {
-    display: grid;
-    place-content: center;
-    height: 40px;
-    padding: 0 10px;
-    border-radius: 20px;
-    border: 1px solid var(--accent-clr);
+.home-top__btn {
+    height: 60px;
+    @include grid-center;
+    border-radius: 30px;
+    padding: 0 15px;
     background: var(--accent-clr);
-
     transition: all 0.3s;
 
     &:hover {
-        // background: rgba(0, 0, 0, 0.5);
         transform: translateY(-5px);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
@@ -262,7 +253,7 @@
 }
 
 @media (max-width: 500px) {
-    .btn-container {
+    .home-top__btn-container {
         flex-direction: column;
     }
 }
