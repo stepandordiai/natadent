@@ -1,67 +1,63 @@
 @use "./../../mixins" as *;
 
-.lang-custom-select {
+.lang-select {
     position: relative;
-    width: 100px;
-    height: 40px;
     z-index: 99;
 }
 
-.lang-custom-select__btn {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.lang-select__btn {
+    height: 40px;
+    @include flex-center;
+    column-gap: 5px;
     border-radius: 20px;
-    padding-left: 10px;
-    text-align: left;
+    padding: 0 10px;
     border: 1px solid var(--accent-clr);
-    cursor: pointer;
-    transition: border 0.3s;
-
-    &:focus {
-        border: 1px solid var(--accent-clr);
-    }
+    transition: background-color 0.3s;
 }
 
-.lang-custom-select__btn--active {
-    border: 1px solid var(--accent-clr);
+.lang-select__btn--active {
+    background: var(--accent-clr);
 }
 
-.lang-custom-select__btn::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 10px;
+.lang-select__btn-value {
+    pointer-events: none;
+}
+
+.lang-select__btn-icon {
     width: 10px;
     aspect-ratio: 1 / 1;
     clip-path: polygon(50% 100%, 0 0, 100% 0);
     background: var(--txt-clr);
+    pointer-events: none;
+    transition: rotate 0.3s;
 }
 
-.lang-custom-select__list {
+.lang-select__btn-icon--active {
+    rotate: 180deg;
+}
+
+.lang-select__list {
     position: absolute;
-    left: 0;
-    width: 100%;
+    width: max-content;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
     background: var(--bg-clr);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--cstm-box-shadow);
     opacity: 0;
     transform: translateY(30px);
     pointer-events: none;
     transition: opacity 0.3s, transform 0.3s;
 }
 
-.lang-custom-select__list--visible {
+.lang-select__list--visible {
     opacity: 1;
     transform: translateY(0);
     pointer-events: all;
 }
 
-.lang-custom-select__option {
-    @include flex-start-center;
+.lang-select__option {
     height: 40px;
+    @include flex-center;
+    column-gap: 5px;
     border-radius: inherit;
     padding: 0 10px;
     cursor: pointer;
@@ -72,16 +68,16 @@
     }
 }
 
-.lang-custom-select__option--active {
+.lang-select__option--active {
     background: var(--accent-clr);
 }
 
-.lang-custom-select__input {
+.lang-select__input {
     display: none;
 }
 
 @media (max-width: 800px) {
-    .lang-custom-select {
+    .lang-select {
         margin-left: auto;
         margin-right: 15px;
     }

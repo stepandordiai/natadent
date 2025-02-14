@@ -10,108 +10,104 @@ const LangSelect = () => {
             i18n.changeLanguage(lang);
             // Active state for language options
             document
-                .querySelectorAll(".lang-custom-select__option")
+                .querySelectorAll(".lang-select__option")
                 .forEach((option) => {
                     if (option.dataset.value === lang) {
-                        option.classList.add(
-                            "lang-custom-select__option--active"
-                        );
+                        option.classList.add("lang-select__option--active");
                     } else {
-                        option.classList.remove(
-                            "lang-custom-select__option--active"
-                        );
+                        option.classList.remove("lang-select__option--active");
                     }
                 });
         };
 
-        document.querySelectorAll(".lang-custom-select").forEach((select) => {
-            const selectBtn = select.querySelector(".lang-custom-select__btn");
-            const selectList = select.querySelector(
-                ".lang-custom-select__list"
-            );
+        document.querySelectorAll(".lang-select").forEach((select) => {
+            const selectBtn = select.querySelector(".lang-select__btn");
+            const selectList = select.querySelector(".lang-select__list");
             const selectOptions = selectList.querySelectorAll(
-                ".lang-custom-select__option"
+                ".lang-select__option"
             );
-            const selectInput = document.querySelector(
-                ".lang-custom-select__input"
-            );
+            const selectInput = document.querySelector(".lang-select__input");
 
             selectBtn.addEventListener("click", (e) => {
                 // Prevent from submitting a form
                 e.preventDefault();
-                selectList.classList.toggle(
-                    "lang-custom-select__list--visible"
-                );
-                selectBtn.classList.add("lang-custom-select__btn--active");
+                selectList.classList.toggle("lang-select__list--visible");
+                selectBtn.classList.toggle("lang-select__btn--active");
+                document
+                    .querySelector(".lang-select__btn-icon")
+                    .classList.toggle("lang-select__btn-icon--active");
             });
 
             selectOptions.forEach((option) => {
                 option.addEventListener("click", (e) => {
                     // TODO:
                     e.stopPropagation();
-                    selectBtn.textContent = option.textContent;
-                    selectBtn.focus();
+                    document.querySelector(
+                        ".lang-select__btn-value"
+                    ).textContent = option.textContent;
                     selectInput.value = option.dataset.value;
                     handleChangeLanguage(selectInput.value);
-                    selectList.classList.remove(
-                        "lang-custom-select__list--visible"
-                    );
+                    selectBtn.classList.remove("lang-select__btn--active");
+                    selectList.classList.remove("lang-select__list--visible");
+                    document
+                        .querySelector(".lang-select__btn-icon")
+                        .classList.remove("lang-select__btn-icon--active");
                 });
             });
 
             document.addEventListener("click", (e) => {
                 if (e.target !== selectBtn) {
-                    selectBtn.classList.remove(
-                        "lang-custom-select__btn--active"
-                    );
-                    selectList.classList.remove(
-                        "lang-custom-select__list--visible"
-                    );
+                    selectBtn.classList.remove("lang-select__btn--active");
+                    selectList.classList.remove("lang-select__list--visible");
+                    document
+                        .querySelector(".lang-select__btn-icon")
+                        .classList.remove("lang-select__btn-icon--active");
                 }
             });
         });
     }, []);
 
     return (
-        <>
-            <div className="lang-custom-select">
-                <button className="lang-custom-select__btn">CZ</button>
-                <ul className="lang-custom-select__list">
-                    <li
-                        className="lang-custom-select__option lang-custom-select__option--active"
-                        data-value="cz"
-                    >
-                        CZ{" "}
-                        <img
-                            width={20}
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/383px-Flag_of_the_Czech_Republic.svg.png"
-                            alt=""
-                        />
-                    </li>
-                    <li className="lang-custom-select__option" data-value="ua">
-                        UA{" "}
-                        <img
-                            width={20}
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/383px-Flag_of_Ukraine.svg.png"
-                            alt=""
-                        />
-                    </li>
-                    <li className="lang-custom-select__option" data-value="en">
-                        EN{" "}
-                        <img
-                            width={20}
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/383px-Flag_of_the_United_States_%28Pantone%29.svg.png"
-                            alt=""
-                        />
-                    </li>
-                </ul>
-                <input
-                    className="lang-custom-select__input"
-                    type="text"
-                    defaultValue="cz"
-                />
-            </div>
-        </>
+        <div className="lang-select">
+            <button className="lang-select__btn">
+                <span className="lang-select__btn-value">CZ</span>
+                <div className="lang-select__btn-icon"></div>
+            </button>
+            <ul className="lang-select__list">
+                <li
+                    className="lang-select__option lang-select__option--active"
+                    data-value="cz"
+                >
+                    <span>CZ</span>
+                    <img
+                        width={20}
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/383px-Flag_of_the_Czech_Republic.svg.png"
+                        alt="CZ"
+                    />
+                </li>
+                <li className="lang-select__option" data-value="ua">
+                    <span>UA</span>
+                    <img
+                        width={20}
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/383px-Flag_of_Ukraine.svg.png"
+                        alt="UA"
+                    />
+                </li>
+                <li className="lang-select__option" data-value="en">
+                    <span>EN</span>
+                    <img
+                        width={20}
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/383px-Flag_of_the_United_States_%28Pantone%29.svg.png"
+                        alt="EN"
+                    />
+                </li>
+            </ul>
+            <input
+                className="lang-select__input"
+                type="text"
+                defaultValue="cz"
+            />
+        </div>
     );
 };
 
