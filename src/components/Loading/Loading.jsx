@@ -1,29 +1,24 @@
-import "./Loading.scss";
-import logoIcon from "./../../assets/logo/tooth.png";
 import { useEffect } from "react";
+import logoIcon from "./../../assets/logo/tooth.png";
+import "./Loading.scss";
 
 const Loading = () => {
     useEffect(() => {
-        // document.querySelector(".home-img-bg__wrapper").style.display = "none";
-
-        document.querySelector(".popo").addEventListener("animationend", () => {
-            document.body.classList.add("body--active");
-
-            document.querySelector(".img-bg__wrapper").style.display = "none";
-
-            // document.querySelector(".home-img-bg__wrapper").style.display =
-            // "initial";
-        });
+        document
+            .querySelector(".loading")
+            .addEventListener("animationend", () => {
+                document.body.classList.add("body--active");
+                document.querySelector(".loading__wrapper").style.display =
+                    "none";
+            });
     }, []);
 
     return (
-        <>
-            <div className="img-bg__wrapper">
-                <div className="popo">
-                    <img className="img-bg" src={logoIcon} alt="" />
-                </div>
+        <div className="loading__wrapper">
+            <div className="loading">
+                <img className="loading__logo-icon" src={logoIcon} alt="Logo" />
             </div>
-        </>
+        </div>
     );
 };
 

@@ -1,24 +1,20 @@
-.img-bg__wrapper {
+.loading__wrapper {
     position: fixed;
-    z-index: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
-.img-bg__wrapper--inactive {
-    display: none;
-}
-
-.popo {
+.loading {
     display: grid;
     grid-template-rows: 0fr;
     overflow: hidden;
     scale: 0.5;
-    animation: revealImg 2s forwards;
+    animation: revealLoading 2s forwards;
 }
 
-@keyframes revealImg {
+@keyframes revealLoading {
     50% {
         grid-template-rows: 1fr;
         scale: 0.5;
@@ -29,13 +25,7 @@
     }
 }
 
-.img-bg {
+.loading__logo-icon {
     overflow: hidden;
     width: clamp(200px, 30vw, 400px);
-}
-
-@keyframes hideLoading {
-    to {
-        opacity: 0;
-    }
 }

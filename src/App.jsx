@@ -73,16 +73,11 @@ i18n.use(initReactI18next) // passes i18n down to react-i18next
 
 function App() {
     useEffect(() => {
-        // document.querySelector(".home-img-bg__wrapper").style.display = "none";
-
-        document.querySelector(".popo").addEventListener("animationend", () => {
-            // document.body.classList.add("body--active");
-
-            document.querySelector(".wrapper").style.display = "initial";
-
-            // document.querySelector(".home-img-bg__wrapper").style.display =
-            // "initial";
-        });
+        document
+            .querySelector(".loading")
+            .addEventListener("animationend", () => {
+                document.querySelector(".wrapper").style.display = "initial";
+            });
     }, []);
     return (
         <Router>
