@@ -89,6 +89,7 @@
 // Services
 
 .home__services {
+    width: 100%;
     background: #fff;
     padding: 30px;
 }
@@ -109,7 +110,6 @@
     width: 100%;
     @include flex-center;
     flex-direction: column;
-    text-align: justify;
     gap: 15px;
     height: 180px;
     background: var(--bg-clr);
@@ -123,9 +123,11 @@
     h4 {
         font-weight: 500;
         font-size: 1.2rem;
+        text-align: center;
     }
     p {
         font-weight: 200;
+        text-align: justify;
     }
 
     &:hover {
@@ -143,25 +145,27 @@
 
 .faq {
     @include flex-center;
-    padding: 0 30px;
+
+    padding: 30px;
 }
 
 .faq__title {
     width: 50%;
-    font-size: 3rem;
-    @include grid-center;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .faq__list {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
 }
 
 .faq__item {
     padding: 15px;
-
-    &:not(:last-child) {
-        border-bottom: 1px solid var(--border-25);
-    }
+    background: var(--accent-clr);
+    border-radius: 45px;
 }
 
 .faq__btn {
@@ -170,10 +174,15 @@
     @include flex-between-center;
 }
 
+.faq__btn-txt {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
 .faq__btn-icon {
     position: relative;
     width: 30px;
-    height: 2px;
+    height: 1.5px;
     background: var(--txt-clr);
 }
 
@@ -183,25 +192,26 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 2px;
+    width: 1.5px;
     height: 30px;
     background: var(--txt-clr);
     transition: height 0.3s;
 }
 
 .faq__btn-icon--active::after {
-    height: 1px;
+    height: 1.5px;
 }
 
 .grid-dropdown {
     display: grid;
     grid-template-rows: 0fr;
     overflow: hidden;
-    transition: grid-template-rows 0.3s;
+    transition: all 0.3s;
 }
 
 .grid-dropdown--active {
     grid-template-rows: 1fr;
+    padding: 7.5px;
 }
 
 .grid-dropdown__details {
@@ -225,14 +235,9 @@
     }
 
     .faq {
-        padding: 0 15px;
-    }
-}
-
-@media (max-width: 800px) {
-    .faq {
         flex-direction: column;
-        padding: 0;
+        padding: 30px 15px;
+        row-gap: 30px;
     }
 
     .faq__title {

@@ -3,14 +3,13 @@
 .footer {
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
     margin-top: auto;
     background: #fff;
-    padding: 30px;
 }
 
 .footer-top {
     @include flex-between-start;
+    padding: 30px;
 }
 
 .footer-top__logo {
@@ -56,6 +55,7 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
+    padding: 30px;
 }
 
 .footer-middle__nav-list-wrapper {
@@ -115,6 +115,8 @@
 .footer-bottom {
     @include flex-center;
     flex-direction: column;
+    background: var(--bg-clr);
+    padding: 30px;
 }
 
 .creator {
@@ -128,7 +130,9 @@
 }
 
 @media (max-width: 900px) {
-    .footer {
+    .footer-top,
+    .footer-middle,
+    .footer-bottom {
         padding: 30px 15px;
     }
 }
