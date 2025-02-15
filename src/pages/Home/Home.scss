@@ -1,15 +1,9 @@
 @use "./../../mixins" as *;
 
-.home {
-    @include flex-center;
-    flex-direction: column;
-}
-
 .home-top {
     position: relative;
     @include flex-center;
     flex-direction: column;
-    width: 100%;
     height: 100svh;
     row-gap: 30px;
     overflow: hidden;
@@ -89,7 +83,6 @@
 // Services
 
 .home__services {
-    width: 100%;
     background: #fff;
     padding: 30px;
 }
@@ -145,7 +138,6 @@
 
 .faq {
     @include flex-center;
-
     padding: 30px;
 }
 

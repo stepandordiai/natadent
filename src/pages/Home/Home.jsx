@@ -44,7 +44,7 @@ const Home = () => {
     }, []);
 
     return (
-        <section className="home">
+        <>
             <div className="home-top">
                 <div className="home-top__logo">
                     <img
@@ -270,7 +270,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </>
     );
 };
 
