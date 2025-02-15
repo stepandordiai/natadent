@@ -22,7 +22,7 @@
     @include flex-between-center;
 
     a {
-        transition: color 0.3s;
+        transition: color 0.15s;
 
         &:hover {
             color: var(--accent-clr);

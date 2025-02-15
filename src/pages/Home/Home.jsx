@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import CustomDivider from "../../components/CustomDivider/CustomDivider";
 import { useTranslation } from "react-i18next";
-import HomeCustomBg from "../../components/HomeCustomBg/HomeCustomBg";
 import toothIcon1 from "./../../assets/icons/tooth-icons/braces.png";
 import toothIcon2 from "./../../assets/icons/tooth-icons/cavity.png";
 import toothIcon3 from "./../../assets/icons/tooth-icons/crown.png";
@@ -131,7 +130,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
             <CustomDivider />
             <div className="faq">
                 <div className="faq__title">{t("home.faq")}</div>
