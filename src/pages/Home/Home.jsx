@@ -70,157 +70,126 @@ const Home = () => {
                 <h2 className="home__services-title">{t("services_title")}</h2>
                 <div className="home__services-grid">
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_1")}</h4>
                         <p>{t("service_desc_1")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_2")}</h4>
                         <p>{t("service_desc_2")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_3")}</h4>
                         <p>{t("service_desc_3")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_4")}</h4>
                         <p>{t("service_desc_4")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_5")}</h4>
                         <p>{t("service_desc_5")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_6")}</h4>
                         <p>{t("service_desc_6")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_7")}</h4>
                         <p>{t("service_desc_7")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_8")}</h4>
                         <p>{t("service_desc_8")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_9")}</h4>
                         <p>{t("service_desc_9")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_10")}</h4>
                         <p>{t("service_desc_10")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_11")}</h4>
                         <p>{t("service_desc_11")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_12")}</h4>
                         <p>{t("service_desc_12")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_13")}</h4>
                         <p>{t("service_desc_13")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_14")}</h4>
                         <p>{t("service_desc_14")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_15")}</h4>
                         <p>{t("service_desc_15")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_16")}</h4>
                         <p>{t("service_desc_16")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_17")}</h4>
                         <p>{t("service_desc_17")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_18")}</h4>
                         <p>{t("service_desc_18")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_19")}</h4>
                         <p>{t("service_desc_19")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_20")}</h4>
                         <p>{t("service_desc_20")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_21")}</h4>
                         <p>{t("service_desc_21")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_22")}</h4>
                         <p>{t("service_desc_22")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_23")}</h4>
                         <p>{t("service_desc_23")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_24")}</h4>
                         <p>{t("service_desc_24")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_25")}</h4>
                         <p>{t("service_desc_25")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_26")}</h4>
                         <p>{t("service_desc_26")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_27")}</h4>
                         <p>{t("service_desc_27")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_28")}</h4>
                         <p>{t("service_desc_28")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_29")}</h4>
                         <p>{t("service_desc_29")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_30")}</h4>
                         <p>{t("service_desc_30")}</p>
                     </NavLink>
                     <NavLink className="home__service js-service">
-                        <img width={30} src={logoIcon} alt="Logo" />
                         <h4>{t("service_31")}</h4>
                         <p>{t("service_desc_31")}</p>
                     </NavLink>
