@@ -13,12 +13,7 @@
 }
 
 .footer-top__logo {
-    display: flex;
-    flex-direction: column;
-
-    div {
-        @include flex-center;
-    }
+    @include flex-center;
 
     img {
         width: 50px;
@@ -30,6 +25,7 @@
 
 .footer-top__working-hours {
     width: 300px;
+    text-align: center;
 
     p {
         font-size: 1.5rem;
@@ -59,6 +55,7 @@
 }
 
 .footer-middle__nav-list-wrapper {
+    text-align: center;
     p {
         font-size: 1.5rem;
         font-weight: 500;
@@ -66,12 +63,14 @@
     }
     ul {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
     }
 }
 
 .footer-middle__contacts-wrapper {
+    text-align: center;
+
     p {
         font-size: 1.5rem;
         font-weight: 500;
@@ -79,7 +78,7 @@
     }
     ul {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
 
         a {
@@ -140,6 +139,7 @@
 @media (max-width: 800px) {
     .footer-middle {
         row-gap: 30px;
+        align-items: center;
         flex-direction: column;
     }
 }
