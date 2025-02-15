@@ -86,39 +86,42 @@
     }
 }
 
-.home__services-wrapper {
+// Services
+
+.home__services {
     background: #fff;
+    padding: 30px;
 }
 
 .home__services-title {
-    font-size: 2rem;
-    padding: 30px 0;
+    font-size: 3rem;
+    margin-bottom: 30px;
 }
 
-.home__services {
+.home__services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin: 0 30px;
 }
 
 .home__service {
     position: relative;
     width: 100%;
     @include flex-center;
+    flex-direction: column;
+    text-align: justify;
     gap: 15px;
-    height: 170px;
-    // border: 1px solid var(--border-25);
-    background: var(--accent-clr);
-    // color: #fff;
-    border-radius: 85px;
-    padding: 0 15px;
+    height: 180px;
+    background: var(--bg-clr);
+    border-radius: 90px;
+    padding: 0 45px;
+    cursor: pointer;
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.3s;
 
     h4 {
-        font-weight: 600;
+        font-weight: 500;
         font-size: 1.2rem;
     }
     p {
@@ -129,15 +132,6 @@
         transform: translateY(-5px);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
-}
-
-.view-more {
-    position: absolute;
-    @include grid-center;
-    width: 100%;
-    height: 100%;
-    border-radius: 85px;
-    // border: 1px solid var(--accent-clr);
 }
 
 .service--active {
@@ -216,15 +210,18 @@
 }
 
 @media (max-width: 1300px) {
-    .home__services {
+    .home__services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 900px) {
     .home__services {
+        padding: 30px 15px;
+    }
+
+    .home__services-grid {
         grid-template-columns: repeat(1, 1fr);
-        margin: 0 15px;
     }
 
     .faq {
@@ -233,11 +230,6 @@
 }
 
 @media (max-width: 800px) {
-    .home__services {
-        grid-template-columns: repeat(1, 1fr);
-        margin: 0;
-    }
-
     .faq {
         flex-direction: column;
         padding: 0;
