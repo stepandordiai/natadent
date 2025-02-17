@@ -1,5 +1,5 @@
 .price-list__wrapper {
-    padding: 0 30px;
+    padding: 0 30px 30px;
 }
 
 .price-list__table {
@@ -60,20 +60,11 @@ tr:nth-child(odd) td:nth-of-type(2) {
 
 @media (max-width: 900px) {
     .price-list__wrapper {
-        padding: 0 15px;
+        padding: 0 15px 30px;
     }
 
     .filter-btn-wrapper {
         margin: 0 15px;
-    }
-}
-
-@media (max-width: 800px) {
-    .price-list__wrapper {
-        padding: 0;
-    }
-
-    .filter-btn-wrapper {
-        margin: 0;
+        gap: 15px;
     }
 }

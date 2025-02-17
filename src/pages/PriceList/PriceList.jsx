@@ -8,7 +8,7 @@ const PriceList = () => {
 
     useEffect(() => {
         // Update title depending on which lang we are using
-        document.title = t("nav.price_list_title");
+        document.title = t("price_list_title");
     }, [t]);
 
     const [filter, setFilter] = useState("");
@@ -17,7 +17,7 @@ const PriceList = () => {
     const activeFilterBtn = "filter-btn active-filter-btn";
 
     return (
-        <section className="price-list">
+        <>
             <PageTitle title={t("price_list_title")} />
             <div className="filter-btn-wrapper">
                 <button
@@ -63,6 +63,18 @@ const PriceList = () => {
                                 <td>{t("braces.name_1")}</td>
                                 <td>{t("braces.price_1")}</td>
                             </tr>
+                            <tr>
+                                <td>{t("braces.name_1")}</td>
+                                <td>{t("braces.price_1")}</td>
+                            </tr>
+                            <tr>
+                                <td>{t("braces.name_1")}</td>
+                                <td>{t("braces.price_1")}</td>
+                            </tr>
+                            <tr>
+                                <td>{t("braces.name_1")}</td>
+                                <td>{t("braces.price_1")}</td>
+                            </tr>
                         </tbody>
                     </table>
                     <table className="price-list__table">
@@ -70,6 +82,18 @@ const PriceList = () => {
                             {t("price_data.dentistry_title")}
                         </caption>
                         <tbody>
+                            <tr>
+                                <td>{t("dentistry.name_1")}</td>
+                                <td>{t("dentistry.price_1")}</td>
+                            </tr>
+                            <tr>
+                                <td>{t("dentistry.name_1")}</td>
+                                <td>{t("dentistry.price_1")}</td>
+                            </tr>
+                            <tr>
+                                <td>{t("dentistry.name_1")}</td>
+                                <td>{t("dentistry.price_1")}</td>
+                            </tr>
                             <tr>
                                 <td>{t("dentistry.name_1")}</td>
                                 <td>{t("dentistry.price_1")}</td>
@@ -89,6 +113,18 @@ const PriceList = () => {
                                 <td>{t("braces.name_1")}</td>
                                 <td>{t("braces.price_1")}</td>
                             </tr>
+                            <tr>
+                                <td>{t("braces.name_1")}</td>
+                                <td>{t("braces.price_1")}</td>
+                            </tr>
+                            <tr>
+                                <td>{t("braces.name_1")}</td>
+                                <td>{t("braces.price_1")}</td>
+                            </tr>
+                            <tr>
+                                <td>{t("braces.name_1")}</td>
+                                <td>{t("braces.price_1")}</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -104,11 +140,23 @@ const PriceList = () => {
                                 <td>{t("dentistry.name_1")}</td>
                                 <td>{t("dentistry.price_1")}</td>
                             </tr>
+                            <tr>
+                                <td>{t("dentistry.name_1")}</td>
+                                <td>{t("dentistry.price_1")}</td>
+                            </tr>
+                            <tr>
+                                <td>{t("dentistry.name_1")}</td>
+                                <td>{t("dentistry.price_1")}</td>
+                            </tr>
+                            <tr>
+                                <td>{t("dentistry.name_1")}</td>
+                                <td>{t("dentistry.price_1")}</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             )}
-        </section>
+        </>
     );
 };
 

@@ -1,11 +1,10 @@
 @use "./../../mixins" as *;
 
 .page-title {
-    padding: 160px 0 30px;
+    padding: 160px 30px 30px;
 }
 
 .page-title__links {
-    padding: 0 30px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -41,15 +40,10 @@
 
 .page-title__title {
     font-size: 3rem;
-    padding: 0 30px;
 }
 
 @media (max-width: 900px) {
-    .page-title__links {
-        padding: 0 15px;
-    }
-
-    .page-title__title {
-        padding: 0 15px;
+    .page-title {
+        padding: 160px 15px 30px;
     }
 }
