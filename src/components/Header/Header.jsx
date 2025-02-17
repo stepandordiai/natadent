@@ -21,7 +21,7 @@ const Header = () => {
             <div className="header-bottom">
                 <NavLink className="header-bottom__logo" to="/">
                     <img src={logoIcon} alt="Logo" />
-                    <span>Luxdent</span>
+                    <span>Prozubik</span>
                 </NavLink>
                 <nav className="nav">
                     <div>

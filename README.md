@@ -1,1 +1,1 @@
-# Novozub (CZ)
+# Prozubik (CZ)

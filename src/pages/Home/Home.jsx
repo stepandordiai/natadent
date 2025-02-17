@@ -134,7 +134,7 @@ const Home = () => {
                         <h4>{t("service_15")}</h4>
                         <p>{t("service_desc_15")}</p>
                     </NavLink>
-                    <NavLink className="home__service js-service">
+                    {/* <NavLink className="home__service js-service">
                         <h4>{t("service_16")}</h4>
                         <p>{t("service_desc_16")}</p>
                     </NavLink>
@@ -197,47 +197,52 @@ const Home = () => {
                     <NavLink className="home__service js-service">
                         <h4>{t("service_31")}</h4>
                         <p>{t("service_desc_31")}</p>
-                    </NavLink>
+                    </NavLink> */}
                 </div>
             </div>
             <div className="home-our-team">
-                <h3 className="about-us__team-title">
+                <h3 className="home-our-team__title">
                     {t("about_us.our_team_title")}
                 </h3>
-                <div className="about-us__team-grid">
-                    <div className="team-card">
+                <div className="home-our-team__grid">
+                    <div className="home-our-team__card">
                         <img src={photo1} alt="Photo" />
                         <div>
                             <p>Jméno</p>
                             <p>Pozice</p>
+                            <p>Cislo</p>
                         </div>
                     </div>
-                    <div className="team-card">
+                    <div className="home-our-team__card">
                         <img src={photo2} alt="Photo" />
                         <div>
                             <p>Jméno</p>
                             <p>Pozice</p>
+                            <p>+420 722 001 016</p>
                         </div>
                     </div>
-                    <div className="team-card">
+                    <div className="home-our-team__card">
                         <img src={photo3} alt="Photo" />
                         <div>
                             <p>Jméno</p>
                             <p>Pozice</p>
+                            <p>+420 722 001 016</p>
                         </div>
                     </div>
-                    <div className="team-card">
+                    <div className="home-our-team__card">
                         <img src={photo4} alt="Photo" />
                         <div>
                             <p>Jméno</p>
                             <p>Pozice</p>
+                            <p>+420 722 001 016</p>
                         </div>
                     </div>
-                    <div className="team-card">
+                    <div className="home-our-team__card">
                         <img src={photo5} alt="Photo" />
                         <div>
                             <p>Jméno</p>
                             <p>Pozice</p>
+                            <p>+420 722 001 016</p>
                         </div>
                     </div>
                 </div>

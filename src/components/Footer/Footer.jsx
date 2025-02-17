@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="footer-top">
                 <NavLink className="footer-top__logo" to="/">
                     <img src={logoIcon} alt="Logo" />
-                    <span>Luxdent</span>
+                    <span>Prozubik</span>
                 </NavLink>
                 <div className="footer-top__working-hours">
                     <p>{t("footer.working_hours")}</p>
@@ -224,7 +224,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p className="copyright">&copy; 2025 Novozub</p>
+                <p className="copyright">&copy; 2025 Prozubik</p>
                 <p>{t("footer.rights")}.</p>
                 <p className="creator">
                     Designed and developed by{" "}
