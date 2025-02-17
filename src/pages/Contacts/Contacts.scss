@@ -165,7 +165,7 @@
     width: 10px;
     aspect-ratio: 1 / 1;
     clip-path: polygon(50% 100%, 0 0, 100% 0);
-    background: var(--txt-clr);
+    background: #000;
 }
 
 .custom-select__list {
@@ -212,8 +212,7 @@ input[type="time"] {
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="time"]::-webkit-calendar-picker-indicator {
     display: none;
-    -webkit-appearance: none;
-    appearance: none;
+    @include appearance;
 }
 
 .contacts-form__btn {

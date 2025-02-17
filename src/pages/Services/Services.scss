@@ -8,7 +8,7 @@
 }
 
 .service {
-    @include flex-around;
+    @include flex-around-center;
     column-gap: 15px;
     width: 100%;
     height: 160px;

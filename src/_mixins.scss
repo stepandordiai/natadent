@@ -22,7 +22,7 @@
     align-items: flex-start;
 }
 
-@mixin flex-around {
+@mixin flex-around-center {
     display: flex;
     justify-content: space-around;
     align-items: center;
