@@ -17,10 +17,10 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-top">
-                <div className="footer-top__logo">
+                <NavLink className="footer-top__logo" to="/">
                     <img src={logoIcon} alt="Logo" />
-                    <span>Prozubik</span>
-                </div>
+                    <span>Luxdent</span>
+                </NavLink>
                 <div className="footer-top__working-hours">
                     <p>{t("footer.working_hours")}</p>
                     <ul className="working-hours">
