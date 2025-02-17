@@ -134,13 +134,11 @@
     .footer-bottom {
         padding: 30px 15px;
     }
-}
 
-@media (max-width: 800px) {
     .footer-middle {
-        row-gap: 30px;
         align-items: center;
         flex-direction: column;
+        row-gap: 30px;
     }
 }
 

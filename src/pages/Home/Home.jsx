@@ -201,9 +201,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="home-our-team">
-                <h3 className="home-our-team__title">
-                    {t("about_us.our_team_title")}
-                </h3>
+                <h3 className="home-our-team__title">{t("our_team_title")}</h3>
                 <div className="home-our-team__grid">
                     <div className="home-our-team__card">
                         <img src={photo1} alt="Photo" />

@@ -69,7 +69,7 @@ const Footer = () => {
                                 {t("home_title")}
                             </NavLink>
                         </li>
-                        <li>
+                        {/* <li>
                             <NavLink
                                 className={({ isActive }) =>
                                     isActive ? activeLink : inactiveLink
@@ -78,8 +78,8 @@ const Footer = () => {
                             >
                                 {t("about_us_title")}
                             </NavLink>
-                        </li>
-                        <li>
+                        </li> */}
+                        {/* <li>
                             <NavLink
                                 className={({ isActive }) =>
                                     isActive ? activeLink : inactiveLink
@@ -88,7 +88,7 @@ const Footer = () => {
                             >
                                 {t("services_title")}
                             </NavLink>
-                        </li>
+                        </li> */}
                         <li>
                             <NavLink
                                 className={({ isActive }) =>
@@ -107,6 +107,41 @@ const Footer = () => {
                                 to="/appointment"
                             >
                                 {t("appointment_title")}
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
+                <div className="footer-middle__nav-list-wrapper">
+                    <p>{t("about_us_title")}</p>
+                    <ul>
+                        <li>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? activeLink : inactiveLink
+                                }
+                                to="/our-team"
+                            >
+                                {t("our_team_title")}
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? activeLink : inactiveLink
+                                }
+                                to="/price-list"
+                            >
+                                {t("price_list_title")}
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? activeLink : inactiveLink
+                                }
+                                to="/smile-gallery"
+                            >
+                                {t("smile_gallery_title")}
                             </NavLink>
                         </li>
                     </ul>

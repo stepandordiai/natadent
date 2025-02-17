@@ -70,6 +70,16 @@ const Menu = () => {
                                         ? activeMenuDdLink
                                         : inactiveMenuDdLink
                                 }
+                                to="/our-team"
+                            >
+                                {t("our_team_title")}
+                            </NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? activeMenuDdLink
+                                        : inactiveMenuDdLink
+                                }
                                 to="/price-list"
                             >
                                 {t("price_list_title")}

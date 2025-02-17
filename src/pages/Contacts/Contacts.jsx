@@ -290,7 +290,7 @@ const Contacts = () => {
                             >
                                 {t("service_15")}
                             </li>
-                            <li
+                            {/* <li
                                 className="custom-select__option"
                                 data-value={t("service_16")}
                             >
@@ -385,7 +385,7 @@ const Contacts = () => {
                                 data-value={t("service_31")}
                             >
                                 {t("service_31")}
-                            </li>
+                            </li> */}
                         </ul>
                         <input
                             className="custom-select__input"
