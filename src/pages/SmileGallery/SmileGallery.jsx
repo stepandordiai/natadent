@@ -48,9 +48,9 @@ const SmileGallery = () => {
     }, []);
 
     return (
-        <>
+        <section className="smile-gallery">
             <PageTitle title={t("smile_gallery_title")} />
-            <section className="smile-gallery">
+            <div className="smile-gallery-wrapper">
                 <div className="about-us__gallery-grid">
                     <div
                         className="smile-wrapper"
@@ -173,8 +173,8 @@ const SmileGallery = () => {
                         <div className="line"></div>
                     </div>
                 </div>
-            </section>
-        </>
+            </div>
+        </section>
     );
 };
 

@@ -75,9 +75,9 @@ const Contacts = () => {
     }, []);
 
     return (
-        <>
+        <section className="contacts">
             <PageTitle title={t("contacts_title")} />
-            <section className="contacts">
+            <section className="contacts-wrapper">
                 <p className="contacts__secondary-info">
                     {t("contacts.details_title")}
                 </p>
@@ -397,7 +397,7 @@ const Contacts = () => {
                     loading="lazy"
                 ></iframe>
             </section>
-        </>
+        </section>
     );
 };
 

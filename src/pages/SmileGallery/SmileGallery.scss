@@ -1,6 +1,17 @@
 @use "./../../mixins" as *;
 
 .smile-gallery {
+    opacity: 0;
+    animation: revealSmileGallery 1s forwards;
+}
+
+@keyframes revealSmileGallery {
+    to {
+        opacity: 1;
+    }
+}
+
+.smile-gallery-wrapper {
     padding: 30px;
 }
 
@@ -109,7 +120,7 @@
 }
 
 @media (max-width: 900px) {
-    .smile-gallery {
+    .smile-gallery-wrapper {
         padding: 30px 15px;
     }
 }

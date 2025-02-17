@@ -1,6 +1,17 @@
 @use "./../../mixins" as *;
 
 .contacts {
+    opacity: 0;
+    animation: revealContacts 1s forwards;
+}
+
+@keyframes revealContacts {
+    to {
+        opacity: 1;
+    }
+}
+
+.contacts-wrapper {
     display: flex;
     flex-direction: column;
     row-gap: 30px;

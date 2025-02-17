@@ -17,7 +17,7 @@ const PriceList = () => {
     const activeFilterBtn = "filter-btn active-filter-btn";
 
     return (
-        <>
+        <section className="price-list">
             <PageTitle title={t("price_list_title")} />
             <div className="filter-btn-wrapper">
                 <button
@@ -156,7 +156,7 @@ const PriceList = () => {
                     </table>
                 </div>
             )}
-        </>
+        </section>
     );
 };
 
