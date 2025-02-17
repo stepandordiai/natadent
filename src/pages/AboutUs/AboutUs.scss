@@ -1,65 +1,65 @@
-@use "./../../mixins" as *;
+// @use "./../../mixins" as *;
 
-.about-us__team-title {
-    font-size: 2.5rem;
-    text-align: center;
-    padding: 0 0 30px;
-}
+// .about-us__team-title {
+//     font-size: 2.5rem;
+//     text-align: center;
+//     padding: 0 0 30px;
+// }
 
-.about-us__team-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 30px;
-    padding: 0 30px 30px;
-}
+// .about-us__team-grid {
+//     display: grid;
+//     grid-template-columns: repeat(5, 1fr);
+//     gap: 30px;
+//     padding: 0 30px 30px;
+// }
 
-.team-card {
-    padding: 20px;
-    text-align: center;
-    @include flex-around;
-    flex-direction: column;
-    width: 100%;
-    height: min-content;
-    background: white;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    transition: border 150ms;
+// .team-card {
+//     padding: 20px;
+//     text-align: center;
+//     @include flex-around;
+//     flex-direction: column;
+//     width: 100%;
+//     height: min-content;
+//     background: white;
+//     border: 1px solid rgba(255, 255, 255, 0.25);
+//     transition: border 150ms;
 
-    &:hover {
-        border: 1px solid var(--accent-clr);
-    }
-}
+//     &:hover {
+//         border: 1px solid var(--accent-clr);
+//     }
+// }
 
-@media (max-width: 1200px) {
-    .about-us__team-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
+// @media (max-width: 1200px) {
+//     .about-us__team-grid {
+//         grid-template-columns: repeat(4, 1fr);
+//     }
 
-    .about-us__gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+//     .about-us__gallery-grid {
+//         grid-template-columns: repeat(2, 1fr);
+//     }
+// }
 
-@media (max-width: 900px) {
-    .about-us__team-grid {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 0 15px 30px;
-    }
+// @media (max-width: 900px) {
+//     .about-us__team-grid {
+//         grid-template-columns: repeat(2, 1fr);
+//         padding: 0 15px 30px;
+//     }
 
-    .about-us__gallery-grid {
-        padding: 0 15px;
-    }
-}
+//     .about-us__gallery-grid {
+//         padding: 0 15px;
+//     }
+// }
 
-@media (max-width: 800px) {
-    .about-us__gallery-grid {
-        grid-template-columns: repeat(1, 1fr);
-        padding: 0;
-    }
-}
+// @media (max-width: 800px) {
+//     .about-us__gallery-grid {
+//         grid-template-columns: repeat(1, 1fr);
+//         padding: 0;
+//     }
+// }
 
-@media (max-width: 600px) {
-    .about-us__team-grid {
-        grid-template-columns: repeat(1, 1fr);
-        padding: 0 0 30px;
-    }
-}
+// @media (max-width: 600px) {
+//     .about-us__team-grid {
+//         grid-template-columns: repeat(1, 1fr);
+//         padding: 0 0 30px;
+//     }
+// }

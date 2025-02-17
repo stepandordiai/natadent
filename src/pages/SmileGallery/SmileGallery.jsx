@@ -48,134 +48,133 @@ const SmileGallery = () => {
     }, []);
 
     return (
-        <section className="smile-gallery">
+        <>
             <PageTitle title={t("smile_gallery_title")} />
-            <h3 className="about-us__gallery-title">
-                {t("smile_gallery.gallery_title")}
-            </h3>
-            <div className="about-us__gallery-grid">
-                <div
-                    className="smile-wrapper"
-                    data-before={t("smile_gallery.before")}
-                    data-after={t("smile_gallery.after")}
-                >
-                    <img src={after1} alt="Smile after" />
-                    <img
-                        className="img-range"
-                        src={before1}
-                        alt="Smile before"
-                    />
-                    <input
-                        className="img-ranger"
-                        type="range"
-                        min={0}
-                        max={100}
-                        defaultValue={50}
-                    />
-                    <div className="line"></div>
+            <section className="smile-gallery">
+                <div className="about-us__gallery-grid">
+                    <div
+                        className="smile-wrapper"
+                        data-before={t("smile_gallery.before")}
+                        data-after={t("smile_gallery.after")}
+                    >
+                        <img src={after1} alt="Smile after" />
+                        <img
+                            className="img-range"
+                            src={before1}
+                            alt="Smile before"
+                        />
+                        <input
+                            className="img-ranger"
+                            type="range"
+                            min={0}
+                            max={100}
+                            defaultValue={50}
+                        />
+                        <div className="line"></div>
+                    </div>
+                    <div
+                        className="smile-wrapper"
+                        data-before={t("smile_gallery.before")}
+                        data-after={t("smile_gallery.after")}
+                    >
+                        <img src={after2} alt="Smile after" />
+                        <img
+                            className="img-range"
+                            src={before2}
+                            alt="Smile before"
+                        />
+                        <input
+                            className="img-ranger"
+                            type="range"
+                            min={0}
+                            max={100}
+                            defaultValue={50}
+                        />
+                        <div className="line"></div>
+                    </div>
+                    <div
+                        className="smile-wrapper"
+                        data-before={t("smile_gallery.before")}
+                        data-after={t("smile_gallery.after")}
+                    >
+                        <img src={after3} alt="Smile after" />
+                        <img
+                            className="img-range"
+                            src={before3}
+                            alt="Smile before"
+                        />
+                        <input
+                            className="img-ranger"
+                            type="range"
+                            min={0}
+                            max={100}
+                            defaultValue={50}
+                        />
+                        <div className="line"></div>
+                    </div>
+                    <div
+                        className="smile-wrapper"
+                        data-before={t("smile_gallery.before")}
+                        data-after={t("smile_gallery.after")}
+                    >
+                        <img src={after4} alt="Smile after" />
+                        <img
+                            className="img-range"
+                            src={before4}
+                            alt="Smile before"
+                        />
+                        <input
+                            className="img-ranger"
+                            type="range"
+                            min={0}
+                            max={100}
+                            defaultValue={50}
+                        />
+                        <div className="line"></div>
+                    </div>
+                    <div
+                        className="smile-wrapper"
+                        data-before={t("smile_gallery.before")}
+                        data-after={t("smile_gallery.after")}
+                    >
+                        <img src={after5} alt="Smile after" />
+                        <img
+                            className="img-range"
+                            src={before5}
+                            alt="Smile before"
+                        />
+                        <input
+                            className="img-ranger"
+                            type="range"
+                            min={0}
+                            max={100}
+                            defaultValue={50}
+                        />
+                        <div className="line"></div>
+                    </div>
+                    <div
+                        className="smile-wrapper"
+                        data-before={t("smile_gallery.before")}
+                        data-after={t("smile_gallery.after")}
+                    >
+                        <img src={after6} alt="Smile after" />
+                        <img
+                            className="img-range"
+                            src={before6}
+                            alt="Smile before"
+                        />
+                        <input
+                            className="img-ranger"
+                            type="range"
+                            min={0}
+                            max={100}
+                            defaultValue={50}
+                        />
+                        <div className="line"></div>
+                    </div>
                 </div>
-                <div
-                    className="smile-wrapper"
-                    data-before={t("smile_gallery.before")}
-                    data-after={t("smile_gallery.after")}
-                >
-                    <img src={after2} alt="Smile after" />
-                    <img
-                        className="img-range"
-                        src={before2}
-                        alt="Smile before"
-                    />
-                    <input
-                        className="img-ranger"
-                        type="range"
-                        min={0}
-                        max={100}
-                        defaultValue={50}
-                    />
-                    <div className="line"></div>
-                </div>
-                <div
-                    className="smile-wrapper"
-                    data-before={t("smile_gallery.before")}
-                    data-after={t("smile_gallery.after")}
-                >
-                    <img src={after3} alt="Smile after" />
-                    <img
-                        className="img-range"
-                        src={before3}
-                        alt="Smile before"
-                    />
-                    <input
-                        className="img-ranger"
-                        type="range"
-                        min={0}
-                        max={100}
-                        defaultValue={50}
-                    />
-                    <div className="line"></div>
-                </div>
-                <div
-                    className="smile-wrapper"
-                    data-before={t("smile_gallery.before")}
-                    data-after={t("smile_gallery.after")}
-                >
-                    <img src={after4} alt="Smile after" />
-                    <img
-                        className="img-range"
-                        src={before4}
-                        alt="Smile before"
-                    />
-                    <input
-                        className="img-ranger"
-                        type="range"
-                        min={0}
-                        max={100}
-                        defaultValue={50}
-                    />
-                    <div className="line"></div>
-                </div>
-                <div
-                    className="smile-wrapper"
-                    data-before={t("smile_gallery.before")}
-                    data-after={t("smile_gallery.after")}
-                >
-                    <img src={after5} alt="Smile after" />
-                    <img
-                        className="img-range"
-                        src={before5}
-                        alt="Smile before"
-                    />
-                    <input
-                        className="img-ranger"
-                        type="range"
-                        min={0}
-                        max={100}
-                        defaultValue={50}
-                    />
-                    <div className="line"></div>
-                </div>
-                <div
-                    className="smile-wrapper"
-                    data-before={t("smile_gallery.before")}
-                    data-after={t("smile_gallery.after")}
-                >
-                    <img src={after6} alt="Smile after" />
-                    <img
-                        className="img-range"
-                        src={before6}
-                        alt="Smile before"
-                    />
-                    <input
-                        className="img-ranger"
-                        type="range"
-                        min={0}
-                        max={100}
-                        defaultValue={50}
-                    />
-                    <div className="line"></div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </>
     );
 };
 

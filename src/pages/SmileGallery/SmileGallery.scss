@@ -1,16 +1,13 @@
 @use "./../../mixins" as *;
 
-.about-us__gallery-title {
-    font-size: 2.5rem;
-    text-align: center;
-    padding-bottom: 30px;
+.smile-gallery {
+    padding: 30px;
 }
 
 .about-us__gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    padding: 0 30px;
 }
 
 .smile-wrapper {
@@ -38,7 +35,7 @@
     height: 30px;
     border-radius: 15px;
     padding: 0 7.5px;
-    background: var(--bg-semi-tp-clr);
+    background: rgba(255, 255, 255, 0.5);
     transition: opacity 0.15s;
 }
 
@@ -53,7 +50,7 @@
     height: 30px;
     border-radius: 15px;
     padding: 0 7.5px;
-    background: var(--bg-semi-tp-clr);
+    background: rgba(255, 255, 255, 0.5);
     transition: opacity 0.15s;
 }
 
@@ -112,14 +109,13 @@
 }
 
 @media (max-width: 900px) {
-    .about-us__gallery-grid {
-        padding: 0 15px;
+    .smile-gallery {
+        padding: 30px 15px;
     }
 }
 
 @media (max-width: 800px) {
     .about-us__gallery-grid {
         grid-template-columns: repeat(1, 1fr);
-        padding: 0;
     }
 }

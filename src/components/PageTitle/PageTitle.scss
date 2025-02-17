@@ -1,7 +1,7 @@
 @use "./../../mixins" as *;
 
 .page-title {
-    padding: 160px 30px 30px;
+    padding: 160px 30px 0;
 }
 
 .page-title__links {
@@ -44,6 +44,6 @@
 
 @media (max-width: 900px) {
     .page-title {
-        padding: 160px 15px 30px;
+        padding: 160px 15px 0;
     }
 }
