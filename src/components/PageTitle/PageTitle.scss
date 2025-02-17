@@ -1,7 +1,7 @@
 @use "./../../mixins" as *;
 
 .page-title {
-    padding: 130px 0 0;
+    padding: 160px 0 30px;
 }
 
 .page-title__links {
@@ -32,7 +32,7 @@
     height: 30px;
     border-radius: 15px;
     padding: 0 7.5px;
-    transition: background-color 150ms;
+    transition: background-color 300ms;
 
     &:hover {
         background: var(--accent-clr);

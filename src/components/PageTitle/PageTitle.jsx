@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import CustomDivider from "../CustomDivider/CustomDivider";
 import { useTranslation } from "react-i18next";
 import "./PageTitle.scss";
 
@@ -8,7 +7,6 @@ const PageTitle = ({ title }) => {
 
     return (
         <div className="page-title">
-            <CustomDivider />
             <div className="page-title__links">
                 <NavLink className="page-title__link" to="/">
                     {t("home_title")}
@@ -18,7 +16,6 @@ const PageTitle = ({ title }) => {
                 <span>/</span>
             </div>
             <h2 className="page-title__title">{title}</h2>
-            <CustomDivider />
         </div>
     );
 };
