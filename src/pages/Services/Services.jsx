@@ -1,14 +1,6 @@
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import { useTranslation } from "react-i18next";
-import toothIcon1 from "./../../assets/icons/tooth-icons/braces.png";
-import toothIcon2 from "./../../assets/icons/tooth-icons/cavity.png";
-import toothIcon3 from "./../../assets/icons/tooth-icons/crown.png";
-import toothIcon4 from "./../../assets/icons/tooth-icons/golden-crown.png";
-import toothIcon5 from "./../../assets/icons/tooth-icons/implant.png";
-import toothIcon6 from "./../../assets/icons/tooth-icons/tooth-gum.png";
-import toothIcon7 from "./../../assets/icons/tooth-icons/tooth-xray-spot.png";
-import toothIcon8 from "./../../assets/icons/tooth-icons/tooth.png";
 import "./Services.scss";
 
 const Services = () => {

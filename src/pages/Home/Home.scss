@@ -88,7 +88,7 @@
 }
 
 .home__services-title {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -244,5 +244,53 @@
 @media (max-width: 500px) {
     .home-top__btn-container {
         flex-direction: column;
+    }
+}
+
+//
+
+.home-our-team {
+    padding: 30px;
+}
+
+.about-us__team-title {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.about-us__team-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+
+.team-card {
+    padding: 15px;
+    text-align: center;
+    @include flex-center;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+}
+
+@media (max-width: 1200px) {
+    .about-us__team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .home-our-team {
+        padding: 30px 15px;
+    }
+    .about-us__team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .about-us__team-grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 }

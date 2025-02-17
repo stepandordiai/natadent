@@ -1,7 +1,7 @@
 import PageTitle from "../../components/PageTitle/PageTitle";
-import CustomDivider from "../../components/CustomDivider/CustomDivider";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import dayjs from "dayjs";
 import phoneIcon from "./../../assets/icons/telephone.png";
 import emailIcon from "./../../assets/icons/mail.png";
 import pinIcon from "./../../assets/icons/pin.png";
@@ -73,6 +73,15 @@ const Contacts = () => {
             });
         });
     }, []);
+
+    const dateNow = dayjs();
+    const formatDate = dateNow.format("YYYY-MM-DD");
+
+    const hourNow = dateNow.hour();
+    const formatHour = hourNow < 10 ? "0" + hourNow : hourNow;
+
+    const minuteNow = dateNow.minute();
+    const formatMinute = minuteNow < 10 ? "0" + minuteNow : minuteNow;
 
     return (
         <section className="contacts">
@@ -385,8 +394,12 @@ const Contacts = () => {
                             defaultValue=""
                         />
                     </div>
-                    <input type="date" defaultValue="2024-12-12" name="Date" />
-                    <input type="time" defaultValue="12:00" name="Time" />
+                    <input type="date" defaultValue={formatDate} name="Date" />
+                    <input
+                        type="time"
+                        defaultValue={formatHour + ":" + formatMinute}
+                        name="Time"
+                    />
                     <button className="contacts-form__btn" type="submit">
                         {t("contacts.submit_btn_title")}
                     </button>
