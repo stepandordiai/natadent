@@ -1,6 +1,7 @@
 {
     "home_title": "Home",
     "about_us_title": "About us",
+    "our_team_title": "Our team",
     "price_list_title": "Price list",
     "smile_gallery_title": "Smile gallery",
     "services_title": "Services",
@@ -38,10 +39,6 @@
         "answer_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!",
         "question_3": "Question",
         "answer_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!"
-    },
-
-    "about_us": {
-        "our_team_title": "Our team"
     },
 
     "price_data": {

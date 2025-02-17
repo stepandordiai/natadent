@@ -44,6 +44,14 @@ const Header = () => {
                                 className={({ isActive }) =>
                                     isActive ? activeLink : inactiveLink
                                 }
+                                to="/our-team"
+                            >
+                                {t("our_team_title")}
+                            </NavLink>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? activeLink : inactiveLink
+                                }
                                 to="/price-list"
                             >
                                 {t("price_list_title")}

@@ -1,0 +1,53 @@
+@use "./../../mixins" as *;
+
+.our-team {
+    opacity: 0;
+    animation: revealOurTeam 1s forwards;
+}
+
+@keyframes revealOurTeam {
+    to {
+        opacity: 1;
+    }
+}
+
+.our-team-wrapper {
+    padding: 30px;
+}
+
+.our-team__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+
+.our-team__card {
+    padding: 15px;
+    text-align: center;
+    @include flex-center;
+    flex-direction: column;
+    row-gap: 15px;
+    background: #fff;
+}
+
+@media (max-width: 1200px) {
+    .our-team__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .our-team-wrapper {
+        padding: 30px 15px;
+    }
+
+    .our-team__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .our-team__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

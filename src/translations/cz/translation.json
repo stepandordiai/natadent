@@ -1,6 +1,7 @@
 {
     "home_title": "Úvod",
     "about_us_title": "O nás",
+    "our_team_title": "Náš tým",
     "price_list_title": "Ceník",
     "smile_gallery_title": "Galerie úsměvů",
     "services_title": "Služby",
@@ -82,10 +83,6 @@
         "answer_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!",
         "question_3": "Otázka",
         "answer_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!"
-    },
-
-    "about_us": {
-        "our_team_title": "Náš tým"
     },
 
     "price_data": {

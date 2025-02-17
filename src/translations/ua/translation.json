@@ -1,6 +1,7 @@
 {
     "home_title": "Головна",
     "about_us_title": "Про нас",
+    "our_team_title": "Наша команда",
     "price_list_title": "Прайс лист",
     "smile_gallery_title": "Галерея усмішок",
     "services_title": "Сервіси",
@@ -38,10 +39,6 @@
         "answer_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!",
         "question_3": "Питання",
         "answer_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!"
-    },
-
-    "about_us": {
-        "our_team_title": "Наша команда"
     },
 
     "price_data": {

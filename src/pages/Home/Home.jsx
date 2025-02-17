@@ -210,7 +210,7 @@ const Home = () => {
                         <div>
                             <p>Jméno</p>
                             <p>Pozice</p>
-                            <p>Cislo</p>
+                            <p>+420 722 001 016</p>
                         </div>
                     </div>
                     <div className="home-our-team__card">
