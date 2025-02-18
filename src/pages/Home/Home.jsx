@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import logoIcon from "./../../assets/logo/tooth.png";
@@ -12,9 +12,86 @@ import "./Home.scss";
 const Home = () => {
     const { t } = useTranslation();
 
+    const servicesData = [
+        {
+            name: t("service_1"),
+            desc: t("service_desc_1"),
+        },
+        {
+            name: t("service_2"),
+            desc: t("service_desc_2"),
+        },
+        {
+            name: t("service_3"),
+            desc: t("service_desc_3"),
+        },
+        {
+            name: t("service_4"),
+            desc: t("service_desc_4"),
+        },
+        {
+            name: t("service_5"),
+            desc: t("service_desc_5"),
+        },
+        {
+            name: t("service_6"),
+            desc: t("service_desc_6"),
+        },
+        {
+            name: t("service_7"),
+            desc: t("service_desc_7"),
+        },
+        {
+            name: t("service_8"),
+            desc: t("service_desc_8"),
+        },
+        {
+            name: t("service_9"),
+            desc: t("service_desc_9"),
+        },
+        {
+            name: t("service_10"),
+            desc: t("service_desc_10"),
+        },
+        {
+            name: t("service_11"),
+            desc: t("service_desc_11"),
+        },
+        {
+            name: t("service_12"),
+            desc: t("service_desc_12"),
+        },
+        {
+            name: t("service_13"),
+            desc: t("service_desc_13"),
+        },
+        {
+            name: t("service_14"),
+            desc: t("service_desc_14"),
+        },
+        {
+            name: t("service_15"),
+            desc: t("service_desc_15"),
+        },
+    ];
+
     useEffect(() => {
         document.title = `Novozub | ${t("home.secondary_title")}`;
     }, [t]);
+
+    const [search, setSearch] = useState("");
+
+    useEffect(() => {
+        document.querySelectorAll(".js-faq__btn").forEach((btn, index) => {
+            btn.addEventListener("click", () => {
+                const gridDropdowns =
+                    document.querySelectorAll(".grid-dropdown");
+                const faqBtnIcon = document.querySelectorAll(".faq__btn-icon");
+                gridDropdowns[index].classList.toggle("grid-dropdown--active");
+                faqBtnIcon[index].classList.toggle("faq__btn-icon--active");
+            });
+        });
+    }, []);
 
     useEffect(() => {
         document.querySelectorAll(".js-service").forEach((el) => {
@@ -36,17 +113,7 @@ const Home = () => {
                 el.classList.remove("service--active");
             }
         });
-
-        document.querySelectorAll(".js-faq__btn").forEach((btn, index) => {
-            btn.addEventListener("click", () => {
-                const gridDropdowns =
-                    document.querySelectorAll(".grid-dropdown");
-                const faqBtnIcon = document.querySelectorAll(".faq__btn-icon");
-                gridDropdowns[index].classList.toggle("grid-dropdown--active");
-                faqBtnIcon[index].classList.toggle("faq__btn-icon--active");
-            });
-        });
-    }, []);
+    });
 
     return (
         <>
@@ -73,131 +140,31 @@ const Home = () => {
             </div>
             <div className="home__services" id="services">
                 <h2 className="home__services-title">{t("services_title")}</h2>
+                <input
+                    className="home__services-search"
+                    onInput={(e) => {
+                        setSearch(e.target.value);
+                    }}
+                    type="text"
+                    placeholder="What service are you looking for?"
+                />
                 <div className="home__services-grid">
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_1")}</h4>
-                        <p>{t("service_desc_1")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_2")}</h4>
-                        <p>{t("service_desc_2")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_3")}</h4>
-                        <p>{t("service_desc_3")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_4")}</h4>
-                        <p>{t("service_desc_4")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_5")}</h4>
-                        <p>{t("service_desc_5")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_6")}</h4>
-                        <p>{t("service_desc_6")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_7")}</h4>
-                        <p>{t("service_desc_7")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_8")}</h4>
-                        <p>{t("service_desc_8")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_9")}</h4>
-                        <p>{t("service_desc_9")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_10")}</h4>
-                        <p>{t("service_desc_10")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_11")}</h4>
-                        <p>{t("service_desc_11")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_12")}</h4>
-                        <p>{t("service_desc_12")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_13")}</h4>
-                        <p>{t("service_desc_13")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_14")}</h4>
-                        <p>{t("service_desc_14")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_15")}</h4>
-                        <p>{t("service_desc_15")}</p>
-                    </NavLink>
-                    {/* <NavLink className="home__service js-service">
-                        <h4>{t("service_16")}</h4>
-                        <p>{t("service_desc_16")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_17")}</h4>
-                        <p>{t("service_desc_17")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_18")}</h4>
-                        <p>{t("service_desc_18")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_19")}</h4>
-                        <p>{t("service_desc_19")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_20")}</h4>
-                        <p>{t("service_desc_20")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_21")}</h4>
-                        <p>{t("service_desc_21")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_22")}</h4>
-                        <p>{t("service_desc_22")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_23")}</h4>
-                        <p>{t("service_desc_23")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_24")}</h4>
-                        <p>{t("service_desc_24")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_25")}</h4>
-                        <p>{t("service_desc_25")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_26")}</h4>
-                        <p>{t("service_desc_26")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_27")}</h4>
-                        <p>{t("service_desc_27")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_28")}</h4>
-                        <p>{t("service_desc_28")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_29")}</h4>
-                        <p>{t("service_desc_29")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_30")}</h4>
-                        <p>{t("service_desc_30")}</p>
-                    </NavLink>
-                    <NavLink className="home__service js-service">
-                        <h4>{t("service_31")}</h4>
-                        <p>{t("service_desc_31")}</p>
-                    </NavLink> */}
+                    {servicesData
+                        .filter((service) => {
+                            return search.toLowerCase() === ""
+                                ? service
+                                : service.name
+                                      .toLowerCase()
+                                      .startsWith(search.toLowerCase());
+                        })
+                        .map((service) => {
+                            return (
+                                <NavLink className="home__service js-service">
+                                    <h4>{service.name}</h4>
+                                    <p>{service.desc}</p>
+                                </NavLink>
+                            );
+                        })}
                 </div>
             </div>
             <div className="home-our-team">
