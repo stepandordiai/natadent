@@ -104,6 +104,30 @@
     margin-bottom: 30px;
 }
 
+.home__services-no-result-pop-up {
+    position: relative;
+    display: none;
+    place-content: center;
+    width: 100%;
+    text-align: center;
+
+    img {
+        opacity: 0.25;
+    }
+
+    span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 500;
+    }
+}
+
+.home__services-no-result-pop-up--active {
+    display: grid;
+}
+
 .home__services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

@@ -82,6 +82,18 @@ const Home = () => {
     const [search, setSearch] = useState("");
 
     useEffect(() => {
+        if (document.querySelector(".home__services-grid").innerHTML === "") {
+            document
+                .querySelector(".home__services-no-result-pop-up")
+                .classList.add("home__services-no-result-pop-up--active");
+        } else {
+            document
+                .querySelector(".home__services-no-result-pop-up")
+                .classList.remove("home__services-no-result-pop-up--active");
+        }
+    }, [search]);
+
+    useEffect(() => {
         document.querySelectorAll(".js-faq__btn").forEach((btn, index) => {
             btn.addEventListener("click", () => {
                 const gridDropdowns =
@@ -146,8 +158,12 @@ const Home = () => {
                         setSearch(e.target.value);
                     }}
                     type="text"
-                    placeholder="What service are you looking for?"
+                    placeholder={t("home.services_search_placeholder")}
                 />
+                <p className="home__services-no-result-pop-up">
+                    <img src={logoIcon} alt="Logo" />
+                    <span>{t("home.services_no_result_pop_up")}</span>
+                </p>
                 <div className="home__services-grid">
                     {servicesData
                         .filter((service) => {
@@ -157,9 +173,12 @@ const Home = () => {
                                       .toLowerCase()
                                       .startsWith(search.toLowerCase());
                         })
-                        .map((service) => {
+                        .map((service, index) => {
                             return (
-                                <NavLink className="home__service js-service">
+                                <NavLink
+                                    key={index}
+                                    className="home__service js-service"
+                                >
                                     <h4>{service.name}</h4>
                                     <p>{service.desc}</p>
                                 </NavLink>
