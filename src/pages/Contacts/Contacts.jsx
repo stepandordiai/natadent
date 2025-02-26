@@ -174,7 +174,7 @@ const Contacts = () => {
                             </label>
                             <input
                                 className="contacts-form__input js-contacts-form__input"
-                                type="text"
+                                type="email"
                                 name="Email"
                             />
                         </div>
@@ -184,7 +184,7 @@ const Contacts = () => {
                             </label>
                             <input
                                 className="contacts-form__input  js-contacts-form__input"
-                                type="text"
+                                type="tel"
                                 name="Phone number"
                             />
                         </div>
@@ -290,107 +290,11 @@ const Contacts = () => {
                             >
                                 {t("service_15")}
                             </li>
-                            {/* <li
-                                className="custom-select__option"
-                                data-value={t("service_16")}
-                            >
-                                {t("service_16")}
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value={t("service_17")}
-                            >
-                                {t("service_17")}
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value={t("service_18")}
-                            >
-                                {t("service_18")}
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value={t("service_19")}
-                            >
-                                {t("service_19")}
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value={t("service_20")}
-                            >
-                                {t("service_20")}
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value={t("service_21")}
-                            >
-                                {t("service_21")}
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value={t("service_22")}
-                            >
-                                {t("service_22")}
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value={t("service_23")}
-                            >
-                                {t("service_23")}
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value={t("service_24")}
-                            >
-                                {t("service_24")}
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value={t("service_25")}
-                            >
-                                {t("service_25")}
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value={t("service_26")}
-                            >
-                                {t("service_26")}
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value={t("service_27")}
-                            >
-                                {t("service_27")}
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value={t("service_28")}
-                            >
-                                {t("service_28")}
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value={t("service_29")}
-                            >
-                                {t("service_29")}
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value={t("service_30")}
-                            >
-                                {t("service_30")}
-                            </li>
-                            <li
-                                className="custom-select__option"
-                                data-value={t("service_31")}
-                            >
-                                {t("service_31")}
-                            </li> */}
                         </ul>
                         <input
                             className="custom-select__input"
                             type="text"
-                            name="Department"
+                            name="Service"
                             defaultValue=""
                         />
                     </div>

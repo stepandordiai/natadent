@@ -161,7 +161,7 @@
     transform: translateY(-50%);
     right: 15px;
     width: 10px;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1/1;
     clip-path: polygon(50% 100%, 0 0, 100% 0);
     background: #000;
 }
@@ -200,17 +200,10 @@
 
 input[type="date"],
 input[type="time"] {
-    border: 1px solid rgba(255, 255, 255, 0.25);
     height: 60px;
     border-radius: 30px;
-    padding-left: 15px;
+    padding: 15px;
     border: 1px solid var(--accent-clr);
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator,
-input[type="time"]::-webkit-calendar-picker-indicator {
-    display: none;
-    @include appearance;
 }
 
 .contacts-form__btn {
