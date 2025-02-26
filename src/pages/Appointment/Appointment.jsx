@@ -11,13 +11,13 @@ const Appointment = () => {
     }, [t]);
 
     return (
-        <section className="contact">
+        <>
             <PageTitle title={t("appointment_title")} />
             <iframe
-                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3y2lhQh_lmF5IRVbwctdxTpTw3L5Z9byjt-CaslzDSQWXseEr4VGM5vjAcmNq700Aivq-wSg2x?gv=true"
                 className="google-calendar"
+                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3y2lhQh_lmF5IRVbwctdxTpTw3L5Z9byjt-CaslzDSQWXseEr4VGM5vjAcmNq700Aivq-wSg2x?gv=true"
             ></iframe>
-        </section>
+        </>
     );
 };
 

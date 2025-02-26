@@ -76,7 +76,7 @@ const Home = () => {
     ];
 
     useEffect(() => {
-        document.title = `Novozub | ${t("home.secondary_title")}`;
+        document.title = `Prozubik | ${t("home.secondary_title")}`;
     }, [t]);
 
     const [search, setSearch] = useState("");
