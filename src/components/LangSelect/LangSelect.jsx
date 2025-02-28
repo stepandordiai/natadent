@@ -6,13 +6,15 @@ const LangSelect = () => {
     useEffect(() => {
         // Function that change language
 
-        const handleChangeLanguage = (lang) => {
-            i18n.changeLanguage(lang);
+        const handleChangeLanguage = (lng) => {
+            i18n.changeLanguage(lng);
+
             // Active state for language options
+
             document
                 .querySelectorAll(".lang-select__option")
                 .forEach((option) => {
-                    if (option.dataset.value === lang) {
+                    if (option.dataset.value === lng) {
                         option.classList.add("lang-select__option--active");
                     } else {
                         option.classList.remove("lang-select__option--active");

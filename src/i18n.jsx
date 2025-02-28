@@ -21,21 +21,12 @@ i18n.use(initReactI18next)
             },
         },
 
-        fallbackLng: "ua",
+        fallbackLng: "cz",
 
         detection: {
-            order: [
-                "htmlTag",
-                // "querystring",
-                "cookie",
-                "localStorage",
-                "path",
-                // "sessionStorage",
-                // "navigator",
-                "subdomain",
-            ],
+            order: ["localStorage", "cookie", "htmlTag", "path", "subdomain"],
 
-            caches: ["cookie", "localStorage"],
+            caches: ["localStorage", "cookie"],
         },
 
         interpolation: {
