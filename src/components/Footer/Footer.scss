@@ -12,6 +12,10 @@
     padding: 30px;
 }
 
+.footer__logo-container {
+    text-align: center;
+}
+
 .footer-top__logo {
     @include flex-center;
 
@@ -112,19 +116,29 @@
 }
 
 .footer-bottom {
-    @include flex-center;
-    flex-direction: column;
+    @include flex-start;
+    gap: 30px;
     background: var(--bg-clr);
     padding: 30px;
 }
 
-.creator {
-    a {
-        transition: color 150ms;
+.related-sites-container {
+    ul {
+        a {
+            transition: color 0.15s;
 
-        &:hover {
-            color: var(--accent-clr);
+            &:hover {
+                color: var(--accent-clr);
+            }
         }
+    }
+}
+
+.footer__creator-link {
+    transition: color 150ms;
+
+    &:hover {
+        color: var(--accent-clr);
     }
 }
 
@@ -155,5 +169,11 @@
 
     .footer-top__logo {
         align-items: center;
+    }
+
+    .footer-bottom {
+        align-items: center;
+        flex-direction: column-reverse;
+        text-align: center;
     }
 }

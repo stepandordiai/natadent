@@ -13,6 +13,7 @@ import Appointment from "./pages/Appointment/Appointment";
 import Footer from "./components/Footer/Footer";
 import "./i18n";
 import "./App.scss";
+import Service from "./pages/Service/Service";
 
 function App() {
     useEffect(() => {
@@ -37,6 +38,7 @@ function App() {
                     <Route path="/smile-gallery" element={<SmileGallery />} />
                     <Route path="/contacts" element={<Contacts />} />
                     <Route path="/appointment" element={<Appointment />} />
+                    <Route path="/service/:id" element={<Service />} />
                 </Routes>
                 <Footer />
             </div>

@@ -4,6 +4,86 @@ import { useEffect } from "react";
 import "./Menu.scss";
 
 const Menu = () => {
+    const { t } = useTranslation();
+
+    const servicesData = [
+        {
+            name: t("service_1"),
+            desc: t("service_desc_1"),
+            path: "stomatologie",
+        },
+        {
+            name: t("service_2"),
+            desc: t("service_desc_2"),
+            path: "prevence",
+        },
+        {
+            name: t("service_3"),
+            desc: t("service_desc_3"),
+            path: "dentální-hygiena",
+        },
+        {
+            name: t("service_4"),
+            desc: t("service_desc_4"),
+            path: "stomatochirurgie",
+        },
+        {
+            name: t("service_5"),
+            desc: t("service_desc_5"),
+            path: "kompletní-rekonstrukce-chrupu",
+        },
+        {
+            name: t("service_6"),
+            desc: t("service_desc_6"),
+            path: "extrakce-zubů-moudrosti",
+        },
+        {
+            name: t("service_7"),
+            desc: t("service_desc_7"),
+            path: "implantologie",
+        },
+        {
+            name: t("service_8"),
+            desc: t("service_desc_8"),
+            path: "parodontologie",
+        },
+        {
+            name: t("service_9"),
+            desc: t("service_desc_9"),
+            path: "endodoncie",
+        },
+        {
+            name: t("service_10"),
+            desc: t("service_desc_10"),
+            path: "ortodoncie",
+        },
+        {
+            name: t("service_11"),
+            desc: t("service_desc_11"),
+            path: "analgosedace-a-celková-anestezie",
+        },
+        {
+            name: t("service_12"),
+            desc: t("service_desc_12"),
+            path: "dětská-stomatologie",
+        },
+        {
+            name: t("service_13"),
+            desc: t("service_desc_13"),
+            path: "nastřižení-uzdiček-v-ústech-kojenců",
+        },
+        {
+            name: t("service_14"),
+            desc: t("service_desc_14"),
+            path: "bělení-zubů",
+        },
+        {
+            name: t("service_15"),
+            desc: t("service_desc_15"),
+            path: "zubní-laboratoř",
+        },
+    ];
+
     useEffect(() => {
         document.querySelectorAll(".js-menu__link").forEach((link) => {
             link.addEventListener("click", () => {
@@ -34,8 +114,6 @@ const Menu = () => {
             });
         });
     }, []);
-
-    const { t } = useTranslation();
 
     const inactiveMenuLink = "menu__link js-menu__link";
     const activeMenuLink = "menu__link js-menu__link menu__link--active";
@@ -104,96 +182,21 @@ const Menu = () => {
                     </div>
                     <div className="menu-dd__wrapper">
                         <div className="menu-dd">
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? activeMenuDdLink
-                                        : inactiveMenuDdLink
-                                }
-                                to="/oral-hygienist"
-                            >
-                                {t("service_1")}
-                            </NavLink>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? activeMenuDdLink
-                                        : inactiveMenuDdLink
-                                }
-                                to="/teeth-cleaning"
-                            >
-                                {t("service_2")}
-                            </NavLink>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? activeMenuDdLink
-                                        : inactiveMenuDdLink
-                                }
-                                to="/care-advice"
-                            >
-                                {t("service_3")}
-                            </NavLink>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? activeMenuDdLink
-                                        : inactiveMenuDdLink
-                                }
-                                to="/dental-care"
-                            >
-                                {t("service_4")}
-                            </NavLink>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? activeMenuDdLink
-                                        : inactiveMenuDdLink
-                                }
-                                to="/tooth-protection"
-                            >
-                                {t("service_5")}
-                            </NavLink>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? activeMenuDdLink
-                                        : inactiveMenuDdLink
-                                }
-                                to="/whitening-teeth"
-                            >
-                                {t("service_6")}
-                            </NavLink>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? activeMenuDdLink
-                                        : inactiveMenuDdLink
-                                }
-                                to="/dental-implants"
-                            >
-                                {t("service_7")}
-                            </NavLink>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? activeMenuDdLink
-                                        : inactiveMenuDdLink
-                                }
-                                to="/oral-surgery"
-                            >
-                                {t("service_8")}
-                            </NavLink>
-                            <NavLink
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? activeMenuDdLink
-                                        : inactiveMenuDdLink
-                                }
-                                to="/oral-hygienist"
-                            >
-                                {t("service_9")}
-                            </NavLink>
+                            {servicesData.map((service, index) => {
+                                return (
+                                    <NavLink
+                                        key={index}
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? activeMenuDdLink
+                                                : inactiveMenuDdLink
+                                        }
+                                        to={`/service/${service.path}`}
+                                    >
+                                        {service.name}
+                                    </NavLink>
+                                );
+                            })}
                         </div>
                     </div>
                 </li>

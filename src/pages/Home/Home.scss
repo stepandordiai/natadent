@@ -246,32 +246,30 @@
     text-align: justify;
 }
 
-// Our team
+// .home-our-team {
+//     padding: 30px;
+// }
 
-.home-our-team {
-    padding: 30px;
-}
+// .home-our-team__title {
+//     font-size: 2rem;
+//     text-align: center;
+//     padding-bottom: 30px;
+// }
 
-.home-our-team__title {
-    font-size: 2rem;
-    text-align: center;
-    padding-bottom: 30px;
-}
+// .home-our-team__grid {
+//     display: grid;
+//     grid-template-columns: repeat(5, 1fr);
+//     gap: 30px;
+// }
 
-.home-our-team__grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 30px;
-}
-
-.home-our-team__card {
-    padding: 15px;
-    text-align: center;
-    @include flex-center;
-    flex-direction: column;
-    row-gap: 15px;
-    background: #fff;
-}
+// .home-our-team__card {
+//     padding: 15px;
+//     text-align: center;
+//     @include flex-center;
+//     flex-direction: column;
+//     row-gap: 15px;
+//     background: #fff;
+// }
 
 @media (max-width: 1300px) {
     .home__services-grid {
@@ -279,11 +277,11 @@
     }
 }
 
-@media (max-width: 1200px) {
-    .home-our-team__grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
+// @media (max-width: 1200px) {
+//     .home-our-team__grid {
+//         grid-template-columns: repeat(4, 1fr);
+//     }
+// }
 
 @media (max-width: 900px) {
     .home__services {
@@ -308,13 +306,13 @@
         width: 100%;
     }
 
-    .home-our-team {
-        padding: 30px 15px;
-    }
+    // .home-our-team {
+    //     padding: 30px 15px;
+    // }
 
-    .home-our-team__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    // .home-our-team__grid {
+    //     grid-template-columns: repeat(2, 1fr);
+    // }
 }
 
 @media (max-width: 500px) {
@@ -322,7 +320,7 @@
         flex-direction: column;
     }
 
-    .home-our-team__grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
+    // .home-our-team__grid {
+    //     grid-template-columns: repeat(1, 1fr);
+    // }
 }

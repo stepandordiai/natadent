@@ -1,0 +1,11 @@
+.service {
+    text-align: center;
+    font-size: 2rem;
+    padding: 30px;
+}
+
+@media (max-width: 900px) {
+    .service {
+        padding: 30px 15px;
+    }
+}

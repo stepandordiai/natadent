@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { useTranslation } from "react-i18next";
 import "./PageTitle.scss";
 
-const PageTitle = ({ title }) => {
+const PageTitle = ({ title, previousPath }) => {
     const { t } = useTranslation();
 
     return (
@@ -12,6 +13,14 @@ const PageTitle = ({ title }) => {
                     {t("home_title")}
                 </NavLink>
                 <span>/</span>
+                {previousPath && (
+                    <>
+                        <HashLink className="page-title__link" to="/#services">
+                            {previousPath}
+                        </HashLink>
+                        <span>/</span>
+                    </>
+                )}
                 <p>{title}</p>
                 <span>/</span>
             </div>
