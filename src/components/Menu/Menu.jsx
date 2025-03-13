@@ -191,7 +191,7 @@ const Menu = () => {
                                                 ? activeMenuDdLink
                                                 : inactiveMenuDdLink
                                         }
-                                        to={`/service/${service.path}`}
+                                        to={`/service-page/${service.path}`}
                                     >
                                         {service.name}
                                     </NavLink>

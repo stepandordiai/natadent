@@ -2,7 +2,7 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "./Service.scss";
+import "./ServicePage.scss";
 
 const Service = () => {
     const { t } = useTranslation();
@@ -93,18 +93,16 @@ const Service = () => {
 
     useEffect(() => {
         document.title = service[0].name;
-    }, [t]);
+    }, [t, service]);
 
     return (
-        <>
+        <section className="service-page">
             <PageTitle
                 title={service[0].name}
                 previousPath={t("services_title")}
             />
-            <div className="service">
-                <p>{t("coming_soon")}</p>
-            </div>
-        </>
+            <p className="coming-soon">{t("coming_soon")}</p>
+        </section>
     );
 };
 

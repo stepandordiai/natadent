@@ -1,0 +1,22 @@
+.service-page {
+    opacity: 0;
+    animation: revealServicePage 1s forwards;
+}
+
+.coming-soon {
+    text-align: center;
+    font-size: 2rem;
+    padding: 30px;
+}
+
+@keyframes revealServicePage {
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    .coming-soon {
+        padding: 30px 15px;
+    }
+}

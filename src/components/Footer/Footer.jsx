@@ -239,7 +239,7 @@ const Footer = () => {
                                         className={({ isActive }) =>
                                             isActive ? activeLink : inactiveLink
                                         }
-                                        to={`/service/${service.path}`}
+                                        to={`/service-page/${service.path}`}
                                     >
                                         {service.name}
                                     </NavLink>

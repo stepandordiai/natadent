@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import logoIcon from "./../../assets/logo/tooth.png";
-import photo1 from "./../../assets/team/1.jpg";
-import photo2 from "./../../assets/team/2.jpg";
-import photo3 from "./../../assets/team/3.jpg";
-import photo4 from "./../../assets/team/4.jpg";
-import photo5 from "./../../assets/team/5.jpg";
+// import photo1 from "./../../assets/team/1.jpg";
+// import photo2 from "./../../assets/team/2.jpg";
+// import photo3 from "./../../assets/team/3.jpg";
+// import photo4 from "./../../assets/team/4.jpg";
+// import photo5 from "./../../assets/team/5.jpg";
 import "./Home.scss";
 
 const Home = () => {
@@ -192,7 +192,7 @@ const Home = () => {
                             return (
                                 <NavLink
                                     key={index}
-                                    to={`/service/${service.path}`}
+                                    to={`/service-page/${service.path}`}
                                     className="home__service js-service"
                                 >
                                     <h4>{service.name}</h4>
