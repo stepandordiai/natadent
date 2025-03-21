@@ -1,1 +1,1 @@
-# Prozubik (CZ)
+# Prozubik
