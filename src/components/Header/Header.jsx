@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import LangSelect from "../LangSelect/LangSelect";
+import LngSelect from "../LngSelect/LngSelect";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import Menu from "../Menu/Menu";
 import logoIcon from "./../../assets/logo/tooth.png";
@@ -176,7 +176,7 @@ const Header = () => {
                         </NavLink>
                     </div>
                 </nav>
-                <LangSelect />
+                <LngSelect />
                 <BurgerBtn />
             </div>
             <Menu />

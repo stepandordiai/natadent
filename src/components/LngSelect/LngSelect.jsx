@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import i18n from "i18next";
-import "./LangSelect.scss";
+import "./LngSelect.scss";
 
 const LangSelect = () => {
     useEffect(() => {
@@ -16,7 +16,6 @@ const LangSelect = () => {
             const selectOptions = selectList.querySelectorAll(
                 ".lang-select__option"
             );
-            const selectInput = document.querySelector(".lang-select__input");
 
             selectBtn.addEventListener("click", (e) => {
                 // Prevent from submitting a form
@@ -30,13 +29,11 @@ const LangSelect = () => {
 
             selectOptions.forEach((option) => {
                 option.addEventListener("click", (e) => {
-                    // TODO:
                     e.stopPropagation();
                     document.querySelector(
                         ".lang-select__btn-value"
                     ).textContent = option.textContent;
-                    selectInput.value = option.dataset.value;
-                    handleChangeLanguage(selectInput.value);
+                    handleChangeLanguage(option.dataset.value);
                     selectBtn.classList.remove("lang-select__btn--active");
                     selectList.classList.remove("lang-select__list--visible");
                     document
@@ -117,11 +114,6 @@ const LangSelect = () => {
                     />
                 </li>
             </ul>
-            <input
-                className="lang-select__input"
-                type="text"
-                defaultValue="cz"
-            />
         </div>
     );
 };
