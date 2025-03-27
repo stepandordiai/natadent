@@ -152,10 +152,10 @@ const Home = () => {
                         alt="Logo"
                     />
                 </div>
-                <h2 className="home-top__title">{t("home.title")}</h2>
-                <h3 className="home-top__sec-title">
+                <h1 className="home-top__title">{t("home.title")}</h1>
+                <h2 className="home-top__sec-title">
                     {t("home.secondary_title")}
-                </h3>
+                </h2>
                 <div className="home-top__btn-container">
                     <NavLink className="home-top__btn" to="/appointment">
                         {t("appointment_title")}
@@ -195,7 +195,7 @@ const Home = () => {
                                     to={`/service-page/${service.path}`}
                                     className="home__service js-service"
                                 >
-                                    <h4>{service.name}</h4>
+                                    <h3>{service.name}</h3>
                                     <p>{service.desc}</p>
                                 </NavLink>
                             );
@@ -248,7 +248,7 @@ const Home = () => {
                 </div>
             </div> */}
             <div className="faq" id="faq">
-                <div className="faq__title">{t("faq_title")}</div>
+                <h2 className="faq__title">{t("faq_title")}</h2>
                 <div className="faq__list">
                     <div className="faq__item">
                         <button className="faq__btn js-faq__btn">

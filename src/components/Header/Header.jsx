@@ -94,7 +94,7 @@ const Header = () => {
         <header className="header">
             <div className="header-top">
                 <a href="mailto:novozubcz@gmail.com">novozubcz@gmail.com</a>
-                <a href="tel:+420722001016">+420 722 001 016</a>
+                <a href="tel:+420773802166">+420 773 802 166</a>
             </div>
             <div className="header-bottom">
                 <NavLink className="header-bottom__logo" to="/">

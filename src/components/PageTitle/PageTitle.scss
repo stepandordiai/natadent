@@ -8,21 +8,15 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    p {
-        @include grid-center;
-        height: 30px;
-        padding: 0 7.5px;
-        opacity: 0.5;
-    }
 
     span {
         @include grid-center;
         height: 30px;
         padding: 0 7.5px;
-    }
 
-    span:nth-last-of-type(1) {
-        opacity: 0.5;
+        &:nth-last-of-type(1) {
+            color: rgba(0, 0, 0, 0.5);
+        }
     }
 }
 

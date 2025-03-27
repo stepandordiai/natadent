@@ -21,10 +21,9 @@ const PageTitle = ({ title, previousPath }) => {
                         <span>/</span>
                     </>
                 )}
-                <p>{title}</p>
-                <span>/</span>
+                <span>{title}</span>
             </div>
-            <h2 className="page-title__title">{title}</h2>
+            <h1 className="page-title__title">{title}</h1>
         </div>
     );
 };

@@ -12,8 +12,8 @@ import Contacts from "./pages/Contacts/Contacts";
 import Appointment from "./pages/Appointment/Appointment";
 import Footer from "./components/Footer/Footer";
 import "./i18n";
-import "./App.scss";
 import ServicePage from "./pages/ServicePage/ServicePage";
+import "./App.scss";
 
 function App() {
     useEffect(() => {

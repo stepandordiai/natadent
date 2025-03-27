@@ -48,7 +48,6 @@ const Contacts = () => {
             );
 
             selectBtn.addEventListener("click", (e) => {
-                // Prevent from submitting a form
                 e.preventDefault();
                 selectList.classList.toggle("custom-select__list--visible");
                 selectBtn.classList.add("custom-select__btn--active");
@@ -57,6 +56,7 @@ const Contacts = () => {
             selectOptions.forEach((option) => {
                 option.addEventListener("click", (e) => {
                     // TODO:
+
                     e.stopPropagation();
                     selectBtn.textContent = option.textContent;
                     selectBtn.focus();
@@ -100,9 +100,9 @@ const Contacts = () => {
                         <p className="contacts__phone">{t("contacts.phone")}</p>
                         <a
                             className="contacts__phone-link"
-                            href="tel:+420722001016"
+                            href="tel:+420773802166"
                         >
-                            +420 722 001 016
+                            +420 773 802 166
                         </a>
                     </div>
                     <div>
@@ -136,9 +136,9 @@ const Contacts = () => {
                         </a>
                     </div>
                 </div>
-                <h3 className="contacts__appointment-title">
+                <h2 className="contacts__appointment-title">
                     {t("appointment_title")}
-                </h3>
+                </h2>
                 <form
                     className="contacts-form"
                     action="mailto:novozubcz@gmail.com"
