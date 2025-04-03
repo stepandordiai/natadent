@@ -12,7 +12,7 @@ const OurTeam = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = t("our_team_title");
+        document.title = `${t("our_team_title")} | Prozubik`;
     }, [t]);
 
     return (

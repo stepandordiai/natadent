@@ -179,14 +179,6 @@ const Footer = () => {
                                 {t("services_title")}
                             </HashLink>
                         </li>
-                        {/* <li>
-                            <HashLink
-                                className={"footer__link"}
-                                to={"/#services"}
-                            >
-                                {t("our_team_title")}
-                            </HashLink>
-                        </li> */}
                         <li>
                             <HashLink className={"footer__link"} to={"/#faq"}>
                                 {t("faq_title")}
@@ -252,7 +244,7 @@ const Footer = () => {
                     <p>{t("contacts_title")}</p>
                     <ul>
                         <li>
-                            <a href="tel:+420722001016">+420 722 001 016</a>
+                            <a href="tel:+420773802166">+420 773 802 166</a>
                         </li>
                         <li>
                             <a href="mailto:novozubcz@gmail.com">
@@ -284,16 +276,18 @@ const Footer = () => {
                     <p>Related websites</p>
                     <ul>
                         <li>
-                            <a href="https://pepabourek.cz/" target="_blank">
-                                pepabourek.cz
+                            <a href="https://bourek.cz/" target="_blank">
+                                bourek.cz
                             </a>
                         </li>
                         <li>
-                            <a
-                                href="https://neresen-cz.netlify.app/"
-                                target="_blank"
-                            >
+                            <a href="https://neresen.cz/" target="_blank">
                                 neresen.cz
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://fvestavby.cz/" target="_blank">
+                                fvestavby.cz
                             </a>
                         </li>
                     </ul>

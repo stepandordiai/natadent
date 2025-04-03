@@ -8,7 +8,8 @@ const PriceList = () => {
 
     useEffect(() => {
         // Update title depending on which lang we are using
-        document.title = t("price_list_title");
+
+        document.title = `${t("price_list_title")} | Prozubik`;
     }, [t]);
 
     const [filter, setFilter] = useState("");

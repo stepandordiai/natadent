@@ -124,6 +124,10 @@
 
 .related-sites-container {
     ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+
         a {
             transition: color 0.15s;
 
@@ -175,5 +179,11 @@
         align-items: center;
         flex-direction: column-reverse;
         text-align: center;
+    }
+
+    .related-sites-container {
+        ul {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 }

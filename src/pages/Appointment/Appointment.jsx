@@ -7,7 +7,7 @@ const Appointment = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = t("appointment_title");
+        document.title = `${t("appointment_title")} | Prozubik`;
     }, [t]);
 
     return (

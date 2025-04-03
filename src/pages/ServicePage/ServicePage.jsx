@@ -92,7 +92,7 @@ const Service = () => {
     });
 
     useEffect(() => {
-        document.title = service[0].name;
+        document.title = `${service[0].name} | Prozubik`;
     }, [t, service]);
 
     return (

@@ -26,7 +26,7 @@ const SmileGallery = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = t("smile_gallery_title");
+        document.title = `${t("smile_gallery_title")} | Prozubik`;
     }, [t]);
 
     useEffect(() => {

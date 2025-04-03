@@ -8,6 +8,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
 
     span {
         @include grid-center;
@@ -33,7 +34,8 @@
 }
 
 .page-title__title {
-    font-size: 3rem;
+    padding-top: 30px;
+    font-size: clamp(1rem, 4vw, 2rem);
 }
 
 @media (max-width: 900px) {

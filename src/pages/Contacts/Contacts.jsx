@@ -11,7 +11,7 @@ const Contacts = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title = t("contacts_title");
+        document.title = `${t("contacts_title")} | Prozubik`;
     }, [t]);
 
     useEffect(() => {
