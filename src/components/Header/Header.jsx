@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import LngSelect from "../LngSelect/LngSelect";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import Menu from "../Menu/Menu";
-import logoIcon from "./../../assets/logo/tooth.png";
+import logoIcon from "/assets/logo/tooth.png";
 import "./Header.scss";
 
 const Header = () => {

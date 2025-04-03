@@ -1,12 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import logoIcon from "./../../assets/logo/tooth.png";
-// import photo1 from "./../../assets/team/1.jpg";
-// import photo2 from "./../../assets/team/2.jpg";
-// import photo3 from "./../../assets/team/3.jpg";
-// import photo4 from "./../../assets/team/4.jpg";
-// import photo5 from "./../../assets/team/5.jpg";
+import logoIcon from "/assets/logo/tooth.png";
 import "./Home.scss";
 
 const Home = () => {
@@ -202,51 +197,6 @@ const Home = () => {
                         })}
                 </div>
             </div>
-            {/* <div className="home-our-team" id="our-team">
-                <h3 className="home-our-team__title">{t("our_team_title")}</h3>
-                <div className="home-our-team__grid">
-                    <div className="home-our-team__card">
-                        <img src={photo1} alt="Photo" />
-                        <div>
-                            <p>Jméno</p>
-                            <p>Pozice</p>
-                            <p>+420 722 001 016</p>
-                        </div>
-                    </div>
-                    <div className="home-our-team__card">
-                        <img src={photo2} alt="Photo" />
-                        <div>
-                            <p>Jméno</p>
-                            <p>Pozice</p>
-                            <p>+420 722 001 016</p>
-                        </div>
-                    </div>
-                    <div className="home-our-team__card">
-                        <img src={photo3} alt="Photo" />
-                        <div>
-                            <p>Jméno</p>
-                            <p>Pozice</p>
-                            <p>+420 722 001 016</p>
-                        </div>
-                    </div>
-                    <div className="home-our-team__card">
-                        <img src={photo4} alt="Photo" />
-                        <div>
-                            <p>Jméno</p>
-                            <p>Pozice</p>
-                            <p>+420 722 001 016</p>
-                        </div>
-                    </div>
-                    <div className="home-our-team__card">
-                        <img src={photo5} alt="Photo" />
-                        <div>
-                            <p>Jméno</p>
-                            <p>Pozice</p>
-                            <p>+420 722 001 016</p>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
             <div className="faq" id="faq">
                 <h2 className="faq__title">{t("faq_title")}</h2>
                 <div className="faq__list">

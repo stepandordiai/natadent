@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import logoIcon from "./../../assets/logo/tooth.png";
+import logoIcon from "/assets/logo/tooth.png";
 import "./Loading.scss";
 
 const Loading = () => {

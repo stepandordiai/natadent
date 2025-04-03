@@ -2,23 +2,23 @@ import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import { useTranslation } from "react-i18next";
 
-import before1 from "./../../assets/smiles/before1.png";
-import after1 from "./../../assets/smiles/after1.png";
+import before1 from "/assets/smiles/before1.png";
+import after1 from "/assets/smiles/after1.png";
 
-import before2 from "./../../assets/smiles/before2.png";
-import after2 from "./../../assets/smiles/after2.png";
+import before2 from "/assets/smiles/before2.png";
+import after2 from "/assets/smiles/after2.png";
 
-import before3 from "./../../assets/smiles/before3.png";
-import after3 from "./../../assets/smiles/after3.png";
+import before3 from "/assets/smiles/before3.png";
+import after3 from "/assets/smiles/after3.png";
 
-import before4 from "./../../assets/smiles/before4.png";
-import after4 from "./../../assets/smiles/after4.png";
+import before4 from "/assets/smiles/before4.png";
+import after4 from "/assets/smiles/after4.png";
 
-import before5 from "./../../assets/smiles/before5.png";
-import after5 from "./../../assets/smiles/after5.png";
+import before5 from "/assets/smiles/before5.png";
+import after5 from "/assets/smiles/after5.png";
 
-import before6 from "./../../assets/smiles/before6.png";
-import after6 from "./../../assets/smiles/after6.png";
+import before6 from "/assets/smiles/before6.png";
+import after6 from "/assets/smiles/after6.png";
 
 import "./SmileGallery.scss";
 

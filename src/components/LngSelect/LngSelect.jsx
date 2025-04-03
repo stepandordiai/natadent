@@ -54,9 +54,23 @@ const LangSelect = () => {
         });
     }, []);
 
-    const lngStorage = localStorage.getItem("i18nextLng") || "cz";
+    const lngStorage = localStorage.getItem("i18nextLng") || "cs";
 
-    const selectBtnTxt = lngStorage.toUpperCase() || "CZ";
+    let selectBtnTxt = "CZ";
+
+    switch (lngStorage) {
+        case "cs":
+            selectBtnTxt = "CZ";
+            break;
+        case "uk":
+            selectBtnTxt = "UA";
+
+            break;
+        case "en":
+            selectBtnTxt = "EN";
+
+            break;
+    }
 
     const inactiveLngOption = "lang-select__option";
     const activeLngOption = "lang-select__option lang-select__option--active";
@@ -70,11 +84,11 @@ const LangSelect = () => {
             <ul className="lang-select__list">
                 <li
                     className={
-                        lngStorage === "cz"
+                        lngStorage === "cs"
                             ? activeLngOption
                             : inactiveLngOption
                     }
-                    data-value="cz"
+                    data-value="cs"
                 >
                     <span>CZ</span>
                     <img
@@ -85,11 +99,11 @@ const LangSelect = () => {
                 </li>
                 <li
                     className={
-                        lngStorage === "ua"
+                        lngStorage === "uk"
                             ? activeLngOption
                             : inactiveLngOption
                     }
-                    data-value="ua"
+                    data-value="uk"
                 >
                     <span>UA</span>
                     <img

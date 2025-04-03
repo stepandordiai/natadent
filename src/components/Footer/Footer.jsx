@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import logoIcon from "./../../assets/logo/tooth.png";
-import "./Footer.scss";
 import { HashLink } from "react-router-hash-link";
+import logoIcon from "/assets/logo/tooth.png";
+import "./Footer.scss";
 
 const Footer = () => {
     const { t } = useTranslation();

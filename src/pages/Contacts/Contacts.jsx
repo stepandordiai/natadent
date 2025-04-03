@@ -2,9 +2,9 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import dayjs from "dayjs";
-import phoneIcon from "./../../assets/icons/telephone.png";
-import emailIcon from "./../../assets/icons/mail.png";
-import pinIcon from "./../../assets/icons/pin.png";
+import phoneIcon from "/assets/icons/telephone.png";
+import emailIcon from "/assets/icons/mail.png";
+import pinIcon from "/assets/icons/pin.png";
 import "./Contacts.scss";
 
 const Contacts = () => {

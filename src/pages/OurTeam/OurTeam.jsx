@@ -1,12 +1,12 @@
 import { useTranslation } from "react-i18next";
-import photo1 from "./../../assets/team/1.jpg";
-import photo2 from "./../../assets/team/2.jpg";
-import photo3 from "./../../assets/team/3.jpg";
-import photo4 from "./../../assets/team/4.jpg";
-import photo5 from "./../../assets/team/5.jpg";
-import "./OurTeam.scss";
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import photo1 from "/assets/team/1.jpg";
+import photo2 from "/assets/team/2.jpg";
+import photo3 from "/assets/team/3.jpg";
+import photo4 from "/assets/team/4.jpg";
+import photo5 from "/assets/team/5.jpg";
+import "./OurTeam.scss";
 
 const OurTeam = () => {
     const { t } = useTranslation();

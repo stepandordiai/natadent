@@ -1,4 +1,4 @@
-import upArrowIcon from "./../../assets/icons/up-arrows.png";
+import upArrowIcon from "/assets/icons/up-arrows.png";
 import "./ToTopBtn.scss";
 
 const ToTopBtn = () => {
