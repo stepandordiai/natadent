@@ -1,136 +1,136 @@
 @use "./../../mixins" as *;
 
 .smile-gallery {
-    opacity: 0;
-    animation: revealSmileGallery 1s forwards;
+	opacity: 0;
+	animation: revealSmileGallery 1s forwards;
 }
 
 @keyframes revealSmileGallery {
-    to {
-        opacity: 1;
-    }
+	to {
+		opacity: 1;
+	}
 }
 
 .smile-gallery-wrapper {
-    padding: 30px;
+	padding: 30px;
 }
 
 .about-us__gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
 }
 
 .smile-wrapper {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 30px;
+	position: relative;
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	border-radius: 30px;
 
-    img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        overflow: hidden;
-    }
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		overflow: hidden;
+	}
 }
 
 .smile-wrapper::before {
-    content: attr(data-before);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 30px;
-    z-index: 1;
-    @include grid-center;
-    height: 30px;
-    border-radius: 15px;
-    padding: 0 7.5px;
-    background: rgba(255, 255, 255, 0.5);
-    pointer-events: none;
-    transition: opacity 0.15s;
+	content: attr(data-before);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 30px;
+	z-index: 1;
+	@include grid-center;
+	height: 30px;
+	border-radius: 15px;
+	padding: 0 7.5px;
+	background: rgba(255, 255, 255, 0.5);
+	pointer-events: none;
+	transition: opacity 0.15s;
 }
 
 .smile-wrapper::after {
-    content: attr(data-after);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 30px;
-    z-index: 1;
-    @include grid-center;
-    height: 30px;
-    border-radius: 15px;
-    padding: 0 7.5px;
-    background: rgba(255, 255, 255, 0.5);
-    pointer-events: none;
-    transition: opacity 0.15s;
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 30px;
+	z-index: 1;
+	@include grid-center;
+	height: 30px;
+	border-radius: 15px;
+	padding: 0 7.5px;
+	background: rgba(255, 255, 255, 0.5);
+	pointer-events: none;
+	transition: opacity 0.15s;
 }
 
 .smile-wrapper:hover::before,
 .smile-wrapper:hover::after {
-    opacity: 0;
+	opacity: 0;
 }
 
 .img-range {
-    --x-axis: 50%;
-    clip-path: polygon(0 0, var(--x-axis) 0%, var(--x-axis) 100%, 0 100%);
+	--x-axis: 50%;
+	clip-path: polygon(0 0, var(--x-axis) 0%, var(--x-axis) 100%, 0 100%);
 }
 
 .img-ranger {
-    position: absolute;
-    @include appearance;
-    width: calc(100% + 40px);
-    height: 100%;
-    margin-left: -20px;
+	position: absolute;
+	@include appearance;
+	width: calc(100% + 40px);
+	height: 100%;
+	margin-left: -20px;
 }
 
 .img-ranger::-webkit-slider-thumb {
-    appearance: none;
-    height: 40px;
-    width: 40px;
-    background: url("./../../assets/icons/left-and-right.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: none;
-    cursor: pointer;
+	appearance: none;
+	height: 40px;
+	width: 40px;
+	background: url("./../../icons/left-and-right.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-shadow: none;
+	cursor: pointer;
 }
 
 .line {
-    position: absolute;
-    appearance: none;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    --x-line-axis: 50%;
+	position: absolute;
+	appearance: none;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	--x-line-axis: 50%;
 }
 
 .line::before {
-    content: "";
-    position: absolute;
-    left: var(--x-line-axis);
-    transform: translateX(-50%);
-    height: 100%;
-    width: 2px;
-    background: #fff;
+	content: "";
+	position: absolute;
+	left: var(--x-line-axis);
+	transform: translateX(-50%);
+	height: 100%;
+	width: 2px;
+	background: #fff;
 }
 
 @media (max-width: 1200px) {
-    .about-us__gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+	.about-us__gallery-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 @media (max-width: 900px) {
-    .smile-gallery-wrapper {
-        padding: 30px 15px;
-    }
+	.smile-gallery-wrapper {
+		padding: 30px 15px;
+	}
 }
 
 @media (max-width: 800px) {
-    .about-us__gallery-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
+	.about-us__gallery-grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }

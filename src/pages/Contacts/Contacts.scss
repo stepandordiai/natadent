@@ -1,265 +1,260 @@
 @use "./../../mixins" as *;
 
 .contacts {
-    opacity: 0;
-    animation: revealContacts 1s forwards;
+	opacity: 0;
+	animation: revealContacts 1s forwards;
 }
 
 @keyframes revealContacts {
-    to {
-        opacity: 1;
-    }
+	to {
+		opacity: 1;
+	}
 }
 
 .contacts-wrapper {
-    display: flex;
-    flex-direction: column;
-    row-gap: 30px;
-    padding: 30px 0;
+	display: flex;
+	flex-direction: column;
+	row-gap: 30px;
+	padding: 30px 0;
 }
 
 .contacts__secondary-info {
-    text-align: justify;
-    font-size: 1.25rem;
-    padding: 0 30px;
+	text-align: justify;
+	font-size: 1.25rem;
+	padding: 0 30px;
 }
 
 .contacts-details {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    background: #fff;
-    padding: 30px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+	background: #fff;
+	padding: 30px;
 
-    div {
-        width: 100%;
-        height: 150px;
-        @include flex-center;
-        flex-direction: column;
-    }
-}
-
-.contacts__phone-img,
-.contacts__email-img,
-.contacts__address-img {
-    width: 30px;
+	div {
+		width: 100%;
+		height: 150px;
+		@include flex-center;
+		flex-direction: column;
+	}
 }
 
 .contacts__phone,
 .contacts__email,
 .contacts__address {
-    font-size: 1.5rem;
+	font-size: 1.5rem;
 }
 
 .contacts__phone-link,
 .contacts__email-link,
 .contacts__address-link {
-    align-self: center;
-    font-size: 1rem;
-    font-weight: 200;
-    transition: color 150ms;
+	align-self: center;
+	font-size: 1rem;
+	font-weight: 200;
+	transition: color 150ms;
 
-    &:hover {
-        color: var(--accent-clr);
-    }
+	&:hover {
+		color: var(--accent-clr);
+	}
 }
 
 .contacts-details__address-btn {
-    @include grid-center;
-    margin-top: 15px;
-    height: 30px;
-    border-radius: 15px;
-    padding: 0 7.5px;
-    background: var(--accent-clr);
-    border: 1px solid var(--accent-clr);
-    transition: background-color 300ms;
+	@include grid-center;
+	margin-top: 15px;
+	height: 30px;
+	border-radius: 15px;
+	padding: 0 7.5px;
+	background: var(--accent-clr);
+	border: 1px solid var(--accent-clr);
+	transition: background-color 300ms;
 
-    &:hover {
-        background: transparent;
-    }
+	&:hover {
+		background: transparent;
+	}
 }
 
-.contacts__appointment-title {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    text-align: center;
+.contacts__appointment-title,
+.contacts__map-title {
+	font-size: clamp(1.5rem, 4vw, 2rem);
+	text-align: center;
 }
 
 .contacts-form {
-    display: flex;
-    flex-direction: column;
-    row-gap: 7.5px;
-    width: 50%;
-    margin: 0 auto;
-    padding: 0 30px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 7.5px;
+	width: 50%;
+	margin: 0 auto;
+	padding: 0 30px;
 }
 
 .contacts-form__inputs {
-    display: flex;
-    gap: 7.5px;
+	display: flex;
+	gap: 7.5px;
 }
 
 .contacts-form__input-wrapper {
-    position: relative;
-    flex-grow: 1;
+	position: relative;
+	flex-grow: 1;
 
-    &:focus-within .contacts-form__label {
-        top: 0;
-        font-size: 12px;
-    }
+	&:focus-within .contacts-form__label {
+		top: 0;
+		font-size: 12px;
+	}
 }
 
 .contacts-form__input {
-    height: 60px;
-    border-radius: 30px;
-    width: 100%;
-    padding: 0 15px;
-    border: 1px solid var(--accent-clr);
+	height: 60px;
+	border-radius: 30px;
+	width: 100%;
+	padding: 0 15px;
+	border: 1px solid var(--accent-clr);
 }
 
 .contacts-form__label {
-    pointer-events: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding-left: 15px;
-    transition: all 0.3s;
+	pointer-events: none;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	padding-left: 15px;
+	transition: all 0.3s;
 }
 
 .contacts-form__label--active {
-    top: 0;
-    font-size: 12px;
+	top: 0;
+	font-size: 12px;
 }
 
 // Custom select
 
 .custom-select {
-    position: relative;
-    height: 60px;
+	position: relative;
+	height: 60px;
 }
 
 .custom-select__btn {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: left;
-    background: var(--bg-clr);
-    border-radius: 30px;
-    padding-left: 15px;
-    cursor: pointer;
-    border: 1px solid var(--accent-clr);
-    transition: background-color 0.3s;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	background: var(--bg-clr);
+	border-radius: 30px;
+	padding-left: 15px;
+	cursor: pointer;
+	border: 1px solid var(--accent-clr);
+	transition: background-color 0.3s;
 }
 
 .custom-select__btn--active {
-    background: var(--accent-clr);
+	background: var(--accent-clr);
 }
 
 .custom-select__btn::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 15px;
-    width: 10px;
-    aspect-ratio: 1/1;
-    clip-path: polygon(50% 100%, 0 0, 100% 0);
-    background: #000;
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 15px;
+	width: 10px;
+	aspect-ratio: 1/1;
+	clip-path: polygon(50% 100%, 0 0, 100% 0);
+	background: #000;
 }
 
 .custom-select__list {
-    display: none;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    padding: 7.5px;
-    border-radius: 15px;
-    background: var(--bg-clr);
-    box-shadow: var(--cstm-box-shadow);
+	display: none;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	padding: 7.5px;
+	border-radius: 15px;
+	background: var(--bg-clr);
+	box-shadow: var(--cstm-box-shadow);
 }
 
 .custom-select__list--visible {
-    display: block;
+	display: block;
 }
 
 .custom-select__option {
-    @include flex-start-center;
-    height: 30px;
-    border-radius: 15px;
-    padding: 0 15px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+	@include flex-start-center;
+	height: 30px;
+	border-radius: 15px;
+	padding: 0 15px;
+	cursor: pointer;
+	transition: background-color 0.3s;
 
-    &:hover {
-        background: var(--accent-clr);
-    }
+	&:hover {
+		background: var(--accent-clr);
+	}
 }
 
 .custom-select__input {
-    display: none;
+	display: none;
 }
 
 input[type="date"],
 input[type="time"] {
-    height: 60px;
-    border-radius: 30px;
-    padding: 15px;
-    border: 1px solid var(--accent-clr);
+	height: 60px;
+	border-radius: 30px;
+	padding: 15px;
+	border: 1px solid var(--accent-clr);
 }
 
 .contacts-form__btn {
-    font-weight: inherit;
-    height: 60px;
-    border-radius: 30px;
-    padding: 0 15px;
-    border: 1px solid var(--accent-clr);
-    background: var(--accent-clr);
-    transition: background-color 0.3s;
+	font-weight: inherit;
+	height: 60px;
+	border-radius: 30px;
+	padding: 0 15px;
+	border: 1px solid var(--accent-clr);
+	background: var(--accent-clr);
+	transition: background-color 0.3s;
 
-    &:hover {
-        background-color: transparent;
-    }
+	&:hover {
+		background-color: transparent;
+	}
 }
 
 .contacts__google-map {
-    height: 300px;
+	height: 300px;
 }
 
 @media (max-width: 1200px) {
-    .contacts-details {
-        grid-template-columns: repeat(2, 1fr);
-    }
+	.contacts-details {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 @media (max-width: 1000px) {
-    .contacts-form {
-        width: 75%;
-    }
+	.contacts-form {
+		width: 75%;
+	}
 }
 
 @media (max-width: 900px) {
-    .contacts-details {
-        grid-template-columns: repeat(1, 1fr);
-    }
+	.contacts-details {
+		grid-template-columns: repeat(1, 1fr);
+	}
 
-    .contacts__secondary-info {
-        padding: 0 15px;
-    }
+	.contacts__secondary-info {
+		padding: 0 15px;
+	}
 
-    .contacts-details {
-        padding: 30px 15px;
-    }
+	.contacts-details {
+		padding: 30px 15px;
+	}
 
-    .contacts-form {
-        padding: 0 15px;
-    }
+	.contacts-form {
+		padding: 0 15px;
+	}
 }
 
 @media (max-width: 700px) {
-    .contacts-form {
-        width: 100%;
-    }
+	.contacts-form {
+		width: 100%;
+	}
 
-    .contacts-form__inputs {
-        flex-direction: column;
-    }
+	.contacts-form__inputs {
+		flex-direction: column;
+	}
 }

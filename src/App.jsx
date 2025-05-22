@@ -13,37 +13,37 @@ import Appointment from "./pages/Appointment/Appointment";
 import Footer from "./components/Footer/Footer";
 import "./i18n";
 import ServicePage from "./pages/ServicePage/ServicePage";
+import Banner from "./components/Banner/Banner";
 import "./App.scss";
 
 function App() {
-    useEffect(() => {
-        document
-            .querySelector(".loading")
-            .addEventListener("animationend", () => {
-                document.querySelector(".wrapper").style.display = "initial";
-            });
-    }, []);
+	useEffect(() => {
+		document.querySelector(".loading").addEventListener("animationend", () => {
+			document.querySelector(".wrapper").style.display = "initial";
+		});
+	}, []);
 
-    return (
-        <Router>
-            <Loading />
-            <div className="wrapper" style={{ display: "none" }}>
-                <Header />
-                <ToTopBtn />
-                <ScrollToTop />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/our-team" element={<OurTeam />} />
-                    <Route path="/price-list" element={<PriceList />} />
-                    <Route path="/smile-gallery" element={<SmileGallery />} />
-                    <Route path="/contacts" element={<Contacts />} />
-                    <Route path="/appointment" element={<Appointment />} />
-                    <Route path="/service-page/:id" element={<ServicePage />} />
-                </Routes>
-                <Footer />
-            </div>
-        </Router>
-    );
+	return (
+		<Router>
+			<Loading />
+			<div className="wrapper" style={{ display: "none" }}>
+				<Header />
+				<ToTopBtn />
+				<ScrollToTop />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/our-team" element={<OurTeam />} />
+					<Route path="/price-list" element={<PriceList />} />
+					<Route path="/smile-gallery" element={<SmileGallery />} />
+					<Route path="/contacts" element={<Contacts />} />
+					<Route path="/appointment" element={<Appointment />} />
+					<Route path="/service-page/:id" element={<ServicePage />} />
+				</Routes>
+				<Footer />
+				<Banner />
+			</div>
+		</Router>
+	);
 }
 
 export default App;

@@ -1,4 +1,3 @@
 User-agent: *
-Disallow: /private/
 Allow: /
-Sitemap: https://www.prozubik.cz/sitemap.xml
+Sitemap: https://prozubik.cz/sitemap.xml
