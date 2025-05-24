@@ -313,7 +313,7 @@ const Contacts = () => {
 					</h2>
 					<iframe
 						className="contacts__google-map"
-						src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5126.647298667424!2d15.214303!3d50.024031!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c153bee9daf87%3A0xc91ccf8d204d4cb!2sPod%20Hroby%20271%2F271%2C%20280%2002%20Kol%C3%ADn%20IV!5e0!3m2!1scs!2scz!4v1738164855741!5m2!1scs!2scz"
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.3236706787648!2d15.2143025!3d50.024030599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c155b8cfe1db9%3A0x4e0e3a3f6277c27f!2sProzubik!5e0!3m2!1sen!2scz!4v1748083227064!5m2!1sen!2scz"
 						loading="lazy"
 					></iframe>
 				</div>

@@ -1,0 +1,2 @@
+update banner with map
+update hours
