@@ -14,9 +14,12 @@ import Footer from "./components/Footer/Footer";
 import "./i18n";
 import ServicePage from "./pages/ServicePage/ServicePage";
 import Banner from "./components/Banner/Banner";
+import ServicesData from "./data/ServicesData";
 import "./App.scss";
 
 function App() {
+	const servicesData = ServicesData();
+
 	useEffect(() => {
 		document.querySelector(".loading").addEventListener("animationend", () => {
 			document.querySelector(".wrapper").style.display = "initial";
@@ -27,19 +30,22 @@ function App() {
 		<Router>
 			<Loading />
 			<div className="wrapper" style={{ display: "none" }}>
-				<Header />
+				<Header servicesData={servicesData} />
 				<ToTopBtn />
 				<ScrollToTop />
 				<Routes>
-					<Route path="/" element={<Home />} />
+					<Route path="/" element={<Home servicesData={servicesData} />} />
 					<Route path="/our-team" element={<OurTeam />} />
 					<Route path="/price-list" element={<PriceList />} />
 					<Route path="/smile-gallery" element={<SmileGallery />} />
 					<Route path="/contacts" element={<Contacts />} />
 					<Route path="/appointment" element={<Appointment />} />
-					<Route path="/service-page/:id" element={<ServicePage />} />
+					<Route
+						path="/service-page/:id"
+						element={<ServicePage servicesData={servicesData} />}
+					/>
 				</Routes>
-				<Footer />
+				<Footer servicesData={servicesData} />
 				<Banner />
 			</div>
 		</Router>
