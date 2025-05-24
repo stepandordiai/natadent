@@ -11,77 +11,77 @@ const Footer = () => {
 		{
 			name: t("service_1"),
 			desc: t("service_desc_1"),
-			path: "stomatologie",
+			path: "dentistry",
 		},
 		{
 			name: t("service_2"),
 			desc: t("service_desc_2"),
-			path: "prevence",
+			path: "prevention",
 		},
 		{
 			name: t("service_3"),
 			desc: t("service_desc_3"),
-			path: "dentální-hygiena",
+			path: "dental-hygiene",
 		},
 		{
 			name: t("service_4"),
 			desc: t("service_desc_4"),
-			path: "stomatochirurgie",
+			path: "dental-surgery",
 		},
 		{
 			name: t("service_5"),
 			desc: t("service_desc_5"),
-			path: "kompletní-rekonstrukce-chrupu",
+			path: "complete-dental-reconstruction",
 		},
 		{
 			name: t("service_6"),
 			desc: t("service_desc_6"),
-			path: "extrakce-zubů-moudrosti",
+			path: "wisdom-teeth-extraction",
 		},
 		{
 			name: t("service_7"),
 			desc: t("service_desc_7"),
-			path: "implantologie",
+			path: "implantology",
 		},
 		{
 			name: t("service_8"),
 			desc: t("service_desc_8"),
-			path: "parodontologie",
+			path: "periodontology",
 		},
 		{
 			name: t("service_9"),
 			desc: t("service_desc_9"),
-			path: "endodoncie",
+			path: "endodontics",
 		},
 		{
 			name: t("service_10"),
 			desc: t("service_desc_10"),
-			path: "ortodoncie",
+			path: "orthodontics",
 		},
 		{
 			name: t("service_11"),
 			desc: t("service_desc_11"),
-			path: "analgosedace-a-celková-anestezie",
+			path: "analgosedation-and-general-anesthesia",
 		},
 		{
 			name: t("service_12"),
 			desc: t("service_desc_12"),
-			path: "dětská-stomatologie",
+			path: "pediatric-dentistry",
 		},
 		{
 			name: t("service_13"),
 			desc: t("service_desc_13"),
-			path: "nastřižení-uzdiček-v-ústech-kojenců",
+			path: "cutting-frenulums-in-the-mouths-of-infants",
 		},
 		{
 			name: t("service_14"),
 			desc: t("service_desc_14"),
-			path: "bělení-zubů",
+			path: "teeth-whitening",
 		},
 		{
 			name: t("service_15"),
 			desc: t("service_desc_15"),
-			path: "zubní-laboratoř",
+			path: "dental-laboratory",
 		},
 	];
 
@@ -105,23 +105,23 @@ const Footer = () => {
 					<ul className="working-hours">
 						<li className={day === 1 ? "day--active" : ""}>
 							<span>{t("footer.mon")}:</span>
-							<span>7:00 - 17:00</span>
+							<span>{t("footer.closed")}</span>
 						</li>
 						<li className={day === 2 ? "day--active" : ""}>
 							<span>{t("footer.tue")}:</span>
-							<span>7:00 - 17:00</span>
+							<span>{t("footer.closed")}</span>
 						</li>
 						<li className={day === 3 ? "day--active" : ""}>
 							<span>{t("footer.wed")}:</span>
-							<span>7:00 - 17:00</span>
+							<span>{t("footer.closed")}</span>
 						</li>
 						<li className={day === 4 ? "day--active" : ""}>
 							<span>{t("footer.thu")}:</span>
-							<span>7:00 - 17:00</span>
+							<span>{t("footer.closed")}</span>
 						</li>
 						<li className={day === 5 ? "day--active" : ""}>
 							<span>{t("footer.fri")}:</span>
-							<span>7:00 - 17:00</span>
+							<span>{t("footer.closed")}</span>
 						</li>
 						<li className={day === 6 ? "day--active" : ""}>
 							<span>{t("footer.sat")}:</span>

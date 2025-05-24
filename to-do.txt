@@ -1,2 +1,1 @@
-update banner with map
-update hours
+add servicesData
