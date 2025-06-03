@@ -15,7 +15,7 @@ import ServicePage from "./pages/ServicePage/ServicePage";
 import Banner from "./components/Banner/Banner";
 import servicesData from "./data/services-data.json";
 import "./i18n";
-import "./App.scss";
+import "./styles/App.scss";
 
 function App() {
 	useEffect(() => {

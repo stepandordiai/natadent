@@ -15,8 +15,7 @@ const Appointment = () => {
 			<PageTitle title={t("appointment_title")} />
 			<iframe
 				className="google-calendar"
-				src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3y2lhQh_lmF5IRVbwctdxTpTw3L5Z9byjt-CaslzDSQWXseEr4VGM5vjAcmNq700Aivq-wSg2x?gv=true"
-				loading="lazy"
+				src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3uuYpyL9duefLEJ_UepwoN1bAWfeacLVVFS8cERNM0H2Hvu2F5S6yknLD5VKHcZxlDrGuPV9eA?gv=true"
 			></iframe>
 		</>
 	);

@@ -1,141 +1,140 @@
-@use "./../../mixins" as *;
+@use "./../../styles/mixins" as *;
 
 .header {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 100;
-    padding: 0 30px;
-    opacity: 0;
-    animation: revealHome 1s forwards;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 100;
+	padding: 0 30px;
+	opacity: 0;
+	animation: revealHome 1s forwards;
 }
 
 @keyframes revealHome {
-    to {
-        opacity: 1;
-    }
+	to {
+		opacity: 1;
+	}
 }
 
 .header-top {
-    min-height: 30px;
-    @include flex-between-center;
+	min-height: 30px;
+	@include flex-between-center;
 
-    a {
-        transition: color 0.15s;
+	a {
+		transition: color 0.15s;
 
-        &:hover {
-            color: var(--accent-clr);
-        }
-    }
+		&:hover {
+			color: var(--accent-clr);
+		}
+	}
 }
 
 .header-bottom {
-    min-height: 100px;
-    @include flex-between-center;
+	min-height: 100px;
+	@include flex-between-center;
 }
 
 .header-bottom__logo {
-    @include flex-center;
+	@include flex-center;
 
-    img {
-        width: clamp(35px, 5vw, 40px);
-    }
+	img {
+		width: clamp(35px, 5vw, 40px);
+	}
 
-    span {
-        font-size: clamp(1.5rem, 4vw, 2rem);
-    }
+	span {
+		font-size: clamp(1.5rem, 4vw, 2rem);
+	}
 }
 
 .nav {
-    @include flex-between-center;
-    width: 50%;
+	@include flex-between-center;
+	width: 50%;
 }
 
 .nav__link {
-    height: 40px;
-    @include flex-center;
-    border-radius: 20px;
-    padding: 0 10px;
-    transition: background-color 0.3s;
+	height: 40px;
+	@include flex-center;
+	border-radius: 20px;
+	padding: 0 10px;
+	transition: background-color 0.3s;
 
-    &:hover {
-        background: var(--accent-clr);
-    }
+	&:hover {
+		background: var(--accent-clr);
+	}
 }
 
 .nav__link--active {
-    background: var(--accent-clr);
+	background: var(--accent-clr);
 }
 
 // dd is a shorthand for dropdown
-
 .nav__dd-wrapper {
-    position: relative;
+	position: relative;
 }
 
 .nav__dd-btn {
-    height: 40px;
-    @include flex-center;
-    column-gap: 5px;
-    border-radius: 20px;
-    padding: 0 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+	height: 40px;
+	@include flex-center;
+	column-gap: 5px;
+	border-radius: 20px;
+	padding: 0 10px;
+	cursor: pointer;
+	transition: background-color 0.3s;
 
-    &:hover {
-        background: var(--accent-clr);
-    }
+	&:hover {
+		background: var(--accent-clr);
+	}
 }
 
 .nav__dd-btn-icon {
-    width: 10px;
-    aspect-ratio: 1 / 1;
-    clip-path: polygon(50% 100%, 0 0, 100% 0);
-    background: #000;
-    transition: rotate 0.3s;
+	width: 10px;
+	aspect-ratio: 1 / 1;
+	clip-path: polygon(50% 100%, 0 0, 100% 0);
+	background: #000;
+	transition: rotate 0.3s;
 }
 
 .nav__dd-wrapper:hover .nav__dd-btn-icon {
-    rotate: 180deg;
+	rotate: 180deg;
 }
 
 .nav__dd {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 30px);
-    width: max-content;
-    background: var(--bg-clr);
-    box-shadow: var(--cstm-box-shadow);
-    border-radius: 20px;
-    padding: 10px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s, transform 0.3s;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 30px);
+	width: max-content;
+	background: var(--bg-clr);
+	box-shadow: var(--cstm-box-shadow);
+	border-radius: 20px;
+	padding: 10px;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s, transform 0.3s;
 }
 
 .nav__dd-wrapper:hover .nav__dd {
-    opacity: 1;
-    transform: translate(-50%, 0);
-    pointer-events: all;
+	opacity: 1;
+	transform: translate(-50%, 0);
+	pointer-events: all;
 }
 
 @media (max-width: 900px) {
-    .header {
-        padding: 0 15px;
-    }
+	.header {
+		padding: 0 15px;
+	}
 }
 
 @media (max-width: 800px) {
-    .nav {
-        display: none;
-    }
+	.nav {
+		display: none;
+	}
 }
 
 @media (max-width: 350px) {
-    .header-bottom__logo {
-        span {
-            display: none;
-        }
-    }
+	.header-bottom__logo {
+		span {
+			display: none;
+		}
+	}
 }

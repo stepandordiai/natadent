@@ -15,28 +15,24 @@ const OurTeam = () => {
 		},
 		{
 			img: "/icons/user.png",
-
 			name: "Jméno",
 			position: "Pozice",
 			tel: "Telefonní číslo",
 		},
 		{
 			img: "/icons/user.png",
-
 			name: "Jméno",
 			position: "Pozice",
 			tel: "Telefonní číslo",
 		},
 		{
 			img: "/icons/user.png",
-
 			name: "Jméno",
 			position: "Pozice",
 			tel: "Telefonní číslo",
 		},
 		{
 			img: "/icons/user.png",
-
 			name: "Jméno",
 			position: "Pozice",
 			tel: "Telefonní číslo",

@@ -1,84 +1,84 @@
-@use "./../../mixins" as *;
+@use "./../../styles/mixins" as *;
 
 .lang-select {
-    position: relative;
-    z-index: 99;
+	position: relative;
+	z-index: 99;
 }
 
 .lang-select__btn {
-    height: 40px;
-    @include flex-center;
-    column-gap: 5px;
-    border-radius: 20px;
-    padding: 0 10px;
-    border: 1px solid var(--accent-clr);
-    transition: background-color 0.3s;
+	height: 40px;
+	@include flex-center;
+	column-gap: 5px;
+	border-radius: 20px;
+	padding: 0 10px;
+	border: 1px solid var(--accent-clr);
+	transition: background-color 0.3s;
 }
 
 .lang-select__btn--active {
-    background: var(--accent-clr);
+	background: var(--accent-clr);
 }
 
 .lang-select__btn-value {
-    pointer-events: none;
+	pointer-events: none;
 }
 
 .lang-select__btn-icon {
-    width: 10px;
-    aspect-ratio: 1 / 1;
-    clip-path: polygon(50% 100%, 0 0, 100% 0);
-    background: #000;
-    pointer-events: none;
-    transition: rotate 0.3s;
+	width: 10px;
+	aspect-ratio: 1 / 1;
+	clip-path: polygon(50% 100%, 0 0, 100% 0);
+	background: #000;
+	pointer-events: none;
+	transition: rotate 0.3s;
 }
 
 .lang-select__btn-icon--active {
-    rotate: 180deg;
+	rotate: 180deg;
 }
 
 .lang-select__list {
-    position: absolute;
-    width: max-content;
-    border-radius: 20px;
-    background: var(--bg-clr);
-    box-shadow: var(--cstm-box-shadow);
-    opacity: 0;
-    transform: translateY(30px);
-    pointer-events: none;
-    transition: opacity 0.3s, transform 0.3s;
+	position: absolute;
+	width: max-content;
+	border-radius: 20px;
+	background: var(--bg-clr);
+	box-shadow: var(--cstm-box-shadow);
+	opacity: 0;
+	transform: translateY(30px);
+	pointer-events: none;
+	transition: opacity 0.3s, transform 0.3s;
 }
 
 .lang-select__list--visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: all;
+	opacity: 1;
+	transform: translateY(0);
+	pointer-events: all;
 }
 
 .lang-select__option {
-    height: 40px;
-    @include flex-center;
-    column-gap: 5px;
-    border-radius: inherit;
-    padding: 0 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+	height: 40px;
+	@include flex-center;
+	column-gap: 5px;
+	border-radius: inherit;
+	padding: 0 10px;
+	cursor: pointer;
+	transition: background-color 0.3s;
 
-    &:hover {
-        background: var(--accent-clr);
-    }
+	&:hover {
+		background: var(--accent-clr);
+	}
 }
 
 .lang-select__option--active {
-    background: var(--accent-clr);
+	background: var(--accent-clr);
 }
 
 .lang-select__input {
-    display: none;
+	display: none;
 }
 
 @media (max-width: 800px) {
-    .lang-select {
-        margin-left: auto;
-        margin-right: 15px;
-    }
+	.lang-select {
+		margin-left: auto;
+		margin-right: 15px;
+	}
 }

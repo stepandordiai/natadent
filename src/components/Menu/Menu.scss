@@ -1,77 +1,77 @@
-@use "./../../mixins" as *;
+@use "./../../styles/mixins" as *;
 
 .menu {
-    position: absolute;
-    top: 130px;
-    right: 0;
-    left: 0;
-    background: var(--bg-clr);
-    min-height: calc(100svh - 130px);
-    padding: 15px;
-    transform: translateY(30px);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.6s, transform 0.6s;
+	position: absolute;
+	top: 130px;
+	right: 0;
+	left: 0;
+	background: var(--bg-clr);
+	min-height: calc(100svh - 130px);
+	padding: 15px;
+	transform: translateY(30px);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.6s, transform 0.6s;
 }
 
 .menu--active {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: all;
+	transform: translateY(0);
+	opacity: 1;
+	pointer-events: all;
 }
 
 .menu-item {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-    padding: 5px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	padding: 5px 0;
 }
 
 .menu__link {
-    height: 60px;
-    @include flex-between-center;
-    transition: color 0.15s;
+	height: 60px;
+	@include flex-between-center;
+	transition: color 0.15s;
 
-    &:hover {
-        color: var(--accent-clr);
-    }
+	&:hover {
+		color: var(--accent-clr);
+	}
 }
 
 .menu__link--active {
-    color: var(--accent-clr);
+	color: var(--accent-clr);
 }
 
 .menu-dd__btn {
-    @include flex-between-center;
-    height: 60px;
-    cursor: pointer;
-    transition: color 0.15s;
+	@include flex-between-center;
+	height: 60px;
+	cursor: pointer;
+	transition: color 0.15s;
 
-    &:hover {
-        color: var(--accent-clr);
-    }
+	&:hover {
+		color: var(--accent-clr);
+	}
 }
 
 .menu-dd__wrapper {
-    display: grid;
-    grid-template-rows: 0fr;
-    overflow: hidden;
-    transition: grid-template-rows 0.6s;
+	display: grid;
+	grid-template-rows: 0fr;
+	overflow: hidden;
+	transition: grid-template-rows 0.6s;
 }
 
 .menu-dd__wrapper--active {
-    grid-template-rows: 1fr;
+	grid-template-rows: 1fr;
 }
 
 .menu-dd {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    row-gap: 5px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
 }
 
 .menu__dd-link {
-    transition: color 0.15s;
+	transition: color 0.15s;
 
-    &:hover {
-        color: var(--accent-clr);
-    }
+	&:hover {
+		color: var(--accent-clr);
+	}
 }
