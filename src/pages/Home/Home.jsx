@@ -11,18 +11,6 @@ const Home = ({ servicesData }) => {
 	const [search, setSearch] = useState("");
 
 	useEffect(() => {
-		if (document.querySelector(".home__services-grid").innerHTML === "") {
-			document
-				.querySelector(".home__services-no-result-pop-up")
-				.classList.add("home__services-no-result-pop-up--active");
-		} else {
-			document
-				.querySelector(".home__services-no-result-pop-up")
-				.classList.remove("home__services-no-result-pop-up--active");
-		}
-	}, [search]);
-
-	useEffect(() => {
 		document.querySelectorAll(".js-faq__btn").forEach((btn, index) => {
 			btn.addEventListener("click", () => {
 				const gridDropdowns = document.querySelectorAll(".grid-dropdown");
@@ -34,8 +22,9 @@ const Home = ({ servicesData }) => {
 	}, []);
 
 	useEffect(() => {
-		document.querySelectorAll(".js-service").forEach((el) => {
-			document.addEventListener("scroll", () => {
+		const services = document.querySelectorAll(".js-service");
+		function handleServiceOnScroll() {
+			services.forEach((el) => {
 				const serviceRect = el.getBoundingClientRect().top;
 				if (serviceRect < window.innerHeight - 100) {
 					el.classList.add("service--active");
@@ -43,15 +32,25 @@ const Home = ({ servicesData }) => {
 					el.classList.remove("service--active");
 				}
 			});
+		}
 
-			// On load page
-			const serviceRect = el.getBoundingClientRect().top;
-			if (serviceRect < window.innerHeight - 100) {
-				el.classList.add("service--active");
-			} else {
-				el.classList.remove("service--active");
-			}
-		});
+		handleServiceOnScroll();
+
+		if (document.querySelector(".home__services-grid").innerHTML === "") {
+			document
+				.querySelector(".home__services-no-result-pop-up")
+				.classList.add("home__services-no-result-pop-up--active");
+		} else {
+			document
+				.querySelector(".home__services-no-result-pop-up")
+				.classList.remove("home__services-no-result-pop-up--active");
+		}
+
+		document.addEventListener("scroll", handleServiceOnScroll);
+
+		return () => {
+			document.removeEventListener("scroll", handleServiceOnScroll);
+		};
 	});
 
 	return (
@@ -62,7 +61,11 @@ const Home = ({ servicesData }) => {
 			</Helmet>
 			<div className="home-top">
 				<div className="home-top__logo">
-					<img className="home-top__logo-icon" src={logoIcon} alt="Logo" />
+					<img
+						className="home-top__logo-icon"
+						src={logoIcon}
+						alt="Prozubik Logo"
+					/>
 				</div>
 				<h1 className="home-top__title">{t("home.title")}</h1>
 				<h2 className="home-top__sec-title">{t("home.secondary_title")}</h2>
@@ -86,15 +89,17 @@ const Home = ({ servicesData }) => {
 					placeholder={t("home.services_search_placeholder")}
 				/>
 				<p className="home__services-no-result-pop-up">
-					<img src={logoIcon} width={300} height={300} alt="Prozubik logo" />
+					<img src={logoIcon} width={300} height={300} alt="Prozubik Logo" />
 					<span>{t("home.services_no_result_pop_up")}</span>
 				</p>
 				<div className="home__services-grid">
 					{servicesData
 						.filter((service) => {
-							return search.toLowerCase() === ""
+							return search.toLowerCase().trim() === ""
 								? service
-								: service.name.toLowerCase().startsWith(search.toLowerCase());
+								: t(service.name)
+										.toLowerCase()
+										.startsWith(search.toLowerCase());
 						})
 						.map((service, index) => {
 							return (
