@@ -101,7 +101,7 @@ const Menu = ({ servicesData }) => {
 										}
 										to={`/service-page/${service.id}`}
 									>
-										{service.name}
+										{t(service.name)}
 									</NavLink>
 								);
 							})}

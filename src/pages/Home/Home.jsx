@@ -103,8 +103,8 @@ const Home = ({ servicesData }) => {
 									to={`/service-page/${service.id}`}
 									className="home__service js-service"
 								>
-									<h3>{service.name}</h3>
-									<p>{service.desc}</p>
+									<h3>{t(service.name)}</h3>
+									<p>{t(service.desc)}</p>
 								</NavLink>
 							);
 						})}

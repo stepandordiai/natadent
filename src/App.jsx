@@ -11,15 +11,13 @@ import SmileGallery from "./pages/SmileGallery/SmileGallery";
 import Contacts from "./pages/Contacts/Contacts";
 import Appointment from "./pages/Appointment/Appointment";
 import Footer from "./components/Footer/Footer";
-import "./i18n";
 import ServicePage from "./pages/ServicePage/ServicePage";
 import Banner from "./components/Banner/Banner";
-import ServicesData from "./data/ServicesData";
+import servicesData from "./data/services-data.json";
+import "./i18n";
 import "./App.scss";
 
 function App() {
-	const servicesData = ServicesData();
-
 	useEffect(() => {
 		document.querySelector(".loading").addEventListener("animationend", () => {
 			document.querySelector(".wrapper").style.display = "initial";

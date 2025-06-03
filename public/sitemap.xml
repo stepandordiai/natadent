@@ -18,7 +18,7 @@
 </url>
 <url>
 	<loc>https://prozubik.cz/contacts</loc>
-	<priority>0.8</priority>
+	<priority>0.9</priority>
 </url>
 <url>
 	<loc>https://prozubik.cz/appointment</loc>
@@ -46,42 +46,6 @@
 </url>
 <url>
 	<loc>https://prozubik.cz/service-page/wisdom-teeth-extraction</loc>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://prozubik.cz/service-page/implantology</loc>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://prozubik.cz/service-page/periodontology</loc>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://prozubik.cz/service-page/endodontics</loc>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://prozubik.cz/service-page/orthodontics</loc>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://prozubik.cz/service-page/analgosedation-and-general-anesthesia</loc>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://prozubik.cz/service-page/pediatric-dentistry</loc>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://prozubik.cz/service-page/cutting-frenulums-in-the-mouths-of-infants</loc>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://prozubik.cz/service-page/teeth-whitening</loc>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://prozubik.cz/service-page/dental-laboratory</loc>
 	<priority>0.8</priority>
 </url>
 </urlset>

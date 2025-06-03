@@ -14,11 +14,14 @@ const ServicePage = ({ servicesData }) => {
 	return (
 		<>
 			<Helmet>
-				<title>{service[0].name} / Prozubik</title>
+				<title>{t(service[0].name)} / Prozubik</title>
 				<link rel="canonical" href={`https://prozubik.cz/service-page/${id}`} />
 			</Helmet>
 			<div className="service-page">
-				<PageTitle title={service[0].name} previousPath={t("services_title")} />
+				<PageTitle
+					title={t(service[0].name)}
+					previousPath={t("services_title")}
+				/>
 				<p className="coming-soon">{t("coming_soon")}</p>
 			</div>
 		</>
