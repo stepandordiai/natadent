@@ -2,50 +2,38 @@
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://prozubik.cz/</loc>
-	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://prozubik.cz/our-team</loc>
-	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://prozubik.cz/price-list</loc>
-	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://prozubik.cz/smile-gallery</loc>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://prozubik.cz/contacts</loc>
-	<priority>0.9</priority>
-</url>
-<url>
-	<loc>https://prozubik.cz/appointment</loc>
-	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://prozubik.cz/service-page/dentistry</loc>
-	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://prozubik.cz/service-page/prevention</loc>
-	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://prozubik.cz/service-page/dental-hygiene</loc>
-	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://prozubik.cz/service-page/dental-surgery</loc>
-	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://prozubik.cz/service-page/complete-dental-reconstruction</loc>
-	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://prozubik.cz/service-page/wisdom-teeth-extraction</loc>
-	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://prozubik.cz/contacts</loc>
+</url>
+<url>
+	<loc>https://prozubik.cz/appointment</loc>
 </url>
 </urlset>
