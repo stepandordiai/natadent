@@ -18,7 +18,7 @@ const PriceList = () => {
 				<title>{t("price_list_title")} / Prozubik</title>
 				<link rel="canonical" href="https://prozubik.cz/price-list" />
 			</Helmet>
-			<div className="price-list">
+			<main className="price-list">
 				<PageTitle title={t("price_list_title")} />
 				<div className="filter-btn-wrapper">
 					<button
@@ -151,7 +151,7 @@ const PriceList = () => {
 						</table>
 					</div>
 				)}
-			</div>
+			</main>
 		</>
 	);
 };

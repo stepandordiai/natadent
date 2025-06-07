@@ -45,7 +45,7 @@ const OurTeam = () => {
 				<title>{t("our_team_title")} / Prozubik</title>
 				<link rel="canonical" href="https://prozubik.cz/our-team" />
 			</Helmet>
-			<div className="our-team">
+			<main className="our-team">
 				<PageTitle title={t("our_team_title")} />
 				<div className="our-team-wrapper">
 					<div className="our-team__grid">
@@ -65,7 +65,7 @@ const OurTeam = () => {
 						})}
 					</div>
 				</div>
-			</div>
+			</main>
 		</>
 	);
 };

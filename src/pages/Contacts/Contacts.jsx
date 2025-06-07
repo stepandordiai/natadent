@@ -29,7 +29,6 @@ const Contacts = () => {
 			});
 
 		// Listener for multiple custom selectors
-
 		document.querySelectorAll(".custom-select").forEach((select) => {
 			const selectBtn = select.querySelector(".custom-select__btn");
 			const selectList = select.querySelector(".custom-select__list");
@@ -47,7 +46,6 @@ const Contacts = () => {
 			selectOptions.forEach((option) => {
 				option.addEventListener("click", (e) => {
 					// TODO:
-
 					e.stopPropagation();
 					selectBtn.textContent = option.textContent;
 					selectBtn.focus();
@@ -80,7 +78,7 @@ const Contacts = () => {
 				<title>{t("contacts_title")} / Prozubik</title>
 				<link rel="canonical" href="https://prozubik.cz/contacts" />
 			</Helmet>
-			<div className="contacts">
+			<main className="contacts">
 				<PageTitle title={t("contacts_title")} />
 				<div className="contacts-wrapper">
 					<p className="contacts__secondary-info">
@@ -317,7 +315,7 @@ const Contacts = () => {
 						loading="lazy"
 					></iframe>
 				</div>
-			</div>
+			</main>
 		</>
 	);
 };

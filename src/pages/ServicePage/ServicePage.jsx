@@ -9,7 +9,7 @@ const ServicePage = ({ servicesData }) => {
 
 	const { id } = useParams();
 
-	const service = servicesData.filter((service) => service.id === id);
+	const service = servicesData.find((service) => service.id === id);
 
 	return (
 		<>
@@ -17,13 +17,13 @@ const ServicePage = ({ servicesData }) => {
 				<title>{t(service[0].name)} / Prozubik</title>
 				<link rel="canonical" href={`https://prozubik.cz/service-page/${id}`} />
 			</Helmet>
-			<div className="service-page">
+			<main className="service-page">
 				<PageTitle
 					title={t(service[0].name)}
 					previousPath={t("services_title")}
 				/>
 				<p className="coming-soon">{t("coming_soon")}</p>
-			</div>
+			</main>
 		</>
 	);
 };

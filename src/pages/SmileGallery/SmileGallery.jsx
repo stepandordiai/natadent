@@ -58,7 +58,7 @@ const SmileGallery = () => {
 				<title>{t("smile_gallery_title")} / Prozubik</title>
 				<link rel="canonical" href="https://prozubik.cz/smile-gallery" />
 			</Helmet>
-			<div className="smile-gallery">
+			<main className="smile-gallery">
 				<PageTitle title={t("smile_gallery_title")} />
 				<div className="smile-gallery-wrapper">
 					<div className="about-us__gallery-grid">
@@ -85,7 +85,7 @@ const SmileGallery = () => {
 						})}
 					</div>
 				</div>
-			</div>
+			</main>
 		</>
 	);
 };
