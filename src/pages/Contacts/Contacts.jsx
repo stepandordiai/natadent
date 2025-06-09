@@ -75,6 +75,10 @@ const Contacts = () => {
 	return (
 		<>
 			<Helmet>
+				<meta
+					name="description"
+					content="Kontaktujte nás – zubní klinika Prozubik v Kolíně. Najdete zde adresu, telefonní číslo, e-mail a ordinační hodiny. Jsme tu pro vás s profesionální péčí a lidským přístupem."
+				/>
 				<title>{t("contacts_title")} / Prozubik</title>
 				<link rel="canonical" href="https://prozubik.cz/contacts" />
 			</Helmet>

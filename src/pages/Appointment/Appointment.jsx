@@ -9,6 +9,10 @@ const Appointment = () => {
 	return (
 		<>
 			<Helmet>
+				<meta
+					name="description"
+					content="Objednejte se jednoduše online na vyšetření či ošetření v zubní klinice Prozubik. Vyberte si termín, který vám vyhovuje, a získejte profesionální péči bez čekání."
+				/>
 				<title>{t("appointment_title")} / Prozubik</title>
 				<link rel="canonical" href="https://prozubik.cz/appointment" />
 			</Helmet>

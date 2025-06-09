@@ -55,6 +55,10 @@ const SmileGallery = () => {
 	return (
 		<>
 			<Helmet>
+				<meta
+					name="description"
+					content="Podívejte se na ukázky proměn našich pacientů v Galerii úsměvů. Skutečné výsledky profesionální stomatologické péče na klinice Prozubik."
+				/>
 				<title>{t("smile_gallery_title")} / Prozubik</title>
 				<link rel="canonical" href="https://prozubik.cz/smile-gallery" />
 			</Helmet>

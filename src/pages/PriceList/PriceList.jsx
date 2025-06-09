@@ -15,6 +15,10 @@ const PriceList = () => {
 	return (
 		<>
 			<Helmet>
+				<meta
+					name="description"
+					content="Prohlédněte si aktuální ceník služeb zubní kliniky Prozubik. Transparentní ceny za stomatologické výkony, dentální hygienu, implantáty a další ošetření."
+				/>
 				<title>{t("price_list_title")} / Prozubik</title>
 				<link rel="canonical" href="https://prozubik.cz/price-list" />
 			</Helmet>

@@ -42,6 +42,10 @@ const OurTeam = () => {
 	return (
 		<>
 			<Helmet>
+				<meta
+					name="description"
+					content="Seznamte se s týmem odborníků z kliniky Prozubik. Zkušení stomatologové, dentální hygienisté a asistenti, kteří vám poskytnou špičkovou péči s lidským přístupem."
+				/>
 				<title>{t("our_team_title")} / Prozubik</title>
 				<link rel="canonical" href="https://prozubik.cz/our-team" />
 			</Helmet>
