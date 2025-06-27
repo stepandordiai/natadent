@@ -1,22 +1,70 @@
-.service-page {
-    opacity: 0;
-    animation: revealServicePage 1s forwards;
-}
+@use "./../../styles/mixins" as *;
 
-.coming-soon {
-    text-align: center;
-    font-size: 2rem;
-    padding: 30px;
+.service-page {
+	padding-bottom: 30px;
+	opacity: 0;
+	animation: revealServicePage 1s forwards;
 }
 
 @keyframes revealServicePage {
-    to {
-        opacity: 1;
-    }
+	to {
+		opacity: 1;
+	}
+}
+
+.coming-soon {
+	text-align: center;
+	font-size: 2rem;
+	padding: 30px;
+}
+
+.service-page__links {
+	padding: 0 30px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
+}
+
+.service-page__link {
+	height: 180px;
+	@include flex-center;
+	flex-direction: column;
+	gap: 15px;
+	border-radius: 90px;
+	padding: 20px;
+	background: #fff;
+	transition: all 0.3s;
+
+	span:nth-of-type(1) {
+		@include flex-center;
+		column-gap: 5px;
+	}
+	span:nth-of-type(2) {
+		font-weight: 500;
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+	}
 }
 
 @media (max-width: 900px) {
-    .coming-soon {
-        padding: 30px 15px;
-    }
+	.coming-soon {
+		padding: 30px 15px;
+	}
+
+	.service-page__links {
+		padding: 0 15px;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 15px;
+	}
+}
+
+@media (max-width: 895px) {
+	.service-page__links {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
