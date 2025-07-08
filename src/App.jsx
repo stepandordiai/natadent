@@ -13,7 +13,7 @@ import Appointment from "./pages/Appointment/Appointment";
 import Footer from "./components/Footer/Footer";
 import ServicePage from "./pages/ServicePage/ServicePage";
 import Banner from "./components/Banner/Banner";
-import servicesData from "./data/services-data.json";
+import servicesData from "./assets/data/services-data.json";
 import "./i18n";
 import "./styles/App.scss";
 

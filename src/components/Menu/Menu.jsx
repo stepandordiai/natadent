@@ -7,6 +7,15 @@ const Menu = ({ servicesData }) => {
 	const { t } = useTranslation();
 
 	useEffect(() => {
+		const menuDropdownWrapper = document.querySelectorAll(".menu-dd__wrapper");
+		const menuNavBtnIcon = document.querySelectorAll(".menu__nav-btn-icon");
+		document.querySelectorAll(".menu-dd__btn").forEach((btn, index) => {
+			btn.addEventListener("click", () => {
+				menuDropdownWrapper[index].classList.toggle("menu-dd__wrapper--active");
+				menuNavBtnIcon[index].classList.toggle("menu__nav-btn-icon--active");
+			});
+		});
+
 		document.querySelectorAll(".js-menu__link").forEach((link) => {
 			link.addEventListener("click", () => {
 				document
@@ -16,17 +25,12 @@ const Menu = ({ servicesData }) => {
 					.querySelector(".burger-5__center-line")
 					.classList.remove("burger-5__center-line--active");
 				document.querySelector(".menu").classList.remove("menu--active");
-				document.querySelectorAll(".menu-dd__wrapper").forEach((wrapper) => {
+				menuDropdownWrapper.forEach((wrapper) => {
 					wrapper.classList.remove("menu-dd__wrapper--active");
 				});
-			});
-		});
-
-		document.querySelectorAll(".menu-dd__btn").forEach((btn, index) => {
-			btn.addEventListener("click", () => {
-				const menuDropdownWrapper =
-					document.querySelectorAll(".menu-dd__wrapper");
-				menuDropdownWrapper[index].classList.toggle("menu-dd__wrapper--active");
+				menuNavBtnIcon.forEach((icon) => {
+					icon.classList.remove("menu__nav-btn-icon--active");
+				});
 			});
 		});
 	}, []);
@@ -48,14 +52,13 @@ const Menu = ({ servicesData }) => {
 						to="/"
 					>
 						<span>{t("home_title")}</span>
-						<span>01</span>
 					</NavLink>
 				</li>
 				<li className="menu-item">
-					<div className="menu-dd__btn">
-						<span>{t("about_us_title")}</span>
-						<span>02</span>
-					</div>
+					<button className="menu-dd__btn">
+						<span className="menu__nav-btn-txt">{t("about_us_title")}</span>
+						<span className="menu__nav-btn-icon"></span>
+					</button>
 					<div className="menu-dd__wrapper">
 						<div className="menu-dd">
 							<NavLink
@@ -86,10 +89,10 @@ const Menu = ({ servicesData }) => {
 					</div>
 				</li>
 				<li className="menu-item">
-					<div className="menu-dd__btn">
-						<span>{t("services_title")}</span>
-						<span>03</span>
-					</div>
+					<button className="menu-dd__btn">
+						<span className="menu__nav-btn-txt">{t("services_title")}</span>
+						<span className="menu__nav-btn-icon"></span>
+					</button>
 					<div className="menu-dd__wrapper">
 						<div className="menu-dd">
 							{servicesData.map((service, index) => {
@@ -116,7 +119,6 @@ const Menu = ({ servicesData }) => {
 						to="/contacts"
 					>
 						<span>{t("contacts_title")}</span>
-						<span>04</span>
 					</NavLink>
 				</li>
 				<li className="menu-item">
@@ -127,7 +129,6 @@ const Menu = ({ servicesData }) => {
 						to="/appointment"
 					>
 						<span>{t("appointment_title")}</span>
-						<span>05</span>
 					</NavLink>
 				</li>
 			</ul>
