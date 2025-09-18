@@ -10,7 +10,7 @@ const ToTopBtn = () => {
 			document.documentElement.scrollHeight -
 			document.documentElement.clientHeight;
 		// Expression for calculating percent height of the page
-		let scrollValue = Math.round((positionTop * 100) / calcHeight);
+		let scrollValue = (positionTop * 100) / calcHeight;
 		document.querySelector(
 			".progress"
 		).style.background = `conic-gradient(var(--accent-clr) ${scrollValue}%, #fff 0%)`;

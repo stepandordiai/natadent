@@ -104,12 +104,12 @@ const Home = ({ servicesData }) => {
 									? service
 									: t(service.name)
 											.toLowerCase()
-											.startsWith(search.toLowerCase());
+											.includes(search.toLowerCase());
 							})
-							.map((service, index) => {
+							.map((service) => {
 								return (
 									<NavLink
-										key={index}
+										key={service.id}
 										to={`/service-page/${service.id}`}
 										className="home__service js-service"
 									>
