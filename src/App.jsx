@@ -16,6 +16,7 @@ import Banner from "./components/Banner/Banner";
 import servicesData from "./assets/data/services-data.json";
 import "./i18n";
 import "./styles/App.scss";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
 	useEffect(() => {
@@ -42,6 +43,7 @@ function App() {
 						path="/service-page/:id"
 						element={<ServicePage servicesData={servicesData} />}
 					/>
+					<Route path="*" element={<NotFound />} />
 				</Routes>
 				<Footer servicesData={servicesData} />
 				<Banner />

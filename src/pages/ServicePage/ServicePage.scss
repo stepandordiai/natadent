@@ -1,7 +1,6 @@
 @use "./../../styles/mixins" as *;
 
 .service-page {
-	padding-bottom: 30px;
 	opacity: 0;
 	animation: revealServicePage 1s forwards;
 }

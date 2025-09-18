@@ -1,10 +1,11 @@
-import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import { useParams, NavLink } from "react-router-dom";
 import prevIcon from "/icons/back.png";
 import nextIcon from "/icons/next.png";
 import "./ServicePage.scss";
+import NotFound from "../NotFound/NotFound";
 
 const ServicePage = ({ servicesData }) => {
 	const { t } = useTranslation();
@@ -12,6 +13,10 @@ const ServicePage = ({ servicesData }) => {
 	const { id } = useParams();
 
 	const service = servicesData.find((service) => service.id === id);
+
+	if (!service) {
+		return <NotFound />;
+	}
 
 	const currentIndex = servicesData.findIndex((service) => service.id === id);
 
