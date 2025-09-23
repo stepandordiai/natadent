@@ -91,12 +91,12 @@ const Footer = ({ servicesData }) => {
 							</NavLink>
 						</li>
 						<li>
-							<HashLink className={"footer__link"} to={"/#services"}>
+							<HashLink className={"footer__link"} to="/#services" smooth>
 								{t("services_title")}
 							</HashLink>
 						</li>
 						<li>
-							<HashLink className={"footer__link"} to={"/#faq"}>
+							<HashLink className={"footer__link"} to="/#faq" smooth>
 								{t("faq_title")}
 							</HashLink>
 						</li>
