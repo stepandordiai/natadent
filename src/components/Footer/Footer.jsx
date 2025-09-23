@@ -140,9 +140,9 @@ const Footer = ({ servicesData }) => {
 				<div className="footer-middle__nav-list-wrapper">
 					<p>{t("services_title")}</p>
 					<ul>
-						{servicesData.map((service, index) => {
+						{servicesData.map((service) => {
 							return (
-								<li key={index}>
+								<li key={service.id}>
 									<NavLink
 										className={({ isActive }) =>
 											isActive ? activeLink : inactiveLink
@@ -160,7 +160,7 @@ const Footer = ({ servicesData }) => {
 					<p>{t("contacts_title")}</p>
 					<ul>
 						<li>
-							<a href="tel:+420773802166">+420 773 802 166</a>
+							<a href="tel:+420773802886">+420 773 802 886</a>
 						</li>
 						<li>
 							<a href="mailto:prozubik@gmail.com">prozubik@gmail.com</a>
