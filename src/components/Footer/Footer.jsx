@@ -136,6 +136,14 @@ const Footer = ({ servicesData }) => {
 								>
 									{t("smile_gallery_title")}
 								</NavLink>
+								<NavLink
+									className={({ isActive }) =>
+										isActive ? activeLink : inactiveLink
+									}
+									to="/our-clinic"
+								>
+									Naše klinika
+								</NavLink>
 							</li>
 						</ul>
 					</div>

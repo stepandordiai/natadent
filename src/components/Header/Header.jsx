@@ -112,6 +112,14 @@ const Header = ({ servicesData }) => {
 								>
 									{t("smile_gallery_title")}
 								</NavLink>
+								<NavLink
+									className={({ isActive }) =>
+										isActive ? activeLink : inactiveLink
+									}
+									to="/our-clinic"
+								>
+									Naše klinika
+								</NavLink>
 							</div>
 						</div>
 						<div className="nav__dd-wrapper">
@@ -210,6 +218,15 @@ const Header = ({ servicesData }) => {
 										to="/smile-gallery"
 									>
 										{t("smile_gallery_title")}
+									</NavLink>
+									<NavLink
+										onClick={() => setIsMenuActive(false)}
+										className={({ isActive }) =>
+											isActive ? activeMenuDdLink : inactiveMenuDdLink
+										}
+										to="/our-clinic"
+									>
+										Naše klinika
 									</NavLink>
 								</div>
 							</div>

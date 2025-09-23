@@ -15,8 +15,9 @@ import ServicePage from "./pages/ServicePage/ServicePage";
 import Banner from "./components/Banner/Banner";
 import servicesData from "./assets/data/services-data.json";
 import "./i18n";
-import "./styles/App.scss";
 import NotFound from "./pages/NotFound/NotFound";
+import OurClinic from "./pages/OurClinic/OurClinic";
+import "./styles/App.scss";
 
 function App() {
 	useEffect(() => {
@@ -37,6 +38,7 @@ function App() {
 					<Route path="/our-team" element={<OurTeam />} />
 					<Route path="/price-list" element={<PriceList />} />
 					<Route path="/smile-gallery" element={<SmileGallery />} />
+					<Route path="/our-clinic" element={<OurClinic />} />
 					<Route path="/contacts" element={<Contacts />} />
 					<Route path="/appointment" element={<Appointment />} />
 					<Route

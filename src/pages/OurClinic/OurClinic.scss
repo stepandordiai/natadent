@@ -1,0 +1,22 @@
+.our-clinic__masonry {
+	padding: 30px 30px 0 30px;
+	column-count: 3;
+	column-gap: 30px;
+
+	img {
+		margin-bottom: 30px;
+		border-radius: 30px;
+	}
+}
+
+@media (max-width: 809px) {
+	.our-clinic__masonry {
+		padding: 30px 15px 0 15px;
+		column-count: 2;
+		column-gap: 7.5px;
+
+		img {
+			margin-bottom: 7.5px;
+		}
+	}
+}
