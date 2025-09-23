@@ -1,6 +1,7 @@
-import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import Container from "../../components/Container/Container";
 import "./Appointment.scss";
 
 const Appointment = () => {
@@ -17,11 +18,13 @@ const Appointment = () => {
 				<link rel="canonical" href="https://prozubik.cz/appointment" />
 			</Helmet>
 			<main>
-				<PageTitle title={t("appointment_title")} />
-				<iframe
-					className="google-calendar"
-					src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3uuYpyL9duefLEJ_UepwoN1bAWfeacLVVFS8cERNM0H2Hvu2F5S6yknLD5VKHcZxlDrGuPV9eA?gv=true"
-				></iframe>
+				<Container>
+					<PageTitle title={t("appointment_title")} />
+					<iframe
+						className="google-calendar"
+						src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3uuYpyL9duefLEJ_UepwoN1bAWfeacLVVFS8cERNM0H2Hvu2F5S6yknLD5VKHcZxlDrGuPV9eA?gv=true"
+					></iframe>
+				</Container>
 			</main>
 		</>
 	);

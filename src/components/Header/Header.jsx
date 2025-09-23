@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import LngSelect from "../LngSelect/LngSelect";
 import { useEffect, useState } from "react";
+import Container from "../Container/Container";
 import logoIcon from "/logo/tooth.png";
 import "./Header.scss";
 
@@ -60,150 +61,52 @@ const Header = ({ servicesData }) => {
 
 	return (
 		<header className="header">
-			<div className="header-top">
-				<a href="mailto:prozubik@gmail.com">prozubik@gmail.com</a>
-				<a href="tel:+420773802886">+420 773 802 886</a>
-			</div>
-			<div className="header-bottom">
-				<NavLink className="header-bottom__logo" to="/">
-					<img src={logoIcon} alt="Prozubik logo" />
-					<span>Prozubik</span>
-				</NavLink>
-				<nav className="nav">
-					<div>
-						<NavLink
-							className={({ isActive }) =>
-								isActive ? activeLink : inactiveLink
-							}
-							to="/"
-						>
-							{t("home_title")}
-						</NavLink>
-					</div>
-					<div className="nav__dd-wrapper">
-						<div className="nav__dd-btn">
-							<span>{t("about_us_title")}</span>
-							<span className="nav__dd-btn-icon"></span>
-						</div>
-						<div className="nav__dd">
-							<NavLink
-								className={({ isActive }) =>
-									isActive ? activeLink : inactiveLink
-								}
-								to="/our-team"
-							>
-								{t("our_team_title")}
-							</NavLink>
-							<NavLink
-								className={({ isActive }) =>
-									isActive ? activeLink : inactiveLink
-								}
-								to="/price-list"
-							>
-								{t("price_list_title")}
-							</NavLink>
-							<NavLink
-								className={({ isActive }) =>
-									isActive ? activeLink : inactiveLink
-								}
-								to="/smile-gallery"
-							>
-								{t("smile_gallery_title")}
-							</NavLink>
-						</div>
-					</div>
-					<div className="nav__dd-wrapper">
-						<div className="nav__dd-btn">
-							<span>{t("services_title")}</span>
-							<span className="nav__dd-btn-icon"></span>
-						</div>
-						<div className="nav__dd">
-							{servicesData.map((service) => {
-								return (
-									<NavLink
-										key={service.id}
-										className={({ isActive }) =>
-											isActive ? activeLink : inactiveLink
-										}
-										to={`/service-page/${service.id}`}
-									>
-										{t(service.name)}
-									</NavLink>
-								);
-							})}
-						</div>
-					</div>
-					<div>
-						<NavLink
-							className={({ isActive }) =>
-								isActive ? activeLink : inactiveLink
-							}
-							to="/contacts"
-						>
-							{t("contacts_title")}
-						</NavLink>
-					</div>
-				</nav>
-				<LngSelect />
-				<div className="burger-btn__wrapper" onClick={handleMenu}>
-					<span>menu</span>
-					<div
-						className={
-							isMenuActive ? "burger-btn burger-btn--active" : "burger-btn"
-						}
-					>
-						<span
-							className={
-								isMenuActive
-									? "burger-btn__center-line burger-btn__center-line--active"
-									: "burger-btn__center-line"
-							}
-						></span>
-					</div>
+			<Container>
+				<div className="header-top">
+					<a href="mailto:prozubik@gmail.com">prozubik@gmail.com</a>
+					<a href="tel:+420773802886">+420 773 802 886</a>
 				</div>
-			</div>
-			<div className={isMenuActive ? "menu menu--active" : "menu"}>
-				<ul className="menu-list">
-					<li className="menu-item">
-						<NavLink
-							onClick={() => setIsMenuActive(false)}
-							className={({ isActive }) =>
-								isActive ? activeMenuLink : inactiveMenuLink
-							}
-							to="/"
-						>
-							<span>{t("home_title")}</span>
-						</NavLink>
-					</li>
-					<li className="menu-item">
-						<button className="menu-dd__btn">
-							<span className="menu__nav-btn-txt">{t("about_us_title")}</span>
-							<span className="menu__nav-btn-icon"></span>
-						</button>
-						<div className="menu-dd__wrapper">
-							<div className="menu-dd">
+				<div className="header-bottom">
+					<NavLink className="header-bottom__logo" to="/">
+						<img src={logoIcon} alt="Prozubik logo" />
+						<span>Prozubik</span>
+					</NavLink>
+					<nav className="nav">
+						<div>
+							<NavLink
+								className={({ isActive }) =>
+									isActive ? activeLink : inactiveLink
+								}
+								to="/"
+							>
+								{t("home_title")}
+							</NavLink>
+						</div>
+						<div className="nav__dd-wrapper">
+							<div className="nav__dd-btn">
+								<span>{t("about_us_title")}</span>
+								<span className="nav__dd-btn-icon"></span>
+							</div>
+							<div className="nav__dd">
 								<NavLink
-									onClick={() => setIsMenuActive(false)}
 									className={({ isActive }) =>
-										isActive ? activeMenuDdLink : inactiveMenuDdLink
+										isActive ? activeLink : inactiveLink
 									}
 									to="/our-team"
 								>
 									{t("our_team_title")}
 								</NavLink>
 								<NavLink
-									onClick={() => setIsMenuActive(false)}
 									className={({ isActive }) =>
-										isActive ? activeMenuDdLink : inactiveMenuDdLink
+										isActive ? activeLink : inactiveLink
 									}
 									to="/price-list"
 								>
 									{t("price_list_title")}
 								</NavLink>
 								<NavLink
-									onClick={() => setIsMenuActive(false)}
 									className={({ isActive }) =>
-										isActive ? activeMenuDdLink : inactiveMenuDdLink
+										isActive ? activeLink : inactiveLink
 									}
 									to="/smile-gallery"
 								>
@@ -211,21 +114,18 @@ const Header = ({ servicesData }) => {
 								</NavLink>
 							</div>
 						</div>
-					</li>
-					<li className="menu-item">
-						<button className="menu-dd__btn">
-							<span className="menu__nav-btn-txt">{t("services_title")}</span>
-							<span className="menu__nav-btn-icon"></span>
-						</button>
-						<div className="menu-dd__wrapper">
-							<div className="menu-dd">
+						<div className="nav__dd-wrapper">
+							<div className="nav__dd-btn">
+								<span>{t("services_title")}</span>
+								<span className="nav__dd-btn-icon"></span>
+							</div>
+							<div className="nav__dd">
 								{servicesData.map((service) => {
 									return (
 										<NavLink
-											onClick={() => setIsMenuActive(false)}
 											key={service.id}
 											className={({ isActive }) =>
-												isActive ? activeMenuDdLink : inactiveMenuDdLink
+												isActive ? activeLink : inactiveLink
 											}
 											to={`/service-page/${service.id}`}
 										>
@@ -235,31 +135,134 @@ const Header = ({ servicesData }) => {
 								})}
 							</div>
 						</div>
-					</li>
-					<li className="menu-item">
-						<NavLink
-							onClick={() => setIsMenuActive(false)}
-							className={({ isActive }) =>
-								isActive ? activeMenuLink : inactiveMenuLink
+						<div>
+							<NavLink
+								className={({ isActive }) =>
+									isActive ? activeLink : inactiveLink
+								}
+								to="/contacts"
+							>
+								{t("contacts_title")}
+							</NavLink>
+						</div>
+					</nav>
+					<LngSelect />
+					<div className="burger-btn__wrapper" onClick={handleMenu}>
+						<span>menu</span>
+						<div
+							className={
+								isMenuActive ? "burger-btn burger-btn--active" : "burger-btn"
 							}
-							to="/contacts"
 						>
-							<span>{t("contacts_title")}</span>
-						</NavLink>
-					</li>
-					<li className="menu-item">
-						<NavLink
-							onClick={() => setIsMenuActive(false)}
-							className={({ isActive }) =>
-								isActive ? activeMenuLink : inactiveMenuLink
-							}
-							to="/appointment"
-						>
-							<span>{t("appointment_title")}</span>
-						</NavLink>
-					</li>
-				</ul>
-			</div>
+							<span
+								className={
+									isMenuActive
+										? "burger-btn__center-line burger-btn__center-line--active"
+										: "burger-btn__center-line"
+								}
+							></span>
+						</div>
+					</div>
+				</div>
+				<div className={isMenuActive ? "menu menu--active" : "menu"}>
+					<ul className="menu-list">
+						<li className="menu-item">
+							<NavLink
+								onClick={() => setIsMenuActive(false)}
+								className={({ isActive }) =>
+									isActive ? activeMenuLink : inactiveMenuLink
+								}
+								to="/"
+							>
+								<span>{t("home_title")}</span>
+							</NavLink>
+						</li>
+						<li className="menu-item">
+							<button className="menu-dd__btn">
+								<span className="menu__nav-btn-txt">{t("about_us_title")}</span>
+								<span className="menu__nav-btn-icon"></span>
+							</button>
+							<div className="menu-dd__wrapper">
+								<div className="menu-dd">
+									<NavLink
+										onClick={() => setIsMenuActive(false)}
+										className={({ isActive }) =>
+											isActive ? activeMenuDdLink : inactiveMenuDdLink
+										}
+										to="/our-team"
+									>
+										{t("our_team_title")}
+									</NavLink>
+									<NavLink
+										onClick={() => setIsMenuActive(false)}
+										className={({ isActive }) =>
+											isActive ? activeMenuDdLink : inactiveMenuDdLink
+										}
+										to="/price-list"
+									>
+										{t("price_list_title")}
+									</NavLink>
+									<NavLink
+										onClick={() => setIsMenuActive(false)}
+										className={({ isActive }) =>
+											isActive ? activeMenuDdLink : inactiveMenuDdLink
+										}
+										to="/smile-gallery"
+									>
+										{t("smile_gallery_title")}
+									</NavLink>
+								</div>
+							</div>
+						</li>
+						<li className="menu-item">
+							<button className="menu-dd__btn">
+								<span className="menu__nav-btn-txt">{t("services_title")}</span>
+								<span className="menu__nav-btn-icon"></span>
+							</button>
+							<div className="menu-dd__wrapper">
+								<div className="menu-dd">
+									{servicesData.map((service) => {
+										return (
+											<NavLink
+												onClick={() => setIsMenuActive(false)}
+												key={service.id}
+												className={({ isActive }) =>
+													isActive ? activeMenuDdLink : inactiveMenuDdLink
+												}
+												to={`/service-page/${service.id}`}
+											>
+												{t(service.name)}
+											</NavLink>
+										);
+									})}
+								</div>
+							</div>
+						</li>
+						<li className="menu-item">
+							<NavLink
+								onClick={() => setIsMenuActive(false)}
+								className={({ isActive }) =>
+									isActive ? activeMenuLink : inactiveMenuLink
+								}
+								to="/contacts"
+							>
+								<span>{t("contacts_title")}</span>
+							</NavLink>
+						</li>
+						<li className="menu-item">
+							<NavLink
+								onClick={() => setIsMenuActive(false)}
+								className={({ isActive }) =>
+									isActive ? activeMenuLink : inactiveMenuLink
+								}
+								to="/appointment"
+							>
+								<span>{t("appointment_title")}</span>
+							</NavLink>
+						</li>
+					</ul>
+				</div>
+			</Container>
 		</header>
 	);
 };

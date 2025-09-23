@@ -1,6 +1,7 @@
-import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import Container from "../../components/Container/Container";
 import "./OurTeam.scss";
 
 const OurTeam = () => {
@@ -50,25 +51,27 @@ const OurTeam = () => {
 				<link rel="canonical" href="https://prozubik.cz/our-team" />
 			</Helmet>
 			<main className="our-team">
-				<PageTitle title={t("our_team_title")} />
-				<div className="our-team-wrapper">
-					<div className="our-team__grid">
-						{membersData.map((member, index) => {
-							return (
-								<div key={index} className="our-team__card">
-									<div className="our-team__card-img-container">
-										<img src={member.img} alt="" />
+				<Container>
+					<PageTitle title={t("our_team_title")} />
+					<div className="our-team-wrapper">
+						<div className="our-team__grid">
+							{membersData.map((member, index) => {
+								return (
+									<div key={index} className="our-team__card">
+										<div className="our-team__card-img-container">
+											<img src={member.img} alt="" />
+										</div>
+										<div>
+											<p>{member.name}</p>
+											<p>{member.position}</p>
+											<p>{member.tel}</p>
+										</div>
 									</div>
-									<div>
-										<p>{member.name}</p>
-										<p>{member.position}</p>
-										<p>{member.tel}</p>
-									</div>
-								</div>
-							);
-						})}
+								);
+							})}
+						</div>
 					</div>
-				</div>
+				</Container>
 			</main>
 		</>
 	);

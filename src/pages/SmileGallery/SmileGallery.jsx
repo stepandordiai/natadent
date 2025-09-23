@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import Container from "../../components/Container/Container";
 import "./SmileGallery.scss";
 
 const SmileGallery = () => {
@@ -63,37 +64,39 @@ const SmileGallery = () => {
 				<link rel="canonical" href="https://prozubik.cz/smile-gallery" />
 			</Helmet>
 			<main className="smile-gallery">
-				<PageTitle title={t("smile_gallery_title")} />
-				<div className="smile-gallery-wrapper">
-					<div className="about-us__gallery-grid">
-						{smilesData.map((smile, index) => {
-							return (
-								<div
-									key={index}
-									className="smile-wrapper"
-									data-before={t("smile_gallery.before")}
-									data-after={t("smile_gallery.after")}
-								>
-									<img src={smile.imgAfter} alt="" loading="lazy" />
-									<img
-										className="img-range"
-										src={smile.imgBefore}
-										alt=""
-										loading="lazy"
-									/>
-									<input
-										className="img-ranger"
-										type="range"
-										min={0}
-										max={100}
-										defaultValue={50}
-									/>
-									<div className="line"></div>
-								</div>
-							);
-						})}
+				<Container>
+					<PageTitle title={t("smile_gallery_title")} />
+					<div className="smile-gallery-wrapper">
+						<div className="about-us__gallery-grid">
+							{smilesData.map((smile, index) => {
+								return (
+									<div
+										key={index}
+										className="smile-wrapper"
+										data-before={t("smile_gallery.before")}
+										data-after={t("smile_gallery.after")}
+									>
+										<img src={smile.imgAfter} alt="" loading="lazy" />
+										<img
+											className="img-range"
+											src={smile.imgBefore}
+											alt=""
+											loading="lazy"
+										/>
+										<input
+											className="img-ranger"
+											type="range"
+											min={0}
+											max={100}
+											defaultValue={50}
+										/>
+										<div className="line"></div>
+									</div>
+								);
+							})}
+						</div>
 					</div>
-				</div>
+				</Container>
 			</main>
 		</>
 	);

@@ -2,10 +2,11 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import { useParams, NavLink } from "react-router-dom";
+import NotFound from "../NotFound/NotFound";
+import Container from "../../components/Container/Container";
 import prevIcon from "/icons/back.png";
 import nextIcon from "/icons/next.png";
 import "./ServicePage.scss";
-import NotFound from "../NotFound/NotFound";
 
 const ServicePage = ({ servicesData }) => {
 	const { t } = useTranslation();
@@ -34,30 +35,35 @@ const ServicePage = ({ servicesData }) => {
 				<link rel="canonical" href={`https://prozubik.cz/service-page/${id}`} />
 			</Helmet>
 			<main className="service-page">
-				<PageTitle title={t(service.name)} previousPath={t("services_title")} />
-				<p className="coming-soon">{t("coming_soon")}</p>
-				<div className="service-page__links">
-					<NavLink
-						className={"service-page__link"}
-						to={`/service-page/${prevService.id}`}
-					>
-						<span>
-							<img width={20} height={20} src={prevIcon} alt="" />
-							<span>Previous</span>
-						</span>
-						<span>{t(prevService.name)}</span>
-					</NavLink>
-					<NavLink
-						className={"service-page__link"}
-						to={`/service-page/${nextService.id}`}
-					>
-						<span>
-							<span>Next</span>
-							<img width={20} height={20} src={nextIcon} alt="" />
-						</span>
-						<span>{t(nextService.name)}</span>
-					</NavLink>
-				</div>
+				<Container>
+					<PageTitle
+						title={t(service.name)}
+						previousPath={t("services_title")}
+					/>
+					<p className="coming-soon">{t("coming_soon")}</p>
+					<div className="service-page__links">
+						<NavLink
+							className={"service-page__link"}
+							to={`/service-page/${prevService.id}`}
+						>
+							<span>
+								<img width={20} height={20} src={prevIcon} alt="" />
+								<span>Previous</span>
+							</span>
+							<span>{t(prevService.name)}</span>
+						</NavLink>
+						<NavLink
+							className={"service-page__link"}
+							to={`/service-page/${nextService.id}`}
+						>
+							<span>
+								<span>Next</span>
+								<img width={20} height={20} src={nextIcon} alt="" />
+							</span>
+							<span>{t(nextService.name)}</span>
+						</NavLink>
+					</div>
+				</Container>
 			</main>
 		</>
 	);
