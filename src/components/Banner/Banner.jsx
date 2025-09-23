@@ -1,15 +1,19 @@
+import { useRef } from "react";
 import logoImg from "/logo/tooth.png";
 import "./Banner.scss";
+
 const Banner = () => {
+	const banner = useRef(null);
+
 	function removeBanner() {
-		document.querySelector(".banner").remove();
+		banner.current.remove();
 	}
 
 	return (
-		<div className="banner">
-			<div className="banner__header">
-				<button onClick={removeBanner}>👉zavřít</button>
-			</div>
+		<div ref={banner} className="banner">
+			<button onClick={removeBanner} className="banner__btn">
+				👉zavřít
+			</button>
 			<img src={logoImg} width={50} height={50} alt="Prozubik logo" />
 			<p className="banner__title">Naše zubní klinika se brzy otevře!</p>
 			<div style={{ textAlign: "center" }}>
@@ -17,9 +21,9 @@ const Banner = () => {
 				<a
 					style={{ marginBottom: 5 }}
 					className="banner__link"
-					href="tel:+420773802166"
+					href="tel:+420773802886"
 				>
-					+420 773 802 166
+					+420 773 802 886
 				</a>
 				<p style={{ fontWeight: 500, marginBottom: 5 }}>Kde jsme</p>
 				<a
