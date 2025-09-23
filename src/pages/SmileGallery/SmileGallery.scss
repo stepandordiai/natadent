@@ -12,7 +12,7 @@
 }
 
 .smile-gallery-wrapper {
-	padding: 30px;
+	padding: 30px 30px 0 30px;
 }
 
 .about-us__gallery-grid {
@@ -69,11 +69,6 @@
 	transition: opacity 0.15s;
 }
 
-.smile-wrapper:hover::before,
-.smile-wrapper:hover::after {
-	opacity: 0;
-}
-
 .img-range {
 	--x-axis: 50%;
 	clip-path: polygon(0 0, var(--x-axis) 0%, var(--x-axis) 100%, 0 100%);
@@ -125,7 +120,7 @@
 
 @media (max-width: 900px) {
 	.smile-gallery-wrapper {
-		padding: 30px 15px;
+		padding: 30px 15px 0 15px;
 	}
 }
 

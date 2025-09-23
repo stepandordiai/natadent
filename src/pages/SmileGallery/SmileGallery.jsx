@@ -1,5 +1,5 @@
-import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import "./SmileGallery.scss";
@@ -74,8 +74,13 @@ const SmileGallery = () => {
 									data-before={t("smile_gallery.before")}
 									data-after={t("smile_gallery.after")}
 								>
-									<img src={smile.imgAfter} alt="" />
-									<img className="img-range" src={smile.imgBefore} alt="" />
+									<img src={smile.imgAfter} alt="" loading="lazy" />
+									<img
+										className="img-range"
+										src={smile.imgBefore}
+										alt=""
+										loading="lazy"
+									/>
 									<input
 										className="img-ranger"
 										type="range"
