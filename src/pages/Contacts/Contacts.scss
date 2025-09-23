@@ -15,12 +15,12 @@
 	display: flex;
 	flex-direction: column;
 	row-gap: 30px;
-	padding: 30px 0;
+	padding-top: 30px;
 }
 
 .contacts__secondary-info {
 	text-align: justify;
-	font-size: 1.25rem;
+	font-size: clamp(1rem, 2vw, 1.25rem);
 	padding: 0 30px;
 }
 
@@ -73,8 +73,7 @@
 	}
 }
 
-.contacts__appointment-title,
-.contacts__map-title {
+.contacts__appointment-title {
 	font-size: clamp(1.5rem, 4vw, 2rem);
 	text-align: center;
 }
@@ -215,8 +214,24 @@ input[type="time"] {
 	}
 }
 
-.contacts__google-map {
+.contacts__maps-container {
+	display: flex;
+	gap: 30px;
+
+	div {
+		flex-grow: 1;
+	}
+}
+
+.contacts__map-title {
+	font-size: clamp(1.5rem, 4vw, 2rem);
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.contacts__map {
 	height: 300px;
+	width: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -246,6 +261,13 @@ input[type="time"] {
 
 	.contacts-form {
 		padding: 0 15px;
+	}
+}
+
+@media (max-width: 809px) {
+	.contacts__maps-container {
+		gap: 30px;
+		flex-direction: column;
 	}
 }
 

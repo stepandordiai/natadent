@@ -1,8 +1,9 @@
-import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import { useEffect } from "react";
 import dayjs from "dayjs";
+import servicesData from "./../../assets/data/services-data.json";
 import phoneIcon from "/icons/telephone.png";
 import emailIcon from "/icons/mail.png";
 import pinIcon from "/icons/pin.png";
@@ -98,8 +99,8 @@ const Contacts = () => {
 								alt=""
 							/>
 							<p className="contacts__phone">{t("contacts.phone")}</p>
-							<a className="contacts__phone-link" href="tel:+420773802166">
-								+420 773 802 166
+							<a className="contacts__phone-link" href="tel:+420773802886">
+								+420 773 802 886
 							</a>
 						</div>
 						<div>
@@ -141,7 +142,7 @@ const Contacts = () => {
 					</h2>
 					<form
 						className="contacts-form"
-						action="mailto:prozubik@gmail.com"
+						action="mailto:info@neresen.cz"
 						method="post"
 					>
 						<div className="contacts-form__inputs">
@@ -202,96 +203,17 @@ const Contacts = () => {
 								<li className="custom-select__option" data-value="Nevybráno">
 									{t("contacts.choose_service")}
 								</li>
-								<li
-									className="custom-select__option"
-									data-value={t("service_1")}
-								>
-									{t("service_1")}
-								</li>
-								<li
-									className="custom-select__option"
-									data-value={t("service_2")}
-								>
-									{t("service_2")}
-								</li>
-								<li
-									className="custom-select__option"
-									data-value={t("service_3")}
-								>
-									{t("service_3")}
-								</li>
-								<li
-									className="custom-select__option"
-									data-value={t("service_4")}
-								>
-									{t("service_4")}
-								</li>
-								<li
-									className="custom-select__option"
-									data-value={t("service_5")}
-								>
-									{t("service_5")}
-								</li>
-								<li
-									className="custom-select__option"
-									data-value={t("service_6")}
-								>
-									{t("service_6")}
-								</li>
-								<li
-									className="custom-select__option"
-									data-value={t("service_7")}
-								>
-									{t("service_7")}
-								</li>
-								<li
-									className="custom-select__option"
-									data-value={t("service_8")}
-								>
-									{t("service_8")}
-								</li>
-								<li
-									className="custom-select__option"
-									data-value={t("service_9")}
-								>
-									{t("service_9")}
-								</li>
-								<li
-									className="custom-select__option"
-									data-value={t("service_10")}
-								>
-									{t("service_10")}
-								</li>
-								<li
-									className="custom-select__option"
-									data-value={t("service_11")}
-								>
-									{t("service_11")}
-								</li>
-								<li
-									className="custom-select__option"
-									data-value={t("service_12")}
-								>
-									{t("service_12")}
-								</li>
-								<li
-									className="custom-select__option"
-									data-value={t("service_13")}
-								>
-									{t("service_13")}
-								</li>
-								<li
-									className="custom-select__option"
-									data-value={t("service_14")}
-								>
-									{t("service_14")}
-								</li>
-								<li
-									className="custom-select__option"
-									data-value={t("service_15")}
-								>
-									{t("service_15")}
-								</li>
+								{servicesData.map((service) => {
+									return (
+										<li
+											key={service.id}
+											className="custom-select__option"
+											data-value={t(service.name)}
+										>
+											{t(service.name)}
+										</li>
+									);
+								})}
 							</ul>
 							<input
 								className="custom-select__input"
@@ -310,14 +232,26 @@ const Contacts = () => {
 							{t("contacts.submit_btn_title")}
 						</button>
 					</form>
-					<h2 className="contacts__map-title">
-						{t("contacts.address_btn_title")}
-					</h2>
-					<iframe
-						className="contacts__google-map"
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.3236706787648!2d15.2143025!3d50.024030599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c155b8cfe1db9%3A0x4e0e3a3f6277c27f!2sProzubik!5e0!3m2!1sen!2scz!4v1748083227064!5m2!1sen!2scz"
-						loading="lazy"
-					></iframe>
+					<div className="contacts__maps-container">
+						<div>
+							<h2 className="contacts__map-title">
+								{t("contacts.address_btn_title")}
+							</h2>
+							<iframe
+								className="contacts__map"
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.3236706787648!2d15.2143025!3d50.024030599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c155b8cfe1db9%3A0x4e0e3a3f6277c27f!2sProzubik!5e0!3m2!1sen!2scz!4v1748083227064!5m2!1sen!2scz"
+								loading="lazy"
+							></iframe>
+						</div>
+						<div>
+							<h2 className="contacts__map-title">Navštivte nás na Mapy.cz</h2>
+							<iframe
+								className="contacts__map"
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.3236706787648!2d15.2143025!3d50.024030599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c155b8cfe1db9%3A0x4e0e3a3f6277c27f!2sProzubik!5e0!3m2!1sen!2scz!4v1748083227064!5m2!1sen!2scz"
+								loading="lazy"
+							></iframe>
+						</div>
+					</div>
 				</div>
 			</main>
 		</>
