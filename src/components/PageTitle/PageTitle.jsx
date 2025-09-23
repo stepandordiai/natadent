@@ -1,6 +1,6 @@
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { useTranslation } from "react-i18next";
 import "./PageTitle.scss";
 
 const PageTitle = ({ title, previousPath }) => {
