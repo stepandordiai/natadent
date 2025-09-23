@@ -197,7 +197,7 @@
 	left: 0;
 	background: var(--bg-clr);
 	min-height: calc(100svh - 130px);
-	padding: 15px;
+	padding: 0 15px 30px 15px;
 	transform: translateY(30px);
 	opacity: 0;
 	pointer-events: none;
@@ -212,12 +212,13 @@
 
 .menu-item {
 	border-bottom: 1px solid var(--accent-clr);
-	padding: 5px 0;
+	padding: 10px 0;
 }
 
 .menu__link {
+	font-size: 1.25rem;
 	font-weight: 500;
-	height: 60px;
+	padding: 10px 0;
 	@include flex-between-center;
 	transition: color 0.15s;
 
@@ -233,7 +234,7 @@
 .menu-dd__btn {
 	@include flex-between-center;
 	width: 100%;
-	height: 60px;
+	padding: 10px 0;
 	transition: color 0.15s;
 
 	&:hover {
@@ -242,6 +243,7 @@
 }
 
 .menu__nav-btn-txt {
+	font-size: 1.25rem;
 	font-weight: 500;
 }
 
@@ -274,7 +276,7 @@
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	row-gap: 5px;
+	row-gap: 10px;
 }
 
 .menu__dd-link {

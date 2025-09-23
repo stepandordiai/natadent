@@ -19,12 +19,18 @@ const Header = ({ servicesData }) => {
 	const inactiveMenuDdLink = "menu__dd-link js-menu__link";
 	const activeMenuDdLink = "menu__dd-link js-menu__link menu__link--active";
 
+	const menuDropdownWrapper = document.querySelectorAll(".menu-dd__wrapper");
+	const menuNavBtnIcon = document.querySelectorAll(".menu__nav-btn-icon");
+
 	// burger-btn
 
 	function handleMenu() {
 		setIsMenuActive((prev) => !prev);
-		document.querySelectorAll(".menu-dd__wrapper").forEach((wrapper) => {
+		menuDropdownWrapper.forEach((wrapper) => {
 			wrapper.classList.remove("menu-dd__wrapper--active");
+		});
+		menuNavBtnIcon.forEach((icon) => {
+			icon.classList.remove("menu__nav-btn-icon--active");
 		});
 	}
 
