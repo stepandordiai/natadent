@@ -18,11 +18,13 @@
 	border-radius: 30px;
 	padding: 10px;
 	opacity: 0;
-	animation: animateBanner 0.3s 1s forwards;
+	pointer-events: none;
+	animation: animateBanner 0.3s 3s forwards;
 }
 
 @keyframes animateBanner {
 	to {
+		pointer-events: all;
 		opacity: 1;
 		transform: translate(-50%, -50%);
 	}

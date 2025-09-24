@@ -2,10 +2,23 @@
 	padding: 30px 30px 0 30px;
 	column-count: 3;
 	column-gap: 30px;
+}
+
+.masonry__item {
+	margin-bottom: 30px;
+}
+
+.masonry__img-container {
+	width: 100%;
+	overflow: hidden;
+	border-radius: 30px;
 
 	img {
-		margin-bottom: 30px;
-		border-radius: 30px;
+		transition: transform 300ms ease;
+
+		&:hover {
+			transform: scale(1.1);
+		}
 	}
 }
 
@@ -14,9 +27,9 @@
 		padding: 30px 15px 0 15px;
 		column-count: 2;
 		column-gap: 7.5px;
+	}
 
-		img {
-			margin-bottom: 7.5px;
-		}
+	.masonry__item {
+		margin-bottom: 7.5px;
 	}
 }

@@ -27,7 +27,13 @@ const OurClinic = () => {
 					<PageTitle title="Naše klinika" />
 					<div className="our-clinic__masonry">
 						{clinicImages.map((img, index) => {
-							return <img key={index} src={img} alt="" loading="lazy" />;
+							return (
+								<div className="masonry__item">
+									<div className="masonry__img-container">
+										<img key={index} src={img} alt="" loading="lazy" />
+									</div>
+								</div>
+							);
 						})}
 					</div>
 				</Container>
