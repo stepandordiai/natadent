@@ -1,3 +1,3 @@
 # Prozubik
 
-<img src="./public/screenshot/prozubik-ss-v3-c.png" alt="" />
+<img src="./public/screenshot/prozubik-ss-v5-c.png" alt="" />
