@@ -82,7 +82,7 @@ const Contacts = () => {
 					content="Kontaktujte nás – zubní klinika Natadent v Kolíně. Najdete zde adresu, telefonní číslo, e-mail a ordinační hodiny. Jsme tu pro vás s profesionální péčí a lidským přístupem."
 				/>
 				<title>{t("contacts_title")} / Natadent</title>
-				<link rel="canonical" href="https://natadent.cz/contacts" />
+				<link rel="canonical" href="https://www.natadent.cz/contacts" />
 			</Helmet>
 			<main className="contacts">
 				<Container>

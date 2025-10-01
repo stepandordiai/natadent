@@ -32,7 +32,10 @@ const ServicePage = ({ servicesData }) => {
 			<Helmet>
 				<meta name="description" content={t(service.desc)} />
 				<title>{t(service.name)} / Natadent</title>
-				<link rel="canonical" href={`https://natadent.cz/service-page/${id}`} />
+				<link
+					rel="canonical"
+					href={`https://www.natadent.cz/service-page/${id}`}
+				/>
 			</Helmet>
 			<main className="service-page">
 				<Container>
