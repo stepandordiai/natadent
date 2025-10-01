@@ -19,8 +19,8 @@ const Footer = ({ servicesData }) => {
 				<div className="footer-top">
 					<div className="footer__logo-container">
 						<NavLink className="footer-top__logo" to="/">
-							<img src={logoIcon} width={50} height={50} alt="Prozubik logo" />
-							<span>Prozubik</span>
+							<img src={logoIcon} width={50} height={50} alt="Natadent logo" />
+							<span>Natadent</span>
 						</NavLink>
 						<p>{t("home.secondary_title")}</p>
 					</div>
@@ -173,7 +173,7 @@ const Footer = ({ servicesData }) => {
 								<a href="tel:+420773802886">+420 773 802 886</a>
 							</li>
 							<li>
-								<a href="mailto:prozubik@gmail.com">prozubik@gmail.com</a>
+								<a href="mailto:info@neresen.cz">info@neresen.cz</a>
 							</li>
 							<li>
 								<a
@@ -188,7 +188,7 @@ const Footer = ({ servicesData }) => {
 				</div>
 				<div className="footer-bottom">
 					<div>
-						<p>&copy; 2025 Prozubik</p>
+						<p>&copy; 2025 Natadent</p>
 						<p>{t("footer.rights")}.</p>
 						<p>
 							{t("footer.website_created_by")}{" "}

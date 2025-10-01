@@ -45,10 +45,10 @@ const OurTeam = () => {
 			<Helmet>
 				<meta
 					name="description"
-					content="Seznamte se s týmem odborníků z kliniky Prozubik. Zkušení stomatologové, dentální hygienisté a asistenti, kteří vám poskytnou špičkovou péči s lidským přístupem."
+					content="Seznamte se s týmem odborníků z kliniky Natadent. Zkušení stomatologové, dentální hygienisté a asistenti, kteří vám poskytnou špičkovou péči s lidským přístupem."
 				/>
-				<title>{t("our_team_title")} / Prozubik</title>
-				<link rel="canonical" href="https://prozubik.cz/our-team" />
+				<title>{t("our_team_title")} / Natadent</title>
+				<link rel="canonical" href="https://natadent.cz/our-team" />
 			</Helmet>
 			<main className="our-team">
 				<Container>

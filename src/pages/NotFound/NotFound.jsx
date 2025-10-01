@@ -7,7 +7,7 @@ const NotFound = () => {
 	return (
 		<>
 			<Helmet>
-				<title>404 / Prozubik</title>
+				<title>404 / Natadent</title>
 			</Helmet>
 			<main>
 				<Container>

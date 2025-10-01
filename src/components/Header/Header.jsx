@@ -63,13 +63,13 @@ const Header = ({ servicesData }) => {
 		<header className="header">
 			<Container>
 				<div className="header-top">
-					<a href="mailto:prozubik@gmail.com">prozubik@gmail.com</a>
+					<a href="mailto:info@neresen.cz">info@neresen.cz</a>
 					<a href="tel:+420773802886">+420 773 802 886</a>
 				</div>
 				<div className="header-bottom">
 					<NavLink className="header-bottom__logo" to="/">
-						<img src={logoIcon} alt="Prozubik logo" />
-						<span>Prozubik</span>
+						<img src={logoIcon} alt="Natadent logo" />
+						<span>Natadent</span>
 					</NavLink>
 					<nav className="nav">
 						<div>

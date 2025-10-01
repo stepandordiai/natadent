@@ -79,10 +79,10 @@ const Contacts = () => {
 			<Helmet>
 				<meta
 					name="description"
-					content="Kontaktujte nás – zubní klinika Prozubik v Kolíně. Najdete zde adresu, telefonní číslo, e-mail a ordinační hodiny. Jsme tu pro vás s profesionální péčí a lidským přístupem."
+					content="Kontaktujte nás – zubní klinika Natadent v Kolíně. Najdete zde adresu, telefonní číslo, e-mail a ordinační hodiny. Jsme tu pro vás s profesionální péčí a lidským přístupem."
 				/>
-				<title>{t("contacts_title")} / Prozubik</title>
-				<link rel="canonical" href="https://prozubik.cz/contacts" />
+				<title>{t("contacts_title")} / Natadent</title>
+				<link rel="canonical" href="https://natadent.cz/contacts" />
 			</Helmet>
 			<main className="contacts">
 				<Container>
@@ -116,9 +116,9 @@ const Contacts = () => {
 								<p className="contacts__email">{t("contacts.mail")}</p>
 								<a
 									className="contacts__email-link"
-									href="mailto:prozubik@gmail.com"
+									href="mailto:info@neresen.cz"
 								>
-									prozubik@gmail.com
+									info@neresen.cz
 								</a>
 							</div>
 							<div>
@@ -146,6 +146,7 @@ const Contacts = () => {
 							className="contacts-form"
 							action="mailto:info@neresen.cz"
 							method="post"
+							encType="text/plain"
 						>
 							<div className="contacts-form__inputs">
 								<div className="contacts-form__input-wrapper">

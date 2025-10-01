@@ -219,7 +219,8 @@ input[type="time"] {
 	gap: 30px;
 
 	div {
-		flex-grow: 1;
+		width: 100%;
+		align-self: flex-end;
 	}
 }
 

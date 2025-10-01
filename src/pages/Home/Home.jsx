@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import Container from "../../components/Container/Container";
 import logoIcon from "/logo/tooth.png";
 import "./Home.scss";
+import { HashLink } from "react-router-hash-link";
 
 const Home = ({ servicesData }) => {
 	const { t } = useTranslation();
@@ -61,8 +62,8 @@ const Home = ({ servicesData }) => {
 					name="description"
 					content="Moderní zubní klinika v Kolíně. Nabízíme bezbolestné ortodontické ošetření pomocí analgosedace i celkové anestezie. Komfortní prostředí, profesionální péče a dostupné služby pro zdravý úsměv."
 				/>
-				<title>{t("home.secondary_title")} / Prozubik</title>
-				<link rel="canonical" href="https://prozubik.cz/" />
+				<title>{t("home.secondary_title")} / Natadent</title>
+				<link rel="canonical" href="https://natadent.cz/" />
 			</Helmet>
 			<main>
 				<Container>
@@ -71,7 +72,7 @@ const Home = ({ servicesData }) => {
 							<img
 								className="home-top__logo-icon"
 								src={logoIcon}
-								alt="Prozubik Logo"
+								alt="Natadent logo"
 							/>
 						</div>
 						<h1 className="home-top__title">{t("home.title")}</h1>
@@ -80,9 +81,9 @@ const Home = ({ servicesData }) => {
 							<NavLink className="home-top__btn" to="/appointment">
 								{t("appointment_title")}
 							</NavLink>
-							<a className="home-top__btn" href="#services">
+							<HashLink className="home-top__btn" to="#services" smooth>
 								{t("home.services_btn")}
-							</a>
+							</HashLink>
 						</div>
 					</div>
 					<div className="home__services" id="services">

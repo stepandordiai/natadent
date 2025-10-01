@@ -20,7 +20,8 @@ const OurClinic = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Naše klinika / Prozubik</title>
+				<title>Naše klinika / Natadent</title>
+				<link rel="canonical" href="https://natadent.cz/our-clinic" />
 			</Helmet>
 			<main>
 				<Container>

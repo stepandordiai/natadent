@@ -12,10 +12,10 @@ const Appointment = () => {
 			<Helmet>
 				<meta
 					name="description"
-					content="Objednejte se jednoduše online na vyšetření či ošetření v zubní klinice Prozubik. Vyberte si termín, který vám vyhovuje, a získejte profesionální péči bez čekání."
+					content="Objednejte se jednoduše online na vyšetření či ošetření v zubní klinice Natadent. Vyberte si termín, který vám vyhovuje, a získejte profesionální péči bez čekání."
 				/>
-				<title>{t("appointment_title")} / Prozubik</title>
-				<link rel="canonical" href="https://prozubik.cz/appointment" />
+				<title>{t("appointment_title")} / Natadent</title>
+				<link rel="canonical" href="https://natadent.cz/appointment" />
 			</Helmet>
 			<main>
 				<Container>

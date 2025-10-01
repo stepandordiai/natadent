@@ -58,10 +58,10 @@ const SmileGallery = () => {
 			<Helmet>
 				<meta
 					name="description"
-					content="Podívejte se na ukázky proměn našich pacientů v Galerii úsměvů. Skutečné výsledky profesionální stomatologické péče na klinice Prozubik."
+					content="Podívejte se na ukázky proměn našich pacientů v Galerii úsměvů. Skutečné výsledky profesionální stomatologické péče na klinice Natadent."
 				/>
-				<title>{t("smile_gallery_title")} / Prozubik</title>
-				<link rel="canonical" href="https://prozubik.cz/smile-gallery" />
+				<title>{t("smile_gallery_title")} / Natadent</title>
+				<link rel="canonical" href="https://natadent.cz/smile-gallery" />
 			</Helmet>
 			<main className="smile-gallery">
 				<Container>
