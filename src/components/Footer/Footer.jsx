@@ -191,7 +191,7 @@ const Footer = ({ servicesData }) => {
 						<p>&copy; 2025 Prozubik</p>
 						<p>{t("footer.rights")}.</p>
 						<p>
-							Site by{" "}
+							{t("footer.website_created_by")}{" "}
 							<a
 								className="footer__creator-link"
 								href="https://heeeyooo.studio/"

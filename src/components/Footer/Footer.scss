@@ -113,10 +113,11 @@
 }
 
 .footer-bottom {
-	@include flex-start;
+	@include flex-center;
 	gap: 30px;
 	background: var(--bg-clr);
 	padding: 30px;
+	text-align: center;
 }
 
 .footer__creator-link {
@@ -154,11 +155,5 @@
 
 	.footer-top__logo {
 		align-items: center;
-	}
-
-	.footer-bottom {
-		align-items: center;
-		flex-direction: column-reverse;
-		text-align: center;
 	}
 }

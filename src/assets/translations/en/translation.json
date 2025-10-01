@@ -1,104 +1,105 @@
 {
-    "home_title": "Home",
-    "about_us_title": "About us",
-    "our_team_title": "Our team",
-    "price_list_title": "Price list",
-    "smile_gallery_title": "Smile gallery",
-    "services_title": "Services",
-    "contacts_title": "Contacts",
-    "appointment_title": "Book an appointment",
-    "faq_title": "FAQ",
-    "coming_soon": "Coming soon",
+	"home_title": "Home",
+	"about_us_title": "About us",
+	"our_team_title": "Our team",
+	"price_list_title": "Price list",
+	"smile_gallery_title": "Smile gallery",
+	"services_title": "Services",
+	"contacts_title": "Contacts",
+	"appointment_title": "Book an appointment",
+	"faq_title": "FAQ",
+	"coming_soon": "Coming soon",
 
-    "service_1": "Stomatologie",
-    "service_desc_1": "Pečujeme o váš úsměv komplexně – zdraví a krása zubů v každém věku.",
-    "service_2": "Prevence",
-    "service_desc_2": "Pravidelné kontroly, díky kterým udržíme váš chrup v perfektní kondici.",
-    "service_3": "Dentální hygiena",
-    "service_desc_3": "Profesionální čištění zubů, které vám pomůže předejít kazům a zánětům.",
-    "service_4": "Stomatochirurgie",
-    "service_desc_4": "Šetrné chirurgické zákroky, které zvládnete bez obav a bolesti.",
-    "service_5": "Kompletní rekonstrukce chrupu",
-    "service_desc_5": "Navrátíme vašemu úsměvu plnou funkci i krásu.",
-    "service_6": "Extrakce zubů moudrosti",
-    "service_desc_6": "Zbavíme vás problémových zubů moudrosti rychle a bezpečně.",
-    "service_7": "Implantologie",
-    "service_desc_7": "Chybějící zuby? Nabízíme moderní a spolehlivé řešení pomocí implantátů.",
-    "service_8": "Parodontologie",
-    "service_desc_8": "Pomůžeme vám s léčbou zánětů dásní a podpoříme zdraví vašeho parodontu.",
-    "service_9": "Endodoncie",
-    "service_desc_9": "Zachraňujeme zuby před extrakcí pečlivým ošetřením kořenových kanálků.",
-    "service_10": "Ortodoncie",
-    "service_desc_10": "Společně dosáhneme rovných zubů pomocí moderních ortodontických metod.",
-    "service_11": "Analgosedace a celková anestezie",
-    "service_desc_11": "Ošetření zcela bez bolesti pro váš maximální komfort.",
-    "service_12": "Dětská stomatologie",
-    "service_desc_12": "Šetrná péče o dětské zoubky s důrazem na prevenci a pozitivní přístup.",
-    "service_13": "Nastřižení uzdiček v ústech kojenců",
-    "service_desc_13": "Rychlý a šetrný zákrok pro pohodlnější kojení a správnou pohyblivost jazyka.",
-    "service_14": "Bělení zubů",
-    "service_desc_14": "Zářivý úsměv je na dosah – vybělení zubů bezpečně a efektivně.",
-    "service_15": "Zubní laboratoř",
-    "service_desc_15": "V naší vlastní laboratoři se postaráme o rychlou a kvalitní výrobu protetiky.",
+	"service_1": "Stomatologie",
+	"service_desc_1": "Pečujeme o váš úsměv komplexně – zdraví a krása zubů v každém věku.",
+	"service_2": "Prevence",
+	"service_desc_2": "Pravidelné kontroly, díky kterým udržíme váš chrup v perfektní kondici.",
+	"service_3": "Dentální hygiena",
+	"service_desc_3": "Profesionální čištění zubů, které vám pomůže předejít kazům a zánětům.",
+	"service_4": "Stomatochirurgie",
+	"service_desc_4": "Šetrné chirurgické zákroky, které zvládnete bez obav a bolesti.",
+	"service_5": "Kompletní rekonstrukce chrupu",
+	"service_desc_5": "Navrátíme vašemu úsměvu plnou funkci i krásu.",
+	"service_6": "Extrakce zubů moudrosti",
+	"service_desc_6": "Zbavíme vás problémových zubů moudrosti rychle a bezpečně.",
+	"service_7": "Implantologie",
+	"service_desc_7": "Chybějící zuby? Nabízíme moderní a spolehlivé řešení pomocí implantátů.",
+	"service_8": "Parodontologie",
+	"service_desc_8": "Pomůžeme vám s léčbou zánětů dásní a podpoříme zdraví vašeho parodontu.",
+	"service_9": "Endodoncie",
+	"service_desc_9": "Zachraňujeme zuby před extrakcí pečlivým ošetřením kořenových kanálků.",
+	"service_10": "Ortodoncie",
+	"service_desc_10": "Společně dosáhneme rovných zubů pomocí moderních ortodontických metod.",
+	"service_11": "Analgosedace a celková anestezie",
+	"service_desc_11": "Ošetření zcela bez bolesti pro váš maximální komfort.",
+	"service_12": "Dětská stomatologie",
+	"service_desc_12": "Šetrná péče o dětské zoubky s důrazem na prevenci a pozitivní přístup.",
+	"service_13": "Nastřižení uzdiček v ústech kojenců",
+	"service_desc_13": "Rychlý a šetrný zákrok pro pohodlnější kojení a správnou pohyblivost jazyka.",
+	"service_14": "Bělení zubů",
+	"service_desc_14": "Zářivý úsměv je na dosah – vybělení zubů bezpečně a efektivně.",
+	"service_15": "Zubní laboratoř",
+	"service_desc_15": "V naší vlastní laboratoři se postaráme o rychlou a kvalitní výrobu protetiky.",
 
-    "home": {
-        "title": "We care for your smile",
-        "secondary_title": "Dental clinic in Kolin",
-        "services_btn": "View services",
-        "services_search_placeholder": "What service are you looking for?",
-        "services_no_result_pop_up": "No services have been found, try searching for another service!",
-        "question_1": "Question",
-        "answer_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!",
-        "question_2": "Question",
-        "answer_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!",
-        "question_3": "Question",
-        "answer_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!"
-    },
+	"home": {
+		"title": "We care for your smile",
+		"secondary_title": "Dental clinic in Kolin",
+		"services_btn": "View services",
+		"services_search_placeholder": "What service are you looking for?",
+		"services_no_result_pop_up": "No services have been found, try searching for another service!",
+		"question_1": "Question",
+		"answer_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!",
+		"question_2": "Question",
+		"answer_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!",
+		"question_3": "Question",
+		"answer_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!"
+	},
 
-    "price_data": {
-        "all_title": "All",
-        "braces_title": "Braces",
-        "dentistry_title": "Dentistry"
-    },
+	"price_data": {
+		"all_title": "All",
+		"braces_title": "Braces",
+		"dentistry_title": "Dentistry"
+	},
 
-    "braces": {
-        "name_1": "Braces 15 min",
-        "price_1": "1250 CZK"
-    },
+	"braces": {
+		"name_1": "Braces 15 min",
+		"price_1": "1250 CZK"
+	},
 
-    "dentistry": {
-        "name_1": "Dentistry 15 min",
-        "price_1": "3250 CZK"
-    },
+	"dentistry": {
+		"name_1": "Dentistry 15 min",
+		"price_1": "3250 CZK"
+	},
 
-    "smile_gallery": {
-        "before": "Before",
-        "after": "After"
-    },
+	"smile_gallery": {
+		"before": "Before",
+		"after": "After"
+	},
 
-    "contacts": {
-        "details_title": "Do you have a question or need to book an appointment? We are here to help. Contact us via the form, phone or email and we will be happy to help you.",
-        "phone": "Phone number",
-        "mail": "E-mail",
-        "address": "Address",
-        "address_btn_title": "Visit us on Google",
-        "first_name": "First name",
-        "last_name": "Last name",
-        "choose_service": "Choose service",
-        "submit_btn_title": "Send"
-    },
+	"contacts": {
+		"details_title": "Do you have a question or need to book an appointment? We are here to help. Contact us via the form, phone or email and we will be happy to help you.",
+		"phone": "Phone number",
+		"mail": "E-mail",
+		"address": "Address",
+		"address_btn_title": "Visit us on Google",
+		"first_name": "First name",
+		"last_name": "Last name",
+		"choose_service": "Choose service",
+		"submit_btn_title": "Send"
+	},
 
-    "footer": {
-        "working_hours": "Working hours",
-        "mon": "Monday",
-        "tue": "Tuesday",
-        "wed": "Wednesday",
-        "thu": "Thursday",
-        "fri": "Friday",
-        "sat": "Saturday",
-        "sun": "Sunday",
-        "closed": "Closed",
-        "nav_title": "Navigation",
-        "rights": "All rights reserved"
-    }
+	"footer": {
+		"working_hours": "Working hours",
+		"mon": "Monday",
+		"tue": "Tuesday",
+		"wed": "Wednesday",
+		"thu": "Thursday",
+		"fri": "Friday",
+		"sat": "Saturday",
+		"sun": "Sunday",
+		"closed": "Closed",
+		"nav_title": "Navigation",
+		"rights": "All rights reserved",
+		"website_created_by": "Website created by"
+	}
 }
