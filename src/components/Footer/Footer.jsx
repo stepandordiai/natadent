@@ -194,7 +194,7 @@ const Footer = ({ servicesData }) => {
 							{t("footer.website_created_by")}{" "}
 							<a
 								className="footer__creator-link"
-								href="https://heeeyooo.studio/"
+								href="https://www.heeeyooo.studio/"
 								target="_blank"
 							>
 								heeeyooo studio
