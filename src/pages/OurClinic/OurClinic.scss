@@ -11,14 +11,18 @@
 .masonry__img-container {
 	width: 100%;
 	overflow: hidden;
-	// TODO: Best with overflow and transform child
+	// TODO:
 	clip-path: inset(0 round 30px);
+}
 
-	img {
-		transition: transform 300ms ease;
-
-		&:hover {
-			transform: scale(1.1);
+// TODO:
+@media (hover: hover) and (pointer: fine) {
+	.masonry__img-container {
+		img {
+			transition: transform 300ms ease;
+			&:hover {
+				transform: scale(1.1);
+			}
 		}
 	}
 }
