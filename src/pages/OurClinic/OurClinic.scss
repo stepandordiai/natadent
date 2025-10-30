@@ -11,7 +11,8 @@
 .masonry__img-container {
 	width: 100%;
 	overflow: hidden;
-	border-radius: 30px;
+	// TODO: Best with overflow and transform child
+	clip-path: inset(0 round 30px);
 
 	img {
 		transition: transform 300ms ease;
