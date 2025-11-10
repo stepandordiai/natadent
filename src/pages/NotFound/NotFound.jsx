@@ -8,6 +8,7 @@ const NotFound = () => {
 		<>
 			<Helmet>
 				<title>404 / Natadent</title>
+				<meta name="robots" content="noindex, nofollow" />
 			</Helmet>
 			<main>
 				<Container>
