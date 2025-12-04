@@ -155,9 +155,14 @@ const Header = ({ servicesData }) => {
 						</div>
 					</nav>
 					<LngSelect />
-					<div className="burger-btn__wrapper" onClick={handleMenu}>
+					{/* menu-btn */}
+					<button
+						className="burger-btn__wrapper"
+						onClick={handleMenu}
+						aria-label={isMenuActive ? t("closeMenu") : t("openMenu")}
+					>
 						<span>menu</span>
-						<div
+						<span
 							className={
 								isMenuActive ? "burger-btn burger-btn--active" : "burger-btn"
 							}
@@ -169,8 +174,8 @@ const Header = ({ servicesData }) => {
 										: "burger-btn__center-line"
 								}
 							></span>
-						</div>
-					</div>
+						</span>
+					</button>
 				</div>
 				<div className={isMenuActive ? "menu menu--active" : "menu"}>
 					<ul className="menu-list">
