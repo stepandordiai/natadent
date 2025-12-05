@@ -1,34 +1,28 @@
-import upArrowIcon from "/icons/up-arrows.png";
+import { useEffect, useState } from "react";
 import "./ToTopBtn.scss";
 
 const ToTopBtn = () => {
-	const scrollPercentage = () => {
-		let positionTop = document.documentElement.scrollTop;
-		const calcHeight =
-			// scrollHeight is a full page height
-			// clientHeight is a window height
-			document.documentElement.scrollHeight -
-			document.documentElement.clientHeight;
-		// Expression for calculating percent height of the page
-		let scrollValue = (positionTop * 100) / calcHeight;
-		document.querySelector(
-			".progress"
-		).style.background = `conic-gradient(var(--accent-clr) ${scrollValue}%, #fff 0%)`;
-	};
+	const [toTopBtnActive, setToTopBtnActive] = useState(false);
+	const [scrollValue, setScrollValue] = useState(0);
 
-	addEventListener("scroll", () => {
-		scrollPercentage();
+	useEffect(() => {
+		const scrollPercentage = () => {
+			// TODO: learn this
+			setToTopBtnActive(window.scrollY > window.innerHeight);
 
-		if (document.documentElement.scrollTop > window.innerHeight) {
-			document.querySelector(".to-top-btn").classList.add("to-top-btn--active");
-		} else {
-			document
-				.querySelector(".to-top-btn")
-				.classList.remove("to-top-btn--active");
-		}
-	});
+			const calcFullPageHeight =
+				document.documentElement.scrollHeight - window.innerHeight;
 
-	function scrollOnToTopBtn() {
+			setScrollValue((window.scrollY * 100) / calcFullPageHeight);
+		};
+
+		// TODO: learn this
+		window.addEventListener("scroll", scrollPercentage, { passive: true });
+
+		return () => window.removeEventListener("scroll", scrollPercentage);
+	}, []);
+
+	function scrollToTop() {
 		window.scrollTo({
 			top: 0,
 			behavior: "smooth",
@@ -36,10 +30,30 @@ const ToTopBtn = () => {
 	}
 
 	return (
-		<div className="to-top-btn" onClick={scrollOnToTopBtn}>
-			<div className="progress">
+		<div
+			className={`to-top-btn ${toTopBtnActive ? "to-top-btn--active" : ""}`}
+			onClick={scrollToTop}
+		>
+			<div
+				className="progress"
+				style={{
+					background: `conic-gradient(#fff ${scrollValue}%, var(--accent-clr) 0%)`,
+				}}
+			>
 				<div className="inner-to-top-btn">
-					<img src={upArrowIcon} width={30} height={30} alt="" />
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						fill="currentColor"
+						class="bi bi-arrow-up"
+						viewBox="0 0 16 16"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"
+						/>
+					</svg>
 				</div>
 			</div>
 		</div>
