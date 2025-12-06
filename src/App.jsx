@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import Loading from "./components/Loading/Loading";
 import Header from "./components/Header/Header";
-import ToTopBtn from "./components/ToTopBtn/ToTopBtn";
+// import ToTopBtn from "./components/ToTopBtn/ToTopBtn";
 import ScrollToTop from "./utils/ScrollToTop";
 import Home from "./pages/Home/Home";
 import OurTeam from "./pages/OurTeam/OurTeam";
@@ -17,6 +17,7 @@ import servicesData from "./assets/data/services-data.json";
 import "./i18n";
 import NotFound from "./pages/NotFound/NotFound";
 import OurClinic from "./pages/OurClinic/OurClinic";
+import ToTopBtn from "./components/ToTopBtn/ToTopBtn";
 import "./styles/App.scss";
 
 function App() {
@@ -28,11 +29,11 @@ function App() {
 
 	return (
 		<Router>
+			<ScrollToTop />
 			<Loading />
 			<div className="wrapper" style={{ display: "none" }}>
-				<Header servicesData={servicesData} />
 				<ToTopBtn />
-				<ScrollToTop />
+				<Header servicesData={servicesData} />
 				<Routes>
 					<Route path="/" element={<Home servicesData={servicesData} />} />
 					<Route path="/our-team" element={<OurTeam />} />

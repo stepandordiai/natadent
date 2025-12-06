@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import "./ToTopBtn.scss";
 
 const ToTopBtn = () => {
+	const { t } = useTranslation();
+
 	const [toTopBtnActive, setToTopBtnActive] = useState(false);
 	const [scrollValue, setScrollValue] = useState(0);
 
@@ -30,33 +33,34 @@ const ToTopBtn = () => {
 	}
 
 	return (
-		<div
+		<button
 			className={`to-top-btn ${toTopBtnActive ? "to-top-btn--active" : ""}`}
 			onClick={scrollToTop}
+			aria-label={t("scrollToTop")}
 		>
-			<div
+			<span
 				className="progress"
 				style={{
 					background: `conic-gradient(#fff ${scrollValue}%, var(--accent-clr) 0%)`,
 				}}
 			>
-				<div className="inner-to-top-btn">
+				<span className="inner-to-top-btn">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
 						height="24"
 						fill="currentColor"
-						class="bi bi-arrow-up"
+						className="bi bi-arrow-up"
 						viewBox="0 0 16 16"
 					>
 						<path
-							fill-rule="evenodd"
+							fillRule="evenodd"
 							d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"
 						/>
 					</svg>
-				</div>
-			</div>
-		</div>
+				</span>
+			</span>
+		</button>
 	);
 };
 
