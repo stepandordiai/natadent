@@ -11,9 +11,10 @@
 	border-radius: 50%;
 	background: var(--accent-clr-semi-tp);
 	transform: translateY(calc(100% + 30px));
+	opacity: 0;
 	// TODO: learn this
-	will-change: transform;
-	transition: transform 300ms, background-color 300ms;
+	will-change: transform, opacity;
+	transition: transform 300ms, opacity 300ms, background-color 300ms;
 
 	&:hover {
 		background: var(--accent-clr);
@@ -21,7 +22,8 @@
 }
 
 .to-top-btn--active {
-	transform: translateY(0);
+	transform: translateY(0) !important;
+	opacity: 1;
 }
 
 .progress {
