@@ -14,7 +14,7 @@ const Appointment = () => {
 					name="description"
 					content="Objednejte se jednoduše online na vyšetření či ošetření v zubní klinice Natadent. Vyberte si termín, který vám vyhovuje, a získejte profesionální péči bez čekání."
 				/>
-				<title>{t("appointment_title")} / Natadent</title>
+				<title>{t("appointment_title")} | Natadent</title>
 				<link rel="canonical" href="https://www.natadent.cz/appointment" />
 			</Helmet>
 			<main>

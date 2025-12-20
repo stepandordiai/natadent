@@ -60,7 +60,7 @@ const SmileGallery = () => {
 					name="description"
 					content="Podívejte se na ukázky proměn našich pacientů v Galerii úsměvů. Skutečné výsledky profesionální stomatologické péče na klinice Natadent."
 				/>
-				<title>{t("smile_gallery_title")} / Natadent</title>
+				<title>{t("smile_gallery_title")} | Natadent</title>
 				<link rel="canonical" href="https://www.natadent.cz/smile-gallery" />
 			</Helmet>
 			<main className="smile-gallery">

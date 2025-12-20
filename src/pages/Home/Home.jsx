@@ -62,7 +62,7 @@ const Home = ({ servicesData }) => {
 					name="description"
 					content="Moderní zubní klinika v Kolíně. Nabízíme bezbolestné ortodontické ošetření pomocí analgosedace i celkové anestezie. Komfortní prostředí, profesionální péče a dostupné služby pro zdravý úsměv."
 				/>
-				<title>{t("home.secondary_title")} / Natadent</title>
+				<title>{t("home.secondary_title")} | Natadent</title>
 				<link rel="canonical" href="https://www.natadent.cz/" />
 			</Helmet>
 			<main>
