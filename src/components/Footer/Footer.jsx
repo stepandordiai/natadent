@@ -188,7 +188,7 @@ const Footer = ({ servicesData }) => {
 				</div>
 				<div className="footer-bottom">
 					<div>
-						<p>&copy; 2025 Natadent</p>
+						<p>&copy; 2025&ndash;{new Date().getFullYear()} Natadent</p>
 						<p>{t("footer.rights")}.</p>
 						<p>
 							{t("footer.website_created_by")}{" "}
