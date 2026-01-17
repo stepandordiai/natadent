@@ -32,10 +32,7 @@ const ServicePage = ({ servicesData }) => {
 			<Helmet>
 				<meta name="description" content={t(service.desc)} />
 				<title>{t(service.name)} | Natadent</title>
-				<link
-					rel="canonical"
-					href={`https://www.natadent.cz/service-page/${id}`}
-				/>
+				<link rel="canonical" href={`https://www.natadent.cz/sluzby/${id}`} />
 			</Helmet>
 			<main className="service-page">
 				<Container>
@@ -47,7 +44,7 @@ const ServicePage = ({ servicesData }) => {
 					<div className="service-page__links">
 						<NavLink
 							className={"service-page__link"}
-							to={`/service-page/${prevService.id}`}
+							to={`/sluzby/${prevService.id}`}
 						>
 							<span>
 								<img width={20} height={20} src={prevIcon} alt="" />
@@ -57,7 +54,7 @@ const ServicePage = ({ servicesData }) => {
 						</NavLink>
 						<NavLink
 							className={"service-page__link"}
-							to={`/service-page/${nextService.id}`}
+							to={`/sluzby/${nextService.id}`}
 						>
 							<span>
 								<span>Next</span>

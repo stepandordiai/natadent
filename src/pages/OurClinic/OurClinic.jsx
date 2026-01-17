@@ -21,7 +21,7 @@ const OurClinic = () => {
 		<>
 			<Helmet>
 				<title>Naše klinika | Natadent</title>
-				<link rel="canonical" href="https://www.natadent.cz/our-clinic" />
+				<link rel="canonical" href="https://www.natadent.cz/nase-klinika" />
 			</Helmet>
 			<main>
 				<Container>

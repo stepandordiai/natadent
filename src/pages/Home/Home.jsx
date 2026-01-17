@@ -78,15 +78,15 @@ const Home = ({ servicesData }) => {
 						<h1 className="home-top__title">{t("home.title")}</h1>
 						<h2 className="home-top__sec-title">{t("home.secondary_title")}</h2>
 						<div className="home-top__btn-container">
-							<NavLink className="home-top__btn" to="/appointment">
+							<NavLink className="home-top__btn" to="/rezervujte-si-termin">
 								{t("appointment_title")}
 							</NavLink>
-							<HashLink className="home-top__btn" to="#services" smooth>
+							<HashLink className="home-top__btn" to="#sluzby" smooth>
 								{t("home.services_btn")}
 							</HashLink>
 						</div>
 					</div>
-					<div className="home__services" id="services">
+					<div className="home__services" id="sluzby">
 						<h2 className="home__services-title">{t("services_title")}</h2>
 						<input
 							className="home__services-search"
@@ -118,7 +118,7 @@ const Home = ({ servicesData }) => {
 									return (
 										<NavLink
 											key={service.id}
-											to={`/service-page/${service.id}`}
+											to={`/sluzby/${service.id}`}
 											className="home__service js-service"
 										>
 											<h3>{t(service.name)}</h3>
@@ -128,7 +128,7 @@ const Home = ({ servicesData }) => {
 								})}
 						</div>
 					</div>
-					<div className="faq" id="faq">
+					<div className="faq" id="casto-kladene-otazky">
 						<h2 className="faq__title">{t("faq_title")}</h2>
 						<div className="faq__list">
 							<div className="faq__item">

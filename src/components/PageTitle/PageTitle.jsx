@@ -15,7 +15,7 @@ const PageTitle = ({ title, previousPath }) => {
 				<span>/</span>
 				{previousPath && (
 					<>
-						<HashLink className="page-title__link" to="/#services">
+						<HashLink className="page-title__link" to="/#sluzby">
 							{previousPath}
 						</HashLink>
 						<span>/</span>

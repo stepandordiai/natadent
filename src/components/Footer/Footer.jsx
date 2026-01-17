@@ -77,7 +77,7 @@ const Footer = ({ servicesData }) => {
 									className={({ isActive }) =>
 										isActive ? activeLink : inactiveLink
 									}
-									to="/contacts"
+									to="/kontakty"
 								>
 									{t("contacts_title")}
 								</NavLink>
@@ -87,18 +87,22 @@ const Footer = ({ servicesData }) => {
 									className={({ isActive }) =>
 										isActive ? activeLink : inactiveLink
 									}
-									to="/appointment"
+									to="/rezervujte-si-termin"
 								>
 									{t("appointment_title")}
 								</NavLink>
 							</li>
 							<li>
-								<HashLink className={"footer__link"} to="/#services" smooth>
+								<HashLink className="footer__link" to="/#služby" smooth>
 									{t("services_title")}
 								</HashLink>
 							</li>
 							<li>
-								<HashLink className={"footer__link"} to="/#faq" smooth>
+								<HashLink
+									className="footer__link"
+									to="/#casto-kladene-otazky"
+									smooth
+								>
 									{t("faq_title")}
 								</HashLink>
 							</li>
@@ -112,7 +116,7 @@ const Footer = ({ servicesData }) => {
 									className={({ isActive }) =>
 										isActive ? activeLink : inactiveLink
 									}
-									to="/our-team"
+									to="/nas-tym"
 								>
 									{t("our_team_title")}
 								</NavLink>
@@ -122,7 +126,7 @@ const Footer = ({ servicesData }) => {
 									className={({ isActive }) =>
 										isActive ? activeLink : inactiveLink
 									}
-									to="/price-list"
+									to="/cenik"
 								>
 									{t("price_list_title")}
 								</NavLink>
@@ -132,7 +136,7 @@ const Footer = ({ servicesData }) => {
 									className={({ isActive }) =>
 										isActive ? activeLink : inactiveLink
 									}
-									to="/smile-gallery"
+									to="/galerie-usmevu"
 								>
 									{t("smile_gallery_title")}
 								</NavLink>
@@ -140,7 +144,7 @@ const Footer = ({ servicesData }) => {
 									className={({ isActive }) =>
 										isActive ? activeLink : inactiveLink
 									}
-									to="/our-clinic"
+									to="/nase-klinika"
 								>
 									Naše klinika
 								</NavLink>
@@ -157,7 +161,7 @@ const Footer = ({ servicesData }) => {
 											className={({ isActive }) =>
 												isActive ? activeLink : inactiveLink
 											}
-											to={`/service-page/${service.id}`}
+											to={`/sluzby/${service.id}`}
 										>
 											{t(service.name)}
 										</NavLink>

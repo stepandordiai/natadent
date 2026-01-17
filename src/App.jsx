@@ -36,14 +36,14 @@ function App() {
 				<Header servicesData={servicesData} />
 				<Routes>
 					<Route path="/" element={<Home servicesData={servicesData} />} />
-					<Route path="/our-team" element={<OurTeam />} />
-					<Route path="/price-list" element={<PriceList />} />
-					<Route path="/smile-gallery" element={<SmileGallery />} />
-					<Route path="/our-clinic" element={<OurClinic />} />
-					<Route path="/contacts" element={<Contacts />} />
-					<Route path="/appointment" element={<Appointment />} />
+					<Route path="/nas-tym" element={<OurTeam />} />
+					<Route path="/cenik" element={<PriceList />} />
+					<Route path="/galerie-usmevu" element={<SmileGallery />} />
+					<Route path="/nase-klinika" element={<OurClinic />} />
+					<Route path="/kontakty" element={<Contacts />} />
+					<Route path="/rezervujte-si-termin" element={<Appointment />} />
 					<Route
-						path="/service-page/:id"
+						path="/sluzby/:id"
 						element={<ServicePage servicesData={servicesData} />}
 					/>
 					<Route path="*" element={<NotFound />} />

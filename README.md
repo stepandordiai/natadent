@@ -1,3 +1,8 @@
 # Natadent
 
-![Natadent hero screenshot](./public/screenshot/prozubik-ss-v5-c.png)
+![Natadent hero screenshot](./docs/screenshots/prozubik-ss-v5-c.png)
+
+## Tech stack
+
+- React (JavaScript)
+- SCSS

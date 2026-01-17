@@ -48,7 +48,7 @@ const OurTeam = () => {
 					content="Seznamte se s týmem odborníků z kliniky Natadent. Zkušení stomatologové, dentální hygienisté a asistenti, kteří vám poskytnou špičkovou péči s lidským přístupem."
 				/>
 				<title>{t("our_team_title")} | Natadent</title>
-				<link rel="canonical" href="https://www.natadent.cz/our-team" />
+				<link rel="canonical" href="https://www.natadent.cz/nas-tym" />
 			</Helmet>
 			<main className="our-team">
 				<Container>

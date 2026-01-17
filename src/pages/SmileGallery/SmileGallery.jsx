@@ -43,11 +43,11 @@ const SmileGallery = () => {
 				const rangeLines = document.querySelectorAll(".line");
 				rangeImages[index].style.setProperty(
 					"--x-axis",
-					rangesValue[index].value + "%"
+					rangesValue[index].value + "%",
 				);
 				rangeLines[index].style.setProperty(
 					"--x-line-axis",
-					rangesValue[index].value + "%"
+					rangesValue[index].value + "%",
 				);
 			});
 		});
@@ -61,7 +61,7 @@ const SmileGallery = () => {
 					content="Podívejte se na ukázky proměn našich pacientů v Galerii úsměvů. Skutečné výsledky profesionální stomatologické péče na klinice Natadent."
 				/>
 				<title>{t("smile_gallery_title")} | Natadent</title>
-				<link rel="canonical" href="https://www.natadent.cz/smile-gallery" />
+				<link rel="canonical" href="https://www.natadent.cz/galerie-usmevu" />
 			</Helmet>
 			<main className="smile-gallery">
 				<Container>

@@ -24,7 +24,7 @@ const Contacts = () => {
 						contactsLabels[index].classList.add("contacts-form__label--active");
 					} else {
 						contactsLabels[index].classList.remove(
-							"contacts-form__label--active"
+							"contacts-form__label--active",
 						);
 					}
 				});
@@ -35,7 +35,7 @@ const Contacts = () => {
 			const selectBtn = select.querySelector(".custom-select__btn");
 			const selectList = select.querySelector(".custom-select__list");
 			const selectOptions = selectList.querySelectorAll(
-				".custom-select__option"
+				".custom-select__option",
 			);
 			const selectOption = document.querySelector(".custom-select__input");
 
@@ -82,7 +82,7 @@ const Contacts = () => {
 					content="Kontaktujte nás – zubní klinika Natadent v Kolíně. Najdete zde adresu, telefonní číslo, e-mail a ordinační hodiny. Jsme tu pro vás s profesionální péčí a lidským přístupem."
 				/>
 				<title>{t("contacts_title")} | Natadent</title>
-				<link rel="canonical" href="https://www.natadent.cz/contacts" />
+				<link rel="canonical" href="https://www.natadent.cz/kontakty" />
 			</Helmet>
 			<main className="contacts">
 				<Container>

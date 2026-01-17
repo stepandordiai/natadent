@@ -92,7 +92,7 @@ const Header = ({ servicesData }) => {
 									className={({ isActive }) =>
 										isActive ? activeLink : inactiveLink
 									}
-									to="/our-team"
+									to="/nas-tym"
 								>
 									{t("our_team_title")}
 								</NavLink>
@@ -100,7 +100,7 @@ const Header = ({ servicesData }) => {
 									className={({ isActive }) =>
 										isActive ? activeLink : inactiveLink
 									}
-									to="/price-list"
+									to="/cenik"
 								>
 									{t("price_list_title")}
 								</NavLink>
@@ -108,7 +108,7 @@ const Header = ({ servicesData }) => {
 									className={({ isActive }) =>
 										isActive ? activeLink : inactiveLink
 									}
-									to="/smile-gallery"
+									to="/galerie-usmevu"
 								>
 									{t("smile_gallery_title")}
 								</NavLink>
@@ -116,7 +116,7 @@ const Header = ({ servicesData }) => {
 									className={({ isActive }) =>
 										isActive ? activeLink : inactiveLink
 									}
-									to="/our-clinic"
+									to="/nase-klinika"
 								>
 									Naše klinika
 								</NavLink>
@@ -135,7 +135,7 @@ const Header = ({ servicesData }) => {
 											className={({ isActive }) =>
 												isActive ? activeLink : inactiveLink
 											}
-											to={`/service-page/${service.id}`}
+											to={`/sluzby/${service.id}`}
 										>
 											{t(service.name)}
 										</NavLink>
@@ -148,7 +148,7 @@ const Header = ({ servicesData }) => {
 								className={({ isActive }) =>
 									isActive ? activeLink : inactiveLink
 								}
-								to="/contacts"
+								to="/kontakty"
 							>
 								{t("contacts_title")}
 							</NavLink>
@@ -202,7 +202,7 @@ const Header = ({ servicesData }) => {
 										className={({ isActive }) =>
 											isActive ? activeMenuDdLink : inactiveMenuDdLink
 										}
-										to="/our-team"
+										to="/nas-tym"
 									>
 										{t("our_team_title")}
 									</NavLink>
@@ -211,7 +211,7 @@ const Header = ({ servicesData }) => {
 										className={({ isActive }) =>
 											isActive ? activeMenuDdLink : inactiveMenuDdLink
 										}
-										to="/price-list"
+										to="/cenik"
 									>
 										{t("price_list_title")}
 									</NavLink>
@@ -220,7 +220,7 @@ const Header = ({ servicesData }) => {
 										className={({ isActive }) =>
 											isActive ? activeMenuDdLink : inactiveMenuDdLink
 										}
-										to="/smile-gallery"
+										to="/galerie-usmevu"
 									>
 										{t("smile_gallery_title")}
 									</NavLink>
@@ -229,7 +229,7 @@ const Header = ({ servicesData }) => {
 										className={({ isActive }) =>
 											isActive ? activeMenuDdLink : inactiveMenuDdLink
 										}
-										to="/our-clinic"
+										to="/nase-klinika"
 									>
 										Naše klinika
 									</NavLink>
@@ -251,7 +251,7 @@ const Header = ({ servicesData }) => {
 												className={({ isActive }) =>
 													isActive ? activeMenuDdLink : inactiveMenuDdLink
 												}
-												to={`/service-page/${service.id}`}
+												to={`/sluzby/${service.id}`}
 											>
 												{t(service.name)}
 											</NavLink>
@@ -266,7 +266,7 @@ const Header = ({ servicesData }) => {
 								className={({ isActive }) =>
 									isActive ? activeMenuLink : inactiveMenuLink
 								}
-								to="/contacts"
+								to="/kontakty"
 							>
 								<span>{t("contacts_title")}</span>
 							</NavLink>
@@ -277,7 +277,7 @@ const Header = ({ servicesData }) => {
 								className={({ isActive }) =>
 									isActive ? activeMenuLink : inactiveMenuLink
 								}
-								to="/appointment"
+								to="/rezervujte-si-termin"
 							>
 								<span>{t("appointment_title")}</span>
 							</NavLink>
