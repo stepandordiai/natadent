@@ -1,0 +1,32 @@
+[
+	{
+		"id": "stomatologie",
+		"name": "service_1",
+		"desc": "service_desc_1"
+	},
+	{
+		"id": "prevence",
+		"name": "service_2",
+		"desc": "service_desc_2"
+	},
+	{
+		"id": "dentalni-hygiena",
+		"name": "service_3",
+		"desc": "service_desc_3"
+	},
+	{
+		"id": "stomatochirurgie",
+		"name": "service_4",
+		"desc": "service_desc_4"
+	},
+	{
+		"id": "kompletni-rekonstrukce-chrupu",
+		"name": "service_5",
+		"desc": "service_desc_5"
+	},
+	{
+		"id": "extrakce-zubu-moudrosti",
+		"name": "service_6",
+		"desc": "service_desc_6"
+	}
+]

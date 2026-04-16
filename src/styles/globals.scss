@@ -1,0 +1,35 @@
+@use "reset" as *;
+@use "variables" as *;
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--montserrat-font);
+	background: var(--bg-clr);
+	color: var(--txt-clr);
+	overflow-y: hidden;
+}
+
+.body--active {
+	overflow-y: scroll !important;
+	height: auto !important;
+}
+
+a {
+	color: var(--txt-clr);
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+}
+
+.link {
+	transition: color 150ms;
+
+	&:hover {
+		color: var(--accent-clr);
+	}
+}

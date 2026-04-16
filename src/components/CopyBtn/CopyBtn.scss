@@ -1,0 +1,7 @@
+.copy-btn {
+	transition: color 150ms;
+
+	&:hover {
+		color: var(--accent-clr) !important;
+	}
+}

@@ -1,0 +1,59 @@
+@use "./../../styles/mixins" as *;
+
+.banner {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, calc(-50% + 30px));
+	z-index: 100;
+	width: calc(100% - 30px);
+	max-width: 600px;
+	@include flex-center;
+	flex-direction: column;
+	row-gap: 30px;
+	background: rgba(255, 255, 255, 0.5);
+	-webkit-backdrop-filter: blur(30px);
+	backdrop-filter: blur(30px);
+	box-shadow: var(--cstm-box-shadow);
+	border-radius: 30px;
+	padding: 10px;
+	opacity: 0;
+	pointer-events: none;
+	animation: animateBanner 0.3s 3s forwards;
+}
+
+@keyframes animateBanner {
+	to {
+		pointer-events: all;
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.banner__btn {
+	align-self: flex-end;
+}
+
+.banner__title {
+	font-size: clamp(1.5rem, 4vw, 2rem);
+	font-weight: 500;
+	text-align: center;
+}
+
+.banner__link {
+	justify-self: center;
+	height: 30px;
+	@include grid-center;
+	border-radius: 15px;
+	padding: 0 7.5px;
+	transition: all 300ms;
+
+	&:hover {
+		background: var(--accent-clr);
+	}
+}
+
+.banner__map {
+	width: 100%;
+	border-radius: 25px;
+}
