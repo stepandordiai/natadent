@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import LngSelect from "@/components/common/LngSelect/LngSelect";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Container from "@/components/Container/Container";
 import services from "@/data/services.json";
 import Link from "next/link";
@@ -68,7 +68,7 @@ const Header = () => {
 			<Container>
 				<div className="header-top">
 					<a href="mailto:info@natadent.cz">info@natadent.cz</a>
-					<a href="tel:+420773802886">+420 773 802 886</a>
+					<a href="tel:+420773853539">+420 773 853 539</a>
 				</div>
 				<div className="header-bottom">
 					<Link className="header-bottom__logo" href="/">
@@ -127,21 +127,7 @@ const Header = () => {
 								<span>{t("services_title")}</span>
 								<span className="nav__dd-btn-icon"></span>
 							</div>
-							<div className="nav__dd">
-								{services.map((service) => {
-									return (
-										<Link
-											key={service.id}
-											// className={({ isActive }) =>
-											// 	isActive ? activeLink : inactiveLink
-											// }
-											href={`/sluzby/${service.id}`}
-										>
-											{t(service.name)}
-										</Link>
-									);
-								})}
-							</div>
+							<div className="nav__dd"></div>
 						</div>
 						<div>
 							<Link
@@ -246,22 +232,7 @@ const Header = () => {
 								<span className="menu__nav-btn-icon"></span>
 							</button>
 							<div className="menu-dd__wrapper">
-								<div className="menu-dd">
-									{services.map((service) => {
-										return (
-											<Link
-												onClick={() => setIsMenuActive(false)}
-												key={service.id}
-												// className={({ isActive }) =>
-												// 	isActive ? activeMenuDdLink : inactiveMenuDdLink
-												// }
-												href={`/sluzby/${service.id}`}
-											>
-												{t(service.name)}
-											</Link>
-										);
-									})}
-								</div>
+								<div className="menu-dd"></div>
 							</div>
 						</li>
 						<li className="menu-item">

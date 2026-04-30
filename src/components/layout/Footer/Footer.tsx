@@ -145,28 +145,13 @@ const Footer = () => {
 					</div>
 					<div className="footer-middle__nav-list-wrapper">
 						<p>{t("services_title")}</p>
-						<ul>
-							{services.map((service) => {
-								return (
-									<li key={service.id}>
-										<Link
-											// className={({ isActive }) =>
-											// 	isActive ? activeLink : inactiveLink
-											// }
-											href={`/sluzby/${service.id}`}
-										>
-											{t(service.name)}
-										</Link>
-									</li>
-								);
-							})}
-						</ul>
+						<ul></ul>
 					</div>
 					<div className="footer-middle__contacts-wrapper">
 						<p>{t("contacts_title")}</p>
 						<ul>
 							<li>
-								<a href="tel:+420773802886">+420 773 802 886</a>
+								<a href="tel:+420773853539">+420 773 853 539</a>
 							</li>
 							<li>
 								<a href="mailto:info@natadent.cz">info@natadent.cz</a>

@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import Container from "@/components/Container/Container";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
-import "./SmileGallery.scss";
+import "./styles.scss";
 
 const SmileGallery = () => {
 	const t = useTranslations();

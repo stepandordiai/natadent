@@ -1,4 +1,4 @@
-@use "./../../styles/mixins" as *;
+@use "@/styles/mixins" as *;
 
 .smile-gallery {
 	opacity: 0;
@@ -86,7 +86,7 @@
 	appearance: none;
 	height: 40px;
 	width: 40px;
-	background: url("./../../icons/left-and-right.png");
+	background: url("/icons/left-and-right.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	box-shadow: none;

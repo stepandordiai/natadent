@@ -1,32 +1,86 @@
 [
 	{
-		"id": "stomatologie",
-		"name": "service_1",
-		"desc": "service_desc_1"
+		"id": "konzultace-dospely",
+		"name": "Konzultace dospělý",
+		"price": 1600,
+		"time": 20,
+		"type": "vysetreni"
 	},
 	{
-		"id": "prevence",
-		"name": "service_2",
-		"desc": "service_desc_2"
+		"id": "konzultace-dite-do-15-let",
+		"name": "Konzultace dítě do 15 let",
+		"price": 1600,
+		"time": 20,
+		"type": "vysetreni"
+	},
+	{
+		"id": "administrativa",
+		"name": "Administrativa",
+		"price": 400,
+		"time": 5,
+		"type": "administrativa"
 	},
 	{
 		"id": "dentalni-hygiena",
-		"name": "service_3",
-		"desc": "service_desc_3"
+		"name": "Stomatologické ošetření při zvýšené časové náročnosti výkonu(1min)",
+		"price": 80,
+		"time": 1,
+		"type": "administrativa"
 	},
 	{
-		"id": "stomatochirurgie",
-		"name": "service_4",
-		"desc": "service_desc_4"
+		"id": "storno-poplatek-pri-absenci-neomluvena-24-hod-predem",
+		"name": "Storno poplatek při absenci(neomluvena 24 hod předem)",
+		"price": 800,
+		"time": 10,
+		"type": "administrativa"
 	},
 	{
-		"id": "kompletni-rekonstrukce-chrupu",
-		"name": "service_5",
-		"desc": "service_desc_5"
+		"id": "dentalni-hygiena-zakladni-bez-kartacku",
+		"name": "Dentální hygiena základní bez kartáčků",
+		"price": 1800,
+		"time": 45,
+		"type": "Dentální hygiena"
 	},
 	{
-		"id": "extrakce-zubu-moudrosti",
-		"name": "service_6",
-		"desc": "service_desc_6"
+		"id": "dentalni-hygiena-komplexni-kartacky-lecebny-plan",
+		"name": "Dentální hygiena komplexní - kartáčky, léčebný plán",
+		"price": 2400,
+		"time": 60,
+		"type": "Dentální hygiena"
+	},
+	{
+		"id": "instruktaz-s-mezizubnim-kartackem",
+		"name": "Instruktáž s mezizubním kartáčkem",
+		"price": 400,
+		"time": 10,
+		"type": "Dentální hygiena"
+	},
+	{
+		"id": "instruktaz-s-jednosvazkovym-kartackem",
+		"name": "Instruktáž s jednosvazkovým kartáčkem",
+		"price": 400,
+		"time": 10,
+		"type": "Dentální hygiena"
+	},
+	{
+		"id": "instruktaz-s-klasickym-zubnim-kartackem",
+		"name": "Instruktáž s klasickým zubním kartáčkem",
+		"price": 400,
+		"time": 10,
+		"type": "Dentální hygiena"
+	},
+	{
+		"id": "dentalni-hygiena-deti-do-14-let",
+		"name": "Dentální hygiena děti do 14 let",
+		"price": 1200,
+		"time": 30,
+		"type": "Dentální hygiena"
+	},
+	{
+		"id": "airflow",
+		"name": "Airflow",
+		"price": 800,
+		"time": 20,
+		"type": "Dentální hygiena"
 	}
 ]

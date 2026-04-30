@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import Container from "@/components/Container/Container";
 import { Link } from "@/i18n/navigation";
 import services from "@/data/services.json";
-import "./styles.scss";
 import CopyBtn from "@/components/CopyBtn/CopyBtn";
+import "./styles.scss";
 
 const Home = () => {
 	const t = useTranslations();
@@ -60,9 +60,9 @@ const Home = () => {
 							<a
 								style={{ marginBottom: 5 }}
 								className="link"
-								href="tel:+420773802886"
+								href="tel:+420773853539"
 							>
-								+420 773 802 886
+								+420 773 853 539
 							</a>
 							<p style={{ fontWeight: 500, marginBottom: 5 }}>Kde jsme</p>
 							<a
@@ -98,7 +98,7 @@ const Home = () => {
 							/>
 							<span>{t("home.services_no_result_pop_up")}</span>
 						</p>
-						<div className="home__services-grid">
+						{/* <div className="home__services-grid">
 							{services
 								.filter((service) => {
 									return search.toLowerCase().trim() === ""
@@ -119,7 +119,7 @@ const Home = () => {
 										</Link>
 									);
 								})}
-						</div>
+						</div> */}
 					</div>
 					<div className="faq" id="casto-kladene-otazky">
 						<h2 className="faq__title">{t("faq_title")}</h2>

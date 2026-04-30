@@ -8,7 +8,13 @@ import { useRouter } from "@/i18n/navigation";
 import { usePathname } from "next/navigation";
 import "./LngSelect.scss";
 
-const languages = [
+interface Lng {
+	locale: string;
+	label: string;
+	imgSrc: string;
+}
+
+const languages: Lng[] = [
 	{
 		locale: "cs",
 		label: "CZ",
@@ -38,7 +44,7 @@ const LangSelect = () => {
 	);
 
 	// TODO: LEARN THIS
-	const handleLngOption = (lng) => {
+	const handleLngOption = (lng: Lng) => {
 		// next-intl сама оновить URL, зберігши поточний шлях
 		// Наприклад: /uk/about -> /en/about
 		router.replace(pathname, { locale: lng.locale });

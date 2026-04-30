@@ -1,7 +1,7 @@
-import { Helmet } from "react-helmet-async";
-import Container from "../../components/Container/Container";
-import PageTitle from "../../components/PageTitle/PageTitle";
-import "./OurClinic.scss";
+import type { Metadata } from "next";
+import Container from "@/components/Container/Container";
+import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
+import "./styles.scss";
 
 const clinicImages = [
 	"https://cdn.prod.website-files.com/67c64fb730bae54f87c547f8/67d349994688c248cc02cac3_Swish---Web-Res-012.jpg",
@@ -16,30 +16,33 @@ const clinicImages = [
 	"https://cdn.prod.website-files.com/67c64fb730bae54f87c547f8/67d34995957e75830269f0a9_exam-room.png",
 ];
 
+export function generateMetadata(): Metadata {
+	return {
+		title: "Naše klinika | Natadent",
+		alternates: {
+			canonical: "https://www.natadent.cz/nase-klinika",
+		},
+	};
+}
+
 const OurClinic = () => {
 	return (
-		<>
-			<Helmet>
-				<title>Naše klinika | Natadent</title>
-				<link rel="canonical" href="https://www.natadent.cz/nase-klinika" />
-			</Helmet>
-			<main>
-				<Container>
-					<PageTitle title="Naše klinika" />
-					<div className="our-clinic__masonry">
-						{clinicImages.map((img, index) => {
-							return (
-								<div key={index} className="masonry__item">
-									<div className="masonry__img-container">
-										<img src={img} alt="" loading="lazy" />
-									</div>
+		<main>
+			<Container>
+				<Breadcrumbs title="Naše klinika" />
+				<div className="our-clinic__masonry">
+					{clinicImages.map((img, index) => {
+						return (
+							<div key={index} className="masonry__item">
+								<div className="masonry__img-container">
+									<img src={img} alt="" loading="lazy" />
 								</div>
-							);
-						})}
-					</div>
-				</Container>
-			</main>
-		</>
+							</div>
+						);
+					})}
+				</div>
+			</Container>
+		</main>
 	);
 };
 

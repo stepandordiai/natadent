@@ -1,27 +1,32 @@
-import PageTitle from "@/components/PageTitle/PageTitle";
+"use client";
+
+import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 import Container from "@/components/Container/Container";
 import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
-import "./ServicePage.scss";
+import { useParams } from "next/navigation";
+import { useTranslations } from "next-intl";
+import services from "@/data/services.json";
+import "./styles.scss";
 
-const ServicePage = ({ servicesData }) => {
-	const { t } = useTranslation();
+const ServicePage = () => {
+	const t = useTranslations();
 
 	const { id } = useParams();
 
-	const service = servicesData.find((service) => service.id === id);
+	const service = services.find((service) => service.id === id);
 
 	if (!service) {
 		return notFound();
 	}
 
-	const currentIndex = servicesData.findIndex((service) => service.id === id);
+	const currentIndex = services.findIndex((service) => service.id === id);
 
-	const nextService = servicesData[(currentIndex + 1) % servicesData.length];
+	const nextService = services[(currentIndex + 1) % services.length];
 	const prevService =
 		currentIndex - 1 !== -1
-			? servicesData[currentIndex - 1]
-			: servicesData[servicesData.length - 1];
+			? services[currentIndex - 1]
+			: services[services.length - 1];
 
 	return (
 		<>
@@ -32,8 +37,8 @@ const ServicePage = ({ servicesData }) => {
 			</Helmet> */}
 			<main className="service-page">
 				<Container>
-					<PageTitle
-						title={t(service.name)}
+					<Breadcrumbs
+						title={service.name}
 						previousPath={t("services_title")}
 					/>
 					<p className="coming-soon">{t("coming_soon")}</p>
@@ -46,7 +51,7 @@ const ServicePage = ({ servicesData }) => {
 								<img width={20} height={20} src="/icons/back.png" alt="" />
 								<span>Previous</span>
 							</span>
-							<span>{t(prevService.name)}</span>
+							<span>{prevService.name}</span>
 						</Link>
 						<Link
 							className={"service-page__link"}
@@ -56,7 +61,7 @@ const ServicePage = ({ servicesData }) => {
 								<span>Next</span>
 								<img width={20} height={20} src="/icons/next.png" alt="" />
 							</span>
-							<span>{t(nextService.name)}</span>
+							<span>{nextService.name}</span>
 						</Link>
 					</div>
 				</Container>
