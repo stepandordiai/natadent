@@ -1,9 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useLocale } from "next-intl";
 import classNames from "classnames";
-// import { useRouter } from "next/router";
 import { useRouter } from "@/i18n/navigation";
 import { usePathname } from "next/navigation";
 import "./LngSelect.scss";
@@ -28,12 +27,10 @@ const languages: Lng[] = [
 	{ locale: "en", label: "EN", imgSrc: "/icons/united-states.png" },
 ];
 
-const LangSelect = () => {
+const LngSelect = () => {
 	const locale = useLocale();
 	const router = useRouter();
 	const pathname = usePathname();
-
-	useEffect(() => {}, []);
 
 	const inactiveLngOption = "lang-select__option";
 	const activeLngOption = "lang-select__option lang-select__option--active";
@@ -45,8 +42,6 @@ const LangSelect = () => {
 
 	// TODO: LEARN THIS
 	const handleLngOption = (lng: Lng) => {
-		// next-intl сама оновить URL, зберігши поточний шлях
-		// Наприклад: /uk/about -> /en/about
 		router.replace(pathname, { locale: lng.locale });
 		setSelectedLng(lng);
 		setLngVisible(false);
@@ -87,4 +82,4 @@ const LangSelect = () => {
 	);
 };
 
-export default LangSelect;
+export default LngSelect;

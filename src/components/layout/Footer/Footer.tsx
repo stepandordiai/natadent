@@ -39,27 +39,27 @@ const Footer = () => {
 						<ul className="working-hours">
 							<li className={day === 1 ? "day--active" : ""}>
 								<span>{t("footer.mon")}:</span>
-								<span>{t("footer.closed")}</span>
+								<span>9:00-12:00 | 12:30-16:00</span>
 							</li>
 							<li className={day === 2 ? "day--active" : ""}>
 								<span>{t("footer.tue")}:</span>
-								<span>{t("footer.closed")}</span>
+								<span>9:00-12:00 | 12:30-16:00</span>
 							</li>
 							<li className={day === 3 ? "day--active" : ""}>
 								<span>{t("footer.wed")}:</span>
-								<span>{t("footer.closed")}</span>
+								<span>9:00-12:00 | 12:30-16:00</span>
 							</li>
 							<li className={day === 4 ? "day--active" : ""}>
 								<span>{t("footer.thu")}:</span>
-								<span>{t("footer.closed")}</span>
+								<span>9:00-12:00 | 12:30-16:00</span>
 							</li>
 							<li className={day === 5 ? "day--active" : ""}>
 								<span>{t("footer.fri")}:</span>
-								<span>{t("footer.closed")}</span>
+								<span>9:00-12:00 | 12:30-16:00</span>
 							</li>
 							<li className={day === 6 ? "day--active" : ""}>
 								<span>{t("footer.sat")}:</span>
-								<span>{t("footer.closed")}</span>
+								<span>9:00-12:00 | 12:30-14:00</span>
 							</li>
 							<li className={day === 0 ? "day--active" : ""}>
 								<span>{t("footer.sun")}:</span>

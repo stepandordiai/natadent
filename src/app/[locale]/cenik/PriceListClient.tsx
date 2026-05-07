@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 import Container from "@/components/Container/Container";
+import services from "@/data/services.json";
 import { useTranslations } from "next-intl";
 
 export default function PriceListClient() {
@@ -12,6 +13,21 @@ export default function PriceListClient() {
 
 	const inactiveFilterBtn = "filter-btn";
 	const activeFilterBtn = "filter-btn active-filter-btn";
+
+	const uniqueTypes = [...new Set(services.map((s) => s.type))];
+
+	const filteredServices = services.filter((s) =>
+		filter === "" ? s : filter === s.type,
+	);
+
+	const filteredUniqueTypes = [
+		...new Set(
+			services
+				.filter((s) => (filter === "" ? s : s.type === filter))
+				.map((s) => s.type),
+		),
+	];
+
 	return (
 		<main className="price-list">
 			<Container>
@@ -19,134 +35,41 @@ export default function PriceListClient() {
 				<div className="filter-btn-wrapper">
 					<button
 						className={filter === "" ? activeFilterBtn : inactiveFilterBtn}
-						// onClick={(e) => setFilter(e.target.dataset.service)}
-						data-service=""
+						onClick={() => setFilter("")}
 					>
 						{t("price_data.all_title")}
 					</button>
-					<button
-						className={
-							filter === "braces" ? activeFilterBtn : inactiveFilterBtn
-						}
-						// onClick={(e) => setFilter(e.target.dataset.service)}
-						data-service="braces"
-					>
-						{t("price_data.braces_title")}
-					</button>
-					<button
-						className={
-							filter === "dentistry" ? activeFilterBtn : inactiveFilterBtn
-						}
-						// onClick={(e) => setFilter(e.target.dataset.service)}
-						data-service="dentistry"
-					>
-						{t("price_data.dentistry_title")}
-					</button>
+					{uniqueTypes.map((t, i) => {
+						return (
+							<button
+								key={i}
+								onClick={() => setFilter(t)}
+								className={filter === t ? activeFilterBtn : inactiveFilterBtn}
+							>
+								{t}
+							</button>
+						);
+					})}
 				</div>
-				{filter === "" && (
-					<div className="price-list__wrapper">
-						<table className="price-list__table">
-							<caption className="price-list__title">
-								{t("price_data.braces_title")}
-							</caption>
-							<tbody>
-								<tr>
-									<td>{t("braces.name_1")}</td>
-									<td>{t("braces.price_1")}</td>
-								</tr>
-								<tr>
-									<td>{t("braces.name_1")}</td>
-									<td>{t("braces.price_1")}</td>
-								</tr>
-								<tr>
-									<td>{t("braces.name_1")}</td>
-									<td>{t("braces.price_1")}</td>
-								</tr>
-								<tr>
-									<td>{t("braces.name_1")}</td>
-									<td>{t("braces.price_1")}</td>
-								</tr>
-							</tbody>
-						</table>
-						<table className="price-list__table">
-							<caption className="price-list__title">
-								{t("price_data.dentistry_title")}
-							</caption>
-							<tbody>
-								<tr>
-									<td>{t("dentistry.name_1")}</td>
-									<td>{t("dentistry.price_1")}</td>
-								</tr>
-								<tr>
-									<td>{t("dentistry.name_1")}</td>
-									<td>{t("dentistry.price_1")}</td>
-								</tr>
-								<tr>
-									<td>{t("dentistry.name_1")}</td>
-									<td>{t("dentistry.price_1")}</td>
-								</tr>
-								<tr>
-									<td>{t("dentistry.name_1")}</td>
-									<td>{t("dentistry.price_1")}</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				)}
-				{filter === "braces" && (
-					<div className="price-list__wrapper">
-						<table className="price-list__table">
-							<caption className="price-list__title">
-								{t("price_data.braces_title")}
-							</caption>
-							<tbody>
-								<tr>
-									<td>{t("braces.name_1")}</td>
-									<td>{t("braces.price_1")}</td>
-								</tr>
-								<tr>
-									<td>{t("braces.name_1")}</td>
-									<td>{t("braces.price_1")}</td>
-								</tr>
-								<tr>
-									<td>{t("braces.name_1")}</td>
-									<td>{t("braces.price_1")}</td>
-								</tr>
-								<tr>
-									<td>{t("braces.name_1")}</td>
-									<td>{t("braces.price_1")}</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				)}
-				{filter === "dentistry" && (
-					<div className="price-list__wrapper">
-						<table className="price-list__table">
-							<caption className="price-list__title">
-								{t("price_data.dentistry_title")}
-							</caption>
-							<tbody>
-								<tr>
-									<td>{t("dentistry.name_1")}</td>
-									<td>{t("dentistry.price_1")}</td>
-								</tr>
-								<tr>
-									<td>{t("dentistry.name_1")}</td>
-									<td>{t("dentistry.price_1")}</td>
-								</tr>
-								<tr>
-									<td>{t("dentistry.name_1")}</td>
-									<td>{t("dentistry.price_1")}</td>
-								</tr>
-								<tr>
-									<td>{t("dentistry.name_1")}</td>
-									<td>{t("dentistry.price_1")}</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				)}
+				{filteredUniqueTypes.map((t, i) => {
+					return (
+						<div key={i} className="price-list__table">
+							<p className="price-list__title">{t}</p>
+							<ul className="price-list-ul">
+								{filteredServices
+									.filter((s) => s.type === t)
+									.map((s, i) => {
+										return (
+											<li key={i}>
+												<p>{s.name}</p>
+												<p>{s.price} Kč</p>
+											</li>
+										);
+									})}
+							</ul>
+						</div>
+					);
+				})}
 			</Container>
 		</main>
 	);
