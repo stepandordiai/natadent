@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import PriceListClient from "./PriceListClient";
 import { Metadata } from "next";
+import { BASE_URL } from "@/lib/constants";
 import "./styles.scss";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -11,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		description:
 			"Prohlédněte si aktuální ceník služeb zubní kliniky Natadent. Transparentní ceny za stomatologické výkony, dentální hygienu, implantáty a další ošetření.",
 		alternates: {
-			canonical: "https://www.natadent.cz/cenik",
+			canonical: `${BASE_URL}/cs/cenik`,
 		},
 	};
 }

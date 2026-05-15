@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Container from "@/components/Container/Container";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
+import { BASE_URL } from "@/lib/constants";
 import "./styles.scss";
 
 const clinicImages = [
@@ -20,7 +21,7 @@ export function generateMetadata(): Metadata {
 	return {
 		title: "Naše klinika | Natadent",
 		alternates: {
-			canonical: "https://www.natadent.cz/nase-klinika",
+			canonical: `${BASE_URL}/cs/nase-klinika`,
 		},
 	};
 }

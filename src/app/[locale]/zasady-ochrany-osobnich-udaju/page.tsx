@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Container from "@/components/Container/Container";
 import CopyBtn from "@/components/CopyBtn/CopyBtn";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
+import { BASE_URL } from "@/lib/constants";
 import "./styles.scss";
 
 export function generateMetadata(): Metadata {
@@ -10,7 +11,7 @@ export function generateMetadata(): Metadata {
 		description:
 			"Zásady zpracování osobních údajů společnosti NATADENT s.r.o. v souladu s nařízením GDPR.",
 		alternates: {
-			canonical: "https://www.natadent.cz/gdpr",
+			canonical: `${BASE_URL}/cs/gdpr`,
 		},
 	};
 }

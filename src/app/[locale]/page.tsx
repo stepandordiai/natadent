@@ -1,138 +1,122 @@
-"use client";
-
-import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { getTranslations } from "next-intl/server";
 import Container from "@/components/Container/Container";
-import { Link } from "@/i18n/navigation";
-import services from "@/data/services.json";
 import CopyBtn from "@/components/CopyBtn/CopyBtn";
+import type { Metadata } from "next";
+import { BASE_URL } from "@/lib/constants";
 import "./styles.scss";
 
-const Home = () => {
-	const t = useTranslations();
+const services = [
+	{
+		name: "Vysetreni",
+		img: "/01.png",
+		desc: "Komplexní zubní vyšetření zaměřené na kontrolu stavu zubů, dásní a celé dutiny ústní. Součástí je diagnostika kazů, zánětů a dalších problémů, návrh vhodné léčby a doporučení pro správnou dentální hygienu. Pravidelné vyšetření pomáhá předcházet vážnějším komplikacím a udržet zdravý a krásný úsměv.",
+	},
+	{
+		name: "Administrativa",
+		img: "/02.png",
+		desc: "Zajišťujeme kompletní administrativní servis spojený s vaším ošetřením. Pomůžeme s registrací, plánováním termínů, vedením zdravotní dokumentace i komunikací se zdravotními pojišťovnami. Naším cílem je zajistit pohodlný a bezproblémový průběh vaší návštěvy.",
+	},
+	{
+		name: "Dentální hygiena",
+		img: "/03.png",
+		desc: "Profesionální dentální hygiena pomáhá předcházet vzniku zubního kazu, zánětu dásní a parodontózy. Součástí ošetření je odstranění zubního kamene, plaku a pigmentací, leštění zubů a individuální doporučení správné domácí péče. Pravidelná dentální hygiena přispívá ke zdravému chrupu, svěžímu dechu a krásnému úsměvu.",
+	},
+	{
+		name: "Bělení",
+		img: "/04.png",
+		desc: "Profesionální bělení zubů je bezpečný a efektivní způsob, jak získat zářivější a bělejší úsměv. Používáme moderní a šetrné metody, které pomáhají odstranit pigmentace způsobené jídlem, nápoji nebo kouřením. Výsledkem jsou viditelně světlejší zuby a přirozeně krásný úsměv.",
+	},
+	{
+		name: "Výplně",
+		img: "/05.png",
+		desc: "Zubní výplně slouží k ošetření zubního kazu a obnovení přirozeného tvaru i funkce zubu. Používáme kvalitní a estetické materiály, které barevně odpovídají vašim zubům a zajišťují dlouhou životnost ošetření. Naším cílem je zachovat zdraví chrupu a přirozený vzhled vašeho úsměvu.",
+	},
+	{
+		name: "Retainery, dlahy",
+		img: "/01.png",
+		desc: "Retainery a ochranné dlahy pomáhají udržet správné postavení zubů po ortodontické léčbě a chrání chrup před nadměrným zatížením či skřípáním zubů. Zhotovujeme individuálně přizpůsobené dlahy pro maximální pohodlí, ochranu a dlouhodobé zachování zdravého úsměvu.",
+	},
+	{
+		name: "Endodoncie",
+		img: "/02.png",
+		desc: "Endodontické ošetření, známé také jako ošetření kořenových kanálků, slouží k záchraně zubu postiženého hlubokým kazem nebo zánětem. Pomocí moderních metod důkladně vyčistíme a ošetříme kořenový systém zubu, čímž pomáháme odstranit bolest a zachovat vlastní zub co nejdéle. Ošetření provádíme šetrně a s důrazem na komfort pacienta.",
+	},
+	{
+		name: "Chirurgie",
+		img: "/03.png",
+		desc: "Provádíme široké spektrum stomatochirurgických zákroků s důrazem na šetrnost, bezpečnost a komfort pacienta. Mezi nejčastější výkony patří extrakce zubů, chirurgické odstranění zubů moudrosti či ošetření zánětlivých ložisek. Používáme moderní postupy a kvalitní anestezii pro co nejpohodlnější průběh ošetření i rychlé hojení.",
+	},
+	{
+		name: "Proteticke faze ordinacni",
+		img: "/04.png",
+		desc: "Protetické ošetření v ordinační fázi zahrnuje přípravu zubů, otisky, dočasné náhrady a další kroky potřebné pro zhotovení kvalitních protetických prací. Dbáme na preciznost, funkčnost i estetiku, aby výsledné korunky, můstky či náhrady dokonale odpovídaly vašim potřebám a přirozenému vzhledu chrupu.",
+	},
+	{
+		name: "Samoplátci",
+		img: "/05.png",
+		desc: "Poskytujeme kvalitní stomatologickou péči také samoplátcům bez omezení zdravotní pojišťovnou. Nabízíme individuální přístup, moderní ošetření a transparentní cenovou politiku. Díky tomu si můžete zvolit péči a materiály přesně podle svých potřeb a očekávání.",
+	},
+];
 
-	const [search, setSearch] = useState("");
+export async function generateMetadata(): Promise<Metadata> {
+	const t = await getTranslations();
 
-	useEffect(() => {
-		document.querySelectorAll(".js-faq__btn").forEach((btn, index) => {
-			btn.addEventListener("click", () => {
-				const gridDropdowns = document.querySelectorAll(".grid-dropdown");
-				const faqBtnIcon = document.querySelectorAll(".faq__btn-icon");
-				gridDropdowns[index].classList.toggle("grid-dropdown--active");
-				faqBtnIcon[index].classList.toggle("faq__btn-icon--active");
-			});
-		});
-	}, []);
+	return {
+		title: `${t("home.secondary_title")} | Natadent`,
+		description:
+			"Moderní zubní klinika v Kolíně. Nabízíme bezbolestné ortodontické ošetření pomocí analgosedace i celkové anestezie. Komfortní prostředí, profesionální péče a dostupné služby pro zdravý úsměv.",
+		alternates: {
+			canonical: `${BASE_URL}/cs`,
+		},
+	};
+}
 
-	const services = [
-		{
-			name: "Vysetreni",
-			img: "/01.png",
-			desc: "Komplexní zubní vyšetření zaměřené na kontrolu stavu zubů, dásní a celé dutiny ústní. Součástí je diagnostika kazů, zánětů a dalších problémů, návrh vhodné léčby a doporučení pro správnou dentální hygienu. Pravidelné vyšetření pomáhá předcházet vážnějším komplikacím a udržet zdravý a krásný úsměv.",
-		},
-		{
-			name: "Administrativa",
-			img: "/02.png",
-			desc: "Zajišťujeme kompletní administrativní servis spojený s vaším ošetřením. Pomůžeme s registrací, plánováním termínů, vedením zdravotní dokumentace i komunikací se zdravotními pojišťovnami. Naším cílem je zajistit pohodlný a bezproblémový průběh vaší návštěvy.",
-		},
-		{
-			name: "Dentální hygiena",
-			img: "/03.png",
-			desc: "Profesionální dentální hygiena pomáhá předcházet vzniku zubního kazu, zánětu dásní a parodontózy. Součástí ošetření je odstranění zubního kamene, plaku a pigmentací, leštění zubů a individuální doporučení správné domácí péče. Pravidelná dentální hygiena přispívá ke zdravému chrupu, svěžímu dechu a krásnému úsměvu.",
-		},
-		{
-			name: "Bělení",
-			img: "/04.png",
-			desc: "Profesionální bělení zubů je bezpečný a efektivní způsob, jak získat zářivější a bělejší úsměv. Používáme moderní a šetrné metody, které pomáhají odstranit pigmentace způsobené jídlem, nápoji nebo kouřením. Výsledkem jsou viditelně světlejší zuby a přirozeně krásný úsměv.",
-		},
-		{
-			name: "Výplně",
-			img: "/05.png",
-			desc: "Zubní výplně slouží k ošetření zubního kazu a obnovení přirozeného tvaru i funkce zubu. Používáme kvalitní a estetické materiály, které barevně odpovídají vašim zubům a zajišťují dlouhou životnost ošetření. Naším cílem je zachovat zdraví chrupu a přirozený vzhled vašeho úsměvu.",
-		},
-		{
-			name: "Retainery, dlahy",
-			img: "/01.png",
-			desc: "Retainery a ochranné dlahy pomáhají udržet správné postavení zubů po ortodontické léčbě a chrání chrup před nadměrným zatížením či skřípáním zubů. Zhotovujeme individuálně přizpůsobené dlahy pro maximální pohodlí, ochranu a dlouhodobé zachování zdravého úsměvu.",
-		},
-		{
-			name: "Endodoncie",
-			img: "/02.png",
-			desc: "Endodontické ošetření, známé také jako ošetření kořenových kanálků, slouží k záchraně zubu postiženého hlubokým kazem nebo zánětem. Pomocí moderních metod důkladně vyčistíme a ošetříme kořenový systém zubu, čímž pomáháme odstranit bolest a zachovat vlastní zub co nejdéle. Ošetření provádíme šetrně a s důrazem na komfort pacienta.",
-		},
-		{
-			name: "Chirurgie",
-			img: "/03.png",
-			desc: "Provádíme široké spektrum stomatochirurgických zákroků s důrazem na šetrnost, bezpečnost a komfort pacienta. Mezi nejčastější výkony patří extrakce zubů, chirurgické odstranění zubů moudrosti či ošetření zánětlivých ložisek. Používáme moderní postupy a kvalitní anestezii pro co nejpohodlnější průběh ošetření i rychlé hojení.",
-		},
-		{
-			name: "Proteticke faze ordinacni",
-			img: "/04.png",
-			desc: "Protetické ošetření v ordinační fázi zahrnuje přípravu zubů, otisky, dočasné náhrady a další kroky potřebné pro zhotovení kvalitních protetických prací. Dbáme na preciznost, funkčnost i estetiku, aby výsledné korunky, můstky či náhrady dokonale odpovídaly vašim potřebám a přirozenému vzhledu chrupu.",
-		},
-		{
-			name: "Samoplátci",
-			img: "/05.png",
-			desc: "Poskytujeme kvalitní stomatologickou péči také samoplátcům bez omezení zdravotní pojišťovnou. Nabízíme individuální přístup, moderní ošetření a transparentní cenovou politiku. Díky tomu si můžete zvolit péči a materiály přesně podle svých potřeb a očekávání.",
-		},
-	];
+export default async function Home() {
+	const t = await getTranslations();
 
 	return (
-		<>
-			{/* <Helmet>
-				<meta
-					name="description"
-					content="Moderní zubní klinika v Kolíně. Nabízíme bezbolestné ortodontické ošetření pomocí analgosedace i celkové anestezie. Komfortní prostředí, profesionální péče a dostupné služby pro zdravý úsměv."
-				/>
-				<title>{t("home.secondary_title")} | Natadent</title>
-				<link rel="canonical" href="https://www.natadent.cz/" />
-			</Helmet> */}
-			<main>
-				<Container>
-					<div className="home-top">
-						<div className="home-top__logo">
-							<img
-								className="home-top__logo-icon"
-								src="/logo/tooth.png"
-								alt="Natadent logo"
-							/>
-						</div>
-						<h1 className="home-top__title">Zubní klinika Natadent</h1>
-						<div className="home-container">
-							<p style={{ fontWeight: 500, marginBottom: 5 }}>
-								NATADENT s.r.o.
-							</p>
-							<p style={{ marginBottom: 5 }}>
-								IČO <CopyBtn />
-							</p>
-							<p style={{ fontWeight: 500, marginBottom: 5 }}>
-								Telefonní číslo
-							</p>
-							<a
-								style={{ marginBottom: 5 }}
-								className="link"
-								href="tel:+420773853539"
-							>
-								+420 773 853 539
-							</a>
-							<p style={{ fontWeight: 500, marginBottom: 5 }}>Kde jsme</p>
-							<a
-								className="link"
-								href="https://maps.app.goo.gl/z5moH8T3Wa4Wmt2s5"
-								target="_blank"
-							>
-								Pod Hroby 1026, 280 02 Kolín 2
-							</a>
-						</div>
-						{/* <iframe
+		<main>
+			<Container>
+				<div className="home-top">
+					<div className="home-top__logo">
+						<img
+							className="home-top__logo-icon"
+							src="/logo/tooth.png"
+							alt="Natadent logo"
+						/>
+					</div>
+					<h1 className="home-top__title">Zubní klinika Natadent</h1>
+					<div className="home-container">
+						<p style={{ fontWeight: 500, marginBottom: 5 }}>NATADENT s.r.o.</p>
+						<p style={{ marginBottom: 5 }}>
+							IČO <CopyBtn />
+						</p>
+						<p style={{ fontWeight: 500, marginBottom: 5 }}>Telefonní číslo</p>
+						<a
+							style={{ marginBottom: 5 }}
+							className="link"
+							href="tel:+420773853539"
+						>
+							+420 773 853 539
+						</a>
+						<p style={{ fontWeight: 500, marginBottom: 5 }}>Kde jsme</p>
+						<a
+							className="link"
+							href="https://maps.app.goo.gl/z5moH8T3Wa4Wmt2s5"
+							target="_blank"
+						>
+							Pod Hroby 1026, 280 02 Kolín 2
+						</a>
+					</div>
+					{/* <iframe
 							className="banner__map"
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d906.2737924918879!2d15.213754247414611!3d50.02392366268641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c155b8cfe1db9%3A0x4e0e3a3f6277c27f!2sNATADENT%20s.r.o.!5e0!3m2!1sen!2scz!4v1772115717051!5m2!1sen!2scz"
 							loading="lazy"
 						></iframe> */}
-					</div>
-					<div className="home__services" id="sluzby">
-						<h2 className="home__services-title">{t("services_title")}</h2>
-						{/* <input
+				</div>
+				<div className="home__services" id="sluzby">
+					<h2 className="home__services-title">{t("services_title")}</h2>
+					{/* <input
 							className="home__services-search"
 							// onInput={(e) => {
 							// 	setSearch(e.target.value);
@@ -149,50 +133,50 @@ const Home = () => {
 							/>
 							<span>{t("home.services_no_result_pop_up")}</span>
 						</p> */}
-						<div>
-							{services.map((s, i) => {
-								if (i % 2 === 0) {
-									return (
-										<div key={i} className="service-grid-odd">
-											<div className="empty-container"></div>
-											<div>
-												<h3 className="service__title">({i + 1})</h3>
-												<div className="img-container">
-													<img className="service__img" src={s.img} alt="" />
-												</div>
-											</div>
-											<div>
-												<h3 className="service__title">{s.name}</h3>
-												<div className="text-container">
-													<p>{s.desc}</p>
-													<a href="#">Learn more</a>
-												</div>
+					<div>
+						{services.map((s, i) => {
+							if (i % 2 === 0) {
+								return (
+									<div key={i} className="service-grid-odd">
+										<div className="empty-container"></div>
+										<div>
+											<h3 className="service__title">({i + 1})</h3>
+											<div className="img-container">
+												<img className="service__img" src={s.img} alt="" />
 											</div>
 										</div>
-									);
-								} else {
-									return (
-										<div key={i} className="service-grid-odd">
-											<div>
-												<h3 className="service__title">({i + 1})</h3>
-												<div className="img-container">
-													<img className="service__img" src={s.img} alt="" />
-												</div>
+										<div>
+											<h3 className="service__title">{s.name}</h3>
+											<div className="text-container">
+												<p>{s.desc}</p>
+												<a href="#">Learn more</a>
 											</div>
-											<div>
-												<h3 className="service__title">{s.name}</h3>
-												<div className="text-container">
-													<p>{s.desc}</p>
-													<a href="#">Learn more</a>
-												</div>
-											</div>
-											<div className="empty-container"></div>
 										</div>
-									);
-								}
-							})}
-						</div>
-						{/* <div className="home__services-grid">
+									</div>
+								);
+							} else {
+								return (
+									<div key={i} className="service-grid-odd">
+										<div>
+											<h3 className="service__title">({i + 1})</h3>
+											<div className="img-container">
+												<img className="service__img" src={s.img} alt="" />
+											</div>
+										</div>
+										<div>
+											<h3 className="service__title">{s.name}</h3>
+											<div className="text-container">
+												<p>{s.desc}</p>
+												<a href="#">Learn more</a>
+											</div>
+										</div>
+										<div className="empty-container"></div>
+									</div>
+								);
+							}
+						})}
+					</div>
+					{/* <div className="home__services-grid">
 							{services
 								.filter((service) => {
 									return search.toLowerCase().trim() === ""
@@ -214,8 +198,8 @@ const Home = () => {
 									);
 								})}
 						</div> */}
-					</div>
-					{/* <div className="faq" id="casto-kladene-otazky">
+				</div>
+				{/* <div className="faq" id="casto-kladene-otazky">
 						<h2 className="faq__title">{t("faq_title")}</h2>
 						<div className="faq__list">
 							<div className="faq__item">
@@ -247,10 +231,7 @@ const Home = () => {
 							</div>
 						</div>
 					</div> */}
-				</Container>
-			</main>
-		</>
+			</Container>
+		</main>
 	);
-};
-
-export default Home;
+}

@@ -1,7 +1,8 @@
 import { getTranslations } from "next-intl/server";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 import Container from "@/components/Container/Container";
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import { BASE_URL } from "@/lib/constants";
 import "./styles.scss";
 
 const membersData = [
@@ -25,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		description:
 			"Seznamte se s týmem odborníků z kliniky Natadent. Zkušení stomatologové, dentální hygienisté a asistenti, kteří vám poskytnou špičkovou péči s lidským přístupem.",
 		alternates: {
-			canonical: "https://www.natadent.cz/nas-tym",
+			canonical: `${BASE_URL}/cs/nas-tym`,
 		},
 	};
 }

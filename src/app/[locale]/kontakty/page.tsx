@@ -1,9 +1,8 @@
-// import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
-import services from "@/data/services.json";
 import Container from "@/components/Container/Container";
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import { BASE_URL } from "@/lib/constants";
 import "./styles.scss";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -14,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		description:
 			"Kontaktujte nás – zubní klinika Natadent v Kolíně. Najdete zde adresu, telefonní číslo, e-mail a ordinační hodiny. Jsme tu pro vás s profesionální péčí a lidským přístupem.",
 		alternates: {
-			canonical: "https://www.natadent.cz/kontakty",
+			canonical: `${BASE_URL}/cs/kontakty`,
 		},
 	};
 }
@@ -139,10 +138,10 @@ export default async function Contacts() {
 							</a>
 						</div>
 					</div>
-					<h2 className="contacts__appointment-title">
+					{/* <h2 className="contacts__appointment-title">
 						{t("appointment_title")}
-					</h2>
-					<form
+					</h2> */}
+					{/* <form
 						className="contacts-form"
 						action="mailto:info@neresen.cz"
 						method="post"
@@ -225,16 +224,10 @@ export default async function Contacts() {
 								defaultValue=""
 							/>
 						</div>
-						{/* <input type="date" defaultValue={formatDate} name="date" />
-							<input
-								type="time"
-								defaultValue={formatHour + ":" + formatMinute}
-								name="time"
-							/> */}
 						<button className="contacts-form__btn" type="submit">
 							{t("contacts.submit_btn_title")}
 						</button>
-					</form>
+					</form> */}
 					<div className="contacts__maps-container">
 						<div>
 							<h2 className="contacts__map-title">
