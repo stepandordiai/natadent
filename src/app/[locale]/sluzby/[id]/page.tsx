@@ -34,13 +34,15 @@ export default async function ServicePage({
 
 	const { id } = await params;
 
-	const service = services.find((service) => service.id === id);
+	const service = services.find((service) => String(service.id) === id);
 
 	if (!service) {
 		return notFound();
 	}
 
-	const currentIndex = services.findIndex((service) => service.id === id);
+	const currentIndex = services.findIndex(
+		(service) => String(service.id) === id,
+	);
 
 	const nextService = services[(currentIndex + 1) % services.length];
 	const prevService =

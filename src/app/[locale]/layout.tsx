@@ -6,6 +6,7 @@ import Loading from "@/components/Loading/Loading";
 import { BASE_URL } from "@/lib/constants";
 import Header from "@/components/layout/Header/Header";
 import "@/styles/globals.scss";
+import Banner from "@/components/Banner/Banner";
 
 const montserrat = Lexend({
 	variable: "--montserrat-font",
@@ -30,6 +31,7 @@ export default async function LocaleLayout({
 		<html lang={locale} className={montserrat.variable}>
 			<body>
 				<Loading />
+				<Banner />
 				<NextIntlClientProvider locale={locale}>
 					<div className="wrapper" style={{ display: "none" }}>
 						<Header />

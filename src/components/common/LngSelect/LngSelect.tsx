@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocale } from "next-intl";
 import classNames from "classnames";
 import { useRouter } from "@/i18n/navigation";
@@ -31,24 +31,37 @@ const LngSelect = () => {
 	const locale = useLocale();
 	const router = useRouter();
 	const pathname = usePathname();
+	const lngRef = useRef<HTMLDivElement | null>(null);
 
 	const inactiveLngOption = "lang-select__option";
 	const activeLngOption = "lang-select__option lang-select__option--active";
 
 	const [lngVisible, setLngVisible] = useState(false);
-	const [selectedLng, setSelectedLng] = useState(
-		languages.find((lng) => lng.locale === locale),
-	);
 
-	// TODO: LEARN THIS
-	const handleLngOption = (lng: Lng) => {
-		router.replace(pathname, { locale: lng.locale });
-		setSelectedLng(lng);
+	// Знаходимо дані поточної мови для відображення на кнопці
+	const selectedLng =
+		languages.find((lng) => lng.locale === locale) || languages[0];
+
+	// Закриття дропдауну при кліку поза ним
+	useEffect(() => {
+		const handleClickOutside = (e: MouseEvent) => {
+			if (lngRef.current && !lngRef.current.contains(e.target as Node)) {
+				setLngVisible(false);
+			}
+		};
+		document.addEventListener("click", handleClickOutside);
+		return () => document.removeEventListener("click", handleClickOutside);
+	}, []);
+
+	const handleLanguageChange = (newLocale: string) => {
 		setLngVisible(false);
+		// next-intl сама оновить URL, зберігши поточний шлях
+		// Наприклад: /uk/about -> /en/about
+		router.replace(pathname, { locale: newLocale });
 	};
 
 	return (
-		<div className="lang-select">
+		<div ref={lngRef} className="lang-select">
 			<button
 				onClick={() => setLngVisible((prev) => !prev)}
 				className="lang-select__btn"
@@ -70,7 +83,10 @@ const LngSelect = () => {
 							}
 							data-value={lng.locale}
 						>
-							<button onClick={() => handleLngOption(lng)}>
+							<button
+								className="lng-select__li-btn"
+								onClick={() => handleLanguageChange(lng.locale)}
+							>
 								<span>{lng.label}</span>
 								<img width={20} height={20} src={lng.imgSrc} alt="" />
 							</button>

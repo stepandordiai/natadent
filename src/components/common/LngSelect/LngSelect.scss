@@ -60,15 +60,19 @@
 .lang-select__option {
 	height: 40px;
 	@include flex-center;
-	column-gap: 5px;
+	gap: 5px;
 	border-radius: inherit;
 	padding: 0 10px;
-	cursor: pointer;
 	transition: background-color 0.3s;
 
 	&:hover {
 		background: var(--accent-clr);
 	}
+}
+
+.lng-select__li-btn {
+	display: flex;
+	gap: 5px;
 }
 
 .lang-select__option--active {

@@ -104,5 +104,76 @@
 		"nav_title": "Navigace",
 		"rights": "Všechna práva vyhrazena",
 		"website_created_by": "Website created by"
+	},
+
+	"services": {
+		"examination": {
+			"title": "Vyšetření",
+			"1": "Konzultace dospělý",
+			"2": "Konzultace dítě do 15 let"
+		},
+		"dentalHygiene": {
+			"title": "Dentální hygiena",
+			"1": "Dentální hygiena základní bez kartáčků",
+			"2": "Dentální hygiena komplexní - kartáčky, léčebný plán",
+			"3": "Dentální hygiena děti do 14 let"
+		},
+		"whitening": {
+			"title": "Bělení",
+			"1": "Dentalní hygiena a bělení BlancOne Click- obě čelisti",
+			"2": "BlancOne Click - obě čelisti",
+			"3": "BlancOne Touch- intenzivní bělení",
+			"4": "Bělení BlancOne Ultra +",
+			"5": "Domácí bělení BlancOne HOME"
+		},
+		"fillings": {
+			"title": "Výplně",
+			"1": "Fotokompozitní výplň I ploška",
+			"2": "Fotokompozitní výplň II plošky",
+			"3": "Fotokompozitní výplň III plošky",
+			"4": "Fotokompozitní výplň krčková"
+		},
+		"endodontics": {
+			"title": "Endodoncie",
+			"1": "Endodontické ošetření nadstandartní I",
+			"2": "Endodontické ošetření nadstandartní II",
+			"3": "Endodontické ošetření nadstandartní III",
+			"4": "Endodontické ošetření nadstandartní III",
+			"5": "Endodontické ošetreni pod mikroskopem 1kanalék",
+			"6": "Endodontické ošetreni pod mikroskopem  2kanalký",
+			"7": "Endodontické ošetreni pod mikroskopem  3kanalký",
+			"8": "Endodontické ošetreni pod mikroskopem  4 kanalký a vice",
+			"9": "Reendodontické ošetření pod mikroskopem 1 kanal odstraneni ulomeneho nastroje",
+			"10": "MTA",
+			"11": "Skleněny čep"
+		},
+		"surgery": {
+			"title": "Chirurgie",
+			"1": "Ekstrakce jednoducha",
+			"2": "Extrakce chirurgicka"
+		},
+		"selfPayers": {
+			"title": "Samoplátci",
+			"1": "Vstupní vyšetření, OPG, BW snímky - SAMOPLÁTCE",
+			"2": "Preventivní prohlídka - SAMOPLÁTCE",
+			"3": "Akutní vyšetření - SAMOPLÁTCE",
+			"4": "RTG snímek 1x - SAMOPLÁTCE",
+			"5": "Snímek OPG - SAMOPLÁTCE",
+			"6": "Čtení a hodnocení snímku OPG - SAMOPLÁTCE",
+			"7": "Anestezie - SAMOPLÁTCE",
+			"8": "Alvogyl,Dykal,retrakce",
+			"9": "Kofferdam",
+			"10": "tekuty kofferdam",
+			"11": "depurace+ leštěni 1 zub",
+			"12": "keramicky skalpel",
+			"13": "Anastezie",
+			"14": "Plak +kariesdetektor",
+			"15": "optragate",
+			"16": "sterylní kryti",
+			"17": "atravmatické šití",
+			"18": "sejmutí fixu",
+			"19": "cementování fuji Cem",
+			"20": "cementování prov. Práce"
+		}
 	}
 }

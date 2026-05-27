@@ -104,5 +104,76 @@
 		"nav_title": "Navigation",
 		"rights": "All rights reserved",
 		"website_created_by": "Website created by"
+	},
+
+	"services": {
+		"examination": {
+			"title": "Examination",
+			"1": "Adult consultation",
+			"2": "Consultation for child under 15"
+		},
+		"dentalHygiene": {
+			"title": "Dental Hygiene",
+			"1": "Basic dental hygiene without toothbrushes",
+			"2": "Comprehensive dental hygiene - toothbrushes, treatment plan",
+			"3": "Dental hygiene for children under 14"
+		},
+		"whitening": {
+			"title": "Whitening",
+			"1": "Dental hygiene and BlancOne Click whitening - both jaws",
+			"2": "BlancOne Click - both jaws",
+			"3": "BlancOne Touch - intensive whitening",
+			"4": "BlancOne Ultra+ whitening",
+			"5": "BlancOne HOME home whitening"
+		},
+		"fillings": {
+			"title": "Fillings",
+			"1": "Photocomposite filling I surface",
+			"2": "Photocomposite filling II surfaces",
+			"3": "Photocomposite filling III surfaces",
+			"4": "Photocomposite cervical filling"
+		},
+		"endodontics": {
+			"title": "Endodontics",
+			"1": "Standard endodontic treatment I",
+			"2": "Standard endodontic treatment II",
+			"3": "Standard endodontic treatment III",
+			"4": "Re-endodontic treatment 1 canal",
+			"5": "Microscope-assisted endodontic treatment 1 canal",
+			"6": "Microscope-assisted endodontic treatment 2 canals",
+			"7": "Microscope-assisted endodontic treatment 3 canals",
+			"8": "Microscope-assisted endodontic treatment 4+ canals",
+			"9": "Microscope-assisted re-endodontic treatment with broken instrument removal",
+			"10": "MTA",
+			"11": "Glass post"
+		},
+		"surgery": {
+			"title": "Surgery",
+			"1": "Simple extraction",
+			"2": "Surgical extraction"
+		},
+		"selfPayers": {
+			"title": "Self-payers",
+			"1": "Initial examination, OPG, BW images - SELF-PAYER",
+			"2": "Preventive examination - SELF-PAYER",
+			"3": "Emergency examination - SELF-PAYER",
+			"4": "X-ray image 1x - SELF-PAYER",
+			"5": "OPG image - SELF-PAYER",
+			"6": "Reading and evaluation of OPG image - SELF-PAYER",
+			"7": "Anesthesia - SELF-PAYER",
+			"8": "Alvogyl, Dykal, retraction",
+			"9": "Rubber dam",
+			"10": "Liquid rubber dam",
+			"11": "Cleaning + polishing 1 tooth",
+			"12": "Ceramic scalpel",
+			"13": "Anesthesia",
+			"14": "Plaque + caries detector",
+			"15": "Optragate",
+			"16": "Sterile covering",
+			"17": "Atraumatic suturing",
+			"18": "Fix removal",
+			"19": "Fuji Cem cementation",
+			"20": "Temporary work cementation"
+		}
 	}
 }

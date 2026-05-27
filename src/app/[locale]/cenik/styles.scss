@@ -10,13 +10,13 @@
 }
 
 .price-list__wrapper {
-	padding: 0 30px 30px;
+	padding: 0 1.75rem 1.75rem;
 }
 
 .price-list__table {
 	border-collapse: collapse;
 	width: 100%;
-	padding: 0 30px;
+	padding: 0 1.75rem;
 }
 
 .price-list-ul {
@@ -27,8 +27,13 @@
 	li {
 		display: flex;
 		justify-content: space-between;
-		padding: 15px;
-		border-radius: 25px;
+		align-items: center;
+		padding: 0.875rem;
+		border-radius: 24px;
+
+		span:nth-last-of-type(1) {
+			white-space: nowrap;
+		}
 
 		&:nth-child(odd) {
 			background: var(--accent-clr);
@@ -82,10 +87,17 @@ tr:nth-child(odd) td:nth-of-type(2) {
 	border-radius: 30px;
 	padding: 15px;
 	border: 1px solid var(--accent-clr);
+	transition: all 0.3s;
+
+	&:hover {
+		// border: 2px solid var(--accent-clr);
+		border-radius: 0;
+	}
 }
 
 .active-filter-btn {
 	background: var(--accent-clr);
+	border-radius: 0;
 }
 
 @media (max-width: 900px) {
@@ -96,5 +108,9 @@ tr:nth-child(odd) td:nth-of-type(2) {
 	.filter-btn-wrapper {
 		margin: 30px 15px 0;
 		gap: 15px;
+	}
+
+	.price-list__table {
+		padding: 0 0.75rem;
 	}
 }

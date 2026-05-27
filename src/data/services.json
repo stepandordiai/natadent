@@ -1,597 +1,358 @@
 [
 	{
-		"id": "konzultace-dospely",
-		"name": "Konzultace dospělý",
+		"id": 1,
+		"name": "services.examination.1",
 		"price": 1600,
 		"time": 20,
-		"type": "Vysetreni"
+		"type": "services.examination.title"
 	},
 	{
-		"id": "konzultace-dite-do-15-let",
-		"name": "Konzultace dítě do 15 let",
+		"id": 2,
+		"name": "services.examination.2",
 		"price": 1600,
 		"time": 20,
-		"type": "Vysetreni"
+		"type": "services.examination.title"
 	},
 	{
-		"id": "administrativa",
-		"name": "Administrativa",
-		"price": 400,
-		"time": 5,
-		"type": "Administrativa"
-	},
-	{
-		"id": "dentalni-hygiena",
-		"name": "Stomatologické ošetření při zvýšené časové náročnosti výkonu(1min)",
-		"price": 80,
-		"time": 1,
-		"type": "Administrativa"
-	},
-	{
-		"id": "storno-poplatek-pri-absenci-neomluvena-24-hod-predem",
-		"name": "Storno poplatek při absenci(neomluvena 24 hod předem)",
-		"price": 800,
-		"time": 10,
-		"type": "Administrativa"
-	},
-	{
-		"id": "dentalni-hygiena-zakladni-bez-kartacku",
-		"name": "Dentální hygiena základní bez kartáčků",
+		"id": 3,
+		"name": "services.dentalHygiene.1",
 		"price": 1800,
 		"time": 45,
-		"type": "Dentální hygiena"
+		"type": "services.dentalHygiene.title"
 	},
 	{
-		"id": "dentalni-hygiena-komplexni-kartacky-lecebny-plan",
-		"name": "Dentální hygiena komplexní - kartáčky, léčebný plán",
+		"id": 4,
+		"name": "services.dentalHygiene.2",
 		"price": 2400,
 		"time": 60,
-		"type": "Dentální hygiena"
+		"type": "services.dentalHygiene.title"
 	},
 	{
-		"id": "instruktaz-s-mezizubnim-kartackem",
-		"name": "Instruktáž s mezizubním kartáčkem",
-		"price": 400,
-		"time": 10,
-		"type": "Dentální hygiena"
-	},
-	{
-		"id": "instruktaz-s-jednosvazkovym-kartackem",
-		"name": "Instruktáž s jednosvazkovým kartáčkem",
-		"price": 400,
-		"time": 10,
-		"type": "Dentální hygiena"
-	},
-	{
-		"id": "instruktaz-s-klasickym-zubnim-kartackem",
-		"name": "Instruktáž s klasickým zubním kartáčkem",
-		"price": 400,
-		"time": 10,
-		"type": "Dentální hygiena"
-	},
-	{
-		"id": "dentalni-hygiena-deti-do-14-let",
-		"name": "Dentální hygiena děti do 14 let",
+		"id": 5,
+		"name": "services.dentalHygiene.3",
 		"price": 1200,
 		"time": 30,
-		"type": "Dentální hygiena"
+		"type": "services.dentalHygiene.title"
 	},
 	{
-		"id": "airflow",
-		"name": "Airflow",
-		"price": 800,
-		"time": 20,
-		"type": "Dentální hygiena"
-	},
-	{
-		"id": "dentalni-hygiena-a-beleni-blancone-click-obe-celisti",
-		"name": "Dentalní hygiena a bělení BlancOne Click- obě čelisti",
+		"id": 6,
+		"name": "services.whitening.1",
 		"price": 3600,
 		"time": 90,
-		"type": "Bělení"
+		"type": "services.whitening.title"
 	},
 	{
-		"id": "blancone-click-obe-celisti",
-		"name": "BlancOne Click - obě čelisti",
+		"id": 7,
+		"name": "services.whitening.2",
 		"price": 1800,
 		"time": 45,
-		"type": "Bělení"
+		"type": "services.whitening.title"
 	},
 	{
-		"id": "blancone-click-obe-celisti",
-		"name": "BlancOne Touch- intenzivní bělení",
+		"id": 8,
+		"name": "services.whitening.3",
 		"price": 3000,
 		"time": 75,
-		"type": "Bělení"
+		"type": "services.whitening.title"
 	},
 	{
-		"id": "beleni-blancone-ultra",
-		"name": "Bělení BlancOne Ultra +",
+		"id": 9,
+		"name": "services.whitening.4",
 		"price": 3600,
 		"time": 90,
-		"type": "Bělení"
+		"type": "services.whitening.title"
 	},
 	{
-		"id": "domaci-beleni-blancone-home",
-		"name": "Domácí bělení BlancOne HOME",
-		"price": 0,
+		"id": 10,
+		"name": "services.whitening.5",
+		"price": 3000,
 		"time": 80,
-		"type": "Bělení"
+		"type": "services.whitening.title"
 	},
 	{
-		"id": "belici-gel-bez-nosice-instruktaz-blancone-home",
-		"name": "Bělící gel bez nosiče, instruktáž BlancONe Home",
-		"price": 1200,
-		"time": 30,
-		"type": "Bělení"
-	},
-	{
-		"id": "nosic-na-domaci-beleni-obe-celisti",
-		"name": "Nosič na domácí bělení obě čelisti",
-		"price": 1200,
-		"time": 30,
-		"type": "Bělení"
-	},
-	{
-		"id": "vnitrni-beleni-zubu-prvni-navsteva",
-		"name": "Vnitřní bělení zubu - první návštěva",
-		"price": 1200,
-		"time": 30,
-		"type": "Bělení"
-	},
-	{
-		"id": "vnitrni-beleni-zubu-opakovana-navsteva",
-		"name": "Vnitřní bělení zubu - opakovaná návštěva",
-		"price": 600,
-		"time": 15,
-		"type": "Bělení"
-	},
-	{
-		"id": "fluoridace-1-zub",
-		"name": "fluoridace 1 zub",
-		"price": 40,
-		"time": 1,
-		"type": "Bělení"
-	},
-	{
-		"id": "skloionomerni-vypln",
-		"name": "Skloionomerní výplň",
+		"id": 11,
+		"name": "services.fillings.1",
 		"price": 2400,
 		"time": 30,
-		"type": "Vyplne"
+		"type": "services.fillings.title"
 	},
 	{
-		"id": "fotokompozitni-vypln-1-ploska",
-		"name": "Fotokompozitní výplň I ploška",
-		"price": 2400,
-		"time": 30,
-		"type": "Vyplne"
-	},
-	{
-		"id": "fotokompozitni-vypln-2-plosky",
-		"name": "Fotokompozitní výplň II plošky",
+		"id": 12,
+		"name": "services.fillings.2",
 		"price": 3200,
 		"time": 40,
-		"type": "Vyplne"
+		"type": "services.fillings.title"
 	},
 	{
-		"id": "fotokompozitni-vypln-3-plosky",
-		"name": "Fotokompozitní výplň III plošky",
+		"id": 13,
+		"name": "services.fillings.3",
 		"price": 4800,
 		"time": 60,
-		"type": "Vyplne"
+		"type": "services.fillings.title"
 	},
 	{
-		"id": "fotokompozitni-vypln-krckova",
-		"name": "Fotokompozitní výplň krčková",
+		"id": 14,
+		"name": "services.fillings.4",
 		"price": 1200,
 		"time": 15,
-		"type": "Vyplne"
+		"type": "services.fillings.title"
 	},
 	{
-		"id": "provizorni-vypln",
-		"name": "Provizorní výplň",
-		"price": 400,
-		"time": 5,
-		"type": "Vyplne"
-	},
-	{
-		"id": "prima-onlay",
-		"name": "Přima onlay",
-		"price": 2400,
-		"time": 30,
-		"type": "Vyplne"
-	},
-	{
-		"id": "odstraneni-retaineru-prebytecneho-cementu",
-		"name": "Odstranění retaineru/přebytečného cementu",
-		"price": 800,
-		"time": 10,
-		"type": "Retainery, dlahy"
-	},
-	{
-		"id": "preendodonticka-dostavba",
-		"name": "Preendodontická dostavba",
-		"price": 1600,
-		"time": 20,
-		"type": "Endodoncie"
-	},
-	{
-		"id": "provizorni-endodonticke-osetreni",
-		"name": "Provizorní endodontické ošetření",
-		"price": 2400,
-		"time": 30,
-		"type": "Endodoncie"
-	},
-	{
-		"id": "endodonticke-osetreni-nadstandartni-1",
-		"name": "Endodontické ošetření nadstandartní I",
+		"id": 15,
+		"name": "services.endodontics.1",
 		"price": 3600,
 		"time": 45,
-		"type": "Endodoncie"
+		"type": "services.endodontics.title"
 	},
 	{
-		"id": "endodonticke-osetreni-nadstandartni-2",
-		"name": "Endodontické ošetření nadstandartní II",
+		"id": 16,
+		"name": "services.endodontics.2",
+
 		"price": 4800,
 		"time": 60,
-		"type": "Endodoncie"
+		"type": "services.endodontics.title"
 	},
 	{
-		"id": "endodonticke-osetreni-nadstandartni-3",
-		"name": "Endodontické ošetření nadstandartní III",
+		"id": 17,
+		"name": "services.endodontics.3",
+
 		"price": 6000,
 		"time": 75,
-		"type": "Endodoncie"
+		"type": "services.endodontics.title"
 	},
 	{
-		"id": "reendodonticke-osetreni-1-kanalek",
-		"name": "Endodontické ošetření nadstandartní III",
+		"id": 18,
+		"name": "services.endodontics.4",
+
 		"price": 1600,
 		"time": 20,
-		"type": "Endodoncie"
+		"type": "services.endodontics.title"
 	},
 	{
-		"id": "endodonticke-osetreni-pod-mikroskopem-1kanalek",
-		"name": "Endodontické ošetreni pod mikroskopem 1kanalék",
+		"id": 19,
+		"name": "services.endodontics.5",
+
 		"price": 4800,
 		"time": 60,
-		"type": "Endodoncie"
+		"type": "services.endodontics.title"
 	},
 	{
-		"id": "endodonticke-osetreni-pod-mikroskopem-2kanalky",
-		"name": "Endodontické ošetreni pod mikroskopem  2kanalký",
+		"id": 20,
+		"name": "services.endodontics.6",
+
 		"price": 6000,
 		"time": 75,
-		"type": "Endodoncie"
+		"type": "services.endodontics.title"
 	},
 	{
-		"id": "endodonticke-osetreni-pod-mikroskopem-3kanalky",
-		"name": "Endodontické ošetreni pod mikroskopem  3kanalký",
+		"id": 21,
+		"name": "services.endodontics.7",
+
 		"price": 7200,
 		"time": 90,
-		"type": "Endodoncie"
+		"type": "services.endodontics.title"
 	},
 	{
-		"id": "endodonticke-osetreni-pod-mikroskopem-4-kanalky-a-vice",
-		"name": "Endodontické ošetreni pod mikroskopem  4 kanalký a vice",
+		"id": 22,
+		"name": "services.endodontics.8",
+
 		"price": 9600,
 		"time": 120,
-		"type": "Endodoncie"
+		"type": "services.endodontics.title"
 	},
 	{
-		"id": "reendodonticke-osetreni-pod-mikroskopem-1-kanal-odstraneni-ulomeneho-nastroje",
-		"name": "Reendodontické ošetření pod mikroskopem 1 kanal odstraneni ulomeneho nastroje",
+		"id": 23,
+		"name": "services.endodontics.9",
 		"price": 2400,
 		"time": 30,
-		"type": "Endodoncie"
+		"type": "services.endodontics.title"
 	},
 	{
-		"id": "mta",
-		"name": "MTA",
+		"id": 24,
+		"name": "services.endodontics.10",
+
 		"price": 1200,
 		"time": 15,
-		"type": "Endodoncie"
+		"type": "services.endodontics.title"
 	},
 	{
-		"id": "skleneny-cep",
-		"name": "Skleněny čep",
+		"id": 25,
+		"name": "services.endodontics.11",
 		"price": 1200,
 		"time": 15,
-		"type": "Endodoncie"
+		"type": "services.endodontics.title"
 	},
 	{
-		"id": "ekstrakce-jednoducha",
-		"name": "Ekstrakce jednoducha",
+		"id": 26,
+		"name": "services.surgery.1",
 		"price": 2400,
 		"time": 30,
-		"type": "Chirurgie"
+		"type": "services.surgery.title"
 	},
 	{
-		"id": "extrakce-chirurgicka",
-		"name": "Extrakce chirurgicka",
+		"id": 27,
+		"name": "services.surgery.2",
 		"price": 3600,
 		"time": 45,
-		"type": "Chirurgie"
+		"type": "services.surgery.title"
 	},
 	{
-		"id": "extrakce-komplikovana",
-		"name": "Extrakce komplikovana",
-		"price": 4800,
-		"time": 60,
-		"type": "Chirurgie"
-	},
-	{
-		"id": "sutura-rany-nevstrebatelna",
-		"name": "Sutura rány nevstřebatelná",
-		"price": 400,
-		"time": 5,
-		"type": "Chirurgie"
-	},
-	{
-		"id": "sutura-rany-vstrebatelna",
-		"name": "Sutura rány vstřebatelná",
-		"price": 400,
-		"time": 5,
-		"type": "Chirurgie"
-	},
-	{
-		"id": "hemostaticky-prostredek-po-chirurgickem-vykonu",
-		"name": "Hemostatický prostředek po chirurgickém výkonu",
-		"price": 400,
-		"time": 5,
-		"type": "Chirurgie"
-	},
-	{
-		"id": "hemostaticka-sitka",
-		"name": "Hemostatická síťka",
-		"price": 400,
-		"time": 5,
-		"type": "Chirurgie"
-	},
-	{
-		"id": "frenulektomie",
-		"name": "Frenulektomie",
-		"price": 1200,
-		"time": 15,
-		"type": "Chirurgie"
-	},
-	{
-		"id": "gingivektomie-1-zubu",
-		"name": "Gingivektomie 1 zubu",
-		"price": 800,
-		"time": 10,
-		"type": "Chirurgie"
-	},
-	{
-		"id": "preproteticka-dostavba",
-		"name": "Preprotetická dostavba",
-		"price": 2400,
-		"time": 30,
-		"type": "Proteticke faze ordinacni"
-	},
-	{
-		"id": "sejmuti-fixni-nahrady-separacnim-vrtackem-1-pilir",
-		"name": "Sejmutí fixní náhrady separačním vrtáčkem - 1 pilíř",
-		"price": 800,
-		"time": 10,
-		"type": "Proteticke faze ordinacni"
-	},
-	{
-		"id": "oprava-fixni-nahrady-v-ordinaci-1-pilir",
-		"name": "Oprava fixní náhrady v ordinaci - 1 pilíř",
-		"price": 800,
-		"time": 10,
-		"type": "Proteticke faze ordinacni"
-	},
-	{
-		"id": "provizorni-korunka-razidlova-ordinace",
-		"name": "Provizorní korunka razidlová - ordinace",
-		"price": 1200,
-		"time": 15,
-		"type": "Proteticke faze ordinacni"
-	},
-	{
-		"id": "rebaze-razidlove-korunky",
-		"name": "Rebaze razidlové korunky",
-		"price": 1200,
-		"time": 15,
-		"type": "Proteticke faze ordinacni"
-	},
-	{
-		"id": "uprava-snimatelne-nahrady",
-		"name": "Úprava snímatelné náhrady",
-		"price": 400,
-		"time": 5,
-		"type": "Proteticke faze ordinacni"
-	},
-	{
-		"id": "rebaze-castecne-snimatelne-nahrady-ordinace",
-		"name": "Rebaze částečné snímatelné náhrady - ordinace",
-		"price": 1600,
-		"time": 20,
-		"type": "Proteticke faze ordinacni"
-	},
-	{
-		"id": "rebaze-celkove-snimatelne-nahrady-ordinace",
-		"name": "Rebaze celkové snímatelné náhrady - ordinace",
-		"price": 1600,
-		"time": 20,
-		"type": "Proteticke faze ordinacni"
-	},
-	{
-		"id": "fixace-korunky-permanentni-cement",
-		"name": "Fixace korunky - permanentní cement",
-		"price": 800,
-		"time": 10,
-		"type": "Proteticke faze ordinacni"
-	},
-	{
-		"id": "fixace-korunky-provizorni-cement",
-		"name": "Fixace korunky - provizorní cement",
-		"price": 800,
-		"time": 10,
-		"type": "Proteticke faze ordinacni"
-	},
-	{
-		"id": "mock-up-1-zub-ordinace",
-		"name": "Mock up - 1 zub - ordinace",
-		"price": 800,
-		"time": 10,
-		"type": "Proteticke faze ordinacni"
-	},
-	{
-		"id": "cisteni-korunky",
-		"name": "čištění korunky",
-		"price": 160,
-		"time": 2,
-		"type": "Proteticke faze ordinacni"
-	},
-	{
-		"id": "cisteni-protezy",
-		"name": "čištění protezy",
-		"price": 400,
-		"time": 5,
-		"type": "Proteticke faze ordinacni"
-	},
-	{
-		"id": "vstupni-vysetreni-opg-bw-snimky-samoplatce",
-		"name": "Vstupní vyšetření, OPG, BW snímky - SAMOPLÁTCE",
+		"id": 28,
+		"name": "services.selfPayers.1",
 		"price": 3600,
 		"time": 45,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "preventivni-prohlidka-samoplatce",
-		"name": "Preventivní prohlídka - SAMOPLÁTCE",
+		"id": 29,
+		"name": "services.selfPayers.2",
+
 		"price": 2400,
 		"time": 30,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "akutni-vysetreni-samoplatce",
-		"name": "Akutní vyšetření - SAMOPLÁTCE",
+		"id": 30,
+		"name": "services.selfPayers.3",
+
 		"price": 2400,
 		"time": 30,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "rtg-snimek-1x-samoplatce",
-		"name": "RTG snímek 1x - SAMOPLÁTCE",
+		"id": 31,
+		"name": "services.selfPayers.4",
+
 		"price": 1200,
 		"time": 15,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "snimek-opg-samoplatce",
-		"name": "Snímek OPG - SAMOPLÁTCE",
+		"id": 32,
+		"name": "services.selfPayers.5",
+
 		"price": 1200,
 		"time": 15,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "cteni-a-hodnoceni-snimku-opg-samoplatce",
-		"name": "Čtení a hodnocení snímku OPG - SAMOPLÁTCE",
+		"id": 33,
+		"name": "services.selfPayers.6",
+
 		"price": 1200,
 		"time": 15,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "anestezie-samoplatce",
-		"name": "Anestezie - SAMOPLÁTCE",
+		"id": 34,
+		"name": "services.selfPayers.7",
+
 		"price": 1200,
 		"time": 15,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "alvogyl-dykal-retrakce",
-		"name": "Alvogyl,Dykal,retrakce",
+		"id": 35,
+		"name": "services.selfPayers.8",
+
 		"price": 800,
 		"time": 10,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "kofferdam",
-		"name": "Kofferdam",
+		"id": 36,
+		"name": "services.selfPayers.9",
+
 		"price": 400,
 		"time": 5,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "tekuty kofferdam",
-		"name": "tekuty kofferdam",
+		"id": 37,
+		"name": "services.selfPayers.10",
+
 		"price": 160,
 		"time": 2,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "depurace-lesteni-1-zub",
-		"name": "depurace+ leštěni 1 zub",
+		"id": 38,
+		"name": "services.selfPayers.11",
+
 		"price": 80,
 		"time": 1,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "keramicky-skalpel",
-		"name": "keramicky skalpel",
+		"id": 39,
+		"name": "services.selfPayers.12",
+
 		"price": 80,
 		"time": 1,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "anastezie",
-		"name": "Anastezie",
+		"id": 40,
+		"name": "services.selfPayers.13",
+
 		"price": 320,
 		"time": 4,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "plak-kariesdetektor",
-		"name": "Plak +kariesdetektor",
+		"id": 41,
+		"name": "services.selfPayers.14",
+
 		"price": 80,
 		"time": 1,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "optragate",
-		"name": "optragate",
+		"id": 42,
+		"name": "services.selfPayers.15",
+
 		"price": 160,
 		"time": 2,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "sterylni-kryti",
-		"name": "sterylní kryti",
+		"id": 43,
+		"name": "services.selfPayers.16",
+
 		"price": 160,
 		"time": 2,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "atravmaticke-siti",
-		"name": "atravmatické šití",
+		"id": 44,
+		"name": "services.selfPayers.17",
+
 		"price": 320,
 		"time": 4,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "sejmuti-fixu",
-		"name": "sejmutí fixu",
+		"id": 45,
+		"name": "services.selfPayers.18",
+
 		"price": 400,
 		"time": 5,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "cementovani-fuji-cem",
-		"name": "cementování fuji Cem",
+		"id": 46,
+		"name": "services.selfPayers.19",
+
 		"price": 320,
 		"time": 4,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	},
 	{
-		"id": "cementovani-prov-prace",
-		"name": "cementování prov. Práce",
+		"id": 47,
+		"name": "services.selfPayers.20",
+
 		"price": 80,
 		"time": 1,
-		"type": "Samoplátci"
+		"type": "services.selfPayers.title"
 	}
 ]

@@ -4,22 +4,19 @@ import { useTranslations } from "next-intl";
 import LngSelect from "@/components/common/LngSelect/LngSelect";
 import { useState } from "react";
 import Container from "@/components/Container/Container";
-import services from "@/data/services.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./Header.scss";
+import ArrowRightIcon from "@/components/icons/ArrowRightIcon";
 
 const Header = () => {
 	const t = useTranslations();
 	const pathname = usePathname();
 
 	const [isMenuActive, setIsMenuActive] = useState(false);
-
+	const [menuDdExpanded, setMenuDdExpanded] = useState(false);
 	const inactiveLink = "nav__link";
 	const activeLink = "nav__link nav__link--active";
-
-	const inactiveMenuLink = "menu__link js-menu__link";
-	const activeMenuLink = "menu__link js-menu__link menu__link--active";
 
 	const inactiveMenuDdLink = "menu__dd-link js-menu__link";
 	const activeMenuDdLink = "menu__dd-link js-menu__link menu__link--active";
@@ -29,15 +26,15 @@ const Header = () => {
 
 	// // burger-btn
 
-	// function handleMenu() {
-	// 	setIsMenuActive((prev) => !prev);
-	// 	menuDropdownWrapper.forEach((wrapper) => {
-	// 		wrapper.classList.remove("menu-dd__wrapper--active");
-	// 	});
-	// 	menuNavBtnIcon.forEach((icon) => {
-	// 		icon.classList.remove("menu__nav-btn-icon--active");
-	// 	});
-	// }
+	function handleMenu() {
+		setIsMenuActive((prev) => !prev);
+		// menuDropdownWrapper.forEach((wrapper) => {
+		// 	wrapper.classList.remove("menu-dd__wrapper--active");
+		// });
+		// menuNavBtnIcon.forEach((icon) => {
+		// 	icon.classList.remove("menu__nav-btn-icon--active");
+		// });
+	}
 
 	// // menu
 
@@ -63,6 +60,15 @@ const Header = () => {
 	// 	});
 	// }, []);
 
+	const handleMenuDd = () => {
+		setMenuDdExpanded((prev) => !prev);
+	};
+
+	const handleMenuOnLinkClick = () => {
+		setIsMenuActive(false);
+		setMenuDdExpanded(false);
+	};
+
 	return (
 		<header className="header">
 			<Container>
@@ -85,10 +91,14 @@ const Header = () => {
 							</Link>
 						</div>
 						<div className="nav__dd-wrapper">
-							<div className="nav__dd-btn">
+							<button
+								onClick={handleMenuDd}
+								type="button"
+								className="nav__dd-btn"
+							>
 								<span>{t("about_us_title")}</span>
 								<span className="nav__dd-btn-icon"></span>
-							</div>
+							</button>
 							<div className="nav__dd">
 								<Link
 									className={
@@ -122,13 +132,13 @@ const Header = () => {
 								</Link>
 							</div>
 						</div>
-						<div className="nav__dd-wrapper">
+						{/* <div className="nav__dd-wrapper">
 							<div className="nav__dd-btn">
 								<span>{t("services_title")}</span>
 								<span className="nav__dd-btn-icon"></span>
 							</div>
 							<div className="nav__dd"></div>
-						</div>
+						</div> */}
 						<div>
 							<Link
 								className={pathname === "/kontakty" ? activeLink : inactiveLink}
@@ -142,7 +152,7 @@ const Header = () => {
 					{/* menu-btn */}
 					<button
 						className="burger-btn__wrapper"
-						// onClick={handleMenu}
+						onClick={handleMenu}
 						aria-label={isMenuActive ? t("closeMenu") : t("openMenu")}
 					>
 						<span>menu</span>
@@ -161,26 +171,32 @@ const Header = () => {
 						</span>
 					</button>
 				</div>
-				<div className={isMenuActive ? "menu menu--active" : "menu"}>
+				<nav className={isMenuActive ? "menu menu--active" : "menu"}>
 					<ul className="menu-list">
 						<li className="menu-item">
 							<Link
 								onClick={() => setIsMenuActive(false)}
-								className={pathname === "/" ? activeLink : inactiveLink}
+								className={`menu-nav__link ${pathname === "/" ? "menu-nav__link--active" : ""}`}
 								href="/"
 							>
 								<span>{t("home_title")}</span>
 							</Link>
 						</li>
 						<li className="menu-item">
-							<button className="menu-dd__btn">
+							<button
+								onClick={handleMenuDd}
+								type="button"
+								className="menu-dd__btn"
+							>
 								<span className="menu__nav-btn-txt">{t("about_us_title")}</span>
 								<span className="menu__nav-btn-icon"></span>
 							</button>
-							<div className="menu-dd__wrapper">
+							<div
+								className={`menu-dd__wrapper ${menuDdExpanded ? "menu-dd__wrapper--expanded" : ""}`}
+							>
 								<div className="menu-dd">
 									<Link
-										onClick={() => setIsMenuActive(false)}
+										onClick={handleMenuOnLinkClick}
 										className={
 											pathname === "/nas-tym"
 												? activeMenuDdLink
@@ -191,7 +207,7 @@ const Header = () => {
 										{t("our_team_title")}
 									</Link>
 									<Link
-										onClick={() => setIsMenuActive(false)}
+										onClick={handleMenuOnLinkClick}
 										className={
 											pathname === "/cenik"
 												? activeMenuDdLink
@@ -202,7 +218,7 @@ const Header = () => {
 										{t("price_list_title")}
 									</Link>
 									<Link
-										onClick={() => setIsMenuActive(false)}
+										onClick={handleMenuOnLinkClick}
 										className={
 											pathname === "/galerie-usmevu"
 												? activeMenuDdLink
@@ -213,7 +229,7 @@ const Header = () => {
 										{t("smile_gallery_title")}
 									</Link>
 									<Link
-										onClick={() => setIsMenuActive(false)}
+										onClick={handleMenuOnLinkClick}
 										className={
 											pathname === "/nase-klinika"
 												? activeMenuDdLink
@@ -226,7 +242,7 @@ const Header = () => {
 								</div>
 							</div>
 						</li>
-						<li className="menu-item">
+						{/* <li className="menu-item">
 							<button className="menu-dd__btn">
 								<span className="menu__nav-btn-txt">{t("services_title")}</span>
 								<span className="menu__nav-btn-icon"></span>
@@ -234,33 +250,29 @@ const Header = () => {
 							<div className="menu-dd__wrapper">
 								<div className="menu-dd"></div>
 							</div>
-						</li>
+						</li> */}
 						<li className="menu-item">
 							<Link
 								onClick={() => setIsMenuActive(false)}
-								className={
-									pathname === "/kontakty" ? activeMenuLink : inactiveMenuLink
-								}
+								className={`menu-nav__link ${pathname === "/" ? "menu-nav__link--active" : ""}`}
 								href="/kontakty"
 							>
 								<span>{t("contacts_title")}</span>
 							</Link>
 						</li>
-						<li className="menu-item">
-							<Link
-								onClick={() => setIsMenuActive(false)}
-								className={
-									pathname === "/rezervujte-si-termin"
-										? activeMenuLink
-										: inactiveMenuLink
-								}
-								href="/rezervujte-si-termin"
-							>
-								<span>{t("appointment_title")}</span>
-							</Link>
-						</li>
 					</ul>
-				</div>
+					<a
+						onClick={() => setIsMenuActive(false)}
+						className="link-btn"
+						href="https://natadent.xdent.cz/wizard/clinic-selection"
+						target="_blank"
+					>
+						<span>Objednat online</span>
+						<span>
+							<ArrowRightIcon />
+						</span>
+					</a>
+				</nav>
 			</Container>
 		</header>
 	);

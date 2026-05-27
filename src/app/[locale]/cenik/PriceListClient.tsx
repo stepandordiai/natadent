@@ -1,10 +1,10 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 import Container from "@/components/Container/Container";
 import services from "@/data/services.json";
-import { useTranslations } from "next-intl";
 
 export default function PriceListClient() {
 	const t = useTranslations();
@@ -14,17 +14,17 @@ export default function PriceListClient() {
 	const inactiveFilterBtn = "filter-btn";
 	const activeFilterBtn = "filter-btn active-filter-btn";
 
-	const uniqueTypes = [...new Set(services.map((s) => s.type))];
+	const uniqueTypes = [...new Set(services.map((s) => t(s.type)))];
 
 	const filteredServices = services.filter((s) =>
-		filter === "" ? s : filter === s.type,
+		filter === "" ? s : filter === t(s.type),
 	);
 
 	const filteredUniqueTypes = [
 		...new Set(
 			services
-				.filter((s) => (filter === "" ? s : s.type === filter))
-				.map((s) => s.type),
+				.filter((s) => (filter === "" ? s : t(s.type) === filter))
+				.map((s) => t(s.type)),
 		),
 	];
 
@@ -39,30 +39,32 @@ export default function PriceListClient() {
 					>
 						{t("price_data.all_title")}
 					</button>
-					{uniqueTypes.map((t, i) => {
+					{uniqueTypes.map((type, i) => {
 						return (
 							<button
 								key={i}
-								onClick={() => setFilter(t)}
-								className={filter === t ? activeFilterBtn : inactiveFilterBtn}
+								onClick={() => setFilter(type)}
+								className={
+									filter === type ? activeFilterBtn : inactiveFilterBtn
+								}
 							>
-								{t}
+								{type}
 							</button>
 						);
 					})}
 				</div>
-				{filteredUniqueTypes.map((t, i) => {
+				{filteredUniqueTypes.map((type, i) => {
 					return (
 						<div key={i} className="price-list__table">
-							<p className="price-list__title">{t}</p>
+							<p className="price-list__title">{type}</p>
 							<ul className="price-list-ul">
 								{filteredServices
-									.filter((s) => s.type === t)
+									.filter((s) => t(s.type) === type)
 									.map((s, i) => {
 										return (
 											<li key={i}>
-												<p>{s.name}</p>
-												<p>{s.price} Kč</p>
+												<span>{t(s.name)}</span>
+												<span>{s.price} Kč</span>
 											</li>
 										);
 									})}
