@@ -101,14 +101,6 @@ const Header = () => {
 							</button>
 							<div className="nav__dd">
 								<Link
-									className={
-										pathname === "/nas-tym" ? activeLink : inactiveLink
-									}
-									href="/nas-tym"
-								>
-									{t("our_team_title")}
-								</Link>
-								<Link
 									className={pathname === "/cenik" ? activeLink : inactiveLink}
 									href="/cenik"
 								>
@@ -139,6 +131,16 @@ const Header = () => {
 							</div>
 							<div className="nav__dd"></div>
 						</div> */}
+						<div>
+							<Link
+								className={
+									pathname === "/ordinacni-hodiny" ? activeLink : inactiveLink
+								}
+								href="/ordinacni-hodiny"
+							>
+								Ordinační hodiny
+							</Link>
+						</div>
 						<div>
 							<Link
 								className={pathname === "/kontakty" ? activeLink : inactiveLink}
@@ -198,17 +200,6 @@ const Header = () => {
 									<Link
 										onClick={handleMenuOnLinkClick}
 										className={
-											pathname === "/nas-tym"
-												? activeMenuDdLink
-												: inactiveMenuDdLink
-										}
-										href="/nas-tym"
-									>
-										{t("our_team_title")}
-									</Link>
-									<Link
-										onClick={handleMenuOnLinkClick}
-										className={
 											pathname === "/cenik"
 												? activeMenuDdLink
 												: inactiveMenuDdLink
@@ -251,6 +242,15 @@ const Header = () => {
 								<div className="menu-dd"></div>
 							</div>
 						</li> */}
+						<li className="menu-item">
+							<Link
+								onClick={() => setIsMenuActive(false)}
+								className={`menu-nav__link ${pathname === "/ordinacni-hodiny" ? "menu-nav__link--active" : ""}`}
+								href="/ordinacni-hodiny"
+							>
+								<span>Ordinační hodiny</span>
+							</Link>
+						</li>
 						<li className="menu-item">
 							<Link
 								onClick={() => setIsMenuActive(false)}

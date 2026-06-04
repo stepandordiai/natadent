@@ -102,8 +102,7 @@
 		"sun": "Neděle",
 		"closed": "Zavřeno",
 		"nav_title": "Navigace",
-		"rights": "Všechna práva vyhrazena",
-		"website_created_by": "Website created by"
+		"rights": "Všechna práva vyhrazena"
 	},
 
 	"services": {
@@ -175,5 +174,17 @@
 			"19": "cementování fuji Cem",
 			"20": "cementování prov. Práce"
 		}
+	},
+
+	"workingHours": {
+		"meta": {
+			"title": "Ordinační hodiny týmu",
+			"description": "Přehled ordinačních hodin jednotlivých lékařů a členů týmu kliniky Natadent v Kolíně. Podívejte se, kdy ordinují naši stomatologové a specialisté."
+		},
+
+		"title": "Ordinační hodiny týmu",
+		"lunch": "Polední pauza",
+		"atWork": "V pracovní době",
+		"notAtWork": "Mimo pracovní dobu"
 	}
 }

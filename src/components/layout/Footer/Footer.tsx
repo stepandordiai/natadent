@@ -184,11 +184,13 @@ const Footer = () => {
 					<p>&copy; {new Date().getFullYear()} NATADENT s.r.o.</p>
 					<p>{t("footer.rights")}.</p>
 					<p>
-						{t("footer.website_created_by")}{" "}
+						Website created by{" "}
 						<a
 							className="footer__creator-link"
 							href="https://www.heeeyooo.com"
 							target="_blank"
+							// TODO: learn this
+							rel="noopener noreferrer"
 						>
 							heeeyooo studio
 						</a>

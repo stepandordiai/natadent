@@ -102,8 +102,7 @@
 		"sun": "Sunday",
 		"closed": "Closed",
 		"nav_title": "Navigation",
-		"rights": "All rights reserved",
-		"website_created_by": "Website created by"
+		"rights": "All rights reserved"
 	},
 
 	"services": {
@@ -175,5 +174,17 @@
 			"19": "Fuji Cem cementation",
 			"20": "Temporary work cementation"
 		}
+	},
+
+	"workingHours": {
+		"meta": {
+			"title": "Team Working Hours",
+			"description": "Overview of working hours for individual doctors and team members at the Natadent clinic in Kolín. Find out when our dentists and specialists are available."
+		},
+
+		"title": "Team Working Hours",
+		"lunch": "Lunch break",
+		"atWork": "At work",
+		"notAtWork": "Off work"
 	}
 }

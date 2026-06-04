@@ -17,7 +17,7 @@
 
 .our-team__grid {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	gap: 30px;
 }
 
@@ -34,9 +34,34 @@
 	background: var(--bg-clr);
 }
 
+.working-hours-list-item {
+	padding: 0.25rem;
+
+	&--active {
+		border-radius: 10px;
+		border: 2px solid rgba(0, 0, 0, 0.1);
+	}
+}
+
+.working-hours__indicator {
+	display: inline-block;
+	width: 20px;
+	aspect-ratio: 1/1;
+	background: radial-gradient(hsl(0, 0%, 50%), #fff 50%);
+	border-radius: 50%;
+
+	&--active {
+		background: radial-gradient(var(--accent-clr), #fff 50%);
+	}
+
+	&--lunch {
+		background: radial-gradient(rgb(254, 145, 87), #fff 50%);
+	}
+}
+
 @media (max-width: 1200px) {
 	.our-team__grid {
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 

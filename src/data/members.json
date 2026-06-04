@@ -1,0 +1,94 @@
+[
+	{
+		"img": "/icons/user.png",
+		"name": "Natalija Tomyšynec",
+		"workingHours": [
+			{
+				"start": "9:00",
+				"lunchStart": "12:00",
+				"lunchEnd": "12:30",
+				"end": "16:00"
+			},
+			{
+				"start": "9:00",
+				"lunchStart": "12:00",
+				"lunchEnd": "12:30",
+				"end": "16:00"
+			},
+			{
+				"start": "9:00",
+				"lunchStart": "12:00",
+				"lunchEnd": "12:30",
+				"end": "16:00"
+			},
+			{
+				"start": "9:00",
+				"lunchStart": "12:00",
+				"lunchEnd": "12:30",
+				"end": "16:00"
+			},
+			{
+				"name": "our_team.fri",
+				"start": "9:00",
+				"lunchStart": "12:00",
+				"lunchEnd": "12:30",
+				"end": "16:00"
+			},
+			{
+				"name": "our_team.mon",
+				"start": "9:00",
+				"lunchStart": "12:00",
+				"lunchEnd": "12:30",
+				"end": "14:00"
+			}
+		]
+	},
+	{
+		"img": "/icons/user.png",
+		"name": "Vladimir Kedelidze",
+		"workingHours": [
+			{
+				"name": "our_team.mon",
+				"start": "9:00",
+				"lunchStart": "12:00",
+				"lunchEnd": "12:30",
+				"end": "16:00"
+			},
+			{
+				"name": "our_team.mon",
+				"start": "9:00",
+				"lunchStart": "12:00",
+				"lunchEnd": "12:30",
+				"end": "16:00"
+			},
+			{
+				"name": "our_team.mon",
+				"start": "9:00",
+				"lunchStart": "12:00",
+				"lunchEnd": "12:30",
+				"end": "16:00"
+			},
+			{
+				"name": "our_team.mon",
+				"start": "9:00",
+				"lunchStart": "12:00",
+				"lunchEnd": "12:30",
+				"end": "16:00"
+			},
+			{
+				"name": "our_team.mon",
+				"start": "9:00",
+				"lunchStart": "12:00",
+				"lunchEnd": "12:30",
+				"end": "15:00"
+			},
+			{
+				"name": "our_team.mon",
+				"start": "9:00",
+				"lunchStart": "12:00",
+				"lunchEnd": "12:30",
+				"end": "14:00"
+			}
+		]
+	}
+]

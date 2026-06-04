@@ -5,8 +5,8 @@ import { NextIntlClientProvider } from "next-intl";
 import Loading from "@/components/Loading/Loading";
 import { BASE_URL } from "@/lib/constants";
 import Header from "@/components/layout/Header/Header";
-import "@/styles/globals.scss";
 import Banner from "@/components/Banner/Banner";
+import "@/styles/globals.scss";
 
 const montserrat = Lexend({
 	variable: "--montserrat-font",
@@ -16,6 +16,10 @@ const montserrat = Lexend({
 
 export const metadata: Metadata = {
 	metadataBase: BASE_URL,
+	title: {
+		template: "%s | Natadent",
+		default: "Natadent",
+	},
 };
 
 export default async function LocaleLayout({
