@@ -100,8 +100,8 @@ export default async function Contacts() {
 								alt=""
 							/>
 							<p className="contacts__phone">{t("contacts.phone")}</p>
-							<a className="contacts__phone-link" href="tel:+420773802886">
-								+420 773 802 886
+							<a className="contacts__phone-link" href="tel:+420773853539">
+								+420 773 853 539
 							</a>
 						</div>
 						<div>
