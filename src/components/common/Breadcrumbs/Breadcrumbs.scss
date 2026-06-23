@@ -1,10 +1,12 @@
 @use "@/styles/mixins" as *;
 
-.page-title {
+.breadcrumbs {
 	padding: 130px 30px 0;
+	font-size: 14px;
 }
 
-.page-title__links {
+.breadcrumbs-list {
+	list-style: none;
 	@include flex-start-center;
 	flex-wrap: wrap;
 
@@ -12,10 +14,6 @@
 		@include grid-center;
 		height: 30px;
 		padding: 0 7.5px;
-
-		&:nth-last-of-type(1) {
-			color: hsl(0, 0%, 50%);
-		}
 	}
 }
 
@@ -38,7 +36,7 @@
 }
 
 @media (max-width: 900px) {
-	.page-title {
+	.breadcrumbs {
 		padding: 130px 15px 0;
 	}
 }

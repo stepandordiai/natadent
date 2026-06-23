@@ -7,6 +7,8 @@ import members from "@/data/members.json";
 import { routing } from "@/i18n/routing";
 import "./styles.scss";
 
+const page = "ordinacni-hodiny";
+
 export async function generateMetadata({
 	params,
 }: {
@@ -14,7 +16,6 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale, namespace: "workingHours" });
-	const page = "ordinacni-hodiny";
 	const languages = Object.fromEntries(
 		routing.locales.map((l) => [l, `${BASE_URL}/${l}/${page}`]),
 	);
@@ -22,11 +23,11 @@ export async function generateMetadata({
 		title: t("meta.title"),
 		description: t("meta.description"),
 		alternates: {
+			canonical: `${BASE_URL}/${locale}/${page}`,
 			languages: {
 				...languages,
 				"x-default": `${BASE_URL}/${routing.defaultLocale}/${page}`,
 			},
-			canonical: `${BASE_URL}/${locale}/${page}`,
 		},
 	};
 }
@@ -62,7 +63,8 @@ export default async function WorkingHours({
 	return (
 		<main className="our-team">
 			<Container>
-				<Breadcrumbs title={t("title")} />
+				<Breadcrumbs title="Team Working Hours" url={`/${locale}/${page}`} />
+				<h1 className="page__title">Team Working Hours</h1>
 				<div className="our-team-wrapper">
 					<div className="our-team__grid">
 						{members.map((member, index) => {

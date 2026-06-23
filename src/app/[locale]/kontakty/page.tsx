@@ -3,22 +3,43 @@ import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 import Container from "@/components/Container/Container";
 import type { Metadata } from "next";
 import { BASE_URL } from "@/lib/constants";
+import { routing } from "@/i18n/routing";
 import "./styles.scss";
 
-export async function generateMetadata(): Promise<Metadata> {
+const page = "kontakty";
+
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
 	const t = await getTranslations();
+	const { locale } = await params;
+
+	const languages = Object.fromEntries(
+		routing.locales.map((l) => [l, `${BASE_URL}/${l}/${page}`]),
+	);
 
 	return {
-		title: `${t("contacts_title")} | Natadent`,
+		title: t("contacts_title"),
 		description:
 			"Kontaktujte nás – zubní klinika Natadent v Kolíně. Najdete zde adresu, telefonní číslo, e-mail a ordinační hodiny. Jsme tu pro vás s profesionální péčí a lidským přístupem.",
 		alternates: {
-			canonical: `${BASE_URL}/cs/kontakty`,
+			canonical: `${BASE_URL}/${locale}/${page}`,
+			languages: {
+				...languages,
+				"x-default": `${BASE_URL}/${routing.defaultLocale}/${page}`,
+			},
 		},
 	};
 }
 
-export default async function Contacts() {
+export default async function Contacts({
+	params,
+}: {
+	params: Promise<{ locale: string }>;
+}) {
+	const { locale } = await params;
 	const t = await getTranslations();
 
 	// useEffect(() => {
@@ -85,7 +106,8 @@ export default async function Contacts() {
 	return (
 		<main className="contacts">
 			<Container>
-				<Breadcrumbs title={t("contacts_title")} />
+				<Breadcrumbs title={t("contacts_title")} url={`/${locale}/${page}`} />
+				<h1 className="page__title">{t("contacts_title")}</h1>
 				<div className="contacts-wrapper">
 					<p className="contacts__secondary-info">
 						{t("contacts.details_title")}

@@ -3,6 +3,7 @@ import Container from "@/components/Container/Container";
 import CopyBtn from "@/components/CopyBtn/CopyBtn";
 import type { Metadata } from "next";
 import { BASE_URL } from "@/lib/constants";
+import { routing } from "@/i18n/routing";
 import "./styles.scss";
 
 const services = [
@@ -58,15 +59,27 @@ const services = [
 	},
 ];
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
 	const t = await getTranslations();
+	const { locale } = await params;
 
+	const languages = Object.fromEntries(
+		routing.locales.map((l) => [l, `${BASE_URL}/${l}/`]),
+	);
 	return {
-		title: `${t("home.secondary_title")} | Natadent`,
+		title: `${t("home.secondary_title")}`,
 		description:
 			"Moderní zubní klinika v Kolíně. Nabízíme bezbolestné ortodontické ošetření pomocí analgosedace i celkové anestezie. Komfortní prostředí, profesionální péče a dostupné služby pro zdravý úsměv.",
 		alternates: {
-			canonical: `${BASE_URL}/cs`,
+			canonical: `${BASE_URL}/${locale}/`,
+			languages: {
+				...languages,
+				"x-default": `${BASE_URL}/${routing.defaultLocale}/`,
+			},
 		},
 	};
 }

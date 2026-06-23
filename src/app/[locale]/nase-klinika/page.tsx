@@ -3,6 +3,7 @@ import Container from "@/components/Container/Container";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 import { BASE_URL } from "@/lib/constants";
 import "./styles.scss";
+import { routing } from "@/i18n/routing";
 
 const clinicImages = [
 	"https://cdn.prod.website-files.com/67c64fb730bae54f87c547f8/67d349994688c248cc02cac3_Swish---Web-Res-012.jpg",
@@ -17,20 +18,43 @@ const clinicImages = [
 	"https://cdn.prod.website-files.com/67c64fb730bae54f87c547f8/67d34995957e75830269f0a9_exam-room.png",
 ];
 
-export function generateMetadata(): Metadata {
+const page = "nase-klinika";
+
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+	const { locale } = await params;
+
+	const languages = Object.fromEntries(
+		routing.locales.map((l) => [l, `${BASE_URL}/${l}/${page}`]),
+	);
+
 	return {
 		title: "Naše klinika | Natadent",
 		alternates: {
-			canonical: `${BASE_URL}/cs/nase-klinika`,
+			canonical: `${BASE_URL}/${locale}/${page}`,
+			languages: {
+				...languages,
+				"x-default": `${BASE_URL}/${routing.defaultLocale}/${page}`,
+			},
 		},
 	};
 }
 
-const OurClinic = () => {
+export default async function OurClinic({
+	params,
+}: {
+	params: Promise<{ locale: string }>;
+}) {
+	const { locale } = await params;
+
 	return (
 		<main>
 			<Container>
-				<Breadcrumbs title="Naše klinika" />
+				<Breadcrumbs title={"Naše klinika"} url={`/${locale}/${page}`} />
+				<h1 className="page__title">Clinic Gallery</h1>
 				<div className="our-clinic__masonry">
 					{clinicImages.map((img, index) => {
 						return (
@@ -45,6 +69,4 @@ const OurClinic = () => {
 			</Container>
 		</main>
 	);
-};
-
-export default OurClinic;
+}

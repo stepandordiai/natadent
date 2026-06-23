@@ -15,7 +15,7 @@ const montserrat = Lexend({
 });
 
 export const metadata: Metadata = {
-	metadataBase: BASE_URL,
+	metadataBase: new URL(BASE_URL),
 	title: {
 		template: "%s | Natadent",
 		default: "Natadent",

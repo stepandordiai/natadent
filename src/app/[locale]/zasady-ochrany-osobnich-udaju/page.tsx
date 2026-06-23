@@ -3,23 +3,49 @@ import Container from "@/components/Container/Container";
 import CopyBtn from "@/components/CopyBtn/CopyBtn";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 import { BASE_URL } from "@/lib/constants";
+import { routing } from "@/i18n/routing";
 import "./styles.scss";
 
-export function generateMetadata(): Metadata {
+const page = "gdpr";
+
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+	const { locale } = await params;
+	const languages = Object.fromEntries(
+		routing.locales.map((l) => [l, `${BASE_URL}/${l}/${page}`]),
+	);
+
 	return {
-		title: "Zásady zpracování osobních údajů (GDPR) | Natadent",
+		title: "Zásady zpracování osobních údajů (GDPR)",
 		description:
 			"Zásady zpracování osobních údajů společnosti NATADENT s.r.o. v souladu s nařízením GDPR.",
 		alternates: {
-			canonical: `${BASE_URL}/cs/gdpr`,
+			canonical: `${BASE_URL}/${locale}/${page}`,
+			languages: {
+				...languages,
+				"x-default": `${BASE_URL}/${routing.defaultLocale}/${page}`,
+			},
 		},
 	};
 }
 
-const PrivacyPolicy = () => {
+export default async function PrivacyPolicy({
+	params,
+}: {
+	params: Promise<{ locale: string }>;
+}) {
+	const { locale } = await params;
+
 	return (
 		<main>
-			<Breadcrumbs title="Zásady zpracování osobních údajů (GDPR)" />
+			<Breadcrumbs
+				title="Zásady zpracování osobních údajů"
+				url={`/${locale}/${page}`}
+			/>
+			<h1 className="page__title">Zásady zpracování osobních údajů (GDPR)</h1>
 			<Container>
 				<div className="privacy-policy-container">
 					<p>
@@ -146,6 +172,4 @@ const PrivacyPolicy = () => {
 			</Container>
 		</main>
 	);
-};
-
-export default PrivacyPolicy;
+}

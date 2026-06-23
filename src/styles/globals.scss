@@ -90,3 +90,14 @@ a {
 		}
 	}
 }
+
+.page__title {
+	padding: 30px;
+	font-size: 2rem;
+}
+
+@media (max-width: 900px) {
+	.page__title {
+		padding: 15px;
+	}
+}
