@@ -4,6 +4,7 @@ import Container from "@/components/Container/Container";
 import type { Metadata } from "next";
 import { BASE_URL } from "@/lib/constants";
 import { routing } from "@/i18n/routing";
+import ContactsClient from "./ContactsClient";
 import "./styles.scss";
 
 const page = "kontakty";
@@ -13,17 +14,16 @@ export async function generateMetadata({
 }: {
 	params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-	const t = await getTranslations();
 	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "contacts.meta" });
 
 	const languages = Object.fromEntries(
 		routing.locales.map((l) => [l, `${BASE_URL}/${l}/${page}`]),
 	);
 
 	return {
-		title: t("contacts_title"),
-		description:
-			"Kontaktujte nás – zubní klinika Natadent v Kolíně. Najdete zde adresu, telefonní číslo, e-mail a ordinační hodiny. Jsme tu pro vás s profesionální péčí a lidským přístupem.",
+		title: t("title"),
+		description: t("description"),
 		alternates: {
 			canonical: `${BASE_URL}/${locale}/${page}`,
 			languages: {
@@ -40,78 +40,15 @@ export default async function Contacts({
 	params: Promise<{ locale: string }>;
 }) {
 	const { locale } = await params;
-	const t = await getTranslations();
-
-	// useEffect(() => {
-	// 	const contactsLabels = document.querySelectorAll(".contacts-form__label");
-
-	// 	document
-	// 		.querySelectorAll(".js-contacts-form__input")
-	// 		.forEach((el, index) => {
-	// 			el.addEventListener("input", () => {
-	// 				if (el.value) {
-	// 					contactsLabels[index].classList.add("contacts-form__label--active");
-	// 				} else {
-	// 					contactsLabels[index].classList.remove(
-	// 						"contacts-form__label--active",
-	// 					);
-	// 				}
-	// 			});
-	// 		});
-
-	// 	// Listener for multiple custom selectors
-	// 	document.querySelectorAll(".custom-select").forEach((select) => {
-	// 		const selectBtn = select.querySelector(".custom-select__btn");
-	// 		const selectList = select.querySelector(".custom-select__list");
-	// 		const selectOptions = selectList.querySelectorAll(
-	// 			".custom-select__option",
-	// 		);
-	// 		const selectOption = document.querySelector(".custom-select__input");
-
-	// 		selectBtn.addEventListener("click", (e) => {
-	// 			e.preventDefault();
-	// 			selectList.classList.toggle("custom-select__list--visible");
-	// 			selectBtn.classList.add("custom-select__btn--active");
-	// 		});
-
-	// 		selectOptions.forEach((option) => {
-	// 			option.addEventListener("click", (e) => {
-	// 				// TODO:
-	// 				e.stopPropagation();
-	// 				selectBtn.textContent = option.textContent;
-	// 				selectBtn.focus();
-	// 				selectOption.value = option.dataset.value;
-	// 				selectList.classList.remove("custom-select__list--visible");
-	// 			});
-	// 		});
-
-	// 		document.addEventListener("click", (e) => {
-	// 			if (e.target !== selectBtn) {
-	// 				selectBtn.classList.remove("custom-select__btn--active");
-	// 				selectList.classList.remove("custom-select__list--visible");
-	// 			}
-	// 		});
-	// 	});
-	// }, []);
-
-	// const dateNow = dayjs();
-	// const formatDate = dateNow.format("YYYY-MM-DD");
-
-	// const hourNow = dateNow.hour();
-	// const formatHour = hourNow < 10 ? "0" + hourNow : hourNow;
-
-	// const minuteNow = dateNow.minute();
-	// const formatMinute = minuteNow < 10 ? "0" + minuteNow : minuteNow;
+	const t = await getTranslations("contacts");
 
 	return (
 		<main className="contacts">
 			<Container>
-				<Breadcrumbs title={t("contacts_title")} url={`/${locale}/${page}`} />
-				<h1 className="page__title">{t("contacts_title")}</h1>
+				<Breadcrumbs title={t("heading")} url={`/${locale}/${page}`} />
+				<h1 className="page__title">{t("heading")}</h1>
 				<div className="contacts-wrapper">
-					<p className="contacts__secondary-info">
-						{t("contacts.details_title")}
-					</p>
+					<p className="contacts__secondary-info">{t("subheading")}</p>
 					<div className="contacts-details">
 						<div>
 							<img
@@ -121,7 +58,7 @@ export default async function Contacts({
 								height={30}
 								alt=""
 							/>
-							<p className="contacts__phone">{t("contacts.phone")}</p>
+							<p className="contacts__phone">{t("tel")}</p>
 							<a className="contacts__phone-link" href="tel:+420773853539">
 								+420 773 853 539
 							</a>
@@ -134,7 +71,7 @@ export default async function Contacts({
 								height={30}
 								alt=""
 							/>
-							<p className="contacts__email">{t("contacts.mail")}</p>
+							<p className="contacts__email">{t("email")}</p>
 							<a
 								className="contacts__email-link"
 								href="mailto:info@natadent.cz"
@@ -150,7 +87,7 @@ export default async function Contacts({
 								height={30}
 								alt=""
 							/>
-							<p className="contacts__address">{t("contacts.address")}</p>
+							<p className="contacts__address">{t("address")}</p>
 							<a
 								className="contacts__email-link"
 								href="https://maps.app.goo.gl/z5moH8T3Wa4Wmt2s5"
@@ -160,101 +97,13 @@ export default async function Contacts({
 							</a>
 						</div>
 					</div>
-					{/* <h2 className="contacts__appointment-title">
-						{t("appointment_title")}
-					</h2> */}
-					{/* <form
-						className="contacts-form"
-						action="mailto:info@neresen.cz"
-						method="post"
-						encType="text/plain"
-					>
-						<div className="contacts-form__inputs">
-							<div className="contacts-form__input-wrapper">
-								<label className="contacts-form__label">
-									{t("contacts.first_name")}
-								</label>
-								<input
-									className="contacts-form__input  js-contacts-form__input"
-									type="text"
-									name="firstName"
-									autoComplete="given-name"
-									required
-								/>
-							</div>
-							<div className="contacts-form__input-wrapper">
-								<label className="contacts-form__label">
-									{t("contacts.last_name")}
-								</label>
-								<input
-									className="contacts-form__input  js-contacts-form__input"
-									type="text"
-									name="lastName"
-									autoComplete="family-name"
-								/>
-							</div>
-						</div>
-						<div className="contacts-form__inputs">
-							<div className="contacts-form__input-wrapper">
-								<label className="contacts-form__label">
-									{t("contacts.mail")}
-								</label>
-								<input
-									className="contacts-form__input js-contacts-form__input"
-									type="email"
-									name="email"
-									autoComplete="email"
-								/>
-							</div>
-							<div className="contacts-form__input-wrapper">
-								<label className="contacts-form__label">
-									{t("contacts.phone")}
-								</label>
-								<input
-									className="contacts-form__input  js-contacts-form__input"
-									type="tel"
-									name="tel"
-									autoComplete="tel"
-									required
-								/>
-							</div>
-						</div>
-						<div className="custom-select">
-							<button className="custom-select__btn">
-								{t("contacts.choose_service")}
-							</button>
-							<ul className="custom-select__list">
-								<li className="custom-select__option" data-value="Nevybráno">
-									{t("contacts.choose_service")}
-								</li>
-								{services.map((service) => {
-									return (
-										<li
-											key={service.id}
-											className="custom-select__option"
-											data-value={t(service.name)}
-										>
-											{t(service.name)}
-										</li>
-									);
-								})}
-							</ul>
-							<input
-								className="custom-select__input"
-								type="text"
-								name="service"
-								defaultValue=""
-							/>
-						</div>
-						<button className="contacts-form__btn" type="submit">
-							{t("contacts.submit_btn_title")}
-						</button>
-					</form> */}
+					<h2 className="contacts__appointment-title">
+						{t("appointmentTitle")}
+					</h2>
+					<ContactsClient />
 					<div className="contacts__maps-container">
 						<div>
-							<h2 className="contacts__map-title">
-								{t("contacts.address_btn_title")}
-							</h2>
+							<h2 className="contacts__map-title">{t("visitUsOnGoogle")}</h2>
 							<iframe
 								className="contacts__map"
 								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d906.2737924918879!2d15.213754247414611!3d50.02392366268641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c155b8cfe1db9%3A0x4e0e3a3f6277c27f!2sNATADENT%20s.r.o.!5e0!3m2!1sen!2scz!4v1772115528843!5m2!1sen!2scz"
@@ -262,7 +111,7 @@ export default async function Contacts({
 							></iframe>
 						</div>
 						<div>
-							<h2 className="contacts__map-title">Navštivte nás na Mapy.cz</h2>
+							<h2 className="contacts__map-title">{t("visitUsOnMapy")}</h2>
 							<iframe
 								className="contacts__map"
 								src="https://mapy.com/s/celezobomu"

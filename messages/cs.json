@@ -80,15 +80,26 @@
 	},
 
 	"contacts": {
-		"details_title": "Máte dotaz nebo si potřebujete rezervovat termín? Jsme tu, abychom vám pomohli. Kontaktujte nás prostřednictvím formuláře, telefonu nebo e-mailu a my vám rádi pomůžeme.",
-		"phone": "Telefonní číslo",
-		"mail": "E-mail",
+		"meta": {
+			"title": "Kontakt",
+			"description": "Kontaktujte zubní kliniku Natadent v Kolíně. Najdete zde adresu, telefon, e-mail i ordinační dobu. Rádi vám pomůžeme s objednáním i dotazy týkajícími se zubní péče."
+		},
+		"heading": "Kontakt",
+		"subheading": "Máte dotaz nebo si chcete rezervovat termín? Kontaktujte nás prostřednictvím formuláře, telefonu nebo e-mailu. Rádi vám pomůžeme.",
+		"tel": "Telefon",
+		"email": "E-mail",
 		"address": "Adresa",
-		"address_btn_title": "Navštivte nás na Googlu",
-		"first_name": "Jméno",
-		"last_name": "Příjmení",
-		"choose_service": "Vybrat službu",
-		"submit_btn_title": "Poslat"
+		"visitUsOnGoogle": "Najít na Google",
+		"visitUsOnMapy": "Najít na Mapy.cz",
+		"firstName": "Jméno",
+		"lastName": "Příjmení",
+		"chooseService": "Vyberte službu",
+		"send": "Odeslat",
+		"sending": "Odesílání...",
+		"success": "Děkujeme za vaši zprávu. Budeme vás co nejdříve kontaktovat.",
+		"appointmentTitle": "Objednat se",
+		"service": "Služba",
+		"message": "Zpráva"
 	},
 
 	"footer": {

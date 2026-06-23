@@ -4,6 +4,7 @@ import CopyBtn from "@/components/CopyBtn/CopyBtn";
 import type { Metadata } from "next";
 import { BASE_URL } from "@/lib/constants";
 import { routing } from "@/i18n/routing";
+import ArrowRightIcon from "@/components/icons/ArrowRightIcon";
 import "./styles.scss";
 
 const services = [
@@ -121,11 +122,21 @@ export default async function Home() {
 							Pod Hroby 1026, 280 02 Kolín 2
 						</a>
 					</div>
-					<a
+					{/* <a
 						href="https://natadent.xdent.cz/wizard/clinic-selection"
 						target="_blank"
 					>
 						Objednat online
+					</a> */}
+					<a
+						className="link-btn"
+						href="https://natadent.xdent.cz/wizard/clinic-selection"
+						target="_blank"
+					>
+						<span>Objednat online</span>
+						<span>
+							<ArrowRightIcon size={20} />
+						</span>
 					</a>
 				</div>
 				<div className="home__services" id="sluzby">

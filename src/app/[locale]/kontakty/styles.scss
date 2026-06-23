@@ -98,105 +98,65 @@
 
 	&:focus-within .contacts-form__label {
 		top: 0;
+		transform: translateY(-50%);
 		font-size: 12px;
 	}
 }
 
 .contacts-form__input {
-	height: 60px;
-	border-radius: 30px;
+	border-radius: 24px;
 	width: 100%;
-	padding: 0 15px;
+	padding: 14px;
 	border: 1px solid var(--accent-clr);
 }
 
-.contacts-form__label {
-	pointer-events: none;
-	position: absolute;
-	top: 50%;
+.contacts-form__input:focus + .contacts-form__label,
+.contacts-form__input:not(:placeholder-shown) + .contacts-form__label {
+	top: 0;
 	transform: translateY(-50%);
-	padding-left: 15px;
-	transition: all 0.3s;
+	font-size: 12px;
 }
 
-.contacts-form__label--active {
+.contacts-form__textarea {
+	border-radius: 24px;
+	width: 100%;
+	padding: 14px;
+	border: 1px solid var(--accent-clr);
+	resize: vertical;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.contacts-form__textarea:focus + .contacts-form__label,
+.contacts-form__textarea:not(:placeholder-shown) + .contacts-form__label {
 	top: 0;
+	transform: translateY(-50%);
 	font-size: 12px;
+}
+
+.contacts-form__label {
+	position: absolute;
+	top: 14px;
+	left: 14px;
+	transition: all 0.3s;
 }
 
 // Custom select
 
-.custom-select {
-	position: relative;
-	height: 60px;
-}
+.select-container {
+	display: flex;
+	flex-direction: column;
 
-.custom-select__btn {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	text-align: left;
-	background: var(--bg-clr);
-	border-radius: 30px;
-	padding-left: 15px;
-	cursor: pointer;
-	border: 1px solid var(--accent-clr);
-	transition: background-color 0.3s;
-}
-
-.custom-select__btn--active {
-	background: var(--accent-clr);
-}
-
-.custom-select__btn::after {
-	content: "";
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	right: 15px;
-	width: 10px;
-	aspect-ratio: 1/1;
-	clip-path: polygon(50% 100%, 0 0, 100% 0);
-	background: #000;
-}
-
-.custom-select__list {
-	display: none;
-	position: absolute;
-	left: 0;
-	width: 100%;
-	padding: 7.5px;
-	border-radius: 15px;
-	background: var(--bg-clr);
-	box-shadow: var(--cstm-box-shadow);
-}
-
-.custom-select__list--visible {
-	display: block;
-}
-
-.custom-select__option {
-	@include flex-start-center;
-	height: 30px;
-	border-radius: 15px;
-	padding: 0 15px;
-	cursor: pointer;
-	transition: background-color 0.3s;
-
-	&:hover {
-		background: var(--accent-clr);
+	label {
+		padding-left: 14px;
 	}
 }
 
-.custom-select__input {
-	display: none;
-}
-
-input[type="date"],
-input[type="time"] {
-	height: 60px;
-	border-radius: 30px;
-	padding: 15px;
+.select {
+	padding: 14px;
+	border-radius: 24px;
 	border: 1px solid var(--accent-clr);
 }
 

@@ -3,7 +3,6 @@
 import { useTranslations } from "next-intl";
 import Container from "@/components/Container/Container";
 import CopyBtn from "@/components/CopyBtn/CopyBtn";
-import services from "@/data/services.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./Footer.scss";
@@ -59,7 +58,7 @@ const Footer = () => {
 							</li>
 							<li className={day === 6 ? "day--active" : ""}>
 								<span>{t("footer.sat")}:</span>
-								<span>9:00-12:00 | 12:30-14:00</span>
+								<span>{t("footer.closed")}</span>
 							</li>
 							<li className={day === 0 ? "day--active" : ""}>
 								<span>{t("footer.sun")}:</span>
