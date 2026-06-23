@@ -15,16 +15,15 @@ export async function generateMetadata({
 	params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
 	const { locale } = await params;
-	const t = await getTranslations();
+	const t = await getTranslations({ locale, namespace: "priceList.meta" });
 
 	const languages = Object.fromEntries(
 		routing.locales.map((l) => [l, `${BASE_URL}/${l}/${page}`]),
 	);
 
 	return {
-		title: t("price_list_title"),
-		description:
-			"Prohlédněte si aktuální ceník služeb zubní kliniky Natadent. Transparentní ceny za stomatologické výkony, dentální hygienu, implantáty a další ošetření.",
+		title: t("title"),
+		description: t("description"),
 		alternates: {
 			canonical: `${BASE_URL}/${locale}/cenik`,
 			languages: {

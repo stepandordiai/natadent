@@ -58,6 +58,27 @@
 		"answer_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!"
 	},
 
+	"priceList": {
+		"meta": {
+			"title": "Ceník stomatologických služeb | Natadent Kolín",
+			"description": "Aktuální ceník zubní kliniky Natadent v Kolíně. Transparentní ceny za dentální hygienu, bělení zubů, výplně, endodoncii a stomatochirurgii. Bez skrytých poplatků."
+		}
+	},
+
+	"smileGallery": {
+		"meta": {
+			"title": "Galerie úsměvů – proměny pacientů | Natadent Kolín",
+			"description": "Prohlédněte si reálné proměny úsměvů našich pacientů. Fotografie před a po ošetření na zubní klinice Natadent v Kolíně – bělení, výplně, estetická stomatologie."
+		}
+	},
+
+	"ourClinic": {
+		"meta": {
+			"title": "Naše klinika – prostředí a vybavení | Natadent Kolín",
+			"description": "Nahlédněte do prostředí zubní kliniky Natadent v Kolíně. Moderní vybavení, příjemné a komfortní zázemí pro bezbolestné a profesionální stomatologické ošetření."
+		}
+	},
+
 	"price_data": {
 		"all_title": "Vše",
 		"braces_title": "Rovnátka",

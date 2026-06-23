@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Container from "@/components/Container/Container";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 import { BASE_URL } from "@/lib/constants";
-import "./styles.scss";
 import { routing } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
+import "./styles.scss";
 
 const clinicImages = [
 	"https://cdn.prod.website-files.com/67c64fb730bae54f87c547f8/67d349994688c248cc02cac3_Swish---Web-Res-012.jpg",
@@ -26,13 +27,15 @@ export async function generateMetadata({
 	params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
 	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "ourClinic.meta" });
 
 	const languages = Object.fromEntries(
 		routing.locales.map((l) => [l, `${BASE_URL}/${l}/${page}`]),
 	);
 
 	return {
-		title: "Naše klinika | Natadent",
+		title: t("title"),
+		description: t("description"),
 		alternates: {
 			canonical: `${BASE_URL}/${locale}/${page}`,
 			languages: {

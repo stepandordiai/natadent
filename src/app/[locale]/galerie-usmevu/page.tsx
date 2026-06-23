@@ -15,16 +15,15 @@ export async function generateMetadata({
 	params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
 	const { locale } = await params;
-	const t = await getTranslations();
+	const t = await getTranslations({ locale, namespace: "smileGallery.meta" });
 
 	const languages = Object.fromEntries(
 		routing.locales.map((l) => [l, `${BASE_URL}/${l}/${page}`]),
 	);
 
 	return {
-		title: `${t("smile_gallery_title")}`,
-		description:
-			"Podívejte se na ukázky proměn našich pacientů v Galerii úsměvů. Skutečné výsledky profesionální stomatologické péče na klinice Natadent.",
+		title: t("title"),
+		description: t("description"),
 		alternates: {
 			canonical: `${BASE_URL}/${locale}/${page}`,
 			languages: {

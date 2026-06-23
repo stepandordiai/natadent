@@ -58,6 +58,27 @@
 		"answer_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quas, odit odio consequuntur magni, quia enim commodi suscipit, animi nobis. Magnam saepe quis alias dolorem perferendis, libero tempore temporibus!"
 	},
 
+	"priceList": {
+		"meta": {
+			"title": "Dental Services Price List | Natadent Kolín",
+			"description": "Current price list of Natadent dental clinic in Kolín. Transparent prices for dental hygiene, teeth whitening, fillings, endodontics and oral surgery. No hidden fees."
+		}
+	},
+
+	"smileGallery": {
+		"meta": {
+			"title": "Smile Gallery – Patient Transformations | Natadent Kolín",
+			"description": "Browse real smile transformations of our patients. Before and after photos at Natadent dental clinic in Kolín – whitening, fillings, cosmetic dentistry."
+		}
+	},
+
+	"ourClinic": {
+		"meta": {
+			"title": "Our Clinic – Facilities & Equipment | Natadent Kolín",
+			"description": "Take a look inside Natadent dental clinic in Kolín. Modern equipment and a comfortable, welcoming environment for painless, professional dental care."
+		}
+	},
+
 	"price_data": {
 		"all_title": "All",
 		"braces_title": "Braces",
