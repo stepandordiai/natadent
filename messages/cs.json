@@ -1,4 +1,8 @@
 {
+	"nav": {
+		"ourClinic": "Naše klinika"
+	},
+
 	"home_title": "Úvod",
 	"about_us_title": "O nás",
 	"our_team_title": "Náš tým",
@@ -76,7 +80,9 @@
 		"meta": {
 			"title": "Naše klinika – prostředí a vybavení | Natadent Kolín",
 			"description": "Nahlédněte do prostředí zubní kliniky Natadent v Kolíně. Moderní vybavení, příjemné a komfortní zázemí pro bezbolestné a profesionální stomatologické ošetření."
-		}
+		},
+
+		"heading": "Galerie kliniky"
 	},
 
 	"price_data": {

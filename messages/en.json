@@ -1,4 +1,8 @@
 {
+	"nav": {
+		"ourClinic": "Our Clinic"
+	},
+
 	"home_title": "Home",
 	"about_us_title": "About us",
 	"our_team_title": "Our team",
@@ -76,7 +80,9 @@
 		"meta": {
 			"title": "Our Clinic – Facilities & Equipment | Natadent Kolín",
 			"description": "Take a look inside Natadent dental clinic in Kolín. Modern equipment and a comfortable, welcoming environment for painless, professional dental care."
-		}
+		},
+
+		"heading": "Clinic Gallery"
 	},
 
 	"price_data": {

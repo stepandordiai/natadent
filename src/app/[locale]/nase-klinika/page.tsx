@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import Container from "@/components/Container/Container";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 import { BASE_URL } from "@/lib/constants";
@@ -7,16 +7,21 @@ import { getTranslations } from "next-intl/server";
 import "./styles.scss";
 
 const clinicImages = [
-	"https://cdn.prod.website-files.com/67c64fb730bae54f87c547f8/67d349994688c248cc02cac3_Swish---Web-Res-012.jpg",
-	"https://cdn.prod.website-files.com/67c64fb730bae54f87c547f8/67d349985e8134b65d85bfc3_Swish%20-%20Bridgeland-014.jpg",
-	"https://cdn.prod.website-files.com/67c64fb730bae54f87c547f8/67d34998289e73914fad1dd1_Swish%20-Bridgeland-010.jpg",
-	"https://cdn.prod.website-files.com/67c64fb730bae54f87c547f8/67d3499880356ff16e9d31d2_Swish%20-%20Bridgeland-017.jpg",
-	"https://cdn.prod.website-files.com/67c64fb730bae54f87c547f8/67d34996272b6a0321a5cb66_Swish%20-%20Bridgeland-015.jpg",
-	"https://cdn.prod.website-files.com/67c64fb730bae54f87c547f8/67d3499523c21a5bb88e2dbf_Swish%20-%20Bridgeland-003.jpg",
-	"https://cdn.prod.website-files.com/67c64fb730bae54f87c547f8/67d349939aca5c5c363f1835_Swish%20-%20Bridgeland-013.jpg",
-	"https://cdn.prod.website-files.com/67c64fb730bae54f87c547f8/67d34993da0d52680b8b827f_Swish-Bridgeland.jpeg",
-	"https://cdn.prod.website-files.com/67c64fb730bae54f87c547f8/67d34993e1c3b162ac9cfe24_Swish-Bridgeland-01.jpeg",
-	"https://cdn.prod.website-files.com/67c64fb730bae54f87c547f8/67d34995957e75830269f0a9_exam-room.png",
+	"/gallery/01.jpg",
+	"/gallery/02.jpg",
+	"/gallery/03.jpg",
+	"/gallery/04.jpg",
+	"/gallery/05.jpg",
+	"/gallery/06.jpg",
+	"/gallery/07.jpg",
+	"/gallery/08.jpg",
+	"/gallery/09.jpg",
+	"/gallery/10.jpg",
+	"/gallery/11.jpg",
+	"/gallery/12.jpg",
+	"/gallery/13.jpg",
+	"/gallery/14.jpg",
+	"/gallery/15.jpg",
 ];
 
 const page = "nase-klinika";
@@ -52,18 +57,19 @@ export default async function OurClinic({
 	params: Promise<{ locale: string }>;
 }) {
 	const { locale } = await params;
+	const t = await getTranslations({ locale });
 
 	return (
 		<main>
 			<Container>
-				<Breadcrumbs title={"Naše klinika"} url={`/${locale}/${page}`} />
-				<h1 className="page__title">Clinic Gallery</h1>
+				<Breadcrumbs title={t("nav.ourClinic")} url={`/${locale}/${page}`} />
+				<h1 className="page__title">{t("ourClinic.heading")}</h1>
 				<div className="our-clinic__masonry">
 					{clinicImages.map((img, index) => {
 						return (
 							<div key={index} className="masonry__item">
 								<div className="masonry__img-container">
-									<img src={img} alt="" loading="lazy" />
+									<img src={img} alt="" />
 								</div>
 							</div>
 						);
