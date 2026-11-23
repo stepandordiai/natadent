@@ -88,60 +88,114 @@ export async function generateMetadata({
 export default async function Home() {
 	const t = await getTranslations();
 
+	const jsonLd = {
+		"@context": "https://schema.org",
+		"@type": "Dentist",
+		"@id": `${BASE_URL}/#clinic`,
+		name: "Natadent",
+		legalName: "NATADENT s.r.o.",
+		url: BASE_URL,
+		logo: `${BASE_URL}/logo/tooth.png`,
+		image: `${BASE_URL}/logo/tooth.png`,
+		description:
+			"Moderní zubní klinika v Kolíně. Stomatologická péče, dentální hygiena, bělení zubů, výplně, endodoncie a stomatochirurgie.",
+		telephone: "+420773853539",
+		email: "info@natadent.cz",
+		priceRange: "$$",
+		currenciesAccepted: "CZK",
+		address: {
+			"@type": "PostalAddress",
+			streetAddress: "Pod Hroby 1026",
+			addressLocality: "Kolín",
+			postalCode: "280 02",
+			addressCountry: "CZ",
+		},
+		hasMap: "https://maps.app.goo.gl/z5moH8T3Wa4Wmt2s5",
+		geo: {
+			"@type": "GeoCoordinates",
+			latitude: 50.0243003,
+			longitude: 15.2143518,
+		},
+		openingHoursSpecification: [
+			{
+				"@type": "OpeningHoursSpecification",
+				dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+				opens: "09:00",
+				closes: "16:00",
+			},
+		],
+		sameAs: [
+			"https://www.facebook.com/p/Zubn%C3%AD-klinika-Natadent-61589092481570/",
+		],
+		potentialAction: {
+			"@type": "ReserveAction",
+			target: "https://natadent.xdent.cz/wizard/clinic-selection",
+		},
+	};
+
 	return (
-		<main>
-			<Container>
-				<div className="home-top">
-					<div className="home-top__logo">
-						<img
-							className="home-top__logo-icon"
-							src="/logo/tooth.png"
-							alt="Natadent logo"
-						/>
-					</div>
-					<h1 className="home-top__title">Zubní klinika Natadent</h1>
-					<div className="home-container">
-						<p style={{ fontWeight: 500, marginBottom: 5 }}>NATADENT s.r.o.</p>
-						<p style={{ marginBottom: 5 }}>
-							IČO <CopyBtn />
-						</p>
-						<p style={{ fontWeight: 500, marginBottom: 5 }}>Telefonní číslo</p>
-						<a
-							style={{ marginBottom: 5 }}
-							className="link"
-							href="tel:+420773853539"
-						>
-							+420 773 853 539
-						</a>
-						<p style={{ fontWeight: 500, marginBottom: 5 }}>Kde jsme</p>
-						<a
-							className="link"
-							href="https://maps.app.goo.gl/z5moH8T3Wa4Wmt2s5"
-							target="_blank"
-						>
-							Pod Hroby 1026, 280 02 Kolín 2
-						</a>
-					</div>
-					{/* <a
+		<>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+			/>
+			<main>
+				<Container>
+					<div className="home-top">
+						<div className="home-top__logo">
+							<img
+								className="home-top__logo-icon"
+								src="/logo/tooth.png"
+								alt="Natadent logo"
+							/>
+						</div>
+						<h1 className="home-top__title">Zubní klinika Natadent</h1>
+						<div className="home-container">
+							<p style={{ fontWeight: 500, marginBottom: 5 }}>
+								NATADENT s.r.o.
+							</p>
+							<p style={{ marginBottom: 5 }}>
+								IČO <CopyBtn />
+							</p>
+							<p style={{ fontWeight: 500, marginBottom: 5 }}>
+								Telefonní číslo
+							</p>
+							<a
+								style={{ marginBottom: 5 }}
+								className="link"
+								href="tel:+420773853539"
+							>
+								+420 773 853 539
+							</a>
+							<p style={{ fontWeight: 500, marginBottom: 5 }}>Kde jsme</p>
+							<a
+								className="link"
+								href="https://maps.app.goo.gl/z5moH8T3Wa4Wmt2s5"
+								target="_blank"
+							>
+								Pod Hroby 1026, 280 02 Kolín 2
+							</a>
+						</div>
+						{/* <a
 						href="https://natadent.xdent.cz/wizard/clinic-selection"
 						target="_blank"
 					>
 						Objednat online
 					</a> */}
-					<a
-						className="link-btn"
-						href="https://natadent.xdent.cz/wizard/clinic-selection"
-						target="_blank"
-					>
-						<span>Objednat online</span>
-						<span>
-							<ArrowRightIcon size={20} />
-						</span>
-					</a>
-				</div>
-				<div className="home__services" id="sluzby">
-					<h2 className="home__services-title">{t("services_title")}</h2>
-					{/* <input
+						<a
+							className="link-btn"
+							href="https://natadent.xdent.cz/wizard/clinic-selection"
+							target="_blank"
+						>
+							<span>Objednat online</span>
+							<span>
+								<ArrowRightIcon size={20} />
+							</span>
+						</a>
+					</div>
+					<div className="home__services" id="sluzby">
+						<h2 className="home__services-title">{t("services_title")}</h2>
+						{/* <input
 							className="home__services-search"
 							// onInput={(e) => {
 							// 	setSearch(e.target.value);
@@ -158,50 +212,50 @@ export default async function Home() {
 							/>
 							<span>{t("home.services_no_result_pop_up")}</span>
 						</p> */}
-					<div>
-						{services.map((s, i) => {
-							if (i % 2 === 0) {
-								return (
-									<div key={i} className="service-grid-odd">
-										<div className="empty-container"></div>
-										<div>
-											<h3 className="service__title">({i + 1})</h3>
-											<div className="img-container">
-												<img className="service__img" src={s.img} alt="" />
+						<div>
+							{services.map((s, i) => {
+								if (i % 2 === 0) {
+									return (
+										<div key={i} className="service-grid-odd">
+											<div className="empty-container"></div>
+											<div>
+												<h3 className="service__title">({i + 1})</h3>
+												<div className="img-container">
+													<img className="service__img" src={s.img} alt="" />
+												</div>
+											</div>
+											<div>
+												<h3 className="service__title">{s.name}</h3>
+												<div className="text-container">
+													<p>{s.desc}</p>
+													<a href="#">Learn more</a>
+												</div>
 											</div>
 										</div>
-										<div>
-											<h3 className="service__title">{s.name}</h3>
-											<div className="text-container">
-												<p>{s.desc}</p>
-												<a href="#">Learn more</a>
+									);
+								} else {
+									return (
+										<div key={i} className="service-grid-odd">
+											<div>
+												<h3 className="service__title">({i + 1})</h3>
+												<div className="img-container">
+													<img className="service__img" src={s.img} alt="" />
+												</div>
 											</div>
-										</div>
-									</div>
-								);
-							} else {
-								return (
-									<div key={i} className="service-grid-odd">
-										<div>
-											<h3 className="service__title">({i + 1})</h3>
-											<div className="img-container">
-												<img className="service__img" src={s.img} alt="" />
+											<div>
+												<h3 className="service__title">{s.name}</h3>
+												<div className="text-container">
+													<p>{s.desc}</p>
+													<a href="#">Learn more</a>
+												</div>
 											</div>
+											<div className="empty-container"></div>
 										</div>
-										<div>
-											<h3 className="service__title">{s.name}</h3>
-											<div className="text-container">
-												<p>{s.desc}</p>
-												<a href="#">Learn more</a>
-											</div>
-										</div>
-										<div className="empty-container"></div>
-									</div>
-								);
-							}
-						})}
-					</div>
-					{/* <div className="home__services-grid">
+									);
+								}
+							})}
+						</div>
+						{/* <div className="home__services-grid">
 							{services
 								.filter((service) => {
 									return search.toLowerCase().trim() === ""
@@ -223,8 +277,8 @@ export default async function Home() {
 									);
 								})}
 						</div> */}
-				</div>
-				{/* <div className="faq" id="casto-kladene-otazky">
+					</div>
+					{/* <div className="faq" id="casto-kladene-otazky">
 						<h2 className="faq__title">{t("faq_title")}</h2>
 						<div className="faq__list">
 							<div className="faq__item">
@@ -256,7 +310,8 @@ export default async function Home() {
 							</div>
 						</div>
 					</div> */}
-			</Container>
-		</main>
+				</Container>
+			</main>
+		</>
 	);
 }
