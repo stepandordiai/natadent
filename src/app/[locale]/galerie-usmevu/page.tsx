@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Container from "@/components/Container/Container";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 import { BASE_URL } from "@/lib/constants";
@@ -39,8 +39,9 @@ export default async function SmileGallery({
 }: {
 	params: Promise<{ locale: string }>;
 }) {
-	const t = await getTranslations();
 	const { locale } = await params;
+	setRequestLocale(locale);
+	const t = await getTranslations();
 
 	return (
 		<main className="smile-gallery">

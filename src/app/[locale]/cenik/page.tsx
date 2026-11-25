@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import PriceListClient from "./PriceListClient";
 import { Metadata } from "next";
 import { BASE_URL } from "@/lib/constants";
@@ -40,6 +40,7 @@ export default async function PriceList({
 	params: Promise<{ locale: string }>;
 }) {
 	const { locale } = await params;
+	setRequestLocale(locale);
 	const t = await getTranslations();
 
 	return (

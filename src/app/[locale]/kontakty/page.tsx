@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 import Container from "@/components/Container/Container";
 import type { Metadata } from "next";
@@ -40,6 +40,7 @@ export default async function Contacts({
 	params: Promise<{ locale: string }>;
 }) {
 	const { locale } = await params;
+	setRequestLocale(locale);
 	const t = await getTranslations("contacts");
 
 	return (

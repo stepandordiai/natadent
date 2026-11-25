@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Container from "@/components/Container/Container";
 import CopyBtn from "@/components/CopyBtn/CopyBtn";
 import type { Metadata } from "next";
@@ -65,8 +65,8 @@ export async function generateMetadata({
 }: {
 	params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-	const t = await getTranslations();
 	const { locale } = await params;
+	const t = await getTranslations({ locale });
 
 	const languages = Object.fromEntries(
 		routing.locales.map((l) => [l, `${BASE_URL}/${l}/`]),
@@ -85,7 +85,13 @@ export async function generateMetadata({
 	};
 }
 
-export default async function Home() {
+export default async function Home({
+	params,
+}: {
+	params: Promise<{ locale: string }>;
+}) {
+	const { locale } = await params;
+	setRequestLocale(locale);
 	const t = await getTranslations();
 
 	const jsonLd = {

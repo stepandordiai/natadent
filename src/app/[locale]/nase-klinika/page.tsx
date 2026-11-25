@@ -3,7 +3,7 @@ import Container from "@/components/Container/Container";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 import { BASE_URL } from "@/lib/constants";
 import { routing } from "@/i18n/routing";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import "./styles.scss";
 
 const clinicImages = [
@@ -57,7 +57,8 @@ export default async function OurClinic({
 	params: Promise<{ locale: string }>;
 }) {
 	const { locale } = await params;
-	const t = await getTranslations({ locale });
+	setRequestLocale(locale);
+	const t = await getTranslations();
 
 	return (
 		<main>

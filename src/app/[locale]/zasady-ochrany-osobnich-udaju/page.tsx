@@ -4,6 +4,7 @@ import CopyBtn from "@/components/CopyBtn/CopyBtn";
 import Breadcrumbs from "@/components/common/Breadcrumbs/Breadcrumbs";
 import { BASE_URL } from "@/lib/constants";
 import { routing } from "@/i18n/routing";
+import { setRequestLocale } from "next-intl/server";
 import "./styles.scss";
 
 const page = "gdpr";
@@ -38,6 +39,7 @@ export default async function PrivacyPolicy({
 	params: Promise<{ locale: string }>;
 }) {
 	const { locale } = await params;
+	setRequestLocale(locale);
 
 	return (
 		<main>
